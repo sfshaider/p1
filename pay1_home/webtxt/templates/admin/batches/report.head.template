@@ -1,0 +1,19 @@
+<title>Batching Administration</title>
+<link rel="stylesheet" href="/admin/batches/_css/report.css" type="text/css">
+<link rel="stylesheet" href="/admin/batches/_css/popover.css" type="text/css">
+<script type='text/javascript' language='javascript' src='/_js/Charts.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/Tools.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/order/Transaction.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/order/transaction/Batch.js'></script>
+<!-- <script type='text/javascript' language='javascript' src='/admin/batches/_js/Report.js'></script> -->
+<script type='text/javascript' language='javascript'>
+    jQuery(document).ready( function() {
+        Tools.convertToGoogleTable({tableSelector:'#reportContainer',callback:function (gTable,gData) {
+            gTable.draw(gData, {showRowNumber:false,sortRow:1,sortAscending:true});
+        }});
+
+        Tools.convertToGoogleTable({tableSelector:'#batchStatus',callback:function (gTable,gData) {
+            gTable.draw(gData, {showRowNumber:false,sortRow:1,sortAscending:true});
+        }});
+  });
+</script>

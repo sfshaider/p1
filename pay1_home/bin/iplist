@@ -1,0 +1,72 @@
+#!/usr/bin/perl
+
+use strict;
+
+use PlugNPay::Transaction::IpList;
+use PlugNPay::Util::Array qw(inArray);
+
+my $action = $ARGV[0];
+
+
+my $client = new PlugNPay::Transaction::IpList();
+
+my $actions = {
+  clear => \&clearIp,
+  force => \&forceIp
+};
+
+if (defined $actions->{$action} && ref $actions->{$action} eq 'CODE') {
+  my $status = $actions->{$action}();
+  exit $status;
+} else {
+  print "Currently supported actions: " . join(',',keys %{$actions}) . "\n";
+}
+
+sub clearIp {
+  my $ip = $ARGV[1];
+
+  my $example = 'iplist clear <ip> [<ip>...]';
+
+  # check ip
+  if (!defined $ip || $ip eq '') {
+    print STDERR "IP is required";
+    print STDERR " > $example\n";
+    return 1;
+  }
+
+  $client->deleteIpInfo({ ip => $ip });
+  return 0;
+}
+
+sub forceIp {
+  my $ip = $ARGV[1];
+  my $status = $ARGV[2];
+  my $reason = $ARGV[3];
+
+  my $example = 'iplist force <ip> <status> "<reason>"';
+
+  my $statuses = ['positive','negative','neutral'];
+  my $statusesString = join(',',@{$statuses});
+
+  # check ip
+  if (!defined $ip || $ip eq '') {
+    print STDERR "IP is required";
+    print STDERR " > $example\n";
+    return 1;
+  }
+
+  # check status
+  if (!inArray($status,$statuses)) {
+    print STDERR "Invalid status passed: $status, valid statuses are $statusesString\n";
+    return 2;
+  }
+
+  # check reason
+  if (!defined $reason || $reason eq '') {
+    print STDERR "Reason is required";
+    print STDERR " > $example\n";
+    return 3;
+  }
+
+  $client->forceIpStatus({ ip => $ip, status => $status, reason => $reason });
+}

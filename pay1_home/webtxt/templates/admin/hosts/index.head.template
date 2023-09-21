@@ -1,0 +1,14 @@
+<!-- CSS files -->
+<link type='text/css' rel='stylesheet' href='/admin/hosts/_css/hosts.css'>
+<link type='text/css' rel='stylesheet' href='/admin/hosts/_css/popover.css'>
+<link rel="stylesheet" type="text/css" href="/_jqueryui/themes/plugnpay/jquery-ui.css" />
+
+<!-- Js Scripts-->
+<script src="/_js/Input.js"></script>
+<script src="/_js/Charts.js"></script>
+<script src="/_js/Loader.js"></script>
+<script src="/admin/hosts/_js/Hosts.js"></script>
+<script src="/admin/_js/responders/merchant/Host.js"></script>
+<script src="/admin/_js/responders/merchant/HostConnection.js"></script>
+<script src="/admin/_js/responders/merchant/Credential.js"></script>
+<script src="/_jqueryui/themes/plugnpay/jquery-ui.js"></script>

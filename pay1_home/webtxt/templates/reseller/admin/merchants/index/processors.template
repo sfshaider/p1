@@ -1,0 +1,47 @@
+<!--<div id='merchantProcessors'>-->
+  <div class="processor template rt-hidden">
+    <label for="" class="input insert rt-box half">
+      <span></span>
+      <input name="" class="reseller-input-control">
+    </label>
+    <label for="" class="select insert rt-box half">
+      <span></span>
+      <select name="" class="reseller-input-control"></select>
+    </label>
+  </div>
+  <div class="processor card section lightgraybox rt-box rounded">
+    <h1>Card Processor</h1>
+    <label for="cardProcessor" class="rt-box half">
+      <select name="cardProcessor" class="reseller-input-control processorSelector"><metavar="cardProcessorOptions"></select>
+    </label>
+    <hr>
+  </div>
+  <div class="processor ach section lightgraybox rt-box rounded">
+    <h1>ACH Processor</h1>
+    <label for="achProcessor" class="rt-box half">
+      <select name="achProcessor" class="reseller-input-control processorSelector"><metavar="achProcessorOptions"></select>
+    </label>
+    <hr>
+  </div>
+  <div class="processor tds section lightgraybox rt-box rounded">
+    <h1>TDS Processor</h1>
+    <label for="tdsProcessor" class="rt-box half">
+      <select name="tdsProcessor" class="reseller-input-control processorSelector"><metavar="tdsProcessorOptions"></select>
+    </label>
+    <hr>
+  </div>
+  <div class="processor wallet section lightgraybox rt-box rounded">
+    <h1>Wallet Processor</h1>
+    <label for="walletProcessor" class="rt-box half">
+      <select name="walletProcessor" class="reseller-input-control processorSelector"><metavar="walletProcessorOptions"></select>
+    </label>
+    <hr>
+  </div>
+  <div class="processor emv section lightgraybox rt-box rounded">
+    <h1>EMV Processor</h1>
+    <label for="emvProcessor" class="rt-box half">
+      <select name="emvProcessor" class="reseller-input-control processorSelector"><metavar="emvProcessorOptions"></select>
+    </label>
+    <hr>
+  </div>
+<!--</div>-->

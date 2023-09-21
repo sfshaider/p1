@@ -1,0 +1,21 @@
+<div id="resources" class='accord'>
+	<h2>URL Resources</h2>
+	<div>
+		<hr>
+		<div>
+    			<label class='info'>Resource options are values passed through the URL to the API.</label> <br>
+    			<label class='fail'>Example: https://pay1.plugnpay.com/api/merchant/:pnpdemo</label>
+			<br><br>
+			<label>API path: <metavar="path"></label>
+  		</div>
+  		<hr>
+		<br>
+		<hr>
+  		<div>
+  			<label class='info'>Available Resource Options:</label><br>
+			<metavar='resources'>
+  		</div>
+		<hr>
+	</div>
+</div>
+<br>

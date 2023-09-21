@@ -1,0 +1,25 @@
+<h1>Reseller Documentation</h1>
+<hr></br>
+<div id="marketingTabs">
+  
+<!-- <ul>
+    <li><a href='#marketingInfo'>Marketing Info</a></li>
+  </ul> -->
+  <div id='marketingInfo'>
+    <div id='info'>
+      <p>Welcome to The Online Reseller Documentation Center.</p>
+      <p>This portion of the site has been constructed to provide access to service and integration documentation. The following links will provide you with the information you need to better sell our services.</p>
+      <p>If you do not find the answers to your issues or questions, please check out our online <a href="/admin/v2/help">FAQs &amp; documentation centers.</a></p> 
+
+      <p>If you find our information centers do not answer your issue or question, please submit your issue, comment, question or problem to <a href="javascript:void(0)" id="submit">the helpdesk.</a></p>
+   
+      <form id="helpdesk" method="get" action="/admin/v2/help">
+        <input type="hidden" name="ps_helpdesk_subject" value="Reseller Documentation Issue" />
+      </form>
+
+    </div>
+    
+    <div id='documentTable'></div>
+
+  </div>
+</div>

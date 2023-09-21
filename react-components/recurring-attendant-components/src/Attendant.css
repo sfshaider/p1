@@ -1,0 +1,126 @@
+/*.PNPWrapper {*/
+    /*margin-top: 50px;*/
+/*}*/
+
+/*.PNPHeaderStyle {*/
+    /*background-color: #15476e;*/
+    /*width: 900px;*/
+    /*height: 46px;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.PNPHeaderStyleRounded {*/
+    /*border-radius: 5px;*/
+/*}*/
+
+/*.PNPContentStyle {*/
+    /*background-color: #eee;*/
+    /*width: 900px;*/
+    /*height: 750px;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.PNPContentStyle {*/
+    /*border-radius: 5px;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.PNPContentInner {*/
+    /*padding-top: 30px;*/
+/*}*/
+
+/*.PNPButton {*/
+    /*background: #F5F5F5;*/
+    /*background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#EBEBEB),color-stop(1,#FFFFFF));*/
+    /*background: -ms-linear-gradient(bottom,#EBEBEB,#FFFFFF);*/
+    /*background: -moz-linear-gradient(center bottom,#EBEBEB 0%,#FFFFFF 100%);*/
+    /*background: -o-linear-gradient(#FFFFFF,#EBEBEB);*/
+    /*color: #333333;*/
+/*}*/
+
+/*.PNPButtonLarge {*/
+    /*height: 38px;*/
+    /*width: 190px;*/
+/*}*/
+
+/*.PNPButtonAlignRight415px {*/
+    /*margin-left: 415px;*/
+/*}*/
+
+/*.PNPButtonAlignRight350px {*/
+    /*margin-left: 350px;*/
+/*}*/
+
+/*.PNPInputField {*/
+    /*height: 30px;*/
+    /*width: 300px;*/
+    /*border-radius: 3px;*/
+    /*border: 1px solid #ccc;*/
+/*}*/
+
+/*input:focus {*/
+    /*box-shadow: 0 0 2px #6d8091;*/
+    /*border: 1px solid #6d8091;*/
+/*}*/
+
+/*.PNPMenuBar {*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.PNPMenuBarElement {*/
+    /*margin-bottom: 20px;*/
+/*}*/
+
+/*.PNPMenuBarTable {*/
+    /*display: table;*/
+    /*margin: 0 auto;*/
+    /*padding-top: 20px;*/
+/*}*/
+
+/*.PNPMenuBarTableLi {*/
+    /*display: inline;*/
+/*}*/
+
+/*.PNPMenuBarTableLi button {*/
+    /*width: 200px;*/
+/*}*/
+
+/*.PNPMenuBarTableLi button:active {*/
+    /*background-color: #15476e;*/
+    /*border-color: #15476e;*/
+/*}*/
+
+/*.PNPResultsMessage {*/
+    /*margin-left: 180px;*/
+    /*padding: 12px 0px;*/
+/*}*/
+
+/*.PNPResultSuccess {*/
+    /*color: #32cd32;*/
+/*}*/
+
+/*.PNPResultError {*/
+    /*color: #ff0000;*/
+/*}*/
+
+/*.PNPHeadingStyle {*/
+    /*margin-left: 55px;*/
+    /*width: 300px;*/
+    /*margin-bottom: 45px;*/
+/*}*/
+
+/*#removeProfileContent {*/
+    /*margin-left: 250px;*/
+    /*margin-top: 25px;*/
+/*}*/
+
+/*#removeProfileText {*/
+    /*padding-bottom: 10px;*/
+/*}*/
+
+/*.PNPHeadingStyle {*/
+    /*margin-left: 55px;*/
+    /*width: 300px;*/
+    /*margin-bottom: 45px;*/
+/*}*/
+

@@ -1,0 +1,115 @@
+<button class='collapsible'>Optional Search Data</button>
+<i class='fas fa-arrow-alt-circle-right' name='indicator-arrow'></i></button>
+<div id='searchData' class='pnp-box rounded collapsibleContent pnp-hidden'>
+	<div>
+		<h2>Account Codes</h2>
+		<hr>
+		<table class='searchBoxTable'>
+			<tr>
+				<td>
+					<label class='rounded third pnp-box'>
+						<span class='searchBox'>Account Code 1:</span>
+						<input type='text' name='account_code_1' class='pnp-input-control pnp-box third'>
+					</label>
+				</td>
+				<td>
+					<label class='pnp-box rounded third'>
+						<span>Partial Match:</span>
+						<select name='partial_match' class = 'pnp-box third pnp-input-control'><option value='true'>Yes</option><option value='false'>No</option></select>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class='rounded third pnp-box'>
+						<span class='searchBox'>Account Code 2:</span>
+						<input type='text' name='account_code_2' class='pnp-input-control pnp-box third'>
+					</label>
+				</td>
+			<td></td>
+			</tr>
+			<tr>
+				<td>
+					<label class='rounded third pnp-box'>
+						<span class='searchBox'>Account Code 3:</span>
+						<input type='text' name='account_code_3' class='pnp-input-control pnp-box third'>
+					</label>
+				</td>   
+				<td></td> 
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div>
+		<h2>Transaction State/Status</h2>
+		<hr>
+		<table class='searchBoxTable'>
+			<tr>
+				<td >
+					<label class= 'rounded pnp-box third'>
+						<span class='searchBox'>Transaction Type(s): </span>
+					</label>
+				</td>
+				<td>
+					<label class='pnp-box rounded third'>
+						<span>Transaction Status(s): </span>
+						<select name='transaction_status' class = 'pnp-box third pnp-input-control'>
+							<option value='all'>All Statuses</option>
+							<option value='success'>Successful</option>
+							<option value='problem'>Decline/Problem</option>
+							<option value='pending'>Pending</option>
+						</select>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class= 'rounded pnp-box third'>
+						<input type='checkbox' name='transaction_state'  value='auth' class='checkBoxAlign'>
+						<span class='searchBox'> Authorization </span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<label class= 'rounded pnp-box third'>
+						<input type='checkbox' name='transaction_state'  value='postauth' class='checkBoxAlign'>
+						<span class='searchBox'> Capture </span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<label class= 'rounded pnp-box third'>
+						<input type='checkbox' name='transaction_state'  value='credit' class='checkBoxAlign'>
+						<span class='searchBox'> Return/Credit </span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<label class= 'rounded pnp-box third'>
+						<input type='checkbox' name='transaction_state'  value='void' class='checkBoxAlign'>
+						<span class='searchBox'> Void </span>
+					</label>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br/>
+	<div>
+		<h2>Card Number</h2>
+		<hr>
+		<table class='searchBoxTable'>
+			<tr>
+				<td colspan='2'>
+					<label class='rounded pnp-box third'>
+						<span class='searchBox'>Card Number (ex: 411111**1111):</span>
+						<input type='text' name='card_number' value='' class='pnp-input-control pnp-box third'/>
+					</label>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+

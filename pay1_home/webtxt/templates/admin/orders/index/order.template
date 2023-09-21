@@ -1,0 +1,111 @@
+<div class='rounded pnp-box section'>
+        <div id='filterFrame'>
+                <div class="merchantSelect">
+                <label><span>Select Merchant:</span><select id="merchant_names" class='pnp-box pnp-input-control quarter' ><option value='' disabled selected>Select A Merchant</option><metavar='linked_accounts'></select></label>
+                <input type="button" id="reload_table" class="pnp-input-control pnp-box quarter" value="Load Orders">
+                </div>
+                <metainc='/admin/orders/index/,search'> <!-- optional search box -->
+                <div id="dateFilter">
+                        <div id="startDate">
+                                <label style="display: inline-block; width:35px; text-align:center">From</label>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="month">
+                                        <metavar="month_options">
+                                        </select>
+                                </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="day">
+                                        <!-- these options are set in /admin/orders/_js/Init.js -->
+                                        </select>
+                                </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="year">
+                                        <metavar="year_options">
+                                        </select>
+                                </span>
+                                <span>Hour: </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="start_hour">
+                                        <metavar="start_hour_options">
+                                        </select>
+                                </span>
+                                <span>GMT</span>
+                        </div><div id="endDate">
+                                <label style="display: inline-block; width:35px; text-align:center">To</label>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="month">
+                                        <metavar="month_options">
+                                        </select>
+                                </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="day">
+                                        <!-- these options are set in /admin/orders/_js/Init.js -->
+                                        </select>
+                                </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="year">
+                                        <metavar="year_options">
+                                        </select>
+                                </span>
+                                <span>Hour: </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="end_hour">
+                                        <metavar="end_hour_options">
+                                        </select>
+                                </span>
+                                <span>GMT</span>
+                        </div>
+                 </div>
+
+                 <div id='orderFilter'>
+                        <label class="inline">Filter Column:</label>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="columnID">
+                                        <option value="orderID">Order ID</option>
+                                        <option value="customer">Customers</option>
+                                        <option value="status">Transaction Status</option>
+                                </select>
+                        </span>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="modifier">
+                                        <option value="starts">Starts With</option>
+                                        <option value="contains" selected>Contains</option>
+                                        <option value="ends">Ends With</option>
+                                </select>
+                        </span>
+                        <span style="display: inline-block; width: 200px">
+                                <input name="filter" type="text" class="pnp-input-control pnp-box" placeholder="filter text" />
+                        </span>
+
+                 </div>
+        </div>
+
+        <div id='tableContainer'>
+
+        </div>
+
+        <div id='listStatus'>
+                 <div id='page-info'>
+                        <span></span>
+                 </div>
+                 <div id='spinner'></div>
+        </div>
+
+        <div id='listNavigation'>
+                 <div class='buttonWrapper'>
+                        <input type='button' name='listPageBack' class='pnp-box pnp-input-control' value='<'>
+                 </div>
+
+
+                 <div id='listPageSelectContainer'>
+                        <select name='listPageSelect' class='pnp-box pnp-input-control'>
+                        </select>
+                 </div>
+
+                 <div class='buttonWrapper'>
+                        <input type='button' name='listPageNext' class='pnp-box pnp-input-control' value='>'>
+                 </div>
+        </div>
+</div>
+
+

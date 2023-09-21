@@ -1,0 +1,139 @@
+<!-- start lightbox for profile -->
+<div class='pnp-hidden overlay light-box' id="editProfileLightBox">
+    <h1>Edit Profile</h1>
+    <hr>
+
+    <div class="content">
+        <!-- start lightbox profile form -->
+        <form id="editProfileForm">
+            <div class="pnp-box half display-format">
+                <h4>Merchant:</h4>
+                <input class="pnp-box pnp-input-control half" id="editProfileGatewayAccount" readonly>
+            </div>
+
+            <input hidden id="customerID">
+            <input hidden id="billingProfileID">
+
+            <div class="pnp-box half display-format">
+                <div class="pnp-box half display-format">
+                    <h4 class="display-format">Status:</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <select class="pnp-box pnp-input-control" id="editProfileStatusSelect">
+                        <metavar='statusSelectOptions'>
+                    </select>
+                </div>
+                <div class="pnp-box display-format">
+                    <h4 class="display-format">Allow Renewal</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <select class="pnp-box pnp-input-control" id="editProfileAllowRenewal">
+                        <option value=1>Yes</option>
+                        <option value=0>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4>Payment Source:</h4>
+                <select class="pnp-box pnp-input-control half" id="editProfilePaymentSourceSelect"></select>
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4>Description:</h4>
+                <input class="pnp-box pnp-input-control" id="editProfileDescription" maxlength="60">
+            </div>
+
+            <h1 id="editProfilePlanIDHeader"></h1>
+            <hr>
+            <div class="pnp-box third display-format">
+                <h4>Payment Plan:</h4>
+                <input class="pnp-box pnp-input-control" id="editProfilePlanID" readonly>
+            </div>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Bill Cycle:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <select class="pnp-box pnp-input-control" required id="editProfileBillCycleSelect">
+                    <metavar="billCycleSelect">
+                </select>
+            </div>
+
+            <div class="pnp-box quarter display-format">
+                <h4>End Date (If bill cycle is none)</h4>
+                <input type="text" placeholder="YYYY/MM/DD" class="pnp-input-control" id="editProfileBillCycleDatePicker">
+            </div>
+            <br>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Loyalty Count:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-box pnp-input-control half non-zero-bill-cycle" required id="editProfileLoyaltyCount">
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4 class="display-format">Loyalty Fee:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-box pnp-input-control half non-zero-bill-cycle" required id="editProfileLoyaltyFee">
+            </div>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Sign Up Fee:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-box pnp-input-control half" required id="editProfileSignUpFee">
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4 class="display-format">Recurring Fee:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-box pnp-input-control half non-zero-bill-cycle" required id="editProfileRecurringFee">
+            </div>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Initial Month Delay:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-box pnp-input-control half non-zero-bill-cycle" required id="editProfileInitialMonthDelay">
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4 class="display-format">Initial Day Delay:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-box pnp-input-control half non-zero-bill-cycle" required id="editProfileInitialDayDelay">
+            </div>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Currency:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <select class="pnp-input-control pnp-box half" required id="editProfileCurrencySelect">
+                    <metavar='currencySelect'>
+                </select>
+            </div>
+
+            <div id="editProfileBalanceDiv" class="pnp-box half display-format">
+                <h4>Remaining Customer Balance:</h4>
+                <input class="pnp-box pnp-input-control half non-zero-bill-cycle" required id="editProfileBalance">
+            </div>
+
+            <br>
+
+            <div id="editProfileGroupSelect" class="pnp-box">
+                <metainc="/admin/membership/index/group/,group_select">
+            </div>
+        </form>
+        <!-- end of lightbox profile form -->
+        <div class="pnp-box">
+        <input class='pnp-input-control right-action-button' type=button value="Edit Profile" id="editProfile">
+        <input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeEditProfileLightBox">
+    </div>
+    </div>
+</div>
+<!-- end lightbox for profile -->
+

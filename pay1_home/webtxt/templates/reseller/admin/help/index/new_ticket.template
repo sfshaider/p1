@@ -1,0 +1,97 @@
+  <h1>Online Helpdesk</h1>
+  <hr>
+
+<div name='ticketingForm'>
+  <div class='rt-box rounded section'>
+   <input type='hidden' name='pnp_user' value='<metavar="pt_gateway_account">' >
+   <input type='hidden' name='type' value='help'>
+   <input type='hidden' name='new_ticket_request' value='<metavar="showNewTicket">'>
+
+   <table class="noFinger">
+    <tr>
+      <td> 
+        <label>
+	<span>Full Name*</span>
+         <input type="text" class='reseller-input-control' name="name" size="30" required> 
+	</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label><span>Priority*</span>
+         <select  class='reseller-input-control'  name='pri' required>
+           <option value='1'>Low</option>
+           <option value='2'>Medium</option>
+           <option value='3'>High</option>
+           <option value='4'>Emergency</option>
+         </select> 
+	</label>
+      </td>
+    </tr>
+    
+    <tr>
+       <td>
+         <label><span>Help Topic*</span>
+         <select name='topicId'  class='reseller-input-control'  required>
+		<metavar="topic_id">
+         </select> 
+	</label>
+    </tr>
+
+    <tr>
+      <td>
+        <label ><span>Email*</span>
+        	<input type="text"  class='reseller-input-control'  name="email" size="30" required> 
+	</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>
+		<span>Phone</span>
+        	<input type="text" name="phone" size= "30"  class='reseller-input-control' >
+	</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label><span>Subject*</span>
+        <input type="text" name="subject" size="40"  class='reseller-input-control' value='<metavar="helpdesk_subject">'  required> 
+	</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label >
+   		<span>Description*</span>
+        	<textarea class='reseller-input-control' name="message" rows="15" cols="60" wrap="physical" required><metavar="helpdesk_description"></textarea> 
+	</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>
+	<span><strong>NOTE:</strong>
+        * denotes a required field</span>
+	</label>
+     </td>
+   </tr>
+  </table>
+  </div>
+	<label>
+        <input type="button" value="Submit" class="reseller-input-control" name="newHelpTicket">  
+	</label>
+
+  <div class='hidden'>
+	<form action='https://helpdesk.plugnpay.com/hd/login.php' method='POST' target="_blank" id="newHelpTicketForm">
+	<input type='hidden' name='lticket'>
+	<input type='hidden' name='lemail'>
+	</form>
+  </div>
+</div>
+<hr>

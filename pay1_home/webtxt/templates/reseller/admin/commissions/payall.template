@@ -1,0 +1,17 @@
+<h1>Commissions</h1>
+<hr>
+<br>
+
+<div class='rt-box rounded section'>
+  <label class="rt-box rounded lightgraybox full">
+    <span>Commission payouts are not enabled for your account!</span> 
+&nbsp;<a onClick="jQuery('#helpForm').submit()">Contact Plug'n Pay if this is an error.</a>
+  </label>
+</div>
+
+<div class='hidden'>
+<form method="POST" action="/admin/v2/help/" id="helpForm">
+  <input type="hidden" name="ps_helpdesk_subject" value="Commissions Activation">
+  <input type="hidden" name="ps_helpdesk_description" value="Reseller area said commissions are disabled, yet we should have them activated. Please check and activate Commissions and Payouts for our account.">
+</form>
+</div>

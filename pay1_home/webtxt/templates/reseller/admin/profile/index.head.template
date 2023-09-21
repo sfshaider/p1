@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="/admin/v2/profile/_css/profile.css">
+<link rel="stylesheet" type="text/css" href="/admin/v2/_css/common.css">
+<link rel="stylesheet" type="text/css" href="/_css/z_checkbox.css">
+<link rel="stylesheet" type="text/css" href="/_css/z_radio.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="/_js/spin.min.js"></script>
+<script src="/_js/z_checkbox.js"></script>
+<script src="/_js/z_radio.js"></script>
+<script src="/admin/v2/profile/_js/Contact.js"></script>
+<script src="/admin/v2/profile/_js/Payout.js"></script>
+<script src="/admin/v2/profile/_js/BillAuth.js"></script>
+<script src="/admin/v2/profile/_js/BuyRates.js"></script>
+<script src="/admin/v2/profile/_js/main.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		jQuery('input[type=checkbox]').z_checkbox();
+		jQuery('input[name=ps_billing_type]').z_radio('fa-check').on('change', function () {
+			switchPayment(jQuery(this).val());
+		});
+	});
+</script>

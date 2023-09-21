@@ -1,0 +1,110 @@
+/* Create COA Account Dialog */
+#createCOAAccountDialog {
+  background: #eee;
+}
+
+#merchantAdjustmentInfo h2 {
+  font-size: 16px;
+  margin: 5px;
+}
+
+#adjustmentSettings div.section {
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+}
+
+#adjustmentBuckets .bucket {
+  display: block;
+  background: white;
+}
+
+#adjustmentBuckets .bucket .rt-box {
+  display: inline-block;
+  height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+#adjustmentBuckets .bucket.header {
+  margin-top: 10px;
+}
+
+#adjustmentBuckets .bucket .paymentVehicle {
+  width: 200px;
+}
+
+#adjustmentBuckets .bucket .base,
+#adjustmentBuckets .bucket .totalRate,
+#adjustmentBuckets .bucket .fixedAdjustment,
+#adjustmentBuckets .bucket .coaRate {
+  text-align: right;
+  width: 150px;
+}
+
+#adjustmentBuckets .bucket .delete {
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+}
+
+#adjustmentBuckets .bucket.template {
+  display: none;
+}
+
+#adjustmentBuckets .bucket .delete,
+#adjustmentBuckets .bucket .delete input {
+  width: 80px;
+}
+
+#adjustmentCaps .cap {
+  display: block;
+  background: white;
+}
+
+#adjustmentCaps .cap .rt-box {
+  display: inline-block;
+  height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+#adjustmentCaps .cap.header {
+  margin-top: 10px;
+}
+
+#adjustmentCaps .cap .paymentVehicle {
+  width: 200px;
+}
+
+#adjustmentCaps .cap .percentCap,
+#adjustmentCaps .cap .fixedCap {
+  text-align: right;
+  width: 150px;
+}
+
+#adjustmentCaps .cap .delete {
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+}
+
+#adjustmentCaps .cap.template {
+  display: none;
+}
+
+#adjustmentCaps .cap .delete,
+#adjustmentCaps .cap .delete input {
+  width: 80px;
+}
+
+.badMCC {
+  background-color:rgba(255,0,0,0.3);
+  color:black;
+}
+
+#badMIDBox,#badAccountBox {
+  color:red;
+}
+

@@ -1,0 +1,35 @@
+/* Copyright 2013 Plug And Pay Technolgies, Inc.
+   Written by C. Isomaki
+   Version 0.1
+*/
+.z_checkbox,.z_check {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
+.z_checkbox {
+  display: inline-block;
+  margin: 0 0 -5px;
+  background: #EEE;
+  border: 1px solid #999;
+}
+.z_check {
+  display: block;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+.z_check_hidden {
+  display: none;
+}
+.z_checkbox_checked {
+  background: #DDF;
+}

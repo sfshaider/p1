@@ -1,0 +1,83 @@
+A {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%;
+ color: #000000
+}
+.awhite {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%;
+ color: #d0d0d0
+}
+H3 {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ font-size: 100%
+}
+H2 {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ font-size: 100%
+}
+TH {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold; font-size: 80%;
+ text-align: left
+}
+.right {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold; font-size: 80%;
+ text-align: right
+}
+.tdright {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%;
+ text-align: right
+}
+.leftside {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ font-size: 80%;
+ color: #ffffff;
+ background-color: #4a7394;
+ vertical-align: top;
+ text-align: left
+}
+.across {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ font-size: 90%;
+ color: #ffffff;
+ background-color: #00a0a0;
+ vertical-align: top;
+ text-align: center
+}
+TD {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%
+}
+B {
+ font-weight: bold
+}
+.tr3 {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%;
+ background-color: #ffffff
+}
+.tr2 {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%;
+ background-color: #dddddd
+}
+.tr1 {
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: normal;
+ font-size: 80%;
+ background-color: #bbbbbb
+}
+

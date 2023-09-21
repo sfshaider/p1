@@ -1,0 +1,65 @@
+<div>
+        <label class="pnp-box rounded half">
+                <span>Merchant:</span>
+                <select id='reports_merchant' class='pnp-input-control pnp-box quarter' name ="merchant">
+                        <metavar='merchants'>
+                </select>
+        </label>
+
+        <br>                
+
+        <label class="pnp-box rounded third">
+                <span>Payment Type:</span>
+                <select class="pnp-input-control pnp-box third" id="report_payment_vehicle" name="report_payment_vehicle">
+                        <metavar="payment_vehicle_options">
+                </select>
+        </label>
+
+        <div id="dateFilter">
+                <div id="startDate">
+                        <label style="display: inline-block; width:35px; text-align:center">From</label>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="start_year">
+                                        <metavar="year_options">
+                                </select>
+                        </span>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="start_month">
+                                        <metavar="month_options">
+                                </select>
+                        </span>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="start_day">
+                                        <metavar='start_day_options'>
+                                </select>
+                        </span>
+                </div>
+                <div id="endDate">
+                        <label style="display: inline-block; width:35px; text-align:center">To</label>
+                               <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="end_year">
+                                        <metavar="year_options">
+                                </select>
+                        </span>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="end_month">
+                                        <metavar="month_options">
+                                </select>
+                        </span>
+                        <span style="display: inline-block; width: 150px">
+                                <select class="pnp-input-control" name="end_day">
+                                         <metavar="end_day_options">
+                                </select>
+                        </span>
+                       </div>
+        </div>
+        <br>
+        <label class="pnp-box rounded half pnp-hidden">
+                <span>Report Type:</span>
+                <select name="type" class="pnp-input-control pnp-box quarter">
+                        <option value='table'>Table</option>
+                </select>
+        </label>
+        <br>
+        <input type="submit" name="sumbit" value="Submit" class="pnp-input-control pnp-box rounded half">
+</div>

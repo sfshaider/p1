@@ -1,0 +1,4 @@
+#!/bin/csh
+
+#nohup /home/pay1/batchfiles/transid/transid.pl >>&! /home/p/pay1/batchfiles/transid/temp.txt
+nohup /home/pay1/batchfiles/prod/transid/transid.pl >& /dev/null &

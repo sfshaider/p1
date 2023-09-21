@@ -1,0 +1,19 @@
+<link type='text/css' rel='stylesheet' href='/admin/customers/_css/customer.css'>
+<link type='text/css' rel='stylesheet' href='/admin/customers/_css/popover.css'>
+<link rel="stylesheet" type="text/css" href="/_jqueryui/themes/plugnpay/jquery-ui.css" />
+
+<script type='text/javascript' language="javascript" src="/_jqueryui/themes/plugnpay/jquery-ui.js"></script>
+<script type='text/javascript' language='javascript' src='/_js/Charts.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/Input.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/customers/_js/Customers.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/State.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/Customer.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/Address.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/Password.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/Phone.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/PaymentSource.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/History.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/FuturePayment.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/customer/BillCustomer.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/membership/Profile.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/Adjustment.js'></script>

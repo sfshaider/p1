@@ -1,0 +1,33 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+use procutils;
+
+if ( $#ARGV < 0 ) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+if ( $ARGV[0] eq "off" ) {
+  &procutils::flagwrite( "secondary", "fdmsnorth", "/home/pay1/batchfiles/logs/fdmsnorth", "secondary.txt", "unlink", "", "" );
+  print "primary fdmsnorth\n";
+} elsif ( $ARGV[0] eq "on" ) {
+  &procutils::flagwrite( "secondary", "fdmsnorth", "/home/pay1/batchfiles/logs/fdmsnorth", "secondary.txt", "write", "", "1\n" );
+  print "secondary fdmsnorth 1\n";
+} elsif ( $ARGV[0] eq "1" ) {
+  &procutils::flagwrite( "secondary", "fdmsnorth", "/home/pay1/batchfiles/logs/fdmsnorth", "secondary.txt", "write", "", "1\n" );
+  print "secondary fdmsnorth 1\n";
+} elsif ( $ARGV[0] eq "2" ) {
+  &procutils::flagwrite( "secondary", "fdmsnorth", "/home/pay1/batchfiles/logs/fdmsnorth", "secondary.txt", "write", "", "2\n" );
+  print "secondary fdmsnorth 2\n";
+} elsif ( $ARGV[0] eq "3" ) {
+  &procutils::flagwrite( "secondary", "fdmsnorth", "/home/pay1/batchfiles/logs/fdmsnorth", "secondary.txt", "write", "", "3\n" );
+  print "secondary fdmsnorth 3\n";
+} elsif ( $ARGV[0] eq "4" ) {
+  &procutils::flagwrite( "secondary", "fdmsnorth", "/home/pay1/batchfiles/logs/fdmsnorth", "secondary.txt", "write", "", "4\n" );
+  print "secondary fdmsnorth 4\n";
+}
+

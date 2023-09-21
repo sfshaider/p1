@@ -1,0 +1,33 @@
+<div id="addCustomerPhoneLightBox" class="light-box pnp-hidden overlay">
+    <h1>Add Phone</h1>
+    <hr>
+    <br>
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Phone Number</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input id="addPhoneNumber" class="pnp-input-control pnp-box half" type="text" maxlength="10">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Make Default</h4>
+        <input type="checkbox" class="pnp-box pnp-input-control" id="addPhoneMakeDefault">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Description</h4>
+        <input id="addPhoneDescription" class="pnp-input-control pnp-box" type="text" maxlength="60">
+    </div>
+
+    <div class="pnp-box third display-format">
+        <h4 class="display-format">Phone General Type</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="addPhoneSelect" class="pnp-input-control pnp-box half">
+            <metavar='general_type_options'>
+        </select>
+    </div>
+
+    <input id="closeAddCustomerPhoneLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="savePhone" type="button" class="pnp-input-control right-action-button" value="Submit">
+</div>

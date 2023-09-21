@@ -1,0 +1,68 @@
+<!-- NOTE: This is the 'optional' model not the 'surcharge' model --><div id="surcharge">
+	<div class="buttons">
+		<h1><span class="yourFee"></span><span class='currencySymbol'></span><span class="feeAmount"></span></h1>
+		<div class='credit button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+				<h2><span class="yourFee"></span><span class='currencySymbol'></span><span class="feeAmount"></span></h2>
+			</div>
+			<hr>
+			<div class='savings'>
+				<span class='savingsOf'></span>:<br>
+				<span class='currencySymbol'></span><span class='discount'></span><br>
+			</div>
+			<div class='pay'>
+				<span class='payVia'></span><br>
+				<span class='type'></span>
+			</div>
+		</div>
+		<div class='debit button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+				<h2><span class="yourFee"></span><span class='currencySymbol'></span><span class="feeAmount"></span></h2>
+			</div>
+			<hr>
+			<div class='savings'>
+				<span class='savingsOf'></span>:<br>
+				<span class='currencySymbol'></span><span class='discount'></span><br>
+			</div>
+			<div class='pay'>
+				<span class='payVia'></span><br>
+				<span class='type'></span>
+			</div>
+		</div>
+		<hr class='choiceSeparator'>
+		<div class='check button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+				<h2><span class="yourFee"></span><span class='currencySymbol'></span><span class="feeAmount"></span></h2>
+			</div>
+			<hr>
+			<div class='savings'>
+				<span class='savingsOf'></span>:<br>
+				<span class='currencySymbol'></span><span class='discount'></span><br>
+			</div>
+			<div class='pay'>
+				<span class='payVia'></span><br>
+				<span class='type'></span>
+			</div>
+		</div>
+		<hr class='choiceSeparator'>
+		<div class='seqr button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+				<h2><span class="yourFee"></span><span class='currencySymbol'></span><span class="feeAmount"></span></h2>
+			</div>
+			<hr>
+			<div class='savings'>
+				<span class='savingsOf'></span>:<br>
+				<span class='currencySymbol'></span><span class='discount'></span><br>
+			</div>
+			<div class='pay'>
+				<span class='payVia'></span><br>
+				<span class='type'></span>
+			</div>
+		</div>
+	</div>
+	<div class='footer'><img class='poweredBy' alt='' src='/_img/'></div>
+</div>

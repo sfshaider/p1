@@ -1,0 +1,20 @@
+<div id="convenienceFee">
+	<div class='header'>
+		<h1></h1>
+	</div>
+	<div class='section'>
+		<div class='convenienceFeeSection'>
+			<h1></h1>
+			<ul>
+				<li id='convenienceFeeAmount'><label><span class='label'></span><span class='currencySymbol'></span><span class='input'><input type='text' name='convenienceFeeAmount' readonly></span><span class='description'></span></label></li>
+			</ul>
+		</div>
+		<div class='totalSection'>
+			<h1></h1>
+			<ul>
+				<li id='totalWithConvenienceFee'><label><span class='label'></span><span class='currencySymbol'></span><span class='input'><input type='text' name='totalWithConvenienceFee' readonly></span><span class='description'></span></label></li>
+			</ul>
+		</div>
+	</div>
+	<div class='footer'><img class='poweredBy' alt='' src='/_img/'></div>
+</div>

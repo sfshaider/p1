@@ -1,0 +1,21 @@
+<ul class="resellerSelectors">
+</ul>
+<div class="rt-box rounded section lightgraybox" id="merchantGatewayAccount">
+  <h1>Merchant Gateway Account</h1>
+  <label class="rt-box rounded half" for="merchantAccountName">
+    <span>Merchant Master Username (Required):</span>
+    <input name="merchantAccountName" class="reseller-input-control" placeholder="The username of the master user that the merchant will use for logging in.  This must be unique." type='text'>
+  </label>
+  <label id="merchantNameError" class="rt-hidden"><span></span></label>
+</div>
+<metainc='/reseller/admin/merchants/shared/,contact_info'>
+<metainc='/reseller/admin/merchants/index/,processors'>
+<div class="rt-hidden overlayTemplate pnp-overlay" style="zIndex: 9999">
+  <h1 class="centeredHeader"></h1>
+  <hr>
+  <input type="button" value="View/Edit Merchant" onClick="editNewMerchant()" class="reseller-input-control">
+  <input type="hidden" name="newAccountName">
+  <input type="button" value="Add another merchant" onClick="clearNewMerchant()" class="reseller-input-control">
+  <input type="button" value="Go to Merchant List" onClick="reloadPage()" class="reseller-input-control">
+</div>
+<input type="button" value="Create Merchant" class="ui-button ui-corner-all ui-widget" name="addMerchantButton" disabled>

@@ -1,0 +1,7 @@
+      <tokens>
+        <description><metavar="tokenDescription"></description>
+        <id><metavar="tokenID"></id>
+        <status>0</status>
+        <value><metavar="tokenValue"></value>
+      </tokens>
+

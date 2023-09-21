@@ -1,0 +1,29 @@
+<h1>My Tickets</h1>
+<hr class='special'>
+
+<div class='rt-hidden statusSelector'>
+  <label>
+    <span>Ticket Status:</span>
+    <select id='statusSelector' class='reseller-input-control'>
+      <option value='open'>Open</option>
+      <option value='closed'>Closed</option>
+    </select>
+  </label>
+</div>
+
+<div name='TicketLoading' class='hidden'>
+   <h1>Loading...</h1>
+</div>
+
+<input type='hidden' name='pt_gateway_account' value='<metavar="pt_gateway_account">'>
+<div id='ticketTableContainer'>
+  <metavar='myTicketTable'>
+</div>
+
+<hr class='special'>
+<div class='hidden'>
+  <form id='ticketForm' method="post" action ='https://helpdesk.plugnpay.com/hd/login.php' target="_blank">
+     <input type='hidden' name='lemail'>
+     <input type='hidden' name='lticket'>
+  </form>
+</div>

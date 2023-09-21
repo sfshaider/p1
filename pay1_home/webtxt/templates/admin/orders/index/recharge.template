@@ -1,0 +1,69 @@
+<div id='rechargePrompt' class='pnp-hidden'>
+    <h1>Recharge Transaction</h1>
+    <hr>
+    <br>
+    <!-- Window Head End -->
+
+    <!-- Hidden Inputs -->
+    <input type="hidden" name="pnp_token">
+    <input type="hidden" name="transaction_vehicle">
+    <input type="hidden" name="pnp_transaction_ref_id" readonly>
+    <input type="hidden" name="billing_address" readonly>
+    <input type="hidden" name="billing_state" readonly>
+    <input type="hidden" name="postal_code" readonly>
+    <input type="hidden" name="billing_name" readonly>
+    <!-- Hidden Input End -->
+
+    <label class="lightgraybox rounded pnp-box third">
+         <span>Amount: </span>
+         <input type="text" name="transaction_amount" class="pnp-input-control">
+    </label>
+
+    <label class="lightgraybox rounded pnp-box third">
+         <span>Fee Amount: </span>
+         <input type="text" name="fee_amount" class="pnp-input-control" readonly>
+    </label>
+
+
+    <label class="lightgraybox rounded pnp-box half">
+         <span>Tax Amount: </span>
+         <input type="text" name="tax_amount" class="pnp-input-control">
+    </label>
+
+    <label class="lightgraybox rounded pnp-box third">
+         <span>Fee Tax Amount: </span>
+         <input type="text" name="fee_tax_amount" class="pnp-input-control" readonly>
+    </label>
+
+
+    <label class="rounded lightgraybox pnp-box full">
+        <span>Currency: </span>
+        <input type="text" name="transaction_currency" readonly class="pnp-input-control">
+    </label>
+
+    <label class="rounded pnp-box lightgraybox">
+        <span>Payment Information: </span>
+        <input type="text" class="half pnp-input-control" readonly name="masked_number">
+        <input type="text" class="half pnp-input-control" readonly name="payinfo">
+    </label>
+
+    <label class="rounded pnp-box lightgraybox pnp-hidden SECCode full">
+        <span>SEC Code: </span>
+        <select name="sec_code">
+            <option value="WEB">WEB</option>
+            <option value="PPD">PPD</option>
+            <option value="CCD">CCD</option>
+        </select>
+    </label>
+
+    <!-- Buttons -->
+    <input type="button" name="submit_transaction" value="Recharge" class='half pnp-input-control'>
+    <input type="button" name="close_recharge" class="pnp-input-control half closeButton" value="Close">
+    <!-- Prompt End -->
+</div>
+
+
+<div id='rechargeResult' class='pnp-hidden'>
+
+</div>
+

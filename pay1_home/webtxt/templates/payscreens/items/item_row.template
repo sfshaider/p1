@@ -1,0 +1,10 @@
+        <div class="data">
+                <span class='item_identifier'><metavar="itemID"></span>
+                <span class='item_description'><metavar="itemDescription"></span>
+                <span class='item_cost'><span class="currency_symbol"></span><span class="number"><metavar="itemCost"></span></span>
+                <span class='item_quantity'><metavar="itemQuantity"></span>
+                <span class='item_extended_cost'><span class="currency_symbol"></span><span class="number"><metavar="itemExtendedCost"></span></span>
+                <span class='item_tax'><span class="currency_symbol"></span><span class="number"><metavar="itemTax"></span></span>
+                <span class='item_extended_cost_with_tax'><span class="currency_symbol"></span><span class="number"><metavar="itemExtendedCostWithTax"></span></span>
+                <div style="clear: both"></div>
+        </div>

@@ -1,0 +1,8 @@
+# gitignore
+deploy/*
+rollout.tgz
+**/.DS_Store
+**/.idea/*
+**/cover_db/*
+**/cover_report/*
+node_modules

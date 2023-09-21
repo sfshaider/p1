@@ -1,0 +1,22 @@
+version: '3.2'
+services: 
+  pay1:
+    build: .
+    ports: 
+      - "443:443"
+    depends_on: 
+      - "mysql"
+    command: ["/home/pay1/httpd-bin/start.sh","mysql"]
+    image: "pay1:dev"
+    environment: 
+      - PNP_DBINFO_USERNAME=dbinfo
+      - PNP_DBINFO_PASSWORD=dbinfo
+      - PNP_DBINFO_HOST=mysql
+      - PNP_DBINFO_DATABASE=dbinfo
+      - PNP_DBINFO_PORT=3306
+    volumes:
+      - type: bind
+        source: ./logs
+        target: /var/log/httpd
+  mysql:
+    image: "mysql:dev"

@@ -1,0 +1,60 @@
+<div class = "areaToBlur">
+	<h1>Upload Batch</h1>
+	<hr>
+	<div class="rounded pnp-box">
+		<label class="pnp-box rounded">
+			<span>Batch File:</span>
+			<input type="button" name="batch_file_button" value="Select Batch File" class="pnp-input-control pnp-box rounded quarter" readonly>
+		</label>
+		<input type="file" name="batch_file"  class="pnp-hidden">
+	</div>
+	<div class="rounded pnp-box subsection section">
+		<h1>Batch Details:</h1>
+		<hr>
+		<label class="pnp-box rounded ">
+			<span>Merchant:</span>
+			<select name="batch_merchant" class="merchantSelect pnp-box pnp-input-control half">
+				<metavar="merchants">
+			</select>
+		</label>
+		<br>
+		<label class="pnp-box rounded ">
+			<span>Batch ID: </span>
+			<input type="text" name="merchant_batch_id" class="pnp-box pnp-input-control third"  size="29" maxlength="29">
+		</label>
+		<br>
+		<label class="pnp-box rounded ">
+			<span>Add header to response file:</span>
+			<input type="checkbox" name="include_header" checked>
+		</label>
+
+		<!-- Result Email Section -->
+		<div class="pnp-box rounded">
+			<h1>Batch Result Email:</h1>
+			<hr>
+			<br>
+			<label class="pnp-box rounded">
+				<span class="radio-title">Send Email Notification: </span>
+				<input type="radio" name="send_email_notification" value = "false" checked><span>No</span>
+				<input type="radio" name="send_email_notification" value = "true"><span>Yes</span>
+			</label>
+			<br>
+			<label class="pnp-box rounded pnp-hidden email-address-label">
+				<span>Email Address </span>
+				<input type="text" name="email_address" class="pnp-box pnp-input-control third" size="29" maxlength="49">
+			</label>
+		</div>
+	</div>
+	<input type="button" id="upload" name="upload_button" value="Upload Batch File" class="pnp-box pnp-input-control quarter">
+</div>
+
+<div id = "confirmPopup" class = "pnp-hidden">
+	<h1>Confirm Batch</h1>
+	<input type="hidden" name="batch_id" value="" readonly>
+	<input type="hidden" name="merchant" value="" readonly>
+	<label class="pnp-box rounded lightgraybox">
+		<span class="batchStatusMessage"></span>
+	</label>
+	<input type="button" name="confirm" value="confirm batch" class="pnp-input-control pnp-box rounded third">
+	<input type="button" name="cancel" value="cancel batch" class="pnp-input-control pnp-box rounded third">
+</div>

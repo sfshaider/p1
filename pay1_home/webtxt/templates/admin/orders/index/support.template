@@ -1,0 +1,18 @@
+<div id='supportPrompt' class='pnp-hidden'>
+    <h1>Support Information</h1>
+    <hr>
+    <br>
+    <!-- Window Head End -->
+
+    <label class="rounded pnp-box lightgraybox">
+	<ul>
+		<li id="td_order_id"><label>Order ID: </label><span class="data"></span></li><br>
+		<li id="td_transaction_id"><label>Transaction ID: </label><span class="data"></span></li><br>
+	</ul>
+    </label>
+
+    <!-- Buttons -->
+    <input type="button" name="close_support" class="pnp-input-control half closeButton" value="Close">
+    <!-- Prompt End -->
+</div>
+

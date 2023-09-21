@@ -1,0 +1,472 @@
+/* 
+Theme Name: Plug n Play Admin Reseller Page
+Description: This theme was created by appCoco
+Version: 1.0
+Author: Owen Piccirillo + Zev Nevo
+Author URL: http://www.messtudios.com, appcoco.com
+Modified by Plug and Pay Technologies.
+*/
+
+
+
+
+
+
+
+
+
+
+/* Main and Reset
+---------------------------------------------------------------------------------*/
+* {	margin: 0; padding: 0; outline:none;} 
+ul, li {list-style-type: none } .clr {clear:both;} img {border:0;} a:link, a:visited, a:hover, a.selected { text-decoration:none;font-family: 'HelveticaNeueLight';} p {	padding-bottom:10px;}
+a:hover {color:#50ae26;}
+img {
+	max-width: 100%;
+	width: auto\9;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+body {
+	background:#f9feef;
+	font-size:14px;
+	font-family: 'HelveticaNeueLight';
+}
+html, body {
+	height:100%;
+	width:100%;
+	min-width:960px;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 100;
+	margin:0;
+	padding:0;
+	color:#999;
+	font-family: 'HelveticaNeueLight';
+	border-style: none;
+	border-width: 0px;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+h2,h3,h4,h5,h6 {
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Font Face
+---------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('/_fonts/helveticaneue-light.eot');
+    src: url('/_fonts/helveticaneue-light.eot') format('embedded-opentype'),
+         url('/_fonts/helveticaneue-light.woff') format('woff'),
+         url('/_fonts/helveticaneue-light.ttf') format('truetype'),
+         url('/_fonts/helveticaneue-light.svg#HelveticaNeueLight') format('svg');
+	font-weight: normal;
+    font-style: normal;
+	
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face{
+	font-family:'FontAwesome';
+	src:url('/_fonts/fontawesome-webfont.eot?v=4.1.0');
+	src:url('/_fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+		url('/_fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+		url('/_fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+		url('/_fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+	
+	font-weight:normal;
+	font-style:normal;
+	font-style:normal;
+	font-weight:normal;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Header
+---------------------------------------------------------------------------------*/
+.o-header-wrapper {
+	height:60px;
+	background-color:#FFF;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	border-bottom:1px solid #dedfde;
+}
+.o-header {
+	position:relative;
+}
+.o-header-title {
+	position:absolute;
+	top:20px;
+	left:220px;
+	color:#999;
+}
+.o-logo {
+	text-indent:-9999px;
+	position:absolute;
+	top:8px;
+	left:17px;
+}
+.o-logo a:link, .o-logo a:visited {
+	background:url(/_img/pnp_admin_logo.gif) no-repeat;
+	width:182px;
+	height:41px;
+	display:block;
+}
+.o-profile {
+	position:absolute;
+	top:11px;
+	right:25px;
+}
+.o-profile-link {
+	display:block;
+	background:url(/_img/profile.png) no-repeat;
+	padding:1px 0px 12px 50px;
+	border:none;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:100;
+	color:#999;
+	font-family: 'HelveticaNeueLight';
+}
+.o-profile-link:hover {
+	color:#000;
+}
+
+
+
+
+
+
+
+
+
+
+/* Content
+---------------------------------------------------------------------------------*/
+.o-content-wrapper {
+	height:100%;
+}
+.o-content {
+	height:100%;
+	width:100%;
+	display:table;
+}
+
+
+
+
+
+
+
+
+
+
+/* Content Left
+---------------------------------------------------------------------------------*/
+.o-content-left {
+	position:relative;
+	display: table-cell;
+	background:#0d2c48;
+	background:url(/_img/bg-left.gif) repeat-y;
+	width: 175px;
+	min-width: 175px;
+	min-height:1010px;
+}
+.o-nav-wrapper {
+}
+.o-nav {
+}
+.o-nav ul{
+}
+.o-nav li{
+}
+.o-nav li a:link, .o-nav li a:visited {
+	color:#cee0f1;
+	border-bottom:1px solid #072036;
+	border-top:1px solid #264766;
+	display:block;
+	padding:15px 0px 15px 15px;
+	text-shadow:0px 1px 0px #000;
+	font-size:14px;
+}
+.o-nav li a:hover, .o-nav li a.selected {
+	color:#f0f8ff;
+	background:#072036;
+}
+.o-nav li:last-child {
+	border-bottom:1px solid #264766;
+}
+.o-copyright {
+	color:#37648f;
+	font-size:11px;
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.o-nav li a span.faWrapper {
+	display: inline-block;
+	width: 2em;
+	margin: 0;
+	padding: 0;
+}
+.o-nav li a span.faWrapper span.fa {
+	width: 1em;
+	height: 1em;
+	text-align: center;
+}
+.o-nav li.menu-item-active {
+	background:#15476e;
+}
+
+
+
+
+
+
+
+
+
+
+/* Content Right
+---------------------------------------------------------------------------------*/
+.o-content-right-wrapper {
+	padding-left: 10px;
+	display: table-cell;
+}
+.o-content-right {
+	overflow:hidden;
+	padding: 10px;
+	max-width:1090px;
+	min-width:900px;
+}
+.o-content-right h2 {
+	font-size:23px;
+	color:#000;
+	margin-bottom:8px;
+	margin-left:20px;
+	margin-top:12px;
+	text-shadow:0px 1px 0px #fff;
+}
+.o-content-right h3 {
+	font-size:16px;
+	color:#333;
+	padding:10px 0px 0px 10px;
+}
+.o-content-box-wrapper {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+}
+.o-box {
+	width:47%;
+	margin-bottom:15px;
+	margin-left:20px;
+	background-color:#FFF;
+	border:1px solid #ccc;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;	
+}
+.o-box a:link, .o-box a:visited, .o-button {
+	margin-top:10px;
+	overflow:hidden;
+	padding: 5px 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #7B7B7B;
+	font-size: 13px;
+	font-family: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #FFFFFF;
+	text-align: center;
+	-webkit-box-shadow: inset 0 1px 0 #FFFFFF,0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 1px 0 #FFFFFF,0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 0 #FFFFFF,0 1px 2px rgba(0,0,0,0.1);
+	background: #F5F5F5;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#EBEBEB),color-stop(1,#FFFFFF));
+	background: -ms-linear-gradient(bottom,#EBEBEB,#FFFFFF);
+	background: -moz-linear-gradient(center bottom,#EBEBEB 0%,#FFFFFF 100%);
+	background: -o-linear-gradient(#FFFFFF,#EBEBEB);
+	border-top: solid 1px #CDCDCD;
+	border-left: solid 1px #C2C2C2;
+	border-right: solid 1px #C2C2C2;
+	border-bottom: solid 1px #B7B7B7;
+	cursor:pointer;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;	
+}
+.o-box a:hover, .o-button:hover {
+	background: #FAFAFA;
+	background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#F0F0F0),color-stop(1,#FFFFFF));
+	background: -ms-linear-gradient(bottom,#F0F0F0,#FFFFFF);
+	background: -moz-linear-gradient(center bottom,#F0F0F0 0%,#FFFFFF 100%);
+	background: -o-linear-gradient(#FFFFFF,#F0F0F0);
+	border-top: solid 1px #D2D2D2;
+	border-left: solid 1px #C7C7C7;
+	border-right: solid 1px #C7C7C7;
+	border-bottom: solid 1px #BCBCBC;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;	
+}
+.o-box a:active, .o-button:active {
+	background:#F0F0F0;
+	background:-webkit-gradient(linear,left bottom,left top,color-stop(0,#F6F6F6),color-stop(1,#EAEAEA));
+	background:-ms-linear-gradient(bottom,#F6F6F6,#EAEAEA);
+	background:-moz-linear-gradient(center bottom,#F6F6F6 0%,#EAEAEA 100%);
+	background:-o-linear-gradient(#EAEAEA,#F6F6F6);
+	border-top:solid 1px #C9C9C9;
+	border-left:solid 1px #BEBEBE;
+	border-right:solid 1px #BEBEBE;
+	border-bottom:solid 1px #B3B3B3;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;	
+}
+.o-upload {
+	margin-top:10px;
+	display:block;
+	overflow:hidden;
+	padding: 5px 5px;
+	width:100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #7B7B7B;
+	font-size: 13px;
+	font-family: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #FFFFFF;
+	text-align: center;
+
+	
+	cursor:pointer;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;	
+}
+.o-box-links {
+	width:60%;
+	background-color:#f1f1f1;
+	padding:0px 10px 10px 10px;
+	min-height:77px;
+}
+.o-b-half {
+	width:49%;
+	margin:10px 0px 0px 0px;
+}
+
+.o-b-third {
+	width:33.333%;
+	margin:10px 0px 0px 0px;
+}
+
+.o-flip-margin {
+	margin:0px 0px 10px 0px;
+}
+.o-no-margin {
+	margin:0;
+}
+.o-right {
+}
+.o-full {
+	width:100%;
+}
+.o-start-date {
+	font-size:13px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding:10px 10px 10px 10px;
+	margin-top:10px;
+}
+.o-white, .o-white:hover {
+	background:#FFF;
+	text-align:left;
+}
+
+.o-third {
+	width:33.3355%;
+}
+
+
+
+
+
+
+/* Google Charts
+-------------------------------------------------------------------------*/
+
+div.google-visualization-table {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding:8px;
+  text-align:left;
+  cursor:pointer;
+}
+
+th {
+  text-align: center;
+  height: 30px;
+}
+
+.google-visualization-table .gradient {
+  background:white;  
+}
+
+.google-visualization-table .gradient:hover {
+
+  background:#F0F0F0;
+}
+
+
+

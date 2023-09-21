@@ -1,0 +1,7 @@
+ErrorDocument 404 /payment/error404.cgi
+<Files coa.cgi>
+    SetHandler  perl-script
+    PerlResponseHandler ModPerl::PerlRun
+    PerlSendHeader On
+    Options +ExecCGI
+</Files>

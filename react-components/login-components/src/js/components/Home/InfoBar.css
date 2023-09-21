@@ -1,0 +1,44 @@
+.InfoBar {
+    background-color: #063868;
+    color: white;
+    text-align: left;
+    display: flex;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    padding: 7.2px 30px;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+}
+
+.InfoBar-spacer {
+    width: 1200px;
+}
+
+.InfoBar-spacer span {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+
+
+.InfoBar-spacer a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 800px) {
+    .InfoBar {
+        text-align: center;
+        line-height: 18px;
+    }
+}

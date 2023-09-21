@@ -1,0 +1,22 @@
+<tr width=100%>
+    <td bgcolor='#f4f4f4' width='25%' align=center>
+        <b><metavar='message_date'></b>
+    </td>
+    <td bgcolor='#f4f4f4'>
+        &nbsp; 
+        <b>No Current Service News & Updates</b>
+        &nbsp;
+    </td>
+    <td bgcolor='#f4f4f4' align=center width='3%'> &nbsp;</td>
+    <td bgcolor='#f4f4f4' align=center width='3%'> &nbsp;</td>
+</tr>
+
+<tr>
+    <td colspan=4>There are no current Service News & Updates entries to display.
+        <br>Please view the <a href='<metavar='script_name'>?show_archive=yes'>Archive</a> to see older entries.
+    </td>
+</tr>
+
+<tr>
+  <td colspan=4 align=center><hr></td>
+</tr>

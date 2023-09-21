@@ -1,0 +1,41 @@
+<div id='resultContainer'>
+	<div id="resultInfo">
+		<div id="resultHeader" class='line'>
+			<h1 id="resultMessage"><metavar='message'></h1>
+			<hr><br>
+		</div>
+		<div id="orderID" class='line'>
+			<div class="name"><metalang="general,order_id">:</div>
+			<div class="value"><metavar="orderID"></div>
+		</div>
+		<div id="paymentName" class='line'>
+			<div class="name"><metalang="general,name">:</div>
+			<div class="value"><metavar="paymentName"></div>
+		</div>
+		<div id="cardNumber" class='line'>
+			<div class="name"><metavar="paymentAccount">:</div>
+			<div class="value"><metavar="paymentAccountNumber"></div>
+		</div>
+		<div id="avsResponse" class='line'>
+			<div class="name"><metalang="general,avs_response">:</div>
+			<div class="value"><metavar="avsResponse"></div>
+		</div>
+		<div id="securityCodeResponse" class='line'>
+			<div class="name"><metalang="general,security_code_response">:</div>
+			<div class="value"><metavar="securityCodeResponse"></div>
+		</div>
+		<div id="authCode" class='line'>
+			<div class="name"><metalang="general,auth_code">:</div>
+			<div class="value"><metavar="authCode"></div>
+		</div>
+		<div id="authCode" class='line'>
+			<div class="name"><metalang="general,transaction_type">:</div>
+			<div class="value"><metavar="transactionType"></div>
+		</div>
+		<div id="resultFooter" class='line'></div>
+	</div>
+	<div id="resultLinks">
+		<p><a id="virtualterminal_link" href='/admin/virtualterminal/?pb_merchant=<metavar="gatewayAccount">'><metalang="virtualterminal,enter_another_transaction"></a>&nbsp<a id="helpdesk_link" href='/admin/helpdesk.cgi'><metalang="general,helpdesk"></a><p>
+	</div>
+</div>
+

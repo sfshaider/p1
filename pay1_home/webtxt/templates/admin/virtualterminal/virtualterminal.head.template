@@ -1,0 +1,54 @@
+<!-- Virtual Terminal HEAD tempalte -->
+<title>Virtual Terminal</title>
+<link rel="stylesheet" href="/_css/merchants/<meta type="template" content="type='variable', name='login'" />/virtualterminal.css" type="text/css" />
+<script type='text/javascript' language='javascript' src='/admin/virtualterminal/_js/VirtualTerminal.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/virtualterminal/_js/EMV.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/autoswipe.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/DataValidation.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/virtualterminal/_js/Init.js'></script>
+
+<meta name='gatewayAccount' 
+  content='<metavar="gatewayAccount">' />
+<meta name='secCodes' 
+  content='<metavar="secCodes">' />
+<meta name='retail' 
+  content='<metavar="retail">' />
+<meta name='pb_coa_enabled' 
+  content='<metavar="pb_coa_enabled">' />
+<meta name='coaSessionID' 
+  content='<metavar="coaSessionID">' />
+<meta name='chargeModel' 
+  content='<metavar="chargeModel">' />
+<meta name='pb_convenience_fee_enabled' 
+  content='<metavar="pb_convenience_fee_enabled">' />
+<meta name='overrideCheckboxIsChecked' 
+  content='<metavar="overrideCheckboxIsChecked">' />
+<meta name='overrideAdjustmentAllowed' 
+  content='<metavar="overrideAdjustmentAllowed">' />
+<meta name='checkCustomerState' 
+  content='<metavar="checkCustomerState">' />
+<meta name='modes' 
+  content='<metavar="modes">' />
+<meta name='settings' 
+  content='<metavar="settings">' />
+<meta name='creditsAllowed' 
+  content='<metavar="creditsAllowed">' />
+<meta name='creditFundTransferAllowed' 
+  content='<metavar="creditFundTransferAllowed">' />
+<meta name='brandsAllowed' 
+  content='<metavar="brandsAllowed">' />
+<meta name='disabledCardBrands' 
+  content='<metavar="disabledCardBrands">' />
+<meta name='disabledCombos' 
+  content='<metavar="disabledCombos">' />
+<meta name='cardTypesAllowed' 
+  content='<metavar="cardTypesAllowed">' />
+<meta name='disabledCardTypes' 
+  content='<metavar="disabledCardTypes">' />
+<meta name='currenciesAllowed' 
+  content='<metavar="currenciesAllowed">' />
+<meta name='authPostAuthIsEnabled'
+  content='<metavar="authPostAuthIsEnabled">' />
+
+
+<!-- End of Virtual Terminal HEAD template -->

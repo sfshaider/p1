@@ -1,0 +1,28 @@
+<h1>Link File Transfer Settings</h1>
+<hr>
+<br>
+
+<div>
+    <h4>Plan</h4>
+    <select class="pnp-box pnp-input-control third" id="linkFileTransferPlanSelect">
+
+    </select>
+    <input id="loadPlanLinkFileTransferSettings" type="button" class="pnp-box pnp-input-control quarter" value="Select Plan">
+</div>
+<br>
+
+<div class="pnp-hidden" id="linkFileTransferSettingsDiv">
+    <h1 id="linkPlanFileTransferSettingsHeader"></h1>
+    <hr>
+    <br>
+    <h4 class="display-format">Linked Settings</h4>
+    <p class="pnp-hidden display-format" style="color: red;font-size: 11px" id="linkCurrentPlanSettingsMessage"></p>
+    <div class="pnp-hidden" id="linkCurrentSettings">
+        <select data-placeholder="Add file transfer settings" class="pnp-box pnp-input-control quarter" multiple id="linkCurrentSettingsSelect">
+
+        </select>
+    </div>
+</div>
+
+<input class='pnp-input-control right-action-button' type=button value="Link" id="linkFileTransfer">
+<input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeLinkFileTransferLightBox">

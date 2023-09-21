@@ -1,0 +1,8 @@
+<div id="displayMessageLightBox" class="light-box overlay pnp-hidden">
+    <h1 id="displayMessageHeader"></h1>
+    <hr>
+    <br>
+    <p id="displayMessageContent"></p>
+
+    <input type="button" class="pnp-input-control right-action-button" id="closeDisplayMessageLightBox" value="Close">
+</div>

@@ -1,0 +1,48 @@
+<div class='settingsContent'>
+    <div class="settings">
+      <h2>Settings</h2>
+      <form method="post" action="cardinal_cruise_settings.cgi">
+        <input type="hidden" name="username" value="<metavar='username'>">
+        <input type="hidden" name="function" value="updateSettings">
+        <span class="field">
+          <label>Enabled:</label>
+          <select name='enabled' >
+            <option value='0'>False</option>
+            <option value='1' <metavar='enabledSelected'>>True</option>
+          </select>
+        </span>
+        <span class="field">
+          <label>Staging:</label>
+          <select name='staging' >
+            <option value='0'>False</option>
+            <option value='1' <metavar='stagingSelected'>>True</option>
+          </select>
+        </span>
+        <span class="field">
+          <label>Org Unit ID:</label>
+          <input type='text' name='orgUnitId' value='<metavar="orgUnitId">' />
+        </span>
+        <span class="field">
+          <label>Processor ID:</label>
+          <input type='text' name='processorId' value='<metavar="processorId">' />
+        </span>
+        <span class="field">
+          <label>Merchant ID:</label>
+          <input type='text' name='merchantId' value='<metavar="merchantId">' />
+        </span>
+        <span class="field">
+          <label>Transaction Password:</label>
+          <input type='text' name='transactionPassword' value='<metavar="transactionPassword">' />
+        </span>
+        <br>
+        <input type="submit" name="updateSettings" value='<metavar="settingsButtonText">' />
+      </form>
+      <div id="deleteSettingsContainer" style="display: none;">
+        <form method="post" action="cardinal_cruise_settings.cgi">
+          <input type="hidden" name="username" value="<metavar='username'>">
+          <input type="hidden" name="function" value="deleteSettings">
+          <input type="submit" name="deleteSettings" value="Delete Account" onclick="deleteAccount(event);"/>
+        </form>
+      </div>
+    </div>
+</div>

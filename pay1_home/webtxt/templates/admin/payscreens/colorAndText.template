@@ -1,0 +1,45 @@
+	<form>		
+		<input type='hidden' name='body_color' class='hiddenAttributeFields' value='<metavar='bodyColor'>' />
+		<input type='hidden' name='content_color' class='hiddenAttributeFields' value='<metavar='contentColor'>' />
+		<input type='hidden' name='section_color' class='hiddenAttributeFields' value='<metavar='sectionColor'>' />
+		<input type='hidden' name='font_color' class='hiddenAttributeFields' value='<metavar='fontColor'>' />
+		<input type='hidden' name='font_family' class='hiddenAttributeFields' value='<metavar='fontFamily'>' />
+		<input type='hidden' name='font_weight' class='hiddenAttributeFields' value='<metavar='fontWeight'>' />
+		<input type='hidden' name='font_style' class='hiddenAttributeFields' value='<metavar='fontStyle'>' />
+		<div id='backgroundSection'>		
+			<div id='backgroundTitle'>
+				<h2>Payment Screen Customization</h2>
+				Click a section in the sample below to change its color:
+			</div>
+			<div id='sampleDivBody'>
+				<div id="sampleContent">
+					<div id="sampleSection">
+						<div class='card-title'>
+							<p>Billing Address</p>
+						</div>
+						<ul>
+							<li id="pt_billing_name"><label><span class="input"><input type="text" name="pt_billing_name" readonly></span><span class="label">Name</span><span class="description"></span></label></li>
+							<li id="pt_billing_address"><label><span class="input"><input type="text" last_name="pt_billing_last_name" readonly></span><span class="label">Address</span><span class="description"></span></label></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id='fontSection'>
+			<ul>
+				<li id="fontColor"><label><span class='label'>Font Color: </span></label><div id='fontColorDiv'></div></li>
+				<li id="fontFamily">
+					<label><span class='label'>Font Family: </span></label><select name='fontFamilySelect' id='fontFamilySelect'>
+						<metavar='fontDropDownOptions'>
+					</select>
+				</li>
+				<li id="fontBold"><label><span class='label'> Bold:</span></label><input type="checkbox" name="bold" id="bold" value=""></li>
+				<li id="fontItalic"><label><span class='label'>Italic:</span></label><input type="checkbox" name="italic" id="italic" value=""></li>
+			</ul>
+		</div>
+		<div id='resetSection'><a href='#' id='resetToDefault'>Reset To Default</a></div>
+		<div id='buttonSection'>
+			<input type='button' name='applyChanges' id='applyChanges' value='Apply Changes to your Payment Screen'>
+		</div>
+		<div id='statusDiv'></div>
+	</form>

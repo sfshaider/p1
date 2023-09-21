@@ -1,0 +1,128 @@
+<div>  
+  <h1>Service Agreement</h1>
+  <hr>
+  <div class='rt-box rounded section'>
+      <label class='preformat' width='750'>Plug & Pay Technologies (PNP) will enable the company described below to resell payment gateway services in accordance to their reseller agreement & the following Terms and Conditions.
+
+PNP shall not be liable for any loss incurred as a result of use of system or software.
+
+In no event shall PNP be liable for any special, incidental, consequential or indirect damages (including, but not limited to, any claim for loss of services, lost profits, or lost revenues) arising from or in relation to this agreement or the use of the system or software, however caused and regardless of the theory of liability. 
+
+This limitation will apply even if PNP has been advised or is aware of the possibility of such damages.
+     </label> 
+  </div>
+  <br>
+
+  <span name='billAuthArea'>
+  <h1>Current Payment Information</h1>
+  <hr>
+  <div class="rt-box section rounded">
+  <label class="rt-box rounded lightgraybox full"><span class='paymentAgree'>Account Type: </span><span name="current_bill_info"><metavar="current_bill_info"></span></label>
+  <label id="billingAccountInfo" class="rt-box rounded lightgraybox full"><metavar="billing_account_info"></label>
+  </div>
+
+  <br>
+  <input type="hidden" name="ps_auth_request" value="true">
+  <h1>New Payment Information</h1>
+  <hr>
+  <div class='rt-box section rounded'>
+    <label for='ps_billing_type' class='rt-box rounded lightgraybox full'><span class='paymentAgree'>Payment Type: </span>
+       <input type="radio" name="ps_billing_type" value="credit" checked> <span>Credit</span>
+       <input type="radio" name="ps_billing_type" value="ach"> <span>ACH</span>
+    </label>
+    <br>
+    <br>
+    <div name="credit">
+      <label>
+        <span class='paymentAgree'>Payment Agreement:</span>
+        <span> I/We authorize PNP to bill my/our credit card.</span>
+      </label>
+      <br>
+      <br>
+
+        <label class="rt-box rounded third lightgraybox"><span>Card Number:</span>
+        <input type="text" name='pt_card_number' size='22' maxlength='16' required autocomplete='off' class='reseller-input-control'></label>
+        <br>
+
+        <label class="rt-box rounded quarter lightgraybox"><span>Expiration Month:</span>
+        <select class="reseller-input-control" name="pt_card_exp_month"><metavar='cardExpirationMonthSelectOptions'></select></label>
+
+        <label class="rt-box rounded quarter lightgraybox"><span>Expiration Year:</span>
+        <select class="reseller-input-control" name="pt_card_exp_year"><metavar='cardExpirationYearSelectOptions'></select></label>
+
+        <label class="rt-box rounded full lightgraybox"><span>Please check if this is a Corporate/Business Card Account:</span> <input type="checkbox" name="isBusinessCard" value='CCD'></label>
+      </div>
+  
+      <div name="ach" class='hidden'>
+  
+        <label>
+          <span class='paymentAgree'>Payment Agreement:</span> 
+          <span>I/We hereby authorize PNP to initiate debit and credit entries to my/our checking account indicated below and the bank named below, hereinafter bank, to debit or credit the same to such account. I further authorize PNP to debit said account for such amount allowed by law in the event a debit entry is rejected by the depository. </span>
+        </label>
+        <br> 
+        <br>
+
+        <label>
+          <span class='paymentAgree'>NOTE:</span>
+        </label><label class='preformat'><span> The ACH debit option is available only for U.S. banks.
+
+Your bank might require you to authorize a debtor.
+If so, please provide your bank with our NACHA bank codes: 9775071990 and 1113392673.</span>
+        </label>
+        <br>
+
+        <label>
+          <span class='paymentAgree'>Return Check Notice: </span>
+          <span>There is a $20.00 fee for all checks that are returned.</spaan>
+        </label>
+        <br>
+        <br>
+
+        <label class="rt-box rounded third lightgraybox"><span>Bank Name:</span>
+        <input name='ps_bank_name' type = 'text' class='reseller-input-control' ></label>
+  
+        <label class="rt-box rounded third lightgraybox"><span>Routing Number:</span>
+        <input type='text' name='ach_routing_number' size='20' autocomplete='off' class='reseller-input-control'></label>
+  
+        <label class="rt-box rounded third lightgraybox"><span>Account Number:</span>
+        <input name='ach_account_number' type='text' size='20' autocomplete='off' class='reseller-input-control'></label>
+  
+        <label class="rt-box rounded full lightgraybox"><span>Please check here if this is a Business Account: </span>
+        <input type='checkbox' name='isBusinessACHAccount' value='CCD'></label>
+
+      </div>
+   </div>
+
+   <br>
+   <h1>Identity Verification</h1>
+   <hr>
+   <div class='rt-box rounded section'>
+  
+        <label class="rt-box rounded half lightgraybox"><span>Name on account:</span>
+        <input class='reseller-input-control' type="text" name="ps_contact_name" value="<metavar='full_name'>" required></label>
+        
+        <label class="rt-box rounded quarter lightgraybox"><span>Last 3 digits of SSN or Tax ID</span>
+        <input class='reseller-input-control' type="text" size="4" maxlength="3" name="ps_tax_id" autocomplete="off" required></label>
+    </div>
+
+    <br>
+    <h1>Authorization Agreement</h1>
+    <hr>
+    <div class='rt-box rounded section'>
+        <label>
+          <span>I agree to pay Plug N Pay for all applicable fees and understand that PNP may terminate all services upon non-payment of any sum due to PNP.</span>
+        </label>       
+	<br>
+        <br>
+ 
+        <label class="rt-box rounded full lightgraybox"><span>Check here if you agree to all terms in this form:</span>
+        <input type="checkbox" name="tac_accept_box" value="YES" required></label>
+	<div id='tacFailure' class='rt-hidden'>
+		<label class='rt-box rounded full lightgraybox error'><span>Must Accept Terms & Conditions!</span></label>
+	</div>
+    </div>
+
+    <br>
+    <input type="button" value="Submit" class="reseller-input-control" name="billAuthSubmit">
+  </span>
+</div>

@@ -1,0 +1,50 @@
+		<ul class="resellerSelectors">
+			<li class="resellerSelector rt-hidden resellerSelectorTemplate">
+				<label class="inline">Select Subreseller:</label>
+				<input type="hidden" name="parent" />
+				<span style="display: inline-block; width: 200px">
+					<select class="reseller-input-control"><option value="none">None</option></select>
+				</span>
+				<span class="rt-float-right deleteResellerFilter" style="padding: 7px"><span class="fa fa-minus-square"></span></span>
+			</li>
+		</ul>
+		<div id='merchantFilter'>
+			<label class="inline">Filter Column:</label>
+			<span style="display: inline-block; width: 150px">
+				<select class="reseller-input-control" name="columnID">
+					<option value="username">Username</option>
+					<option value="company">Company Name</option>
+					<option value="status">Status</option>
+				</select>
+			</span>
+			<span style="display: inline-block; width: 150px">
+				<select class="reseller-input-control" name="modifier">
+					<option value="contains">Contains</option>
+					<option value="starts">Starts With</option>
+					<option value="ends">Ends With</option>
+				</select>
+			</span>
+			<span style="display: inline-block; width: 200px">
+				<input name="filter" class="reseller-input-control" placeholder="filter text" />
+			</span>
+		</div>
+		<div id='merchantTable'></div>
+		<div id='listStatus'>
+			<div id='page-info'>
+				<span></span>
+			</div>
+			<div id='spinner'></div>
+		</div>
+		<div id='listNavigation'>
+			<div class='buttonWrapper'>
+				<input type='button' name='listPageBack' class='rt-box reseller-input-control' value='<'></input>
+			</div>
+			<div id='listPageSelectContainer'><select name='listPageSelect' class='rt-box reseller-input-control'></select></div>
+			<div class='buttonWrapper'>
+				<input type='button' name='listPageNext' class='rt-box reseller-input-control' value='>'></input>
+			</div>
+		</div>
+		<div class='rt-clear-float'></div>
+		<form type='hidden' method='post' action='view.cgi'>
+			<input type='hidden' id='merchant' name='merchant' />
+		</form>

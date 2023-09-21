@@ -1,0 +1,1 @@
+		<input type='hidden' id='pt_item_<metavar="fieldName">_<metavar="itemNumber">' name='pt_item_<metavar="fieldName">_<metavar="itemNumber"' value='<metavar="fieldValue">'>

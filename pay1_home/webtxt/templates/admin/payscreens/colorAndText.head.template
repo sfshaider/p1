@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="/_css/merchants/<metavar="login">/admin_payscreens_ui.css" type="text/css" />
+<link rel="stylesheet" media="screen" type="text/css" href="/_css/colorpicker/colorpicker.css" />
+<script type="text/javascript" src="/_js/colorpicker/colorpicker.js"></script>
+<script type="text/javascript" src="/admin/_js/payscreens/colorAndText.js"></script>

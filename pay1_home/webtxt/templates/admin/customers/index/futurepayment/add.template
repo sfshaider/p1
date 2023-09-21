@@ -1,0 +1,72 @@
+<div id="addCustomerFuturePaymentLightBox" class="light-box pnp-hidden overlay">
+    <h1>Add Future Payment</h1>
+    <hr>
+
+    <div class="pnp-box third display-format">
+        <h4 class="display-format">Payment Date</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input type="text" placeholder="YYYY/MM/DD" class="pnp-box pnp-input-control" id="newFuturePaymentDate"/>
+    </div>
+
+    <div class="pnp-box third display-format">
+        <h4 class="display-format">Operation</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="newFuturePaymentOperationSelect" class="pnp-box pnp-input-control">
+            <option value="auth">Authorization</option>
+            <option value="credit">Credit</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div class="pnp-box third display-format">
+        <h4 class="display-format">Payment Source</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="newFuturePaymentPaymentSourceIDSelect" class="pnp-input-control"></select>
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Description</h4>
+        <input type="text" id="newFuturePaymentDescription" class="pnp-box pnp-input-control full" maxlength="60"/>
+    </div>
+
+    <br>
+
+    <div class="pnp-box half display-format">
+        <h4>Billing Profile</h4>
+        <select id="newFuturePaymentProfileIDSelect" class="pnp-box pnp-input-control"></select>
+    </div>
+
+    <br>
+    <div class="pnp-box third display-format">
+        <h4 class="display-format">Amount</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input type="text" id="newFuturePaymentAmount" class="pnp-input-control"/>
+        <div id="newFuturePaymentAdjustmentSpinner" class="spinner"></div>
+    </div>
+
+    <div class="pnp-box third display-format"></div>
+
+    <div class="pnp-box third display-format">
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Fee</h4>
+            <br>
+            <input id="newFuturePaymentFeeAmount" class="pnp-box pnp-input-control" readonly="">
+        </div>
+
+        <div class="pnp-box half display-format">
+            <h4 class="display-format">Total</h4>
+            <br>
+            <input id="newFuturePaymentTotalAmount" class="pnp-input-control" readonly="">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <input id="closeAddCustomerFuturePaymentLightBox" type="button" class="pnp-input-control left-action-button" value="Close"/>
+    <input id="saveFuturePayment" type="button" class="pnp-input-control right-action-button" value="Submit"/>
+</div>

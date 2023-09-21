@@ -1,0 +1,46 @@
+<div>
+        <div id="menu">
+                <label>
+                        <span>Merchant:</span>
+                        <select id="merchant" class='merchantSelect pnp-box pnp-input-control quarter'>
+                                <metavar="merchants">
+                        </select>
+                </label>
+                <input type="button" name="reload" value="Load Transactions" class='pnp-input-control pnp-box quarter'>
+                <div id="batchDetails">
+                        <label class="pnp-box rounded third">
+                                <span>Payment Type:</span>
+                                <select id="batching_payment_vehicle" class="pnp-input-control pnp-box third">
+                                        <metavar="payment_vehicle_options">
+                                </select>
+                        </label>
+                        
+
+                        <div id="batchingStartDate">
+                                <label style="display: inline-block; width:35px; text-align:center">Start Date:</label>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="year">
+                                                <metavar="year_options">
+                                        </select>
+                                </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="month">
+                                                <metavar="month_options">
+                                        </select>
+                                </span>
+                                <span style="display: inline-block; width: 150px">
+                                        <select class="pnp-input-control" name="day">
+                                                <metavar='start_day_options'>
+                                        </select>
+                                </span>
+                        </div> <!-- Start Date div -->
+                </div> <!-- Batch details div -->
+          </div> <!-- Menu div -->
+
+        <div id='spinner'></div><br>
+        <div id='tableHolder'>
+        </div> <!-- Table Holder div -->
+
+        <input type="button" id="batch" name="submit_batch" value="Settle" class="pnp-input-control pnp-box quarter pnp-hidden">
+        <input type='hidden' name='gatewayAccount' value='<metavar="gatewayAccount">'>
+</div>

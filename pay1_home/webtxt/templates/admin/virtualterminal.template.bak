@@ -1,0 +1,92 @@
+				<div id="formContainer">
+					<form>
+						<div id="modeSelectionSection" class="section">
+							<h1></h1>
+							<ul id="modeSelector">
+								<!-- the below is on one line because if it is not it causes spaces in webkit browsers, do not change it -->
+								<li id="selectCreditCardMode"><a href='#'></a></li><li id="selectPurchaseCardMode"><a href='#'></a></li><li id="selectCheckMode"><a href='#'></a></li><li id="selectBillMemberMode"><a href='#'></a></li>
+							</ul>
+						</div>
+						<div id="billMemberSection" class="section">
+							<h1></h1><hr class="sectionHeaderHR" />
+							<ul>
+								<li><label id="username"><span class="label"></span><span class="input"><input type="text" name="username"></span><span class="description"></span></label></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div id="billingAddressSection" class="section">
+							<h1></h1><hr class="sectionHeaderHR" />
+							<ul>
+								<li><label id="card_name"><span class="label"></span><span class="input"><input type="text" name="card_name"></span><span class="description"></span></label></li>
+								<li><label id="card_address1"><span class="label"></span><span class="input"><input type="text" name="card_address1"></span><span class="description"></span></label></li>
+								<li><label id="card_address2"><span class="label"></span><span class="input"><input type="text" name="card_address2"></span><span class="description"></span></label></li>
+								<li><label id="card_city"><span class="label"></span><span class="input"><input type="text" name="card_city"></span><span class="description"></span></label></li>
+								<li><label id="card_state"><span class="label"></span><span class="input"><input type="text" name="card_state"></span><span class="description"></span></label></li>
+								<li><label id="card_prov"><span class="label"></span><span class="input"><input type="text" name="card_prov"></span><span class="description"></span></label></li>
+								<li><label id="card_country"><span class="label"></span><span class="input"><input type="text" name="card_country"></span><span class="description"></span></label></li>
+								<li><label id="card_zip"><span class="label"></span><span class="input"><input type="text" name="card_zip"></span><span class="description"></span></label></li>
+								<li><label id="email"><span class="label"></span><span class="input"><input type="text" name="email"></span><span class="description"></span></label></li>
+								<li><label id="phone"><span class="label"></span><span class="input"><input type="text" name="phone"></span><span class="description"></span></label></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div id="shippingAddressSection" class="section">
+							<h1></h1><hr class="sectionHeaderHR" />
+							<ul>
+								<li><label id="ship_name"><span class="label"></span><span class="input"><input type="text" name="ship_name"></span><span class="description"></span></label></li>
+								<li><label id="address1"><span class="label"></span><span class="input"><input type="text" name="ship_address1"></span><span class="description"></span></label></li>
+								<li><label id="address2"><span class="label"></span><span class="input"><input type="text" name="ship_address2"></span><span class="description"></span></label></li>
+								<li><label id="city"><span class="label"></span><span class="input"><input type="text" name="ship_city"></span><span class="description"></span></label></li>
+								<li><label id="state"><span class="label"></span><span class="input"><input type="text" name="ship_state"></span><span class="description"></span></label></li>
+								<li><label id="prov"><span class="label"></span><span class="input"><input type="text" name="ship_prov"></span><span class="description"></span></label></li>
+								<li><label id="country"><span class="label"></span><span class="input"><input type="text" name="ship_country"></span><span class="description"></span></label></li>
+								<li><label id="zip"><span class="label"></span><span class="input"><input type="text" name="cardzip"></span><span class="description"></span></label></li>
+								<li><label id="ship_email"><span class="label"></span><span class="input"><input type="text" name="email"></span><span class="description"></span></label></li>
+								<li><label id="ship_phone"><span class="label"></span><span class="input"><input type="text" name="phone"></span><span class="description"></span></label></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div id="paymentInformationSection" class="section">
+							<h1></h1><hr class="sectionHeaderHR" />
+							<ul>
+								<li><label id="card_number"><span class="label"></span><span class="input"><input type="text" name="card_number"></span><span class="description"></span></label></li>
+								<li><label id="card_cvv"><span class="label"></span><span class="input"><input type="text" name="card_cvv"></span><span class="description"></span></label></li>
+								<li><label id="routingnum"><span class="label"></span><span class="input"><input type="text" name="routingnum"></span><span class="description"></span></label></li>
+								<li><label id="accountnum"><span class="label"></span><span class="input"><input type="text" name="accountnum"></span><span class="description"></span></label></li>
+								<li><label id="accttype"><span class="label"></span><span class="input"><input type="text" name="accttype"></span><span class="description"></span></label></li>
+								<li><label id="checktype"><span class="label"></span><span class="input"><input type="text" name="checktype"></span><span class="description"></span></label></li>
+								<li><label id="month_exp"><span class="label"></span><span class="input"><input type="text" name="month_exp"></span><span class="description"></span></label></li>
+								<li><label id="year_exp"><span class="label"></span><span class="input"><input type="text" name="year_exp"></span><span class="description"></span></label></li>
+								<li><label id="card_amount"><span class="label"></span><span class="input"><input type="text" name="card_amount"></span><span class="description"></span></label></li>
+								<li><label id="mode"><span class="label"></span><span class="input select"><select name="mode"><option value=""></option></select></span><span class="description"></span></label></li>
+								<li><label id="auth_code"><span class="label"></span><span class="input"><input type="text" name="auth_code"></span><span class="description"></span></label></li>
+								<li><label id="orderID"><span class="label"></span><span class="input"><input type="text" name="orderID"></span><span class="description"></span></label></li>
+								<li><label id="ponumber"><span class="label"></span><span class="input"><input type="text" name="ponumber"></span><span class="description"></span></label></li>
+								<li><label id="tax"><span class="label"></span><span class="input"><input type="text" name="tax"></span><span class="description"></span></label></li>
+								<li><label id="acct_code"><span class="label"></span><span class="input"><input type="text" name="acct_code"></span><span class="description"></span></label></li>
+								<li><label id="acct_code2"><span class="label"></span><span class="input"><input type="text" name="acct_code2"></span><span class="description"></span></label></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div id="settingsSection" class="section">
+							<h1></h1><hr class="sectionHeaderHR" />
+							<ul>
+								<li><label id="authpostauth"><span class="label"></span><span class="input checkbox"><input type="checkbox" name="authpostauth" value="authpostauth"></span><span class="description"></span></label></li>
+								<li><label id="cvv_ign"><span class="label"></span><span class="input checkbox"><input type="checkbox" name="cvv_ign"></span><span class="description"></span></label></li>
+								<li><label id="fraudbypass"><span class="label"></span><span class="input checkbox"><input type="checkbox" name="fraudbuypass"></span><span class="description"></span></label></li>
+								<li><label id="client"><span class="label"></span><span class="input"><input type="text" name="client"></span><span class="description"></span></label></li>
+								<li><label id="receipt_type"><span class="label"></span><span class="input"><input type="text" name="receipt_type"></span><span class="description"></span></label></li>
+								<li><label id="print_receipt"><span class="label"></span><span class="input"><input type="text" name="print_receipt"></span><span class="description"></span></label></li>
+								<li><label id="settings"><span class="label"></span><span class="input"><input type="text" name="settings"></span><span class="description"></span></label></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div id="buttonSection" class="section">
+							<ul>
+								<li><span class="input"><input type="submit" class="button"><button id="clearButton" class="button">Clear</button><button id="unlockButton" class="button">Unlock Submit Button</button></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div style="clear: both"></div>
+					</form>
+				</div>

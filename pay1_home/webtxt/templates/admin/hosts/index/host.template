@@ -1,0 +1,42 @@
+<div id="tabHosts">
+    <div id="host_add">
+        <div style="text-align: left;">
+            <span style="display: inline-block;">
+                <input class="pnp-input-control pnp-box" value="Add Merchant Host" type="button" id="showAddHostLightBox">
+            </span>
+        </div>
+
+    </div>
+
+    <div id="hostAccordion">
+        <h3 class="pnp-input-control" style="text-align: left;">Current Host</h3>
+        <div>
+            <div id="filterHost">
+                <div id="hostListNavigation" class='listNavigation'>
+                    <div class='buttonWrapper'>
+                        <input type='button' id='hostListPageBack' class='pnp-box pnp-input-control' value='<'>
+                    </div>
+
+                    <div id='hostListPageSelectContainer'>
+                        <select id='hostListPageSelect' class='pnp-box pnp-input-control'></select>
+                    </div>
+
+                    <div class='buttonWrapper'>
+                        <input type='button' id='hostListPageNext' class='pnp-box pnp-input-control' value='>'>
+                    </div>
+                </div>
+                <select class="pnp-input-control filter-select" id="filterHostSelect">
+                    <option value="fqdn">Domain</option>
+                    <option value="ipAddress">IP Address</option>
+                </select>
+                <input class="pnp-input-control display-format" style="width: 200px" id="filterHostTableInput" placeholder="Filter" type="text">
+            </div>
+            <div id="currentHosts"></div>
+
+            <span id="hostCount"></span>
+            <!-- end payment plans list section -->
+
+            <div id='hostSpinner'></div>
+        </div>
+    </div>
+</div>

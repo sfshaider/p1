@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="/_css/merchants/<metavar='login'>/virtualterminal_result.css" type="text/css" />
+<script type='text/javascript' language='javascript' src='/admin/virtualterminal/_js/VirtualTerminal.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/autoswipe.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/DataValidation.js'></script>

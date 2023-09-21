@@ -1,0 +1,4 @@
+<h4>Groups</h4>
+<select class="pnp-input-control display-format" name="groupSelect" data-placeholder="Select groups..." multiple></select>
+<br>
+<span class="pnp-box" style="color: black; font-size: 12px;" name="groupSelectMessage"></span>

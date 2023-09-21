@@ -1,0 +1,45 @@
+<!--link rel="stylesheet" type="text/css" href="/admin/v2/merchants/_css/merchants.css"/>-->
+<link rel="stylesheet" type="text/css" href="/admin/v2/merchants/_css/contact_info.css"/>
+<link rel="stylesheet" type="text/css" href="/admin/v2/merchants/_css/adjustment.css"/>
+<link rel="stylesheet" type="text/css" href="/admin/v2/risktrak/_css/risktrak.css"/>
+<script src="/_js/spin.min.js"></script>
+<script src="/_js/Charts.js"></script>
+<script src="/admin/v2/merchants/_js/update_merchant.js"></script>
+<script src="/admin/v2/merchants/_js/adjustment.js"></script>
+<script src="/admin/v2/merchants/_js/services.js"></script>
+<script src="/admin/v2/merchants/_js/security.js"></script>
+<!--<script src="/admin/v2/risktrak/_js/risktrak.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="/admin/v2/_css/contact_form.css" />-->
+<style>
+table.noFinger td,tr{
+  cursor:auto;
+}
+</style>
+<script>
+//ajaxRisktrak('<metavar="merchant">');
+
+jQuery('document').ready(function() {
+  jQuery('#editMerchantTabs').tabs();
+ // jQuery('#riskTrakTabs').tabs();
+
+//  initRisktrak();
+
+  jQuery('#editMerchantTabs label').click(function() {
+    jQuery(this).find('input').focus();
+  });
+
+  jQuery('#saveAllButton').click(function() {
+    updateMerchantContactInfo();
+  });
+
+  jQuery('input[type=button]').button();
+  //Tools.convertToGoogleTable({tableSelector:'.processorSettingsTable'});
+  //Tools.convertToGoogleTable({tableSelector:'#serviceTable', callback: function(gTable,gTableData) {
+  //  gTable.draw(gTableData, {showRowNumber: false, width:'100%', sortAscending:true, sortColumn:0});
+  //    }
+  //});
+});
+</script>
+<style>
+
+</style>

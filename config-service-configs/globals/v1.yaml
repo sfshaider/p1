@@ -1,0 +1,57 @@
+# config service required fields
+serviceName: 'globals'
+formatVersion: 1
+ttl: 60
+# global environment wide values/settings
+transaction:
+  transflags:
+    # note, always add to highest number, do not reuse nummbers!
+    flags: 
+      activate: 1
+      avsonly: 2
+      capture: 3
+      dupchk: 4
+      gift: 5
+      init: 6
+      install: 7
+      moto: 8
+      partial: 9
+      recinit: 10
+      recinitial: 11
+      recur: 12
+      recurring: 13
+      reload: 14
+      void: 15
+      nonsf: 16
+      multicurrency: 17
+      norepresent: 18
+      fund: 19
+      debit: 20
+      payment: 21
+      resub: 22
+      delay: 23
+      reauth: 24
+      noshow: 25
+      mit: 26
+      timeout: 27
+      mail: 28
+      bill: 29
+      cit: 30
+      fleet: 31
+      debt: 32
+      issue: 33
+      load: 34
+      incr: 35
+      dcc: 36
+      override: 37
+      lost: 38
+      stolen: 39
+      unload: 40
+      close: 41
+      unstatus: 42
+      suspend: 43
+      active: 44
+      balance: 45
+      gettoken: 46
+      notcof: 47
+      3d2: 48

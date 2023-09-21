@@ -1,0 +1,221 @@
+<div>
+    <h1>Settings</h1>
+<hr>
+  <div id='settings'>
+<table class="noFinger">
+<tr>
+<td><span class='cell'>Notification email address:</span></td>
+<td><span id='email' class='cell'></span></td>
+</tr>
+
+<tr>
+<td><span class='cell'>Suspend settlement if daily sales volume exceeds</span></td>
+<td><span class='cell'><span id='suspend-sales-x'></span> over <span id='suspend-sales-y'></span> day avg.</span></td>
+</tr>
+
+<tr>
+<td><span class='cell'>Suspend settlement if daily return volume exceeds</span></td>
+<td><span class='cell'><span id='suspend-return-x'></span> over <span id='suspend-return-y'></span> day avg.</span></td>
+</tr>
+
+<tr>
+<td><span class='cell'>Freeze transaction if cardholder sale volume exceeds</span></td>
+<td><span class='cell>'<span id='freeze-sales-x'></span> over <span id='freeze-sales-y'></span> day avg., or <span id='freeze-sales-z'></span>.</span></td>
+</tr>
+
+<tr>
+<td><span class='cell'>Freeze transaction if cardholder return volume exceeds</span></td>
+<td><span class='cell>'<span id='freeze-return-x'></span> over <span id='freeze-return-y'></span> day avg., or <span id='freeze-return-z'></span>.</td>
+</tr>
+</table>
+  
+  </div>
+ <br> 
+  <div id='riskTrakTabs'>
+    <ul>
+      <li><a href='#history'>History</a></li>
+      <li><a href='#currentStats'>Current Stats</a></li>
+    </ul>
+    
+    <div id='currentStats'>
+      <div id='line_chart'></div>
+      <div id='date_filter'></div>
+    </div>
+    
+    <div id='history'>
+      
+      <div id='historyFilter'>
+        <span style="display: inline-block; width: 150px">
+          <select class="reseller-input-control" name="columnID">
+            <option value="OID">Order ID</option>
+            <option value="IPAddress">IP Address</option>
+            <option value="Action">Action</option>
+            <option value="Description">Description</option>
+          </select>
+        </span>
+        <span style="display: inline-block; width: 150px">
+          <select class="reseller-input-control" name="modifier">
+            <option value="contains">Contains</option>
+            <option value="starts">Starts With</option>
+            <option value="ends">Ends With</option>
+          </select>
+        </span>
+        <span style="display: inline-block; width: 200px">
+          <input name="filter" class="reseller-input-control" placeholder="filter text" />
+        </span>
+      </div>
+      
+      <div id='historyTable'></div>
+      
+      <div id='pageButtons'>
+        <div id='button-container' class='page-button-container'>
+          <!-- <div id='button-left' class='page-button' role='button'>
+            <span class="fa fa-caret-square-o-left"></span>
+          </div>
+          <div id='button-right' class='page-button' role='button'>
+            <span class="fa fa-caret-square-o-right"></span>
+          </div> -->
+          <div id='button-template' class='hidden' role='button'>
+            <span></span>
+          </div>
+        </div>
+        <div id='listStatus'>
+          <div id='page-info'>
+            <span></span>
+          </div>
+          <div id='spinner'></div>
+        </div>
+      </div>
+
+      <div id='wrapper'>
+        <div id='order-wrapper'>
+          <div id='header'>
+            <div id='exit' class='fa fa-times fa-4'></div>
+            <div id='title'>Order Summary</div>
+          </div>
+          <div id='order-summary'>
+            
+            <div id='card'>
+              <h3>Card</h3>
+              <ul>
+                <li>
+                  <span class='card-field-label'>Name</span>
+                  <span id='CardName' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>Number</span>
+                  <span id='CardNumber' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>Exp.</span>
+                  <span id='CardDate' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>Type</span>
+                  <span id='CardType' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>Address</span>
+                  <span id='CardAddr' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>City</span>
+                  <span id='CardCity' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>State</span>
+                  <span id='CardState' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>Country</span>
+                  <span id='CardCountry' class='card-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='card-field-label'>Zip</span>
+                  <span id='CardZip' class='card-field-data'></span>
+                </li>
+              </ul>
+            </div>
+            <div id='order'>
+              <h3>Order</h3>
+              <ul>
+                <li>
+                  <span class='order-field-label'>Gateway Account</span>
+                  <span id='GatewayAccount' class='order-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='order-field-label'>Order ID</span>
+                  <span id='OID' class='order-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='order-field-label'>Amount</span>
+                  <span id='Amount' class='order-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='order-field-label'>AVS. Response</span>
+                  <span id='AVS' class='order-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='order-field-label'>CVV2 Response</span>
+                  <span id='CVV' class='order-field-data'></span>
+                </li>
+              </ul>
+            </div>
+            
+            <div id='general'>
+              <h3>Operation</h3>
+              <ul>
+                <li>
+                  <span class='general-field-label'>Type</span>
+                  <span id='Op' class='general-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='general-field-label'>Time</span>
+                  <span id='OpTime' class='general-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='general-field-label'>Status</span>
+                  <span id='OpStatus' class='general-field-data'></span>
+                </li>
+              </ul>
+              <h3>General</h3>
+              <ul>
+                <li>
+                  <span class='general-field-label'>Currency</span>
+                  <span id='Cur' class='general-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='general-field-label'>IP Address</span>
+                  <span id='IPAddress' class='general-field-data'></span>
+                </li>
+                
+                <li>
+                  <span class='general-field-label'>Country Code</span>
+                  <span id='CountryCode' class='general-field-data'></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</div>

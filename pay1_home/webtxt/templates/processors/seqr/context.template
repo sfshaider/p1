@@ -1,0 +1,14 @@
+      <context>
+        <channel><metavar="channel"></channel>
+        <clientComment><metavar="clientComment"></clientComment>
+        <clientId><metavar="clientId"></clientId>
+        <clientReference><metavar="clientReference"></clientReference>
+        <clientRequestTimeout>0</clientRequestTimeout>
+        <initiatorPrincipalId>
+          <id><metavar="initiatorPrincipalId_ID"></id>
+          <type><metavar="initiatorPrincipalId_type"></type>
+          <userId><metavar="initiatorPrincipalId_userID"></userId>
+        </initiatorPrincipalId>
+        <password><metavar="password"></password>
+      </context>
+

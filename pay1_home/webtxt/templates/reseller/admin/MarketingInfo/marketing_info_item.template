@@ -1,0 +1,8 @@
+<div class="table">
+  <div class="row">
+    <a href=<metavar="url">>
+      <div class="left title"><metavar="title"></div>
+      <div class="right description"><metavar="description"></div>
+    </a>
+  </div>
+</div>

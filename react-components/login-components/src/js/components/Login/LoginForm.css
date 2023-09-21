@@ -1,0 +1,114 @@
+.LoginForm {
+    width: 500px;
+    height: 320px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 80px auto;
+    background-color: white;
+}
+
+.PasswordWarning {
+    display: block;
+    margin: 7px;
+    font-size: 10pt;
+    font-weight: bold;
+    color: brown;
+}
+
+.LoginForm form {
+    margin-top: 5%;
+}
+
+.LoginForm form input {
+    border-radius: 3px;
+    border: 2px solid #eee;
+    width: 405px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.LoginForm form button {
+    width: 430px;
+    height: 40px;
+    background-color: #063868;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.LoginFormFooter {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.LoginFormFooter button {
+    width: 430px;
+    height: 40px;
+    background-color: #4fad26;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.LoginFormFooter button a:link {
+    text-decoration: none;
+}
+
+.LoginFormFooter button a:visited {
+    color: white;
+}
+
+.LoginFormFooter button a {
+    color: white;
+}
+
+/* Login Form Animation
+   When Next is hit
+   0. Show circle loading animation
+   1. Increase the height of the div
+   2. Hide/get rid of the Username Field
+   3. Slide the Password Input Field into the div   
+*/
+
+@keyframes dim-background {
+    0% {opacity: 0.2}
+    25%  {opacity: 0.2}
+    50%  {opacity: 0.2}
+    75%  {opacity: 0.2}
+    100% {opacity: 0.2}
+}
+
+.LoginForm-transparent {
+    animation-name: dim-background;
+    animation-duration: 4s;
+}
+
+#slide:target {
+
+}
+
+#slide {
+
+}
+
+@media (max-width: 599px) {
+    .LoginForm {
+        width: 90%;
+    }
+
+    .LoginForm form input {
+        width: 80%;
+    }
+
+    .LoginForm form button {
+        width: 86%;
+    }
+
+    .LoginFormFooter button {
+        width: 86%;
+    }
+}

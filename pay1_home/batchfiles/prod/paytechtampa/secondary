@@ -1,0 +1,36 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+use procutils;
+
+exit;
+
+if ( $#ARGV < 0 ) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+if ( $ARGV[0] eq "off" ) {
+  unlink "/home/pay1/batchfiles/logs/paytechtampa/secondary.txt";
+  &procutils::filewrite( "$username", "paytechtampa", "/home/pay1/batchfiles/logs/paytechtampa", "secondary.txt", "unlink", "", "" );
+  print "primary paytechtampa\n";
+} elsif ( $ARGV[0] eq "on" ) {
+  &procutils::filewrite( "$username", "paytechtampa", "/home/pay1/batchfiles/logs/paytechtampa", "secondary.txt", "write", "", "1" );
+  print "secondary paytechtampa on\n";
+} elsif ( $ARGV[0] eq "1" ) {
+  &procutils::filewrite( "$username", "paytechtampa", "/home/pay1/batchfiles/logs/paytechtampa", "secondary.txt", "write", "", "1" );
+  print "secondary paytechtampa 1\n";
+} elsif ( $ARGV[0] eq "2" ) {
+  &procutils::filewrite( "$username", "paytechtampa", "/home/pay1/batchfiles/logs/paytechtampa", "secondary.txt", "write", "", "2" );
+  print "secondary paytechtampa 2\n";
+} elsif ( $ARGV[0] eq "3" ) {
+  &procutils::filewrite( "$username", "paytechtampa", "/home/pay1/batchfiles/logs/paytechtampa", "secondary.txt", "write", "", "3" );
+  print "secondary paytechtampa 3\n";
+} elsif ( $ARGV[0] eq "4" ) {
+  &procutils::filewrite( "$username", "paytechtampa", "/home/pay1/batchfiles/logs/paytechtampa", "secondary.txt", "write", "", "4" );
+  print "secondary paytechtampa 4\n";
+}
+

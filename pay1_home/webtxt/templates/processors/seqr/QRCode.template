@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<title>SEQR QR Display Page</title>
+
+<script language="javascript">
+<!--
+function submit_payment(statusData) {
+  //console.log(statusData);
+  if(statusData.status == 'PAID') {
+     document.processPayment.submit()
+  }
+}
+-->
+</script>
+
+</head>
+
+<body>
+
+<script id="seqrShop"
+   src="https://cdn.seqr.com/webshop-plugin/js/seqrShop.js#!mode=demo&injectCSS=true&statusCallback=submit_payment&invoiceQRCode=<metavar='QRURL'>&statusURL=<metavar='statusURL'>&pollFreq=3000">
+</script>
+
+<metavar='message'>
+
+<form name="processPayment" action="<metavar='authURL'>" method="POST">
+<metavar='dataPairs'>
+<p>
+</form>
+
+
+<!-- src="https://cdn.seqr.com/webshop-plugin/js/seqrShop.js#!mode=demo&injectCSS=true&statusCallback=submit_payment&invoiceQRCode=<metavar='QRURL'>&statusURL=<metavar='statusURL'>"> -->
+<!--   src="/_js/seqr/seqrShop.js#!mode=demo&injectCSS=true&statusCallback=submit_payment&invoiceQRCode=<metavar='QRURL'>&statusURL=<metavar='statusURL'>"> -->
+
+</body>
+</html>
+
+

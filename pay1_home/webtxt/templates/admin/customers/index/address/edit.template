@@ -1,0 +1,63 @@
+<div id="editCustomerAddressLightBox" class="light-box pnp-hidden overlay">
+    <h1>Edit Address</h1>
+    <hr>
+
+    <input hidden id="editAddressAddressID">
+
+    <div class="pnp-box half display-format">
+        <h4>Name</h4>
+        <input type="text" id="editAddressName" class="pnp-input-control" maxlength="60">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Company</h4>
+        <input type="text" id="editAddressCompany" class="pnp-input-control" maxlength="60">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Line 1</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input type="text" id="editAddressLine1" class="pnp-input-control" maxlength="90">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Line 2</h4>
+        <input type="text" id="editAddressLine2" class="pnp-input-control" maxlength="60">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">City</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input type="text" id="editAddressCity" class="pnp-input-control" maxlength="60">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">State</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="editAddressStateSelect" class="pnp-input-control"></select>
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Postal Code</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input type="text" id="editAddressPostalCode" class="pnp-input-control" maxlength="20">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Country</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="editAddressCountrySelect" class="pnp-input-control">
+            <metavar='countrySelect'>
+        </select>
+    </div>
+
+    <br>
+    <br>
+    <input id="closeEditCustomerAddressLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="updateAddress" type="button" class="pnp-input-control right-action-button" value="Submit">
+</div>

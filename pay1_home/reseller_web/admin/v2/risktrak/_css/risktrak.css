@@ -1,0 +1,170 @@
+
+#order-wrapper{
+  display: none;
+}
+
+#exit:hover {
+  cursor:pointer;
+}
+
+#order-summary h3 {
+  background: #B5EAAA;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-top-left-radius: 15px;  
+  border-top-right-radius: 15px;
+  border: 1px solid #DDD; 
+  border-bottom: none;
+}
+
+#order-summary ul {
+  background:white;
+  border-bottom-left-radius:15px;
+  border-bottom-right-radius:15px;
+  padding-top:5px;
+  list-style-type:none;
+  overflow: auto;
+  border: 1px solid #DDD;
+}
+
+#order-summary li {
+  display:table-row;
+}
+
+#order-summary span {
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:4px;
+  display: table-cell;
+}
+
+#exit {
+  float: right;
+  text-align: right;
+}
+
+#card, #order, #general {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: table-cell;
+}
+
+#wrapper {
+  background: #F0F0F0;
+  border-radius: 20px;
+  margin-top: 30px;  
+}
+
+#order-summary {
+  table-layout: fixed;
+  width: 100%;
+  display: table;
+}
+
+#order-wrapper {
+  padding: 20px;
+}
+
+#settings {
+  background: #F0F0F0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#settings li {
+  display: table-row;
+}
+
+#settings li span.cell{
+  display: table-cell;
+}
+
+#string-filter, #action-filter {
+  float: left;
+  padding-right:20px;
+  padding-bottom: 10px;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.current, #button-container div:hover {
+  background-color: #666;
+}
+
+.page-button {
+  cursor: pointer;
+  display: inline-block;
+  margin-right:5px;
+}
+
+#button-container {
+  display: inline-block;
+  width: 100%;
+}
+
+#button-container div{
+  float: left;
+}
+
+.page-button-number {
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid #444;
+  border-radius: 3px;
+  margin-top:2px;
+  margin-left: 5px;
+  width: 10px;
+  height: 9px;
+  font-size: 50%;
+  text-align:center;  
+}
+
+.disable {
+  opacity: 0.5;
+}
+
+.disable .page-button-number {
+  cursor: default;
+}
+
+.disable div:hover {
+  background-color: none;
+}
+
+#settings {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#historyTable td {
+  height: 35px;
+}
+
+#historyTable .google-visualization-table {
+  height: 250px;
+}
+
+/* spinner */
+
+#listStatus {
+  display: table;
+}
+
+#page-info, #spinner {
+  display: table-cell;
+}
+
+#spinner, .spinner {
+  position: relative !important;
+}
+
+.spinner {
+  left: 50% !important;
+  width: 50px !important;
+  display: inline-block;
+}
+
+

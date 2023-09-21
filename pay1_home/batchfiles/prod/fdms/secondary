@@ -1,0 +1,76 @@
+#!/usr/local/bin/perl
+
+if ( $#ARGV < 0 ) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+if ( $ARGV[0] eq "off" ) {
+  unlink "/home/p/pay1/batchfiles/logs/fdms/secondary.txt";
+  unlink "/home/p/pay1/web/private/batchfiles/logs/fdmssecondary.txt";
+  print "primary fdms\n";
+} elsif ( $ARGV[0] eq "on" ) {
+  open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+  print outfile "1\n";
+  close(outfile);
+  print "secondary fdms 1\n";
+} elsif ( $ARGV[0] eq "1" ) {
+  open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+  print outfile "1\n";
+  close(outfile);
+  print "secondary fdms 1\n";
+} elsif ( $ARGV[0] eq "2" ) {
+  open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+  print outfile "2\n";
+  close(outfile);
+  print "secondary fdms 2\n";
+} elsif ( $ARGV[0] eq "3" ) {
+  open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+  print outfile "3\n";
+  close(outfile);
+  print "secondary fdms 3\n";
+} elsif ( $ARGV[0] eq "4" ) {
+  open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+  print outfile "4\n";
+  close(outfile);
+  print "secondary fdms 4\n";
+} elsif ( $ARGV[0] eq "check" ) {
+  my ( $dev1, $ino1, $mode1, $nlink1, $uid1, $gid1, $rdev1, $size1, $atime1, $mtime1, $ctime1, $blksize1, $blocks1 ) = stat "/home/p/pay1/batchfiles/logs/fdms/secondary.txt";
+  my ( $dev2, $ino2, $mode2, $nlink2, $uid2, $gid2, $rdev2, $size2, $atime2, $mtime2, $ctime2, $blksize2, $blocks2 ) = stat "/home/p/pay1/web/private/batchfiles/logs/fdmssecondary.txt";
+  if ( $mtime2 > $mtime1 ) {
+    open( infile, "/home/p/pay1/web/private/batchfiles/logs/fdmssecondary.txt" );
+    $line = <infile>;
+    chop $line;
+
+    if ( $line =~ /^(on|1)$/ ) {
+      open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+      print outfile "1\n";
+      close(outfile);
+    } elsif ( $line eq "2" ) {
+      open( outfile, ">/home/p/pay1/batchfiles/logs/fdms/secondary.txt" );
+      print outfile "2\n";
+      close(outfile);
+    } elsif ( $line eq "off" ) {
+      unlink "/home/p/pay1/batchfiles/logs/fdms/secondary.txt";
+    }
+
+    close(infile);
+  }
+  unlink "/home/p/pay1/web/private/batchfiles/logs/fdmssecondary.txt";
+}
+
+$line = `uname -n`;
+chop $line;
+if ( $line eq "steamboat" ) {
+  $line = `touch /home/p/pay1/batchfiles/logs/fdms/use24.txt`;
+  unlink "/home/p/pay1/batchfiles/logs/fdms/use26.txt";
+} elsif ( $line eq "alta" ) {
+  $line = `touch /home/p/pay1/batchfiles/logs/fdms/use26.txt`;
+  unlink "/home/p/pay1/batchfiles/logs/fdms/use24.txt";
+} elsif ( $line eq "snowbird" ) {
+  unlink "/home/p/pay1/batchfiles/logs/fdms/use26.txt";
+  unlink "/home/p/pay1/batchfiles/logs/fdms/use24.txt";
+}
+

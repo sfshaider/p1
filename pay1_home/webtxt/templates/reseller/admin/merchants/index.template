@@ -1,0 +1,19 @@
+<h1>Merchant Main Page</h1>
+<hr><br>
+
+	<div class='contentWidth' id='merchantTabs'>
+		<ul>
+			<li><a href='#merchantList'>Merchant List</a></li>
+			<li><a href='#merchantAdd'>Add Merchant</a></li>
+		</ul>
+		<div id='merchantList'>
+			<metainc='/reseller/admin/merchants/index/,list'>
+		</div>
+		<div id='merchantAdd' class='contactInfo'>
+			<div id='blurWrapper'>
+				<metainc='/reseller/admin/merchants/index/,add_merchant'>
+			</div>
+			<div id='blockInteraction' style='display: none'; width: 100%; height: 100%; zIndex: 500; opacity: 0; position: absolute; top: 0; left: 0'></div>
+		</div>
+	</div>
+</div>

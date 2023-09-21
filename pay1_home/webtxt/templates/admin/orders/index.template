@@ -1,0 +1,56 @@
+<div id = 'areaToBlur'>
+  <div>
+    <metainc='/admin/orders/index/,order'>
+  </div>
+
+  <div id='resultContainer'>
+		<div id='itemization' class="ui-accordion ui-widget ui-helper-reset ui-sortable">
+		</div>
+
+		<div id="accordion"  class="ui-accordion ui-widget ui-helper-reset ui-sortable">
+		</div>
+  </div>
+
+  <div class='hidden pnp-hidden'>
+	<div class='accordionFrame'>
+		<h3 class='accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all accordionFrameTitle'>
+			<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+		</h3> 
+
+		<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom accordionFrameContent">
+			<metainc='/admin/orders/index,order_details'>
+		</div>
+	</div>
+  </div>
+</div> <!-- Area to Blur -->
+
+<div class='pnp-hidden' id='settlePopover'>
+  <metainc='/admin/orders/index/,settle'>
+</div>
+
+<div class='pnp-hidden' id='popover'>
+  <input type="hidden" name="feeEnabled" value="<metavar='coa_enabled'>" class="hidden pnp-hidden">
+  <metainc='/admin/orders/index/,recharge'>
+</div>
+
+<div class='pnp-hidden' id="returnPopover">
+  <metainc='/admin/orders/index/,return'>
+</div>
+
+<div id="supportPopover" class="pnp-hidden">
+  <metainc='admin/orders/index/,support'>
+</div>
+
+<div class='pnp-hidden' id='tokenPrompt'>
+  <h1>Payment Data</h1>
+  <hr><br>
+  <label class="pnp-box rounded lightgraybox">
+     <span>Payment Information:</span>
+     <input type="text" name="payment_data" class='pnp-input-control'>
+  </label>
+  <input type="button" name="closeTokenPrompt" class="tokenCloseButton pnp-input-control" value="Close">
+  <br>
+<div>
+<input name="decrypt_flag" id='decryptFlag' value="<metavar='decrypt_flag'>" class="pnp-hidden hidden" type="hidden" readonly>
+<input name="no_return_flag" id='noReturnFlag' value="<metavar='no_return_flag'>" class="pnp-hidden hidden" type="hidden" readonly>
+<input name="industry_code" id='industryCode' value="<metavar='industry_code'>" class="pnp-hidden hidden" type="hidden" readonly>

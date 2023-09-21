@@ -1,0 +1,30 @@
+<tr>
+  <td bgcolor='<metavar='table_color'>' width='25%' align=center><b><metavar='message_date'></b></td>
+  <td bgcolor='<metavar='table_color'>'> 
+      &nbsp; 
+      <b><metavar='message_subject'></b> 
+      &nbsp;
+  </td>
+
+  <td align=center width='3%'>
+      <form method=post>
+          <input type=hidden name='mode' value='delete_message'>
+          <input type=hidden name='message_id' value='<metavar='message_id'>'>
+          <input type=submit class='button' value='Delete' onClick='return delete_confirm();'>
+      </form>
+  </td>
+  <td align=center width='3%'>
+    <form method=post>
+        <input type=hidden name='mode' value='edit_message'>
+        <input type=hidden name='message_id' value='<metavar='message_id'>'>
+        <input type=submit class='button' value='Edit'>
+    </form>
+  </td>
+</tr>
+<tr>
+    <td colspan=4><metavar='message_content'></td>
+</tr>
+
+<tr>
+    <td colspan=4 align=center><hr></td>
+</tr>

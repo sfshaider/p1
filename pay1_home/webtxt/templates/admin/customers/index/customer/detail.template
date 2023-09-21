@@ -1,0 +1,311 @@
+<div id="detailCustomerDiv" class="pnp-box rounded section">
+    <div class="pnp-box rounded" style="background-color: white; padding: 15px;">
+        <br>
+        <h1 id="detailCustomerHeader"></h1>
+        <hr>
+        <br>
+
+        <div id="customerTabs">
+            <ul>
+                <li><a href="#detailCustomerPrimaryInformationTab">Primary Information</a></li>
+                <li><a href="#detailCustomerAddressTab">Addresses</a></li>
+                <li><a href="#detailCustomerPhoneTab">Phones</a></li>
+                <li><a href="#detailCustomerPaymentSourceTab">Payment Sources</a></li>
+                <li><a href="#detailCustomerHistory">History</a></li>
+                <li><a href="#detailCustomerFuturePayment">Future Payments</a></li>
+                <li><a href="#detailCustomerManage">Manage</a></li>
+            </ul>
+
+            <div id="detailCustomerPrimaryInformationTab" class="tab-section">
+                <div id="detailCustomerPrimaryInformationContent">
+                    <div class="pnp-box third display-format">
+                        <h4>Username</h4>
+                        <input id="detailCustomerUsername" type="text" class="pnp-box pnp-input-control full" readonly>
+
+                        <h4>Email</h4>
+                        <input id="detailCustomerEmail" type="text" class="pnp-box pnp-input-control full" readonly>
+
+                        <h4>Name</h4>
+                        <input id="detailCustomerName" type="text" class="pnp-box pnp-input-control" readonly>
+                    </div>
+
+                    <div class="pnp-box third display-format">
+                        <h4>Default Address</h4>
+                        <input id="detailCustomerDefaultAddressName"  type="text" class="pnp-box pnp-input-control" readonly>
+                        <input id="detailCustomerDefaultAddressLine1" type="text" class="pnp-box pnp-input-control" readonly>
+                        <input id="detailCustomerDefaultAddressLine2" type="text" class="pnp-box pnp-input-control" readonly>
+                        <input id="detailCustomerDefaultAddressLine3" type="text" class="pnp-box pnp-input-control" readonly>
+                        <input id="detailCustomerDefaultAddressLine4" type="text" class="pnp-box pnp-input-control" readonly>
+                    </div>
+
+                    <div class="pnp-box third display-format">
+                        <h4>Default Phone</h4>
+                        <input id="detailCustomerDefaultPhone" type="text" class="pnp-box pnp-input-control" readonly>
+
+                        <h4>Default Fax</h4>
+                        <input id="detailCustomerDefaultFax" type="text" class="pnp-box pnp-input-control" readonly>
+                    </div>
+
+                    <div class="pnp-box third display-format"></div>
+                    <div class="pnp-box third display-format"></div>
+                    <div class="pnp-box third display-format">
+                        <input id="detailEditCustomerButton" type="button" class="pnp-box pnp-input-control" value="Edit Customer Info">
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailCustomerAddressTab" class="tab-section">
+                <div id="detailCustomerAddressContent">
+                    <input id="addAddressButton" type="button" class="pnp-box pnp-input-control quarter" value="Add Address">
+                    <div id='addressListNavigation' class="listNavigation">
+                        <div class='buttonWrapper'>
+                            <input type='button' id='addressListPageBack' class='pnp-box pnp-input-control' value='<'>
+                        </div>
+
+
+                        <div id='addressListPageSelectContainer'>
+                            <select id='addressListPageSelect' class='pnp-box pnp-input-control'></select>
+                        </div>
+
+                        <div class='buttonWrapper'>
+                            <input type='button' id='addressListPageNext' class='pnp-box pnp-input-control' value='>'>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div id="detailCustomerAddressTable">
+
+                    </div>
+
+                    <div id='addressListStatus'>
+                        <span id="addressPageInfo"></span>
+                        <div id='addressSpinner'></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailCustomerPhoneTab" class="tab-section">
+                <div id="detailCustomerPhoneContent">
+                    <input id="addPhoneButton" type="button" class="pnp-box pnp-input-control quarter" value="Add Phone">
+                    <div id='phoneListNavigation' class="listNavigation">
+                        <div class='buttonWrapper'>
+                            <input type='button' id='phoneListPageBack' class='pnp-box pnp-input-control' value='<'>
+                        </div>
+
+
+                        <div id='phoneListPageSelectContainer'>
+                            <select id='phoneListPageSelect' class='pnp-box pnp-input-control'></select>
+                        </div>
+
+                        <div class='buttonWrapper'>
+                            <input type='button' id='phoneListPageNext' class='pnp-box pnp-input-control' value='>'>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="detailCustomerPhoneTable">
+
+                    </div>
+
+                    <div id='phoneListStatus'>
+                        <span id="phonePageInfo"></span>
+                        <div id='phoneSpinner'></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailCustomerPaymentSourceTab" class="tab-section">
+                <div id="detailCustomerPaymentSourceContent">
+                    <input id="addPaymentSourceButton" type="button" class="pnp-box pnp-input-control quarter" value="Add Payment Source">
+                    <div id='paymentSourceListNavigation' class="listNavigation">
+                        <div class='buttonWrapper'>
+                            <input type='button' id='paymentSourceListPageBack' class='pnp-box pnp-input-control' value='<'>
+                        </div>
+
+
+                        <div id='paymentSourceListPageSelectContainer'>
+                            <select id='paymentSourceListPageSelect' class='pnp-box pnp-input-control'></select>
+                        </div>
+
+                        <div class='buttonWrapper'>
+                            <input type='button' id='paymentSourceListPageNext' class='pnp-box pnp-input-control' value='>'>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div id="detailCustomerPaymentSourceTable">
+
+                    </div>
+
+                    <div id='paymentSourceListStatus'>
+                        <span id="paymentSourcePageInfo"></span>
+                        <div id='paymentSourceSpinner'></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailCustomerHistory" class="tab-section">
+                <div class="pnp-box half display-format" style="height:175px;">
+                    <div class="pnp-box display-format">
+                        <h4>Start Month</h4>
+                        <select class="pnp-input-control pnp-box" id="historyStartMonth">
+                            <option value=1>January</option>
+                            <option value=2>February</option>
+                            <option value=3>March</option>
+                            <option value=4>April</option>
+                            <option value=5>May</option>
+                            <option value=6>June</option>
+                            <option value=7>July</option>
+                            <option value=8>August</option>
+                            <option value=9>September</option>
+                            <option value=10>October</option>
+                            <option value=11>November</option>
+                            <option value=12>December</option>
+                        </select>
+                    </div>
+                    <div id="historyStartDayDiv" class="pnp-box display-format">
+                        <h4>Start Day</h4>
+                        <select class="pnp-input-control pnp-box" id="historyStartDay"></select>
+                    </div>
+                    <div class="pnp-box display-format">
+                        <h4>Start Year</h4>
+                        <select class="pnp-input-control pnp-box full" id="historyStartYear"></select>
+                    </div>
+                    <br>
+                    <div class="pnp-box display-format">
+                        <h4>End Month</h4>
+                        <select class="pnp-input-control pnp-box" id="historyEndMonth">
+                            <option value=1>January</option>
+                            <option value=2>February</option>
+                            <option value=3>March</option>
+                            <option value=4>April</option>
+                            <option value=5>May</option>
+                            <option value=6>June</option>
+                            <option value=7>July</option>
+                            <option value=8>August</option>
+                            <option value=9>September</option>
+                            <option value=10>October</option>
+                            <option value=11>November</option>
+                            <option value=12>December</option>
+                        </select>
+                    </div>
+                    <div id="historyEndDayDiv" class="pnp-box display-format">
+                        <h4>End Day</h4>
+                        <select class="pnp-input-control pnp-box" id="historyEndDay"></select>
+                    </div>
+                    <div class="pnp-box display-format">
+                        <h4>End Year</h4>
+                        <select class="pnp-input-control pnp-box full" id="historyEndYear"></select>
+                    </div>
+                </div>
+
+                <div class="pnp-box half display-format" style="height: 175px;">
+                    <div class="pnp-box full display-format">
+                        <h4>Interval</h4>
+                        <select class="pnp-input-control pnp-box quarter" id="historyInterval">
+                            <option value="daily">Daily</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="pnp-box half display-format" style="vertical-align: bottom">
+                        <input id="loadCustomerHistory" class="pnp-input-control pnp-box" type="button" value="View Transaction History">
+                    </div>
+                </div>
+                <br>
+
+                <div id="historyTransactionSection" class="pnp-box rounded pnp-hidden" style="background-color: white; height: 440px;">
+                    <h1>Transaction History</h1>
+                    <hr>
+                    <div id="transactionLogListNavigation" class='listNavigation pnp-hidden'>
+                        <div class='buttonWrapper'>
+                            <input type='button' id='transactionLogListPageBack' class='pnp-box pnp-input-control' value='<'>
+                        </div>
+
+
+                        <div id='transactionLogListPageSelectContainer'>
+                            <select id='transactionLogListPageSelect' class='pnp-box pnp-input-control'>
+                            </select>
+                        </div>
+
+                        <div class='buttonWrapper'>
+                            <input type='button' id='transactionLogListPageNext' class='pnp-box pnp-input-control' value='>'>
+                        </div>
+                    </div>
+                    <div id="filterHistoryLogs" class="pnp-hidden">
+                        <select class="pnp-input-control filter-select" id="filterHistoryLogSelect">
+                            <option value="orderID">Order ID</option>
+                            <option value="amount">Amount</option>
+                            <option value="transDate">Date</option>
+                            <option value="description">Description</option>
+                        </select>
+                        <input class="pnp-input-control" style="width: 200px" id="filterHistoryLogTable" placeholder="Filter" type="text">
+                    </div>
+                    <!-- start report log table -->
+                    <div id="historyLogTable">
+
+                    </div>
+                    <!-- end of report log table -->
+                    <span id="transactionLogCount"></span>
+
+                    <br>
+                    <br>
+                    <!-- end of report log table -->
+                </div>
+                <div id='transactionLogSpinner'></div>
+
+            </div>
+
+            <div id="detailCustomerFuturePayment" class="tab-section">
+                <input id="showFuturePaymentLightBox" type="button" class="pnp-box pnp-input-control quarter" value="Add Future Payment">
+                <div id='futurePaymentListNavigation' class="listNavigation">
+                    <div class='buttonWrapper'>
+                        <input type='button' id='futurePaymentListPageBack' class='pnp-box pnp-input-control' value='<'>
+                    </div>
+
+
+                    <div id='futurePaymentListPageSelectContainer'>
+                        <select id='futurePaymentListPageSelect' class='pnp-box pnp-input-control'></select>
+                    </div>
+
+                    <div class='buttonWrapper'>
+                        <input type='button' id='futurePaymentListPageNext' class='pnp-box pnp-input-control' value='>'>
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="detailFuturePaymentSection">
+                    <div id="detailFuturePaymentTable">
+
+                    </div>
+
+
+                    <div id='futurePaymentStatus'>
+                        <span id="futurePaymentPageInfo"></span>
+                    </div>
+                    <div id='futurePaymentSpinner'></div>
+                </div>
+            </div>
+
+            <div id="detailCustomerManage" class="tab-section">
+                <div class="pnp-box half display-format">
+                    <h4>Bill/Credit Customer</h4>
+                    <input id="showBillCustomerLightBox" class="pnp-box pnp-input-control half" type="button" value="Bill/Credit">
+                </div>
+
+                <br>
+                <div class="pnp-box half display-format">
+                    <h4>Reset Password</h4>
+                    <input id="resetPassword" class="pnp-box pnp-input-control half" type="button" value="Reset">
+                </div>
+
+                <div class="pnp-box half display-format">
+                    <h4>Delete Customer</h4>
+                    <input id="deleteCustomer" class="pnp-box pnp-input-control half" type="button" value="Delete">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="detailFade" class="black_overlay"></div>
+</div>

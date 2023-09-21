@@ -1,0 +1,85 @@
+    <div class='contentArea'>
+      <div class='elements uielement infobox'>
+        <h1>What are elements?</h1>
+        <hr />
+        <p>Elements are the building blocks of our payment screens.  They can be enabled or disabled, made visible or invisible, depending on your requirements.</p>
+        <p>This page may be used to add or remove form elements or entire sections of the form.  You do this by adding element controls on the right to override the default settings.</p>
+      </div>
+      <h2>Element Control <span id='titleDescription'></span></h2>
+      <div class='uielement identifier'>
+	<form>
+	   <span class='setting'>
+	      <div id='context'>
+		   	<input name='context' id='context1' class='requiredField' type='radio' value='payScreens' checked="checked" /><label for='context1'>Pay Screens</label>
+		   	<input name='context' id='context2' class='requiredField' type='radio' value='virtualTerminal' /><label for='context2'>Virtual Terminal</label>
+	      </div>
+	      <br />
+              <label><span class='labelText'>Idenifier:</span>
+		   <input name='identifier' class='requiredField' type='text' value='' />
+	      </label>
+              <label><span class='labelText'>Type:</span>
+		   <select name='type' />
+			<option value='account'>Account</option>
+			<option value='cobrand'>Cobrand</option>
+			<option value='reseller'>Reseller</option>
+			<option value='default'>default</option>
+		   </select>
+	      </label>
+	      <input type='button' id='loadElements' value="Load Elements">
+	      <input type='button' id='resetElements' value="Reset">
+	   </span>
+	</form>
+      </div>
+      <div class='uielement data'>
+        <div class='hidden'>
+          <div class='template control'>
+            <form>
+              <div class='settings'>
+                <input type='hidden' name='original_element' value='' />
+                <input type='hidden' name='original_transaction_type' value='' />
+                <span class='setting'>
+                  <label><span class='labelText'>Element Name:</span>
+                    <input type='text' name='element' value='' />
+                  </label>
+                </span> 
+                <span class='setting'>
+                  <label><span class='labelText'>Enabled:</span>
+                    <input name='enabled' type='checkbox' value='yes' />
+		  </label>
+                </span> 
+                <span class='setting'>
+                  <label><span class='labelText'>Visible:</span>
+                    <input name='visible' type='checkbox' value='yes' />
+                  </label>
+                </span>
+                <span class='setting'>
+                  <label><span class='labelText'>Required:</span>
+                    <input name='required' type='checkbox' value='yes' />
+                  </label>
+                </span>
+                <span class='setting'>
+                  <label><span class='labelText'>Transaction Types:</span>
+                    <select name='transaction_type'>
+                      <option value='all'>All</option>
+                      <option value='credit'>Credit Cards</option>
+                      <option value='ach'>ACH/Online Check</option>
+                      <option value='purchasecard'>Purchase Card</option>
+                      <option value='swipe'>Swipe</option>
+                      <option value='seqr'>SEQR</option>
+                    </select>
+                  </label>
+                </span>
+              </div>
+              <div class='buttons'>
+                <input class='setButton' name='set' type='button' value='Set' />
+                <input class='removeButton' name='remove' type='button' value='Remove' />
+              </div>
+              <div class='controllerSpinner'></div>
+              <div class='clearFloat'></div>
+            </form>
+          </div>
+        </div>
+        <input type='button' id='addControl' value="Add Element Control">
+        <div id='controls'><div id='controlStatus'></div></div>
+      </div>
+      <div class='clearFloat'> </div>

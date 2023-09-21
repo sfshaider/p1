@@ -1,0 +1,49 @@
+<html><!-- thanks to Mike Williamson for the basis of this test form -->
+  <head>
+    <title>Order Form</title>
+  </head>
+  <body bgcolor='#FFFFFF' text='#000000' link='#0000FF' alink='#FF0000' vlink='#FF0000'>
+    <form method='POST' action='https://localhost.plugnpay.com:8443/pay/'><!-- URL that the form will post data to -->
+      <input type='hidden' name='pt_gateway_account' value='pnpdemo'><!-- this sets the account name -->
+      <input type='hidden' name='pb_cards_allowed' value='Visa,Mastercard,Amex,Discover'><!-- sets card types available -->
+      <input type='hidden' name='pt_payment_name' value='cardtest'>
+      <input type='hidden' name='pt_payment_first_name' value='card'>
+      <input type='hidden' name='pt_payment_last_name' value='test'>
+      <input type='hidden' name='pt_billing_address_1' value='123 Test St'>
+      <input type='hidden' name='pt_billing_city' value='Test'>
+      <input type='hidden' name='pt_billing_state' value='IN'>
+      <input type='hidden' name='pt_billing_email_address' value='example@example.com'>
+      <input type='hidden' name='pt_billing_phone_number' value='555-555-5555'>
+      <input type='hidden' name='pt_card_expiration' value='12/20'>
+      <input type='hidden' name='pt_transaction_amount' value='100.00'>
+      <input type='hidden' name='pt_billing_postal_code' value='50001'>
+      <input type='hidden' name='pb_receipt_type' value='simple'>
+      <input type='hidden' name='pt_customer_comments' value='these are the comments'>
+      <input type='hidden' name='pt_card_number' value='4111111111111111'>
+      <input type='hidden' name='pt_custom_value_10' value='https://www.google.com'>
+      <input type='hidden' name='pb_success_url' value='https://www.google.com'>
+      <input type='hidden' name='pt_custom_name_1' value='pnpkey'>
+      <input type='hidden' name='pt_custom_value_1' value='1'>
+      <input type='hidden' name='pt_custom_name_2' value='test2'>
+      <input type='hidden' name='pt_custom_value_2' value='2'>
+      <input type='hidden' name='pt_custom_name_3' value='test3'>
+      <input type='hidden' name='pt_custom_value_3' value='3'>
+      <input type='hidden' name='pt_custom_name_4' value='test4'>
+      <input type='hidden' name='pt_custom_value_4' value='4'>
+      <input type='hidden' name='pt_custom_name_5' value='cancelURL'>
+      <input type='hidden' name='pt_custom_value_5' value='http://plugnpay.com'>
+      <input type='hidden' name='pd_content_privacy_url' value='https://pay1.plugnpay.com/login'>
+      <input type='hidden' name='pd_shipping_policy_url' value='https://pay1.plugnpay.com/login'>
+      <br>
+      <div align='center'>
+        <p>Account Code 1: <input type='text' name='pt_account_code_1' value=''></p>
+        <p>Account Code 2: <input type='text' name='pt_account_code_2' value=''></p>
+        <p>Account Code 3: <input type='text' name='pt_account_code_3' value=''></p>
+        <p>
+          <input type='submit' name='return' value='Submit Order'>
+          <input type='reset' value='Clear Form'>
+        </p>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.ContentArea#content-area {
+    display: flex;
+    background-image: url("https://www5.static.gateway-assets.com/login/login-bg.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: 55% 60%;
+    background-size: cover;
+    height: 550px;
+}

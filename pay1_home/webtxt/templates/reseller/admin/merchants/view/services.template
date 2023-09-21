@@ -1,0 +1,80 @@
+<h1>Batching Options</h1>
+<script>
+  jQuery('document').ready(function() {
+    jQuery('#autoBatch').val(<metavar='autoBatch'>);
+    jQuery('#autoBatch').change(function() {
+      Services.setAutoBatch(jQuery('#autoBatch').val());
+    })
+  });
+</script>
+<hr>
+<table class="lightgraybox rounded rt-box noFinger">
+  <tr>
+    <td>Auto Batch:</td>
+    <td>
+      <select id="autoBatch" merchant="<metavar='merchant'>" class="reseller-input-control">
+        <option value="-1">Disabled</option>
+        <option value="0">Same Day</option>
+        <option value="1">Next Day</option>
+        <option value="2">Delay 2 Days</option>
+        <option value="3">Delay 3 Days</option>
+        <option value="4">Delay 4 Days</option>
+        <option value="5">Delay 5 Days</option>
+        <option value="6">Delay 6 Days</option>
+        <option value="7">Delay 7 Days</option>
+        <option value="14">Delay 14 Days</option>
+      </select>
+    </td>
+</table>
+</hr>
+
+<h1>Services Enabled/Available</h1>
+<script>
+  jQuery('document').ready(function() {
+    Services.setServiceButtonSettings({ id: "addRecurring", mode: "<metavar='merchantRecurring'>"})
+    Services.setServiceButtonSettings({ id: "addPasswordManagement", mode: "<metavar='merchantPasswordManagement'>"})
+    //Services.setServiceButtonSettings({ id: "addMembership", mode: "<metavar='merchantMembership'>"})
+    Services.setServiceButtonSettings({ id: "addBillpay", mode: "<metavar='merchantBillPay'>"})
+    Services.setServiceButtonSettings({ id: "addFraudTrak2", mode: "<metavar='merchantFraudtrak2'>"})
+  });
+</script>
+<hr>
+<table class="lightgraybox rounded rt-box noFinger">
+  <tr>
+    <td>Recurring:</td>
+    <td>
+      <input id="addRecurring" type="button" value="" merchant="<metavar='merchant'>" service="recurring" class="ui-button ui-corner-all ui-widget hidden" role="button">
+    </td>
+  </tr>
+  <tr>
+    <td>Recurring Password Management:</td>
+    <td>
+      <input id="addPasswordManagement" type="button" value="" merchant="<metavar='merchant'>" service="passwordmanagement" class="ui-button ui-corner-all ui-widget hidden" role="button">
+    </td>
+  </tr>
+  <!--<tr>
+    <td>Membership:</td>
+    <td>
+      <input id="addMembership" type="button" value="" merchant="<metavar='merchant'>" service="membership" class="ui-button ui-corner-all ui-widget hidden" role="button">
+    </td>
+  </tr>-->
+  <tr>
+    <td>BillPay:</td>
+    <td>
+      <input id="addBillpay" type="button" value="" merchant="<metavar='merchant'>" service="billpay" class="ui-button ui-corner-all ui-widget hidden" role="button">
+    </td>
+  </tr>
+  <tr>
+    <td>FraudTrak2:</td>
+    <td>
+      <input id="addFraudTrak2" type="button" value="" merchant="<metavar='merchant'>" service="fraudtrak2" class="ui-button ui-corner-all ui-widget hidden" role="button">
+    </td>
+  </tr>
+</table>
+<br>
+<!--<h1>Merchant Services</h1>
+<hr>
+<br>
+<div id="servicesContainer">
+  <metavar="servicesTable">
+</div>-->

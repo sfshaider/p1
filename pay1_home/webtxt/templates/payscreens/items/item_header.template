@@ -1,0 +1,10 @@
+		<div class="header">
+			<span class="item_identifier"></span>
+			<span class="item_description"></span>
+			<span class="item_cost"></span>
+			<span class="item_quantity"></span>
+			<span class="item_extended_cost"></span>
+			<span class="item_tax"></span>
+			<span class="item_extended_cost_with_tax"></span>
+			<div style="clear: both"></div>
+		</div>

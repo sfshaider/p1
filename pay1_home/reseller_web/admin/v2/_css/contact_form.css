@@ -1,0 +1,41 @@
+label.lightgraybox {
+        position: relative;
+        display: inline-block;
+        margin: 5px 0;
+        height: 74px;
+        padding: 10px;
+        border: 1px solid white;
+        background: #F0F0F0;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+label.lightgraybox.half {
+        width: 461px;
+}
+
+label.lightgraybox.third {
+        width: 306px;
+}
+
+label.lightgraybox.quarter {
+        width: 228px;
+}
+
+label.lightgraybox span {
+        display: block;
+}
+
+label.lightgraybox input:focus {
+        background: #F9FEEF;
+}
+
+select.reseller-input-control {
+        background: none;
+        background-color: white;
+        border-radius: 0px;
+}

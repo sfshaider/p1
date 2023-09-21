@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Plug and Pay Technologies, Inc. Merchant Directory</title>
+<style type="text/css">
+<!--
+tr { background-color: #ffffff }
+.tr1 { background-color: #d0c0c0 }
+.tr2 { background-color: #c0d0c0 }
+.tr3 { background-color: #c0c0d0 }
+.tr4 { background-color: #d0c0d0 }
+.tr5 { background-color: #d0d0c0 }
+.tr6 { background-color: #c0d0d0 }
+td { font-family: Arial; font-size: 75%; color: black }
+.tdr { font-family: Arial; font-size: 70%; color: black }
+th { font-family: Arial, Helvetica; font-weight: bold; font-size: 75%; text-align: left }
+-->
+</style>
+<script Language="Javascript">
+//<!-- Start Script
+function postResults() {
+  window.opener.document.addmerchant.merchant_id.value = document.generic.merchant_id.value;
+  window.opener.document.addmerchant.terminal_id.value = document.generic.pubsecret.value;
+  window.opener.document.addmerchant.banknum.value = document.generic.banknum.value;
+  window.close();
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff">
+<form name="generic">
+<table border="0" cellspacing="0">
+<tr class="tr1"><th>mid:</th><td> <input type="text" name="merchant_id" value=""><!-- 10 digits--></td>
+<tr class="tr1"><th>tid (v#):</th><td> <input type="text" name="pubsecret" value=""><!-- 16 digits--></td>
+<tr class="tr1"><th>banknum:</th><td> <input type="text" name="banknum" value=""> 6 digits</td>
+<tr><td colspan="2"><input type="button" value="Send Info" onClick="postResults();"> <input type="reset" value="Reset Form"></td>
+</table>
+</form>
+</body>
+</html>
+

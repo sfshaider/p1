@@ -1,0 +1,5 @@
+#RewriteEngine  on
+#RewriteBase    /home/p/pay1/web/newreseller/
+#RewriteRule    ^temp$  temp/  [R]
+
+

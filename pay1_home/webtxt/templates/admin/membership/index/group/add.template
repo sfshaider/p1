@@ -1,0 +1,15 @@
+<div id="addGroupLightBox" class="pnp-hidden overlay light-box">
+    <h1>Add Group</h1>
+    <hr>
+    <br>
+
+    <div class="pnp-box">
+        <h4 class="display-format">Group Name</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input id="addGroupName" type="text" class="pnp-box pnp-input-control half">
+    </div>
+
+    <input id="closeNewGroupLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="saveGroup" type="button" class="pnp-input-control right-action-button" value="Save Group">
+</div>

@@ -1,0 +1,18 @@
+<h1>Buy Rate Information</h1>
+<hr>
+<div>
+  <div class='containerHeader'>
+    <label>
+      <span>Rates For </span>
+      <select name='reseller_rates' class='reseller-input-control'>
+        <metavar='subresellers'>
+      </select> 
+    </label>
+  </div>
+
+  <div id='buyRatesContainer'>
+    <metavar='buytable'>
+  </div>
+</div>
+
+</hr>

@@ -1,0 +1,8 @@
+<table class='calculatorTable'>
+  <tr>
+    <td class='calculatorLabel'>Discount:</td><td class='calculatorValue'><span class="currencySymbol"></span><span class="adjustmentWithTax">0.00</span></td>
+  </tr>
+  <tr>
+    <td class='calculatorLabel'>Total:</td><td class='calculatorValue'><span class="currencySymbol"></span><span class="adjustedTotalWithTax">0.00</span></td>
+  </tr>
+</table>

@@ -1,0 +1,31 @@
+<style>
+#printOverlay {
+	position: fixed; 
+	display: block; 
+	top: 0px; 
+	right: 0px;
+	background: #EEEEFF;
+	padding: 5px;
+	border-radius: 0 0 0 5px;
+}
+#printOverlay input[type=button] {
+	display: inline-block;
+	border: 1px solid black;
+	background: #CCFFCC;
+}
+
+#printOverlay input[type=button]:active {
+	background: #009900;
+}
+
+@media print {
+  #printOverlay {
+	display: none;
+  }
+}
+</style>
+<div id='printOverlay'>
+<script>if (<metavar='autoPrint'>) { window.print(); }</script>
+<input type='button' value='Print Receipt' onclick='window.print()'>
+<input type='button' value='Run Another Transaction' onclick='javascript:window.location.href = "/admin/virtualterminal/?pb_merchant=<metavar="gatewayAccount">"'>
+</div>

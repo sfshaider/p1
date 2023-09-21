@@ -1,0 +1,3 @@
+<div class="g-recaptcha" data-sitekey="<metavar="sitekey">" data-callback="correctCaptcha"></div>
+<input type=hidden id="g_recaptcha_response" name="g_recaptcha_response" value="">
+

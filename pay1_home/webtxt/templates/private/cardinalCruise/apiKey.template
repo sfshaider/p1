@@ -1,0 +1,34 @@
+<div class="apiKeyContent" id="apiKeyContent">
+    <div class="apiKey">
+        <h2>API Keys</h2>
+        <h3>Add New API Key</h3>
+        <form method="post" action="cardinal_cruise_settings.cgi">
+            <input type="hidden" name="username" value="<metavar='username'>">
+            <input type="hidden" name="function" value="addApiKey">
+            <span class="field">
+              <label>Key Name:</label>
+              <input type='text' name='apiKeyName' value=''/>
+            </span>
+            <span class="field">
+              <label>API Key:</label>
+              <input type='text' name='apiKey' value=''/>
+            </span>
+            <span class="field">
+              <label>API Key Id (ApiIdentifier):</label>
+              <input type='text' name='apiKeyId' value=''/>
+            </span>
+            <input type="submit" name="addApiKey" value="Add API Key"/>
+        </form>
+        <hr />
+        <h3>Manage API Keys</h3>
+        <form method="post" action="cardinal_cruise_settings.cgi">
+            <input type="hidden" name="username" value="<metavar='username'>">
+            <input type="hidden" name="function" id="apiKeyFunction" value="">
+            <div><metavar="apiKeyTableHTML"></div>
+            <input type="submit" name="makeDefault" id="makeApiKeyDefault" value="Set Key As Default"
+                   onclick="setFunction(event, id);"/>
+            <input type="submit" name="deleteKey" id="deleteApiKey" value="Delete Key"
+                   onclick="setFunction(event, id);" />
+        </form>
+    </div>
+</div>

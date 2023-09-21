@@ -1,0 +1,119 @@
+<span name='payoutArea'>
+ <div> 
+  <h1>Billing Contact Information</h1>
+  <hr>
+  <div class='rt-box rounded section'>
+   <label class="rt-box rounded third lightgraybox"><span>Full Name:</span>
+   <input type="text" name="ps_contact_name" value="<metavar='full_name'>" class='reseller-input-control'></label>
+
+   <label class="rt-box rounded half lightgraybox"><span>Company:</span>
+   <input type="text" name="ps_contact_company" value="<metavar='company_name'>" class='reseller-input-control'></label>
+
+   <label class="rt-box rounded third lightgraybox"><span>Address:</span>
+   <input type="text" name="ps_contact_address_1" value="<metavar='address1'>" class='reseller-input-control'></label>
+
+   <label class="rt-box rounded third lightgraybox"><span>Address 2:</span>
+   <input type="text" name="ps_contact_address_2" value="<metavar='address2'>" class='reseller-input-control'></label>
+
+   <label class="rt-box rounded third lightgraybox"><span>City:</span>
+   <input type="text" name="ps_contact_city" value="<metavar='city'>" class='reseller-input-control'></label>
+
+   <label class="rt-box rounded third lightgraybox"><span>Country:</span>
+     <select name='payout_country' class='reseller-input-control'><metavar='payoutCountryOptions'></select>
+   </label>
+  
+     
+  <label class="rt-box rounded third lightgraybox"><span>State/Province:</span>
+    <select name='payout_state' class='reseller-input-control'><metavar="payoutStateOptions"></select>
+  </label>
+
+  <label class="rt-box rounded quarter lightgraybox"><span>Postal Code</span>
+  <input type="text" name="ps_contact_postal_code" value='<metavar="postal_code">' class='reseller-input-control'></label>
+
+  <label class="rt-box rounded quarter lightgraybox"><span>Phone Number:</span>
+  <input type="text" name="ps_contact_phone" value="<metavar='phone'>" class='reseller-input-control'></label>
+
+  <label class="rt-box rounded quarter lightgraybox"><span>Fax Number:</span>
+  <input type="text" name="ps_contact_fax" value="<metavar='fax'>" class='reseller-input-control'></label>
+
+  <label class="rt-box rounded third lightgraybox"><span>Email Address:</span>
+  <input type="text" name="ps_contact_email" value="<metavar='email'>" class='reseller-input-control'></label>
+ </div>
+
+ <br>
+ <h1>Account Information</h1>
+ <hr>
+  <div class='rt-box section rounded'>
+   <table class='<metavar="display_class"> noFinger' id="#existingData">
+    <tr>
+     <td>
+      <label>
+        <span>Your Account is presently set to the following:<span>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>
+        <span>ACH Routing #:<span>
+      </label>
+    </td>
+    <td>
+      <label>
+       <span name='payout_routing_num'>
+        <metavar='ach_routing_number'>
+       </span>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>
+        <span>Account #:</span>
+      </label>
+     </td>
+     <td>
+      <label>
+       <span name='payout_account_num'>
+        <metavar='ach_account_number'>
+       </span>
+      </label>
+    </td>
+   </tr>
+   <tr>
+     <td>
+      <label>
+        <span>Account Type:</span>
+       </label>
+      </td>
+      <td>
+        <label>
+          <span name="pay_account_type">
+           <metavar="commcardtype">
+          </span>
+        </label>
+       </td>
+      </tr>
+     </table>
+ 
+     <label class="rt-box rounded half lightgraybox" for='ach_routing_number'><span>Routing Number:</span>
+     <input class='reseller-input-control' type="text" name="ach_routing_number" autocomplete='off'></label>
+
+     <label class="rt-box rounded half lightgraybox" for='ach_account_number'><span>Account Number:</span>
+     <input type="text" name="ach_account_number" autocomplete='off' class='reseller-input-control'></label>
+
+     <label class='rt-box rounded lightgraybox full'>
+      <span>Check here if this is a business or corporate account: </span>
+      <input type="checkbox" name="commcardtype" value="business">
+     </label>
+  
+     <label class="rt-box rounded full lightgraybox">
+       <span class="paymentAgree">NOTE:</span>
+       <span> U.S. bank accounts only</span>
+     </label>
+    </div>
+  </div>
+ 
+  <br>
+  <input type="button" value="Update Payout Information" name='payoutSubmit' class="reseller-input-control">
+</span>

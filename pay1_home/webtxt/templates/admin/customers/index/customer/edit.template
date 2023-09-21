@@ -1,0 +1,58 @@
+<div id="editCustomerLightBox" class="light-box pnp-hidden overlay">
+    <h1>Edit Customer</h1>
+    <hr>
+    <br>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Username</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input id="editCustomerUsername" class="pnp-input-control pnp-box" type="text">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Email</h4>
+        <span class="info-span">(Will be randomly generated if left blank)</span>
+        <br>
+        <input id="editCustomerEmail" class="pnp-input-control pnp-box" type="text">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Name</h4>
+        <input id="editCustomerName" class="pnp-input-control pnp-box" type="text">
+    </div>
+
+    <br>
+    <div class="pnp-box half display-format">
+        <h4>Password</h4>
+        <input id="editCustomerPassword" class="pnp-input-control pnp-box" type="password">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Confirm Password</h4>
+        <input id="editCustomerPasswordVerify" class="pnp-input-control pnp-box" type="password">
+    </div>
+
+    <span class="info-span" style="margin-left: 5px">**Leave blank to keep the same password</span>
+
+    <div class="pnp-box full display-format">
+        <h4>Default Address</h4>
+        <select id="editCustomerDefaultAddress" class="pnp-box full pnp-input-control"></select>
+    </div>
+    <br>
+
+    <div class="pnp-box half display-format">
+        <h4>Default Phone</h4>
+        <select id="editCustomerDefaultPhone" class="pnp-box pnp-input-control"></select>
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Default Fax</h4>
+        <select id="editCustomerDefaultFax" class="pnp-box pnp-input-control"></select>
+    </div>
+
+    <br>
+    <br>
+    <input id="closeEditCustomerLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="updateCustomer" type="button" class="pnp-input-control right-action-button" value="Submit">
+</div>

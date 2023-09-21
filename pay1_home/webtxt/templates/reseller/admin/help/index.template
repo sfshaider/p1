@@ -1,0 +1,79 @@
+<h1>Helpdesk & FAQ</h1>
+<hr>
+<br>
+
+<div id="tabs">  
+
+  <!-- Tabs -->
+  <ul>
+    <li> 
+	<a href="#faqarea">FAQ</a>
+    </li>
+    <li> 
+        <a href="#tickets">My Tickets</a>
+    </li>
+    <li>
+	<a href="#helpdesk">New Ticket</a>
+    </li>
+  </ul>  
+
+  <!-- Content -->
+  <div id="faqarea">
+    <metavar="FAQSearchSection">
+  </div>
+
+  <div id="helpdesk">
+    <metavar="helpdesk">
+  </div>
+
+  <div id="tickets">
+    <metavar="myTicketArea">
+  </div>
+
+</div>
+
+<!-- Code below deals with the overlay for the FAQ search area! -->
+
+<div class='hidden overlayTemplate' width ='1038px'>
+  <table class='ticketTable'>
+    <tr>
+      <th colspan='2' height='60px'>
+         <label><span class='title'>Issue ID</span><div name='issueID' class='textInput'><span></span></div></label>
+      </th>
+    </tr>
+    <tr class='ticketRow'>
+      <td class='tableHead' height='60px'>
+        <label><span>Category</span><div name='category' class='textInput'><span></span></div></label>
+      </td>
+    </tr>
+    <tr class='ticketRow'>
+      <td class='tableHead' height='60px'>
+        <label><span>Issue</span><div name='question' class='questionArea'><span></span></div></label>
+      </td>
+    </tr>
+    <tr class='ticketRow'>
+      <td class='tableHead'>
+        <label><span>Answer</span><div name='answer' class='answerArea'><span></span></div></label>
+      </td>
+    </tr>
+    <tr class='ticketRow'>
+      <td class='tableHead' height='60px'>
+        <label><span>Keywords</span><div name='keywordList' class='textInput'><span></span></div></label>
+      </td>
+    </tr>
+  </table>
+  <label class='center'> <input type="button" value="Back to Search" class='reseller-input-control' onClick='dismissOverlay()'> </label>
+</div>
+
+<div class='hidden failureTemplate' width='1038px'>
+  <div class='o-box'>
+    <label><span class='fail'>Issue ID: <span class='fail failureID'></span></span></label>
+    <br>
+    <br>
+    <label><span class='fail'>The issue for this ID was not found!</span></label>
+  </div>
+
+  <label class='center'> <input type="button" value="Back to Search" class='o-button' onClick='dismissOverlay()'> </label>
+</div>
+
+

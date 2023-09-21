@@ -1,0 +1,2 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>var correctCaptcha = function(response) { document.getElementById('g_recaptcha_response').value = response; };</script>

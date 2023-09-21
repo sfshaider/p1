@@ -1,0 +1,168 @@
+a, h1, table, th, td {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration:underline
+}
+ 
+a:hover  {
+  color:#50ae26;
+  text-decoration:none
+}
+ 
+img {
+  border-style: none;
+}
+ 
+table {
+  border: none 0px #50ae26;
+  width: 720px;
+}
+ 
+.frame {
+  width: 760px;
+}
+ 
+th {
+  border: none 0px #036;
+  font-size: 10.5pt;
+  font-weight: normal;
+  text-align: right;
+  width: 169px;
+}
+ 
+.label {
+  font-weight: bold;
+  padding:18px 1px 5px 1px;
+  font-size: 10.5pt;
+}
+
+.labellp {
+  font-weight: bold;
+  padding: 0px 1px 0px 1px;
+  font-size: 10.5pt;
+  text-align: left;
+  vertical-align: top;
+  background-color: #f3f9e8;
+}
+
+td {
+  border:none 0px #50ae26;
+  font-size: 10pt;
+}
+ 
+.right {
+  text-align: right;
+}
+
+h1 { 
+  font-size: 11pt; 
+  font-weight: bold;
+  color: #036;
+  margin: 2px;
+}
+ 
+input.focus { 
+  background-color: #f3f9e8;
+}
+ 
+select.focus { 
+  background-color: #f3f9e8;
+}
+
+textarea.focus {
+  background-color: #f3f9e8;
+}
+
+span { 
+  color: #50ae26;
+}
+ 
+hr { 
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 4px;
+  color: #036;
+  background-color: #036;
+  height: 3px;
+  width: 750px;
+}
+ 
+#buttons { 
+  margin-top: 8px; 
+  margin-left: 260px;
+  width: 500px;
+}
+ 
+#under { 
+  margin-top: 0px;
+}
+ 
+#over { 
+  margin-top: 12px; 
+  margin-bottom: 2px;
+}
+
+#middle {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: left;
+  margin-left: 3px;
+  color: #036;
+  background-color: #036;
+  height: 1px;
+  width: 400px;
+}
+ 
+form { 
+  margin: 0px;
+} 
+
+.badcolor { 
+  color: #FF0000;
+}
+
+.date {
+  font-size: 8pt;
+}
+
+.bigger {
+  font-size: 10.5pt;
+}
+
+.menutitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 1px 1px 1px 1px;
+  font-size: 10.5pt;
+  text-align: left;
+  vertical-align: top;
+  color: #000000;
+  background-color: #cee9ae;
+  width: 100%;
+}
+
+.menuleft {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  font-weight: bold;
+  color: #000000;
+  padding: 3pt;
+  text-align: center;
+  vertical-align: top;
+  background-color: #f3f9e8;
+  width: 25%;
+}
+
+.menuright {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #333333;
+  padding: 3pt;
+  text-align: left;
+  vertical-align: top;
+  background-color: #ffffff;
+  width: 75%;
+}

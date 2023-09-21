@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Page</title>
+<!--[if lt IE 10]>
+<script src="/_js/ie-7-8-9.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+
+<meta type="template" content="type='dynamic-include', name='head-tags'" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+	<body>
+		<div id="content">
+			<div id="header">
+				<meta type="template" content="type='variable', name='headerContent'" >
+			</div>
+			<div id="mainContent">
+				<meta type="template" content="type='dynamic-include', name='content'" />
+				<meta type="template" content="type='dynamic-include', name='footer'" />
+			</div>
+		</div>
+	</body>
+</html>

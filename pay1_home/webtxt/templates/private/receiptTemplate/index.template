@@ -1,0 +1,63 @@
+<div id="formContainer">
+
+<h1>Template Upload Status</h1>
+
+<div class="bordout" width="780">
+<form method='POST' action='receiptTemplate.cgi'>
+<table width='780'>
+<tr>
+<td>
+<h3>Please Enter Merchant Information</h3>
+</td>
+</tr>
+<tr>
+<td>
+Username: <input type='text' name='pt_gateway_account' autocomplete='off'>
+ Payment Type: <select name='pd_transaction_payment_type'>
+<option value='credit'>Credit</option>
+<option value='ach'>ACH</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+Receipt Type: <select name='pb_receipt_type'>
+<option value='simple'>Simple</option>
+<option value='pos_simple'>POS Simple</option>
+<option value='email'>Email</option>
+</select>
+ Account Type: <select name='account_type'>
+<option value='account'>Account</option>
+<option value='cobrand'>Cobrand</option>
+<option value='reseller'>Reseller</option>
+<option value='default'>Default</option>
+</select>
+</td>
+</tr><tr>
+<td>
+  Receipt Format: <select name='pb_receipt_format'>
+	<option value="html">HTML</option>
+	<option value="text">Text</option>
+  </select>
+</td>
+</tr><tr>
+<td>
+  Context: <select name='pb_context'>
+    <metavar='contextOptions'>
+  </select>
+</td>
+</tr><tr>
+<td>
+  Status: <select name='pb_status'>
+    <metavar='statusOptions'>
+  </select>
+</td>
+</tr>
+<tr>
+<td>
+<input type='submit' value='Submit'>
+</td>
+</tr>
+</table>
+</form>
+</div>

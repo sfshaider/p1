@@ -1,0 +1,11 @@
+<div id="authorization">
+  <h2>Authorization Headers</h2>
+  <hr>
+  <div class='info'>
+    <label>X-Gateway-Account      : &lt;USERNAME&gt;</label><br>
+    <label>X-Gateway-API-Key-Name : &lt;API_KEY_NAME&gt;</label><br>
+    <label>X-Gateway-API-Key      : &lt;API_KEY&gt;</label>
+  </div>
+  <hr>
+</div>
+<br>

@@ -1,0 +1,92 @@
+<div id="instantdiscount">
+	<div class='header'>
+		<h1></h1>
+		<a class='tooltip'>
+			<span class='infoButton'></span>
+			<div class='info'>
+				<span class='infoText1'></span>
+				<span class='infoText2'></span>
+				<span class='infoText3'></span>
+			</div>
+		</a>
+	</div>
+	<div class='buttons'>
+		<div class='message'><h1></h1></div>
+	        <div class='credit button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+	                	<h2><span class='firstAmountLabel'></span><span class='currencySymbol'></span><span class='firstAmount'></span><span class='secondAmountLabel'></span><span class='currencySymbol'></span><span class='secondAmount'></span></h2>
+			<h2><span class='choose'></span></h2>
+			</div>
+	                <hr>
+			<div class='payButton'>	
+	                	<div class='savings'>
+	                        	<span class='savingsOf'></span><br>
+	                        	<span class='currencySymbol'></span><span class='discount'></span><br>
+	                	</div>
+	                	<div class='pay'>
+	                        	<span class='payVia'></span><br>
+	                        	<span class='type'></span>
+	                	</div>
+			</div>
+	        </div>
+		<hr class='choiceSeparator'>
+	        <div class='debit button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+	                	<h2><span class='firstAmountLabel'></span><span class='currencySymbol'></span><span class='firstAmount'></span><span class='secondAmountLabel'></span><span class='currencySymbol'></span><span class='secondAmount'></span></h2>
+			<h2><span class='choose'></span></h2>
+			</div>
+	                <hr>
+			<div class='payButton'>	
+	                	<div class='savings'>
+	                        	<span class='savingsOf'></span><br>
+	                        	<span class='currencySymbol'></span><span class='discount'></span><br>
+	                	</div>
+	                	<div class='pay'>
+	                        	<span class='payVia'></span><br>
+	                        	<span class='type'></span>
+	                	</div>
+			</div>
+	        </div>
+	        <hr class='choiceSeparator'>
+	        <div class='check button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+	                	<h2><span class='firstAmountLabel'></span><span class='currencySymbol'></span><span class='firstAmount'></span><span class='secondAmountLabel'></span><span class='currencySymbol'></span><span class='secondAmount'></span></h2>
+			<h2><span class='choose'></span></h2>
+			</div>
+	                <hr>
+			<div class='payButton'>
+	                	<div class='savings'>
+	                        	<span class='savingsOf'></span><br>
+	                        	<span class='currencySymbol'></span><span class='discount'></span><br>
+	                	</div>
+	                	<div class='pay'>
+	                        	<span class='payVia'></span><br>
+	                        	<span class='type'></span>
+	                	</div>
+			</div>
+	        </div>
+	        <hr class='choiceSeparator'>
+	        <div class='seqr button choice'>
+			<div class='titleWrapper'>
+				<h1></h1>
+	                	<h2><span class='firstAmountLabel'></span><span class='currencySymbol'></span><span class='firstAmount'></span><span class='secondAmountLabel'></span><span class='currencySymbol'></span><span class='secondAmount'></span></h2>
+			<h2><span class='choose'></span></h2>
+			</div>
+	                <hr>
+			<div class='payButton'>
+	                	<div class='savings'>
+	                        	<span class='savingsOf'></span><br>
+	                        	<span class='currencySymbol'></span><span class='discount'></span><br>
+	                	</div>
+	                	<div class='pay'>
+	                        	<span class='payVia'></span><br>
+	                        	<span class='type'></span>
+	                	</div>
+			</div>
+	        </div>
+	</div>
+	<div class='footer'><img class='poweredBy' alt='' src='/_img/'></div>
+</div>

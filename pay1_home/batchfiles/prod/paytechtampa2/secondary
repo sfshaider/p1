@@ -1,0 +1,49 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+use procutils;
+
+exit;
+
+if ( $#ARGV < 0 ) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+my $logProc = 'paytechtampa2';
+
+if ( $ARGV[0] eq "off" ) {
+  unlink "/home/pay1/batchfiles/logs/paytechtampa2/secondary.txt";
+  my $logData = { 'flag' => 'unlink' };
+  # &procutils::filewrite( "$username", "paytechtampa2", "/home/pay1/batchfiles/logs/paytechtampa2", "secondary.txt", "unlink", "", "" );
+  &procutils::writeDataLog( $username, $logProc, 'secondary', $logData );
+  print "primary paytechtampa2\n";
+} elsif ( $ARGV[0] eq "on" ) {
+  my $logData = { 'msg' => "1" };
+  # &procutils::filewrite( "$username", "paytechtampa2", "/home/pay1/batchfiles/logs/paytechtampa2", "secondary.txt", "write", "", "1" );
+  &procutils::writeDataLog( $username, $logProc, 'secondary', $logData );
+  print "secondary paytechtampa2 on\n";
+} elsif ( $ARGV[0] eq "1" ) {
+  my $logData = { 'msg' => "1" };
+  # &procutils::filewrite( "$username", "paytechtampa2", "/home/pay1/batchfiles/logs/paytechtampa2", "secondary.txt", "write", "", "1" );
+  &procutils::writeDataLog( $username, $logProc, 'secondary', $logData );
+  print "secondary paytechtampa2 1\n";
+} elsif ( $ARGV[0] eq "2" ) {
+  my $logData = { 'msg' => "2" };
+  # &procutils::filewrite( "$username", "paytechtampa2", "/home/pay1/batchfiles/logs/paytechtampa2", "secondary.txt", "write", "", "2" );
+  &procutils::writeDataLog( $username, $logProc, 'secondary', $logData );
+  print "secondary paytechtampa2 2\n";
+} elsif ( $ARGV[0] eq "3" ) {
+  my $logData = { 'msg' => "3" };
+  # &procutils::filewrite( "$username", "paytechtampa2", "/home/pay1/batchfiles/logs/paytechtampa2", "secondary.txt", "write", "", "3" );
+  &procutils::writeDataLog( $username, $logProc, 'secondary', $logData );
+  print "secondary paytechtampa2 3\n";
+} elsif ( $ARGV[0] eq "4" ) {
+  my $logData = { 'msg' => "4" };
+  # &procutils::filewrite( "$username", "paytechtampa2", "/home/pay1/batchfiles/logs/paytechtampa2", "secondary.txt", "write", "", "4" );
+  &procutils::writeDataLog( $username, $logProc, 'secondary', $logData );
+  print "secondary paytechtampa2 4\n";
+}

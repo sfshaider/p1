@@ -1,0 +1,41 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+use procutils;
+
+
+if ($#ARGV < 0) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+
+if ($ARGV[0] eq "off") {
+  &procutils::flagwrite("secondary","telecheckftf","/home/pay1/batchfiles/logs/telecheckftf","secondary.txt","unlink","","");
+  print "primary telecheckftf\n";
+}
+elsif ($ARGV[0] eq "on") {
+  &procutils::flagwrite("secondary","telecheckftf","/home/pay1/batchfiles/logs/telecheckftf","secondary.txt","write","","1\n");
+  print "secondary telecheckftf 1\n";
+}
+elsif ($ARGV[0] eq "1") {
+  &procutils::flagwrite("secondary","telecheckftf","/home/pay1/batchfiles/logs/telecheckftf","secondary.txt","write","","1\n");
+  print "secondary telecheckftf 1\n";
+}
+elsif ($ARGV[0] eq "2") {
+  &procutils::flagwrite("secondary","telecheckftf","/home/pay1/batchfiles/logs/telecheckftf","secondary.txt","write","","2\n");
+  print "secondary telecheckftf 2\n";
+}
+elsif ($ARGV[0] eq "3") {
+  &procutils::flagwrite("secondary","telecheckftf","/home/pay1/batchfiles/logs/telecheckftf","secondary.txt","write","","3\n");
+  print "secondary telecheckftf 3\n";
+}
+elsif ($ARGV[0] eq "4") {
+  &procutils::flagwrite("secondary","telecheckftf","/home/pay1/batchfiles/logs/telecheckftf","secondary.txt","write","","4\n");
+  print "secondary telecheckftf 4\n";
+}
+
+

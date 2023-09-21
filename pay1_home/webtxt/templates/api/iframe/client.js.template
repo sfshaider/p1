@@ -1,0 +1,92 @@
+// paymentapi.js Copyright 2012 Plug and Pay Technologies, Inc.
+// Written by Chris Isomaki
+// Dynamically changed when loaded from /api/iframe/sitekey/api.js
+// requires Jquery to be loaded on merchant's payment page.
+
+var payment_api;
+
+
+$('document').ready(function() {
+	payment_api = new PaymentAPI()
+	payment_api.setup();
+        // handle ie 8 wonkyness (wonkieness?)
+	try {
+		window.addEventListener('message',function(event) { payment_api.receive(event); });
+	} catch(err) {
+		window.attachEvent('onmessage',function(event) { payment_api.receive(event); });
+        }
+});
+
+
+function PaymentAPI ()
+{	
+
+	this.parameters = <metavar="parametersArray">;
+
+			
+	this.receive = function(event)
+	{
+		if (event.origin + '/' == '<metavar="resellerDomain">')
+		{
+			// console.log('Received response from gateway.');
+			this.callback(event.data);
+		}
+	}
+	
+	this.send = function()
+	{
+		// console.log('Attempting to send message to payment gateway.');
+		try
+		{
+			document.getElementById('payment_api').contentWindow.postMessage(this.collectTransactionInfo(),'<metavar="resellerDomain">');
+		}
+		catch(err)
+		{
+			// console.log('Sending of message to payment gateway failed.');
+			// console.log('Error: ' + err);
+			return;
+		}
+		// console.log('Sending of message to payment gateway succeeded.');
+	}
+	
+	this.setup = function()
+	{
+		var iFrameObject = $('<iframe>');
+		iFrameObject.css('display','none');
+		iFrameObject.attr('src','<metavar="resellerDomain">api/iframe/<metavar="siteKey">/server/');
+		iFrameObject.attr('id','payment_api');
+		$('body').append(iFrameObject);
+		
+		// make sure card data is not submitted to the merchant's server, remove name attributes
+		$('#card_number').attr('name','');
+		$('#card_cvv').attr('name','');
+		$('#card_exp').attr('name','');		
+	}
+	
+	this.collectTransactionInfo = function()
+	{
+		var queryString = '';
+		for (i = 0; i < this.parameters.length; i++)
+		{
+			var key = this.parameters[i];
+			if ($('#'+key).val() !== '' && $('#'+key).val()!==undefined)
+			{
+				queryString += key + '=' + encodeURIComponent($('#'+key).val()) + '&';
+			}
+		}
+
+		queryString += 'client=hiddeniframe';
+
+		return queryString;
+	}
+	
+	this.callback = function(message) 
+	{ 
+		alert("Payment API Error:  Callback not set.\nMessage was:\n\n" + message); 
+	}
+	
+	this.setCallback = function(newCallback)
+	{
+		this.callback = newCallback;
+	}
+}

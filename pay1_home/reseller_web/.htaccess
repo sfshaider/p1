@@ -1,0 +1,48 @@
+ErrorDocument 403 /forbidden.cgi
+<IfModule mod_perl.c>
+  PerlModule PlugNPay::AuthCookieDBI
+  PerlSetVar AuthCookieDebug "0"
+
+  PerlSetVar PNPSESSIDPath /
+  PerlSetVar PNPSESSIDLoginScript /login.cgi
+  PerlSetVar PNPSESSIDSecure 1
+  PerlSetVar PNPSESSIDHttpOnly 1
+  PerlSetVar PNPSESSIDCookieName "PNPSESSID"
+  PerlSetVar PNPSESSIDDBI_SessionLifetime 00-02-00-00
+  PerlSetVar PNPSESSIDP3P "CP=\"DSP NON ADM CUR TAI OUR IND NAV COM PUR STA PHY DEM ONL\""
+  PerlSetVar PNPSESSIDDBI_CHKUN "chicafddfakweedh"
+
+  <Files ADMIN>
+    AuthType PlugNPay::AuthCookieDBI
+    AuthName PNPSESSID
+    SetHandler perl-script
+    PerlHandler PlugNPay::AuthCookieDBI->login
+  </Files>
+
+  RedirectMatch "^/$" "/login/"
+  RedirectMatch "^/index\.html$" "/login/"
+  RedirectMatch "^/adminlogin\.html$" "/login/"
+
+  # jQuery
+  RedirectMatch "^/_js/jquery-1.12.2.min.js"   "/_js/jquery-3.5.0/jquery-3.5.0.min.js"
+  RedirectMatch "^/_js/jquery-1.10.2.min.js"   "/_js/jquery-3.5.0/jquery-3.5.0.min.js"
+  RedirectMatch "^/_js/jquery.min.js"          "/_js/jquery-3.5.0/jquery-3.5.0.min.js"
+  RedirectMatch "^/javascript/jquery.min.js"   "/_js/jquery-3.5.0/jquery-3.5.0.min.js"
+  RedirectMatch "^/api/iframe/jquery.min.js"   "/_js/jquery-3.5.0/jquery-3.5.0.min.js"
+
+  # jQuery-ui
+  RedirectMatch "^/_jqueryui/themes/plugnpay/jquery-ui.js"   "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+  RedirectMatch "^/_js/jquery_ui/jquery-ui.js"               "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+  RedirectMatch "^jquery-ui-1.10.3.custom.js"                "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+  RedirectMatch "^/_js/jquery-ui-1.10.3.custom.min.js"       "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+  RedirectMatch "^/_js/jquery-ui-1.10.3.custom.min.js"       "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+  RedirectMatch "/_js/jquery-ui-1.12.1.custom/jquery-ui.min.js" "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+  RedirectMatch "^/javascript/jquery_ui/jquery-ui.min.js"    "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.js"
+
+  # jQuery-ui CSS
+  RedirectMatch "^/_jqueryui/themes/plugnpay/jquery-ui.css"               "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.css"
+  RedirectMatch "^/_css/plugnpay-theme/jquery-ui-1.10.3.custom.css"       "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.css"
+  RedirectMatch "^/_css/plugnpay-theme/jquery-ui-1.10.3.custom.min.css"   "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.css"
+  RedirectMatch "/_js/jquery-ui-1.12.1.custom/jquery-ui.min.css"          "/_js/jquery-ui-1.13.2.custom/jquery-ui.min.css"
+
+</IfModule>

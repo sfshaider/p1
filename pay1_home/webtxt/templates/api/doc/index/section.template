@@ -1,0 +1,35 @@
+<div id="<metavar='id'>" class='accord'>
+<h2><metavar="title"></h2>
+<div>
+  <div class='tabs'>
+    <ul>
+      <li>
+        <a href='#<metavar="spec_link_json">'>Specifications</a>
+      </li>
+      <li>
+        <a href='#<metavar="example_link_json">'>Example</a>
+      </li>
+    </ul>
+    <div id="<metavar='spec_link_json'>">
+      <div>
+        {
+        <div class="paddingWrap">
+<metavar='spec_json'>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div id="<metavar='example_link_json'>">
+      <div> 
+        <div style="white-space:pre-wrap;" class="paddingWrap">
+<metavar='example_json'>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<br>

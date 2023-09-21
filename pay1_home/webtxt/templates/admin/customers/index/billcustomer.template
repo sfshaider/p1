@@ -1,0 +1,57 @@
+<div class='pnp-hidden overlay light-box' id="billCustomerLightBox">
+    <h1>Bill/Credit Customer</h1>
+    <hr>
+
+    <div class="pnp-box">
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Operation</h4>
+            <span class="info-span">*</span>
+            <br>
+            <select id="billCustomerOperationSelect" class="pnp-box half pnp-input-control">
+                <option value="auth">Authorization</option>
+                <option value="credit">Credit</option>
+            </select>
+        </div>
+
+        <div class="pnp-box half display-format">
+            <h4>Description</h4>
+            <input id="billCustomerDescription" class="pnp-box pnp-input-control" type="text" maxlength="60">
+        </div>
+
+        <div class="pnp-box half display-format">
+            <h4 class="display-format">Payment Source</h4>
+            <span class="info-span">*</span>
+            <br>
+            <select id="billCustomerPaymentSourceSelect" class="pnp-box half pnp-input-control"></select>
+        </div>
+
+        <br>
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Amount</h4>
+            <span class="info-span">*</span>
+            <br>
+            <input id="billCustomerAmount" class="pnp-box pnp-input-control half" type="text">
+            <div id="billCustomerAdjustmentSpinner" class="spinner"></div>
+        </div>
+
+        <div class="pnp-box third display-format"></div>
+
+        <div class="pnp-box third display-format">
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Fee</h4>
+                <br>
+                <input id="billCustomerFeeAmount" class="pnp-box pnp-input-control" readonly="">
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4 class="display-format">Total</h4>
+                <br>
+                <input id="billCustomerTotalAmount" class="pnp-input-control" readonly="">
+            </div>
+        </div>
+
+    </div>
+
+    <input id="billCustomer" class="right-action-button pnp-input-control" type="button" value="Submit">
+    <input id="closeBillCustomerLightBox" class="left-action-button pnp-input-control" type="button" value="Cancel">
+</div>

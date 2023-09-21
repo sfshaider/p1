@@ -1,0 +1,63 @@
+ <div id="formContainer">
+    <form method="POST" action="uploadStatus.cgi">
+      <h1>Template Uploader</h1>
+      <div class="bordup" width="780">
+        <table>
+           <tr>
+             <td>
+               <h3>For Use With Receipt Templates</h3>
+             </td>
+           </tr>
+        </table>
+      </div>
+<div class="bordmid" width="780" >
+<table width = '780'>
+<tr>
+<td>
+<label >Username:</label>
+<input type="text" autocomplete="off" name="pt_gateway_account" value=<metavar='pt_gateway_account'>>
+</td>
+<td>
+<label >Account Type:</label>
+
+<select name="account_type">
+<metavar='type'>
+</select>
+</td><td>
+<label >Receipt Type:</label>
+<select name='pb_receipt_type'>
+<metavar='pb_receipt_type'>
+</select>
+</td></tr>
+<td>
+<label >Payment Type:</label>
+<select name="pd_transaction_payment_type">
+<metavar='pd_transaction_payment_type'>
+</select>
+</td>
+<td>
+<Label>Format:</label>
+<select name='pb_receipt_format'>
+<metavar='pb_receipt_format'>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+  Context: <select name='pb_context'>
+    <metavar='contextOptions'>
+  </select>
+</td>
+<td>
+  Status: <select name='pb_status'>
+    <metavar='statusOptions'>
+  </select>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="borddwn" width="780">
+<textarea id="centerer" autocomplete="off" name="pb_receipt_template" rows = "25" cols = "75" ><metavar='pb_receipt_template'></textarea>
+<input id="centerer" type="submit" value="Submit">
+</div>

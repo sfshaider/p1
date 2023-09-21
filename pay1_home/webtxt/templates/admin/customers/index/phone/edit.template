@@ -1,0 +1,31 @@
+<div id="editCustomerPhoneLightBox" class="light-box pnp-hidden overlay">
+    <h1>Edit Phone</h1>
+    <hr>
+    <br>
+    <input hidden id="editCustomerPhoneID">
+
+    <div class="pnp-box third display-format">
+        <h4 class="display-format">Phone Number</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input id="editCustomerPhoneNumber" class="pnp-input-control pnp-box" type="text" maxlength="10">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4>Description</h4>
+        <input id="editCustomerPhoneDescription" class="pnp-input-control pnp-box" type="text" maxlength="60">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Phone General Type</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="editCustomerPhoneSelect" class="pnp-input-control pnp-box quarter">
+            <metavar='general_type_options'>
+        </select>
+    </div>
+
+    <br><br>
+    <input id="closeEditCustomerPhoneLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="updatePhone" type="button" class="pnp-input-control right-action-button" value="Submit">
+</div>

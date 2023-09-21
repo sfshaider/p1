@@ -1,0 +1,54 @@
+<header>
+  <h1>Reseller Profile</h1>
+  <hr>
+  <br>
+</header>
+
+<!-- Tabs -->
+
+<div id="tabs">
+  <ul>
+    <li>
+      <a href='#contact'>Contact Information</a>
+    </li>
+    <li>
+      <a href='#billing'>Billing Authorization</a>
+    </li>
+    <li>
+      <a href='#rates'>Buy Rates</a>
+    </li>
+    <li>
+      <a href='#payout'>Commissions Payout</a>
+    </li>
+  </ul>
+
+
+  <!-- Content -->
+
+  <div id='contact'>
+    <metavar='contactArea'>
+  </div>
+  
+  <div id='billing'>
+    <metavar='bill_auth'>
+  </div>
+
+  <div id='rates'>
+    <metavar='buy_rates'>
+  </div>
+
+  <div id='payout'>
+    <metavar='payout_info'>
+  </div>
+
+</div>
+
+<!-- Templates -->
+
+<div class="overlayTemplate hidden" onClick='jQuery(this).remove()'>
+  <div class="infoDiv">
+	<label><span name="message_text"></span></label>
+	<br>
+	<label class='infoLink'>Click to Dismiss</label>
+  </div>
+</div>

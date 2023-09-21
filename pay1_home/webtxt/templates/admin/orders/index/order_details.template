@@ -1,0 +1,179 @@
+<!-- Transaction Details Section -->
+<div class="transactionDetailsSection">
+	<input type="hidden" name="paymentAccount" value="">
+	<input type="hidden" name="pnp_transaction_id" value="">
+	<input type="hidden" name="pnp_order_id" value="">
+	<div class="row">
+		<div class="col-4">
+			<h4 class="divider">Details</h4>
+			<ul>
+				<li id="td_transaction_status"><label>Transaction Status: </label><span class="data transaction-state-id"></span></li>
+				<li id="td_date_time"><label>Date: </label><span class="data"></span></li>
+				<li id="td_processor"><label>Processor: </label><span class="data"></span></li>
+				<li id="td_job_id" style="display:none;"><label>Job ID: </label><span class="data"></span></li>
+			</ul>
+		</div>
+		<div class="col-4">
+			<h4 class="divider">Amounts <span id="td_currency"><span class="data"></span></span></h4>
+			<ul>
+				<li id="td_base_amount"><label>Base Amount: </label><span class="data pnp-amount"></span></li>
+				<li id="td_tax_amount"><label>Tax: </label><span class="data pnp-amount"></span></li>
+				<li id="td_base_tax" style="display:none;"><label>Base Tax: </label><span class="data pnp-amount"></span></li>
+				<li id="td_fee_amount" style="display:none;"><label>Fee Amount: </label><span class="data pnp-amount"></span></li>
+				<li id="td_fee_tax" style="display:none;"><label>Fee Tax: </label><span class="data pnp-amount"></span></li>
+				<li id="td_total_amount"><label>TOTAL: </label><span class="data pnp-amount"></span></li>
+				<li id="td_settled_amount"><label>Settled Amount: </label><span class="data pnp-amount"></span></li>
+			</ul>
+		</div>
+		<div class="col-4">
+			<h4 class="divider">Payment Information</h4>
+			<ul>
+				<li id="td_payment_name"><label>Name: </label><span class="data"></span></li>
+				<li id="td_card_number"><label>Card Number: </label><span class="data"></span></li>
+				<li id="td_card_expiration_date"><label>Card Expiration: </label><span class="data"></span></li>
+				<li id="td_ach_routing_number"><label>Routing Number: </label><span class="data"></span></li>
+				<li id="td_ach_account_number"><label>Account Number: </label><span class="data"></span></li>
+			</ul>
+		</div>
+	</div>
+	<div id="ts_more_details">
+		<div class="row">
+			<div class="col-4">
+				<h4 class="divider">Account Codes</h4>
+				<ul>
+					<li id="td_account_code_1"><label>Account Code 1: </label><span class="data"></span></li>
+					<li id="td_account_code_2"><label>Account Code 2: </label><span class="data"></span></li>
+					<li id="td_account_code_3"><label>Account Code 3: </label><span class="data"></span></li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<h4 class="divider">Billing Information</h4>
+				<ul>
+					<li id="td_billing_name"><label>Name: </label><span class="data"></span></li>
+					<li id="td_billing_address"><label>Address: </label><span class="data"></span></li>
+					<li id="td_billing_city"><label>City: </label><span class="data"></span></li>
+					<li id="td_billing_state"><label>State: </label><span class="data"></span></li>
+					<li id="td_billing_postal_code"><label>Zip: </label><span class="data"></span></li>
+					<li id="td_billing_country"><label>Country: </label><span class="data"></span></li>
+					<li id="td_billing_email_address"><label>Email: </label><span class="data"></span></li>
+					<li id="td_billing_phone_number"><label>Phone: </label><span class="data"></span></li>
+					<li id="td_billing_fax_number"><label>Fax: </label><span class="data"></span></li>
+					<li id="td_billing_company"><label>Company: </label><span class="data"></span></li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<h4 class="divider">Shipping Information</h4>
+				<ul>
+					<li id="td_shipping_name"><label>Name: </label><span class="data"></span></li>
+					<li id="td_shipping_address"><label>Address: </label><span class="data"></span></li>
+					<li id="td_shipping_city"><label>City: </label><span class="data"></span></li>
+					<li id="td_shipping_state"><label>State: </label><span class="data"></span></li>
+					<li id="td_shipping_postal_code"><label>Zip: </label><span class="data"></span></li>
+					<li id="td_shipping_country"><label>Country: </label><span class="data"></span></li>
+					<li id="td_shipping_email_address"><label>Email: </label><span class="data"></span></li>
+					<li id="td_shipping_phone_number"><label>Phone: </label><span class="data"></span></li>
+					<li id="td_shipping_fax_number"><label>Fax: </label><span class="data"></span></li>
+					<li id="td_shipping_company"><label>Company: </label><span class="data"></span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-8" id="transactionHistory">
+				<h4 class="divider">History</h4>
+				<ul>
+					<li id="td_auth_time"><label>Authorized: </label><span class="data"></span></li>
+					<li id="td_reauth_time"><label>Reauthorized: </label><span class="data"></span></li>
+					<li id="td_mark_time"><label>Marked: </label><span class="data"></span></li>
+					<li id="td_postauth_time"><label>Settled: </label><span class="data"></span></li>
+					<li id="td_void_time"><label>Voided: </label><span class="data"></span></li>
+					<li id="td_credit_time"><label>Credit: </label><span class="data"></span></li>
+					<li id="td_return_time"><label>Return: </label><span class="data"></span></li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<h4 class="divider">Bank Response</h4>
+				<ul>
+					<li id="td_processor_message"><label>Message: </label><span class="data"></span></li>
+					<li id="td_authorization_code"><label>Authorziation Code: </label><span class="data"></span></li>
+					<li id="td_avs_response_code"><label>AVS Response Code: </label><span class="data"></span></li>
+					<li id="td_cvv_response_code"><label>CVV Response Code: </label><span class="data"></span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-8">
+				<h4 class="divider">Token Information</h4>
+				<ul>
+					<li id="td_processor_reference_id"><label>Processor Reference ID: </label><span class="data"></span></li>
+					<li id="td_processor_token"><label>Processor Token: </label><span class="data"></span></li>
+					<li id="td_payment_token"><label>Payment Token: </label><span class="data"></span>
+						<input type="hidden" name="hex_token_value" value="">
+						<input name="redeemTokenButton" class="pnp-input-control" value="Get Payment Data" type="button" style="display:none;">
+					</li>
+				</ul>
+			</div>
+			<div class="col-4">
+				<h4 class="divider">Support Information</h4>
+				<input name="supportInfoButton" class="pnp-input-control" value="Get Support Info" type="button">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<h4 class="divider">Actions</h4>
+			<ul>
+				<li id="ta_settle" style="display:none;">
+					<input type="hidden" name="original_auth_amount" value="">
+					<input type="button" name="settle" value="Mark for Settlement" class="pnp-input-control">
+				</li>
+				<li id="ta_void" style="display:none;">
+					<input type="button" value="Void Transaction" class="voidButton pnp-input-control">
+				</li>
+				<li id="ta_return" style="display:none;">
+					<input type="button" value="Return Transaction" class="returnButton pnp-input-control">
+				</li>
+				<li id="ta_recharge" style="display:none;">
+					<input type="button" name="recharge" value="Run a New Transaction with this Payment Information" class="pnp-input-control">
+				</li>
+			</ul>
+		</div>
+		<div class="col-6">
+			<h4 class="divider">Receipts</h4>
+			<ul>
+				<li>
+					<form method="POST" action="/admin/orders/receipt.cgi" target="_blank">
+						<input type="hidden" name="username" value="">
+						<input type="hidden" name="pnp_transaction_id" value="">
+						<input type="hidden" name="receipt_type" value="simple">
+						<input class="pnp-input-control" value="Std. Simple" type="submit">
+					</form>
+				</li>
+				<li class="itemized_receipts" style="display:none">
+					<form method="POST" action="/admin/orders/receipt.cgi" target="_blank">
+						<input type="hidden" name="username" value="">
+						<input type="hidden" name="pnp_transaction_id" value="">
+						<input type="hidden" name="receipt_type" value="itemized">
+						<input class="pnp-input-control" value="Std. Itemized" type="submit">
+					</form>
+				</li>
+				<li>
+					<form method="POST" action="/admin/orders/receipt.cgi" target="_blank">
+						<input type="hidden" name="username" value="">
+						<input type="hidden" name="pnp_transaction_id" value="">
+						<input type="hidden" name="receipt_type" value="pos_simple">
+						<input class="pnp-input-control" value="POS Simple" type="submit">
+					</form>
+				</li>
+				<li class="itemized_receipts" style="display:none">
+					<form method="POST" action="/admin/orders/receipt.cgi" target="_blank">
+						<input type="hidden" name="username" value="">
+						<input type="hidden" name="pnp_transaction_id" value="">
+						<input type="hidden" name="receipt_type" value="pos_itemized">
+						<input class="pnp-input-control" value="POS Itemized" type="submit">
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- End Transaction Details Section -->

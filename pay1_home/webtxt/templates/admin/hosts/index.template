@@ -1,0 +1,46 @@
+<div id="index" class='rounded pnp-box section'>
+    <div id='filterFrame'>
+        <div class="merchantSelect">
+            <label>
+                <span>Select Merchant:</span>
+                <select id="merchant_names" class='pnp-box pnp-input-control quarter'>
+                    <option value='' disabled selected>Select A Merchant</option>
+                    <metavar='linked_accounts'>
+                </select>
+            </label>
+            <input type="button" id="reload_accounts" class="pnp-input-control pnp-box quarter" value="Reload Accounts">
+        </div>
+    </div>
+
+    <div id="dialogBox">
+        <span id="dialogContent"></span>
+    </div>
+
+    <div id="tabs">
+        <div id='dialog-box'>
+            <span id="dialog-message"></span>
+        </div>
+        <div id='spinner'></div>
+        <ul>
+            <li> <a href="#tabHosts">Hosts</a> </li>
+            <li> <a href="#tabCredential">Credentials</a> </li>
+            <li> <a href="#tabHostConnections">Host Connections</a></li>
+        </ul>
+
+        <div>
+            <metavar="host_template">
+            <metavar="credential_template">
+            <metavar="host_connection_template">
+        </div>
+    </div>
+</div>
+
+<!-- start of lightboxes -->
+<metainc='/admin/hosts/index,message'>
+<metainc="/admin/hosts/index/host/,add">
+<metainc="/admin/hosts/index/host/,edit">
+<metainc="/admin/hosts/index/hostconnection/,add">
+<metainc="/admin/hosts/index/hostconnection/,edit">
+<metainc="/admin/hosts/index/credential/,add">
+<metainc="/admin/hosts/index/credential/,edit">
+<!-- end of lightboxes -->

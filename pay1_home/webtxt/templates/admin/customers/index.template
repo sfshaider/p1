@@ -1,0 +1,77 @@
+<div id="index">
+    <!-- begin filter and customer table section -->
+    <div class="section pnp-box rounded">
+        <div id='filterFrame'>
+            <div class="merchantSelect">
+                <label>
+                    <span>Select Merchant:</span>
+                    <select id="merchant_names" class='pnp-box pnp-input-control quarter'>
+                        <option value='' disabled selected>Select A Merchant</option>
+                        <metavar='linked_accounts'>
+                    </select>
+                </label>
+                <input type="button" id="reload_table" class="pnp-input-control pnp-box quarter" value="Reload Customers">
+            </div>
+
+            <div id='customerFilter'>
+                <label class="inline">Filter Column:</label>
+                <span style="display: inline-block; width: 150px">
+                    <select class="pnp-input-control" name="columnID">
+                            <option value="username">Username</option>
+                            <option value="name">Name</option>
+                            <option value="email">Email</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <option value="phone">Phone</option>
+                            <option value="postalCode">Zip</option>
+
+                    </select>
+                </span>
+                <span style="display: inline-block; width: 150px">
+                    <select class="pnp-input-control" name="modifier">
+                            <option value="starts">Starts With</option>
+                            <option value="contains" selected>Contains</option>
+                            <option value="ends">Ends With</option>
+                    </select>
+                </span>
+                <span style="display: inline-block; width: 200px">
+                    <input id="customerFilterInput" type="text" class="pnp-input-control pnp-box" placeholder="filter text"/>
+                </span>
+            </div>
+        </div>
+
+        <div id="dialogBox">
+            <span id="dialogContent"></span>
+        </div>
+
+        <div class="pnp-box rounded">
+            <metainc='/admin/customers/index/,customers'>
+        </div>
+
+    </div>
+
+    <div id="detailCustomer" class="pnp-hidden">
+        <metainc='/admin/customers/index/customer,detail'>
+    </div>
+</div>
+
+<!-- start of lightboxes -->
+<metainc='/admin/customers/index,message'>
+<metainc='/admin/customers/index,billcustomer'>
+
+<metainc='/admin/customers/index/customer,add'>
+<metainc='/admin/customers/index/customer,edit'>
+
+<metainc='/admin/customers/index/address,add'>
+<metainc='/admin/customers/index/address,edit'>
+
+<metainc='/admin/customers/index/phone,add'>
+<metainc='/admin/customers/index/phone,edit'>
+
+<metainc='/admin/customers/index/paymentsource,add'>
+<metainc='/admin/customers/index/paymentsource,edit'>
+
+<metainc='/admin/customers/index/futurepayment,add'>
+<metainc='/admin/customers/index/futurepayment,edit'>
+<metainc='/admin/customers/index/futurepayment,view'>
+<!-- end of lightboxes -->

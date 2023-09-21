@@ -1,0 +1,28 @@
+  <!--<div id='contactInfoWrapper' class='rt-box inline-block rounded'>-->
+    <div id="merchantMainContact" class='lightgraybox rt-box rounded section'>
+      <h1>Company/Primary Contact</h1>
+      <input type='hidden' name='gatewayAccountName' value='<metavar='merchant'>'>
+      <label class="rt-box inline-block half" for="companyName"><span>Company Name:</span><input class="reseller-input-control" name="companyName" placeholder="Company Name" value="<metavar="companyName">"></label>
+      <label class="rt-box inline-block half" for="primaryContactName"><span>Primary Contact Name:</span><input class="reseller-input-control" name="primaryContactName" placeholder="Primary Contact Name" value="<metavar="primaryContactName">"></label>
+      <label class="rt-box inline-block half" for="companyAddress1"><span>Address Line 1:</span><input class="reseller-input-control" name="companyAddress1" placeholder="Address Line 1" value="<metavar="companyAddress1">"></label>
+      <label class="rt-box inline-block half" for="companyAddress2"><span>Address Line 2:</span><input class="reseller-input-control" name="companyAddress2" placeholder="Address Line 2" value="<metavar="companyAddress2">"></label>
+      <label class="rt-box inline-block third" for="companyCountry"><span>Country:</span><select class="reseller-input-control" class="country" placeholder="Country" name="companyCountry"><metavar='companyCountryOptions'></select></label>
+      <label class="rt-box inline-block third" for="companyStateProvince"><span>State/Province:</span><select class="reseller-input-control" class="state" name="companyStateProvince"><metavar='companyStateOptions'></select></label>
+      <label class="rt-box inline-block third" for="companyCity"><span>City:</span><input class="reseller-input-control" name="companyCity" placeholder="City" value="<metavar="companyCity">"></label>
+      <label class="rt-box inline-block third" for="companyPostalCode"><span>ZIP/Postal Code:</span><input class="reseller-input-control" name="companyPostalCode" placeholder="Postal Code" value="<metavar="companyPostalCode">"></label>
+      <label class="rt-box inline-block third" for="companyPhone"><span>Phone:</span><input class="reseller-input-control" name="companyPhone" placeholder="Contact Phone Number" value="<metavar="companyPhone">"></label>
+      <label class="rt-box inline-block third" for="companyFax"><span>Alternative Number:</span><input class="reseller-input-control" name="companyFax" placeholder="Fax Number" value="<metavar="companyFax">"></label>
+      <label class="rt-box inline-block third" for="companyEmail"><span>Email:</span><input class="reseller-input-control" name="companyEmail" placeholder="Email Address" value="<metavar="companyEmail">"></label>
+      <label class="rt-box inline-block half" for="companyURL"><span>Web Site Address</span><input class="reseller-input-control" name="companyURL" placeholder="Website URL" value="<metavar="companyURL">"></label>
+    </div>
+    <div id="merchantTechContact" class='lightgraybox rt-box rounded section'>
+      <h1>Technical Contact</h1>
+      <label class="rt-box inline-block half" for="technicalContactName"><span>Technical Contact Name:</span><input class="reseller-input-control" name="technicalContactName" placeholder="Technical Contact Name" value="<metavar="technicalContactName">"></label>
+      <label class="rt-box inline-block quarter" for="technicalContactPhone"><span>Phone:</span><input class="reseller-input-control" name="technicalContactPhone" placeholder="Technical Contact Phone Number" value="<metavar="technicalContactPhone">"></label>
+      <label class="rt-box inline-block quarter" for="technicalContactEmail"><span>Email:</span><input class="reseller-input-control" name="technicalContactEmail" placeholder="Technical Contact Email" value="<metavar="technicalContactEmail">"></label>
+    </div>
+    <div id="merchantBillingContact" class='lightgraybox rt-box rounded section'>
+      <h1>Billing Contact</h1>
+      <label class="rt-box inline-block half" for="billingContactEmail"><span>Billing Email:</span><input class="reseller-input-control" name="billingContactEmail" placeholder="Billing Contact Email" value="<metavar="billingContactEmail">"></label>
+    </div>
+  <!--</div>-->

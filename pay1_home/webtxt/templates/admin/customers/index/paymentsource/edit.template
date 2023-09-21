@@ -1,0 +1,11 @@
+<div id="editCustomerPaymentSourceLightBox" class="light-box pnp-hidden overlay">
+    <h1>Edit Payment Source</h1>
+    <hr>
+
+    <input hidden id="editPaymentSourcePaymentSourceID">
+    <metainc='/admin/customers/index/paymentsource/,form'>
+
+    <br><br>
+    <input id="closeEditCustomerPaymentSourceLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="updatePaymentSource" type="button" class="pnp-input-control right-action-button" value="Submit">
+</div>

@@ -1,0 +1,41 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+use procutils;
+
+
+if ($#ARGV < 0) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+
+if ($ARGV[0] eq "off") {
+  &procutils::flagwrite("secondary","visanet","/home/pay1/batchfiles/logs/visanet","secondary.txt","unlink","","");
+  print "primary visanet\n";
+}
+elsif ($ARGV[0] eq "on") {
+  &procutils::flagwrite("secondary","visanet","/home/pay1/batchfiles/logs/visanet","secondary.txt","write","","1\n");
+  print "secondary visanet 1\n";
+}
+elsif ($ARGV[0] eq "1") {
+  &procutils::flagwrite("secondary","visanet","/home/pay1/batchfiles/logs/visanet","secondary.txt","write","","1\n");
+  print "secondary visanet 1\n";
+}
+elsif ($ARGV[0] eq "2") {
+  &procutils::flagwrite("secondary","visanet","/home/pay1/batchfiles/logs/visanet","secondary.txt","write","","2\n");
+  print "secondary visanet 2\n";
+}
+elsif ($ARGV[0] eq "3") {
+  &procutils::flagwrite("secondary","visanet","/home/pay1/batchfiles/logs/visanet","secondary.txt","write","","3\n");
+  print "secondary visanet 3\n";
+}
+elsif ($ARGV[0] eq "4") {
+  &procutils::flagwrite("secondary","visanet","/home/pay1/batchfiles/logs/visanet","secondary.txt","write","","4\n");
+  print "secondary visanet 4\n";
+}
+
+

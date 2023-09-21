@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="/_css/merchants/<metavar='account'>/payscreens.css?template=<metavar='cssTemplate'>&submitted_template=<metavar='accountCssTemplate'>" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/_css/plugnpay-theme/jquery-ui-1.10.3.custom.css" type="text/css">
+<link rel="stylesheet" href="/static/css/fonts.css" type="text/css">
+<link rel="stylesheet" href="/static/css/loader.css" type="text/css">
+<meta type="template" content="type='variable', name='captchaHead'" >
+<script language="javascript" src="https://<metavar='staticContentServer'>/_js/bundle/<metavar='payJSFile'>">jQuery=$</script>
+
+<!-- Custom Code -->
+<meta type="template" content="type='variable', name='formInitialzation'" />
+<!-- End Custom Code -->
+<script language='javascript'>
+jQuery('document').ready(function() {
+        // Wait before allowing submit
+	setTimeout(function() {
+		PayScreens.setAllowSubmit(true);
+	}, 10000);
+
+<meta type="template" content="type='variable', name='formDataJavascript'" />
+});
+
+PayScreens.init({
+		"username": "<metavar='username'>",
+		"account": "<metavar='account'>",
+		"language": "<metavar='language'>",
+		"achEnabled": "<metavar='achEnabled'>",
+		"creditEnabled": "<metavar='creditEnabled'>",
+		"disabledCardTypes": "<metavar='disabledCardTypes'>",
+		"disabledCardCombos": "<metavar='disabledCardCombos'>",
+		"paymentType": "<metavar='paymentType'>",
+		"currencySymbolHTML": "<metavar='currencySymbol'>",
+		"currencyNumeric": "<metavar='currencyNumeric'>",
+		"defaultSecCode": "<metavar='defaultSecCode'>",
+		"avsOnlyEnabled": "<metavar='avsOnlyEnabled'>",
+		"storeDataEnabled": "<metavar='storeDataEnabled'>",
+		"coaEnabled": "<metavar='coaEnabled'>",
+		"overrideAdjustmentAllowed": "<metavar='overrideAdjustmentAllowed'>",
+		"overrideCheckboxIsChecked": "<metavar='overrideCheckboxIsChecked'>",
+		"checkCustomerState": "<metavar='checkCustomerState'>",
+		"seqrEnabled": "<metavar='seqrEnabled'>",
+		"authViaEnabled": "<metavar='authViaEnabled'>",
+		"masterPassEnabled": "<metavar='masterPassEnabled'>",
+		"amexExpressCheckoutEnabled": "<metavar='amexExpressCheckoutEnabled'>",
+		"coaSessionID": "<metavar='coaSessionID'>",
+		"convenienceFeeEnabled": "<metavar='convenienceFeeEnabled'>",
+		"companyName": "<metavar='companyName'>",
+		"chargeAccountCompanyName": "<metavar='chargeAccountCompanyName'>",
+		"customFields": <metavar='customFieldsObject'>,
+		"substitutions": <metavar='substitutionsObject'>,
+	 	"metaphraseTemplate": "<metavar='metaphraseTemplate'>",
+		"masterpass_request_token": "<metavar='masterpass_request_token'>",
+	 	"masterpass_callback_url": "<metavar='masterpass_callback_url'>",
+		"masterpass_merchant_checkoutId": "<metavar='masterpass_merchant_checkoutId'>",
+		"apiRestSessionId": "<metavar='apiRestSessionId'>",
+		"amexexpress_client_id": "<metavar='amexexpress_client_id'>",
+		"amexexpress_request_id": "<metavar='amexexpress_request_id'>",
+		"amexexpress_callback_url": "<metavar='amexexpress_callback_url'>",
+		"goCartEnabled": "<metavar='goCartEnabled'>",
+		"goCartSdkUrl": "<metavar='goCartSdkUrl'>",
+		"goCartExpeditedCheckoutEnabled": "<metavar='goCartExpeditedCheckoutEnabled'>",
+		"goCartEnrollmentCheckboxEnabled": "<metavar='goCartEnrollmentCheckboxEnabled'>",
+		"goCartEnrollmentCheckboxChecked": "<metavar='goCartEnrollmentCheckboxChecked'>",
+		"passedFields": <metavar='passedFieldJavaScriptObject'>,
+		"formInitializationVersion": <metavar='formInitializationVersion'>,
+		"cardinalCruiseEnabled": "<metavar='cardinalCruiseEnabled'>",
+		"cardinalCruiseStaging": "<metavar='cardinalCruiseStaging'>",
+		"cardinalCruiseSessionId": "<metavar='cardinalCruiseSessionId'>",
+		"development": "<metavar='development'>",
+		"remoteIP": "<metavar='remoteIP'>",
+		"acceptHeaders": "<metavar='acceptHeaders'>"
+});
+
+
+jQuery('document').ready(function() {
+	// Clear swipe fields if card is manually entered after swipe
+	jQuery('input[name=pt_card_number]').on('keyup change',function() {
+		var cardNumber = jQuery('input[name=pt_card_number]').val();
+		var encryptedCardNumber = '';
+		var magstripeCardNumber = '';
+
+		var clear = false;
+
+		if (cardNumber.length >= 4) {
+			if (PayScreens.getInputValue('pt_swipe_device') == 'idtechsredkey') {
+				var field = jQuery('input[name=pt_magensa]').val();
+				encryptedCardNumber = field.slice((field.search(/;/)+1),(field.search(/\=/)));
+			} else {
+				encryptedCardNumber = jQuery('input[name=pt_magensa]').val().substr(2,cardNumber.length);
+			}
+			magstripeCardNumber = jQuery('input[name=pt_magstripe]').val().substr(2,cardNumber.length);
+		} else {
+			clear = true;
+		}
+
+		if (encryptedCardNumber != '') {
+			var prefix = encryptedCardNumber.substr(0,4);
+			var suffix = encryptedCardNumber.substr(-4,4);
+
+			if (cardNumber.substr(0,4) != prefix || cardNumber.substr(-4,4) != suffix) {
+				clear = true;
+			}
+		}
+
+		if (magstripeCardNumber != '') {
+			if (cardNumber != magstripeCardNumber) {
+				clear = true;
+			}
+		}
+
+		if (clear) {
+			jQuery('input[name=pt_magstripe]').val('');
+			jQuery('input[name=pt_magensa]').val('');
+			jQuery('input[name=pt_swipe_device]').val('');
+			jQuery('input[name=pt_ksn]').val('');
+			jQuery('input[name=pt_device_serial_number]').val('');
+			jQuery('input[name=pt_encryption_track_1]').val('');
+			jQuery('input[name=pt_encryption_track_2]').val('');
+			jQuery('input[name=pt_encryption_track_3]').val('');
+		}
+	})
+})
+
+</script>

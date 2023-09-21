@@ -1,0 +1,45 @@
+div.tableDiv {
+  background: white;
+  border: 1px solid #B8B6B7;
+}
+
+.tableDiv select {
+  width: 75px;
+}
+
+.tableDiv label {
+  padding-left: 1em;
+}
+
+.tableDiv input {
+  width:50%;
+   margin: 0 25%; 
+}
+
+.payall {
+  text-align:center;
+  font-size:14pt;
+}
+
+.infoBox{
+  background: #F0F0F0;
+  width:75%;
+  margin: 20px 12%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.payallInfo{
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+

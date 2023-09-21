@@ -1,0 +1,137 @@
+<div class="profile-detail profile-accordion-details">
+    <h3 name="profileAccordionHeader"></h3>
+    <div>
+        <div class="pnp-box">
+            <div class="pnp-box half display-format snug">
+                <h1 name="detailsBillingProfileIdentifier"></h1>
+            </div>
+            <div class="pnp-box half display-format snug">
+                <h1 name="detailsMerchantPlanID"></h1>
+            </div>
+            <hr>
+
+            <div class="pnp-box quarter display-format">
+                <h4>Status:</h4>
+                <p name="detailsProfileStatus"></p>
+            </div>
+
+            <div class="pnp-box third display-format">
+                <h4>Creation Date:</h4>
+                <p name="detailsProfileCreationDate"></p>
+            </div>
+
+            <div name="detailsProfileEndDateDiv" class="pnp-box third display-format">
+                <h4>Ending Cycle Date:</h4>
+                <p name="detailsProfileEndDate"></p>
+            </div>
+
+            <div name="detailsProfileDescriptionSection" class="pnp-box half display-format">
+                <h4>Description:</h4>
+                <p name="detailsProfileDescription"></p>
+            </div>
+            <br>
+
+            <div class="pnp-box quarter display-format">
+                <h4>Bill Cycle:</h4>
+                <p name="detailsProfileBillCycle"></p>
+            </div>
+
+            <div name="detailsProfileBalanceDiv" class="pnp-box quarter display-format">
+                <h4>Remaining Balance:</h4>
+                <p name="detailsProfileBalance"></p>
+            </div>
+            <br>
+
+            <div class="pnp-box quarter display-format">
+                <h4 class="display-format">Sign Up Fee:</h4>
+                <span class="pnp-hidden" name="detailsSignUpFeePaid" style="color: green">(PAID)</span>
+                <p name="detailsProfileSignUpFee"></p>
+            </div>
+
+            <div class="pnp-box third display-format">
+                <h4>Allow Renewal</h4>
+                <p name="detailsProfileAllowRenewal"></p>
+            </div>
+
+            <div name="detailsBillCycleOtherThanZero">
+                <div class="pnp-box quarter display-format">
+                    <h4>Recurring Fee:</h4>
+                    <p name="detailsProfileRecurringFee"></p>
+                </div>
+
+                <div class="pnp-box quarter display-format">
+                    <h4>Loyalty Fee:</h4>
+                    <p name="detailsProfileLoyaltyFee"></p>
+                </div>
+
+                <div class="pnp-box half display-format">
+                    <div class="pnp-box half display-format">
+                        <h4>Customer Loyalty Count:</h4>
+                        <p name="detailsProfileLoyaltyCount"></p>
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Loyalty Fee Overtake:</h4>
+                        <p name="detailsProfilePlanLoyaltyCount"></p>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="pnp-box quarter display-format">
+                    <h4>Initial Month Delay:</h4>
+                    <p name="detailsProfileInitialMonthDelay"></p>
+                </div>
+
+                <div class="pnp-box quarter display-format">
+                    <h4>Initial Day Delay:</h4>
+                    <p name="detailsProfileInitialDayDelay"></p>
+                </div>
+            </div>
+
+
+            <div class="pnp-box quarter display-format">
+                <h4>Currency:</h4>
+                <p name="detailsProfileCurrency"></p>
+            </div>
+
+
+            <div name="detailGroups" class="pnp-box half display-format">
+                <h4>Groups:</h4>
+                <p name="detailsProfileGroups"></p>
+            </div>
+        </div>
+
+        <div name="detailsPaymentSourceDiv" class="pnp-hidden">
+            <h1>Payment Source</h1>
+            <hr>
+
+            <div class="pnp-box">
+                <div class="pnp-box quarter pnp-hidden display-format" name="cardData">
+                    <h4>Card Information</h4>
+                    <p name="detailsProfileCardData"></p>
+                </div>
+                <div class="pnp-box quarter pnp-hidden display-format" name="achData">
+                    <h4>ACH Information</h4>
+                    <p name="detailsProfileACHData"></p>
+                </div>
+                <div class="pnp-box half pnp-hidden display-format" name="tokenData">
+                    <h4>Payment Token</h4>
+                    <p name="detailsProfileToken"></p>
+                </div>
+
+                <br>
+
+                <div class="pnp-box quarter display-format">
+                    <h4>Transaction Type</h4>
+                    <p name="detailsPlanTransactionType"></p>
+                </div>
+
+                <div name="billMemberDiv" class="pnp-hidden pnp-box third display-format"></div>
+                <div name="signupFeeDiv" class="pnp-hidden pnp-box third display-format"></div>
+            </div>
+            <br>
+        </div>
+
+    </div>
+</div>

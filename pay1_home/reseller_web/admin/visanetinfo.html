@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Plug and Pay Technologies, Inc. Merchant Directory</title>
+<style type="text/css">
+<!--
+tr { background-color: #ffffff }
+.tr1 { background-color: #d0c0c0 }
+.tr2 { background-color: #c0d0c0 }
+.tr3 { background-color: #c0c0d0 }
+.tr4 { background-color: #d0c0d0 }
+.tr5 { background-color: #d0d0c0 }
+.tr6 { background-color: #c0d0d0 }
+td { font-family: Arial; font-size: 75%; color: black }
+.tdr { font-family: Arial; font-size: 70%; color: black }
+th { font-family: Arial, Helvetica; font-weight: bold; font-size: 75%; text-align: left }
+-->
+</style>
+<script Language="Javascript">
+//<!-- Start Script
+function postResults() {
+  window.opener.document.addmerchant.currency.value = document.visanet.currency.value;
+  window.opener.document.addmerchant.merchant_id.value = document.visanet.merchant_id.value;
+  window.opener.document.addmerchant.terminal_id.value = document.visanet.pubsecret.value;
+  window.opener.document.addmerchant.bin.value = document.visanet.bin.value;
+  window.opener.document.addmerchant.categorycode.value = document.visanet.categorycode.value;
+  window.opener.document.addmerchant.agentbank.value = document.visanet.agentbank.value;
+  window.opener.document.addmerchant.agentchain.value = document.visanet.agentchain.value;
+  window.opener.document.addmerchant.storenum.value = document.visanet.storenum.value;
+  window.opener.document.addmerchant.terminalnum.value = document.visanet.terminalnum.value;
+  window.close();
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff">
+<form name="visanet">
+<table border="0" cellspacing="0">
+<tr class="tr1"><th>Currency:</th><td> <input type="text" name="currency" value="usd"> (usd)</td>
+<tr class="tr1"><th>mid:</th><td> <input type="text" name="merchant_id" value=""> 12 digits</td>
+<tr class="tr1"><th>tid (v#):</th><td> <input type="text" name="pubsecret" value=""> 8 digits</td>
+<tr class="tr1"><th>bin:</th><td> <input type="text" name="bin" value=""> 6 digits</td>
+<tr class="tr1"><th>categorycode:</th><td> <input type="text" name="categorycode" value=""> 4 digits</td>
+<tr class="tr1"><th>agentbank:</th><td> <input type="text" name="agentbank" value=""> 6 digits </td>
+<tr class="tr1"><th>agentchain:</th><td> <input type="text" name="agentchain" value=""> 6 digits </td>
+<tr class="tr1"><th>storenum:</th><td> <input type="text" name="storenum" value=""> 4 digits </td>
+<tr class="tr1"><th>terminalnum:</th><td> <input type="text" name="terminalnum" value=""> 4 digits </td>
+<tr><td colspan="2"><input type="button" value="Send Info" onClick="postResults();"> <input type="reset" value="Reset Form"></td>
+</table>
+</form>
+</body>
+</html>
+

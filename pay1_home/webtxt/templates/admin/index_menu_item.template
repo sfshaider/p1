@@ -1,0 +1,9 @@
+<li id="<metavar="linkCSSID">" class="<metavar="liClass">"> 
+        <a href="<metavar="url">" <metavar="openMode">> 
+                <span class="faWrapper">
+                        <span class="fa fa-<metavar="fontAwesomeIconName">">
+                        </span>
+                </span>
+                <metavar="text">
+        </a>
+</li>

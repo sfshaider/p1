@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Plug n Pay</title>
+  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  <link rel="apple-touch-icon" href="/images/iui/pnpicon.png" />
+  <meta name="apple-touch-fullscreen" content="YES" />
+  <style type="text/css" media="screen">@import "/css/iphonevt/iuivt.css";</style>
+</head>
+
+<body>
+  <div class="toolbar">
+  </div>
+      <form title="Plug n Pay" class="panel" action="iphonevt.cgi" selected="true">
+      <h1>Virtual Terminal</h1><br/>
+      <h2>Transaction Details</h2>
+      <fieldset>
+          <div class="row">
+              <label>Status:</label>
+              <div class="rightlabel">[pnp_FinalStatus]</div>
+          </div>
+          <div class="row">
+              <label>Type:</label>
+              <div class="rightlabel">[pnp_mode]</div>
+          </div>
+          <div class="row">
+              <label>Amount:</label> 
+	      <div class="rightlabel">[pnp_card-amount]</div>
+          </div>
+          <div class="row">
+              <label>Order ID:</label>
+              <div class="rightlabel">[pnp_orderID]</div>
+          </div>
+          <div class="row">
+              <label>Name:</label> 
+              <div class="rightlabel">[pnp_card-name]</div>
+          </div>
+      </fieldset>
+      <input type="submit" class="whiteButton" name="Submit" value="Enter Another Transaction"/>
+  </form>
+</body>
+</html>

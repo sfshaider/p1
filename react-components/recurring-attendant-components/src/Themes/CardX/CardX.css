@@ -1,0 +1,175 @@
+/*@font-face {*/
+    /*font-family: 'Trade Gothic Com';*/
+    /*src: url("../../Fonts/2F71C3_1_0.eot");*/
+    /*src: url("../../Fonts/2F71C3_1_0.eot?#iefix") format("embedded-opentype"),*/
+    /*url("../../Fonts/2F71C3_1_0.woff2") format("woff2"),*/
+    /*url("../../Fonts/2F71C3_1_0.woff") format("woff"),*/
+    /*url("../../Fonts/2F71C3_1_0.ttf") format("truetype");*/
+/*}*/
+/*@font-face {*/
+    /*font-family: 'Trade Gothic Com Bold';*/
+    /*src: url("../../Fonts/2F71C3_0_0.eot");*/
+    /*src: url("../../Fonts/2F71C3_0_0.eot?#iefix") format("embedded-opentype"),*/
+    /*url("../../Fonts/2F71C3_0_0.woff2") format("woff2"),*/
+    /*url("../../Fonts/2F71C3_0_0.woff") format("woff"),*/
+    /*url("../../Fonts/2F71C3_0_0.ttf") format("truetype");*/
+/*}*/
+/*@font-face {*/
+    /*font-family: 'Trade Gothic Com C18';*/
+    /*src: url("../../Fonts/2F71C3_2_0.eot");*/
+    /*src: url("../../Fonts/2F71C3_2_0.eot?#iefix") format("embedded-opentype"),*/
+    /*url("../../Fonts/2F71C3_2_0.woff2") format("woff2"),*/
+    /*url("../../Fonts/2F71C3_2_0.woff") format("woff"),*/
+    /*url("../../Fonts/2F71C3_2_0.ttf") format("truetype");*/
+/*}*/
+/*@font-face {*/
+    /*font-family: 'Trade Gothic Com Bold C20';*/
+    /*src: url("../../Fonts/2F71C3_3_0.eot");*/
+    /*src: url("../../Fonts/2F71C3_3_0.eot?#iefix") format("embedded-opentype"),*/
+    /*url("../../Fonts/2F71C3_3_0.woff2") format("woff2"),*/
+    /*url("../../Fonts/2F71C3_3_0.woff") format("woff"),*/
+    /*url("../../Fonts/2F71C3_3_0.ttf") format("truetype")*/
+/*}*/
+
+/*.CardXSidebar {*/
+    /*list-style: none;*/
+    /*display: block;*/
+    /*background-color: #eee;*/
+    /*margin: 0;*/
+    /*padding: 60px 15px 0px 20px;*/
+    /*height: 100%;*/
+    /*width: 200px;*/
+    /*float: left;*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+/*div.CardXSidebar ul {*/
+    /*margin-top: 130px;*/
+/*}*/
+
+/*.CardXSidebar li {*/
+    /*padding: 10px 0 20px 0;*/
+    /*border-top: 1px solid rgba(120,117,131,0.5);*/
+    /*line-height: 1.5;*/
+    /*font-size: 1rem;*/
+    /*font-weight: 400;*/
+/*}*/
+
+/*.CardXSidebar li a {*/
+    /*color: #372772;*/
+    /*font-family: "Trade Gothic Com Bold";*/
+    /*display: block;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.CardXSidebar li:hover {*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*div.CardXHeader {*/
+    /*height: 65px;*/
+    /*box-sizing: border-box;*/
+    /*line-height: 1.5;*/
+    /*background-color: #372772;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+
+/*div.CardXHeader span {*/
+    /*padding: 9px 0 0 71px;*/
+    /*margin: 0;*/
+    /*height: 65px;*/
+    /*color: #fff;*/
+    /*box-sizing: border-box;*/
+    /*font-family: "Trade Gothic Com C18";*/
+    /*font-weight: bold;*/
+    /*font-size: 30px;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+/*}*/
+
+/*div.CardXHeader div.logoArea {*/
+    /*width: 200px;*/
+    /*height: 65px;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*background: #eee;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*div.CardXHeader div.logoArea img {*/
+    /*height:45px;*/
+    /*margin-left: 20px;*/
+    /*color: #372772;*/
+    /*margin-top: 10px;*/
+/*}*/
+
+/*.CardXButton {*/
+    /*background-color: #372772;*/
+    /*border-color: #372772;*/
+    /*width: 300px !important;*/
+    /*height: 57px;*/
+    /*font-size: 14px;*/
+    /*letter-spacing: .75px;*/
+    /*text-transform: uppercase;*/
+    /*line-height: 14px;*/
+    /*text-decoration: none;*/
+    /*border-radius: 0;*/
+    /*color: #FFFFFF !important;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*.CardXInputField {*/
+    /*border: 1px solid transparent;*/
+    /*border-radius: 0;*/
+    /*padding: 6px;*/
+    /*padding-top: 8px;*/
+    /*padding-left: 12px !important;*/
+    /*height: 42px;*/
+    /*line-height: 14px;*/
+    /*letter-spacing: .75px;*/
+    /*background-image: none;*/
+    /*overflow-x: hidden;*/
+    /*margin-bottom: 6px;*/
+    /*color: #372772;*/
+    /*max-width: 565px !important;*/
+/*}*/
+
+/*.CardXLabel {*/
+    /*font-size: 14px;*/
+    /*letter-spacing: 0.75px;*/
+    /*color: #787583;*/
+    /*white-space: nowrap;*/
+    /*top: 0;*/
+    /*padding-left: 0 !important;*/
+    /*padding-right: 0 !important;*/
+    /*width: 130px !important;*/
+    /*max-width: 18.66666667% !important;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.CardXHeadingStyle {*/
+    /*color: #372772;*/
+    /*margin-left: 55px;*/
+    /*width: 300px;*/
+/*}*/
+
+/*.CardXSelector {*/
+    /*border: 1px solid transparent;*/
+    /*border-radius: 0;*/
+    /*padding: 6px;*/
+    /*padding-top: 8px;*/
+    /*padding-left: 12px !important;*/
+    /*height: 42px;*/
+    /*line-height: 14px;*/
+    /*letter-spacing: .75px;*/
+    /*background-image: none;*/
+    /*overflow-x: hidden;*/
+/*}*/
+
+/*.CardXBackdrop {*/
+    /*max-width: 900px;*/
+    /*padding: 24px 35px 20px 35px;*/
+    /*background-color: #E2E2E7;*/
+    /*margin-bottom: 64px;*/
+/*}*/

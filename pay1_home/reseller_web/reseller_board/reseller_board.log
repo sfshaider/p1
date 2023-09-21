@@ -1,0 +1,43 @@
+76.115.39.30	20130226195712	QUERY	search_keys|	category|api	minimum_match|
+76.115.39.30	20130226195724	VIEW	id_number|ID20020201175025
+76.115.39.30	20130226195748	VIEW	id_number|ID20021105180507
+76.115.39.30	20130226195822	VIEW	id_number|ID20011210185425
+65.129.173.152	20130301235856	QUERY	search_keys|residual	category|all	minimum_match|
+65.129.173.152	20130301235901	QUERY	search_keys|residual	category|all	minimum_match|
+65.129.173.152	20130301235908	QUERY	search_keys|billing	category|all	minimum_match|
+65.129.173.152	20130301235953	VIEW	id_number|ID20020725215955
+24.99.164.61	20130308214514	QUERY	search_keys|	category|training	minimum_match|
+24.99.164.61	20130308214538	QUERY	search_keys|reporting	category|all	minimum_match|
+24.99.164.61	20130308214549	VIEW	id_number|ID20020725215955
+206.123.204.18	20130318150935	QUERY	search_keys|	category|all	minimum_match|
+206.123.204.18	20130318150953	VIEW	id_number|ID20020725214526
+206.123.204.18	20130318151002	QUERY	search_keys|tech support	category|all	minimum_match|
+206.123.204.18	20130318151007	VIEW	id_number|ID20021105180507
+206.123.204.18	20130318151022	QUERY	search_keys|phone number	category|all	minimum_match|
+206.123.204.18	20130318151027	VIEW	id_number|ID20020809153319
+206.123.204.18	20130318151140	QUERY	search_keys|plug pay phone number	category|all	minimum_match|
+206.123.204.18	20130318151150	QUERY	search_keys|plug pay phone	category|all	minimum_match|
+121.54.67.142	20130321220323	QUERY	search_keys|avs billing	category|all	minimum_match|
+121.54.67.142	20130321220342	QUERY	search_keys|avs 	category|all	minimum_match|
+121.54.67.142	20130321220413	QUERY	search_keys|avs billing	category|all	minimum_match|10
+121.54.67.142	20130321220424	QUERY	search_keys|avs  	category|all	minimum_match|
+121.54.67.142	20130321220435	QUERY	search_keys|avs  	category|all	minimum_match|
+121.54.67.142	20130321220441	QUERY	search_keys|avs  	category|all	minimum_match|100
+71.164.186.39	20130424195057	QUERY	search_keys|	category|all	minimum_match|
+71.164.186.39	20130424195121	VIEW	id_number|ID20020809153016
+71.164.186.39	20130424195143	VIEW	id_number|ID20020809153016
+99.18.230.90	20130425195057	QUERY	search_keys|mobile	category|all	minimum_match|
+99.18.230.90	20130425195125	VIEW	id_number|ID20021105174818
+99.18.230.90	20130425195138	QUERY	search_keys|plug pay phone	category|all	minimum_match|
+99.18.230.90	20130425195145	QUERY	search_keys|plug pay phone number	category|all	minimum_match|
+99.18.230.90	20130425195216	QUERY	search_keys|bullet swipe	category|all	minimum_match|25
+99.18.230.90	20130426192655	QUERY	search_keys|	category|support	minimum_match|
+99.18.230.90	20130426192712	QUERY	search_keys|	category|sales_faq	minimum_match|
+99.18.230.90	20130426192721	QUERY	search_keys|	category|product	minimum_match|
+99.18.230.90	20130426192734	QUERY	search_keys|	category|news_announce	minimum_match|
+99.18.230.90	20130426192740	QUERY	search_keys|	category|all	minimum_match|
+99.18.230.90	20130426192758	VIEW	id_number|ID20050323193151
+99.18.230.90	20130426192820	VIEW	id_number|ID20050316145734
+99.18.230.90	20130426192834	VIEW	id_number|ID20041126220204
+99.18.230.90	20130426192902	VIEW	id_number|ID20021029212717
+99.18.230.90	20130426192927	VIEW	id_number|ID20020725211121

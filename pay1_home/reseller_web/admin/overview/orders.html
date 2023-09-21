@@ -1,0 +1,247 @@
+<html>
+<body>
+<title>Merchant Order Database</title>
+<link href="/css/style_graphs.css" type="text/css" rel="stylesheet">
+<script Language="Javascript">
+//<!-- Start Script
+function disableForm(theform) {
+  if (document.all || document.getElementById) {
+    for (i = 0; i < theform.length; i++) {
+      var tempobj = theform.elements[i];
+      if (tempobj.type.toLowerCase() == "submit" || tempobj.type.toLowerCase() == "reset")
+        tempobj.disabled = true;
+    }
+    return true;
+  }
+  else {
+    return true;
+  }
+}
+function notice() {
+  alert('Please be patient, creating the report may take several minutes.');
+}
+function change_win(helpurl,swidth,sheight,windowname) {
+  SmallWin = window.open(helpurl, windowname,'scrollbars=yes,resizable=yes,status=yes,toolbar=yes,menubar=yes,height='+sheight+',width='+swidth);
+}
+function closewin() {
+  self.close();
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff">
+<table width="760" border="0" cellpadding="0" cellspacing="0" id="header">
+  <tr>
+    <td colspan="3" align="left"><img src="/adminlogos/pnp_admin_logo.gif" border="0"></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="left"><img src="/css/header_bottom_bar_gfx.gif" width="760" height="14"></td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="5" width="760">
+  <tr>
+    <td colspan="2"><h1><a href="./fixdates.cgi">Order Database</a></h1>
+
+<form method="post" action="orders.cgi/orders.dat" onSubmit="return disableForm(this);">
+<table border="0" cellspacing=0 cellpadding=4>
+<tr><th align="left" bgcolor="#003366">Start Date (required):</th><td><input type=hidden size="10" name="srchstartdate">
+<select name="startmon" >
+  <!--<option value="">Month</option>-->
+  <option value="01" HERE>Jan</option>
+  <option value="02" HERE>Feb</option>
+  <option value="03" HERE>Mar</option>
+  <option value="04" HERE>Apr</option>
+  <option value="05" HERE>May</option>
+  <option value="06" HERE>Jun</option>
+  <option value="07" HERE>Jul</option>
+  <option value="08" HERE>Aug</option>
+  <option value="09" HERE>Sep</option>
+  <option value="10" HERE>Oct</option>
+  <option value="11" HERE>Nov</option>
+  <option value="12" HERE>Dec</option>
+</select>
+<select name="startday">
+  <!--<option value="">Day</option>-->
+  <option value="01" HERE>1</option>
+  <option value="02" HERE>2</option>
+  <option value="03" HERE>3</option>
+  <option value="04" HERE>4</option>
+  <option value="05" HERE>5</option>
+  <option value="06" HERE>6</option>
+  <option value="07" HERE>7</option>
+  <option value="08" HERE>8</option>
+  <option value="09" HERE>9</option>
+  <option value="10" HERE>10</option>
+  <option value="11" HERE>11</option>
+  <option value="12" HERE>12</option>
+  <option value="13" HERE>13</option>
+  <option value="14" HERE>14</option>
+  <option value="15" HERE>15</option>
+  <option value="16" HERE>16</option>
+  <option value="17" HERE>17</option>
+  <option value="18" HERE>18</option>
+  <option value="19" HERE>19</option>
+  <option value="20" HERE>20</option>
+  <option value="21" HERE>21</option>
+  <option value="22" HERE>22</option>
+  <option value="23" HERE>23</option>
+  <option value="24" HERE>24</option>
+  <option value="25" HERE>25</option>
+  <option value="26" HERE>26</option>
+  <option value="27" HERE>27</option>
+  <option value="28" HERE>28</option>
+  <option value="29" HERE>29</option>
+  <option value="30" HERE>30</option>
+  <option value="31" HERE>31</option>
+</select>
+<select name="startyear">
+  <option value="2006" HERE>2006</option>
+  <option value="2007" HERE>2007</option>
+  <option value="2008" HERE>2008</option>
+  <option value="2009" HERE>2009</option>
+  <option value="2010" HERE>2010</option>
+  <option value="2011" HERE>2011</option>
+  <option value="2012" HERE>2012</option>
+  <option value="2013" HERE>2013</option>
+  <option value="2014" HERE>2014</option>
+  <option value="2015" HERE>2015</option>
+  <option value="2016" HERE>2016</option>
+  <option value="2017" HERE>2017</option>
+  <option value="2018" HERE>2018</option>
+  <option value="2019" HERE>2019</option>
+  <option value="2020" HERE>2020</option>
+</select>
+</td>
+
+<input type=hidden name="normal" value="no">
+<input type="hidden" name="billing" value="yes">
+<input type="hidden" name="ship" value="yes"> 
+<input type="hidden" name="contact" value="yes"> 
+<input type="hidden" name="order" value="yes"> 
+<input type="hidden" name="results" value="yes">
+<input type="hidden" name="message" value="yes"> 
+<input type="hidden" name="misc" value="yes"> 
+<input type="hidden" name="ip" value=""> 
+<input type="hidden" name="debug" value="no">
+<input type="hidden" name="details" value="yes"> 
+<input type="hidden" name="custom" value="yes">
+<input type="hidden" name="merchant" value="MERCHANT_NAME">
+<tr><th align="left" bgcolor="#003366"> End Date (required):</th><td><input type=hidden  name="srchenddate" >
+<select name="endmon" >
+  <!--<option value="">Month</option>-->
+  <option value="01" HERE>Jan</option>
+  <option value="02" HERE>Feb</option>
+  <option value="03" HERE>Mar</option>
+  <option value="04" HERE>Apr</option>
+  <option value="05" HERE>May</option>
+  <option value="06" HERE>Jun</option>
+  <option value="07" HERE>Jul</option>
+  <option value="08" HERE>Aug</option>
+  <option value="09" HERE>Sep</option>
+  <option value="10" HERE>Oct</option>
+  <option value="11" HERE>Nov</option>
+  <option value="12" HERE>Dec</option>
+</select>
+<select name="endday"> 
+  <!--<option value="">Day</option>-->
+  <option value="01" HERE>1</option>
+  <option value="02" HERE>2</option>
+  <option value="03" HERE>3</option>
+  <option value="04" HERE>4</option>
+  <option value="05" HERE>5</option>
+  <option value="06" HERE>6</option>
+  <option value="07" HERE>7</option>
+  <option value="08" HERE>8</option>
+  <option value="09" HERE>9</option>
+  <option value="10" HERE>10</option>
+  <option value="11" HERE>11</option>
+  <option value="12" HERE>12</option>
+  <option value="13" HERE>13</option>
+  <option value="14" HERE>14</option>
+  <option value="15" HERE>15</option>
+  <option value="16" HERE>16</option>
+  <option value="17" HERE>17</option>
+  <option value="18" HERE>18</option>
+  <option value="19" HERE>19</option>
+  <option value="20" HERE>20</option>
+  <option value="21" HERE>21</option>
+  <option value="22" HERE>22</option>
+  <option value="23" HERE>23</option>
+  <option value="24" HERE>24</option>
+  <option value="25" HERE>25</option>
+  <option value="26" HERE>26</option>
+  <option value="27" HERE>27</option>
+  <option value="28" HERE>28</option>
+  <option value="29" HERE>29</option>
+  <option value="30" HERE>30</option>
+  <option value="31" HERE>31</option>
+</select>
+<select name="endyear"> 
+  <option value="2007" HERE>2007</option>
+  <option value="2008" HERE>2008</option>
+  <option value="2009" HERE>2009</option>
+  <option value="2010" HERE>2010</option>
+  <option value="2011" HERE>2011</option>
+  <option value="2012" HERE>2012</option>
+  <option value="2013" HERE>2013</option>
+  <option value="2014" HERE>2014</option>
+  <option value="2015" HERE>2015</option>
+  <option value="2016" HERE>2016</option>
+  <option value="2017" HERE>2017</option>
+  <option value="2018" HERE>2018</option>
+  <option value="2019" HERE>2019</option>
+  <option value="2020" HERE>2020</option>
+</select></td>
+<tr><th align="left" bgcolor="#003366">Order ID:</th><td><input type=text size="23" name="srchorderid"></td>
+<tr><th align="left" bgcolor="#003366">MOrder ID:</th><td><input type=text size="23" name="srchmorderid"></td>
+<tr><th align="left" bgcolor="#003366">Model/Item Number:</th><td><input type=text size="23" name="srchmodel"></td>
+
+<!--
+ ## 06/01/05 - commented out by David's request, because this search feature does not work 
+ ##          - will not work becuase alpha-numeric data found card amount field (formatted as 'USD xxx.xx')
+-->
+<tr><th align="left" bgcolor="#003366">Amount between:</th><td><input type=text size="8" name="srchlowamt"> and <input type=text size="8" name="srchhighamt"></td>
+
+<tr><th align="left" bgcolor="#003366">Card Number:</th><td><input type=text size="20" name="srchcardnum"><font size="-1"> (eg. 4124**34)</td>
+<tr><th align="left" bgcolor="#003366">Name:</th><td><input type="text" size="32" name="srchname"></td>
+
+<tr><th align="left" bgcolor="#003366">Address:</th><td><input type="text" size="32" name="srchaddr1"></td>
+<tr><th align="left" bgcolor="#003366">City:</th><td><input type="text" size="16" name="srchcity"></td>
+<tr><th align="left" bgcolor="#003366">State:</th><td><input type="text" size="2" name="srchstate"></td>
+<tr><th align="left" bgcolor="#003366">Zip:</th><td><input type="text" size="10" name="srchzip"></td>
+
+<tr><th align="left" bgcolor="#003366">Email:</th><td><input type="text" size="32" name="srchemail"></td>
+<tr><th align="left" bgcolor="#003366">Acct Code:</th><td><input type="text" name="srchacctcode"></td>
+<tr><th align="left" bgcolor="#003366">Transaction Status:</th><td>
+<input type="radio" name="srchstatus" value="" > All Orders 
+<input type="radio" name="srchstatus" value="success" checked> Successful Only 
+<input type="radio" name="srchstatus" value="settled"> Settled Orders Only
+<br><input type="radio" name="srchstatus" value="allops"> All plus Returns & Voids  (BETA)
+<input type="radio" name="srchstatus" value="noncancelled"> Orders Not Returned or Voided</td>
+
+<!--<tr><th align="left" bgcolor="#003366">Decrypt Cards:</th><td><input type="checkbox" name="decrypt" value="yes">Yes</td>-->
+
+<tr><th align="left" bgcolor="#003366">Report Format:</th><td><input type="radio" name="format" value="table" checked> Table &nbsp;&nbsp;
+<input type="radio" name="format" value="text"> Text &nbsp;&nbsp;<input type="radio" name="format" value="graph"> Graph &nbsp;&nbsp;<input type="radio" name="format" value="download"> Download</td></tr>
+
+<tr><th align="left" bgcolor="#003366">Output Format:</th><td><input type="checkbox" name="output" value="peritem" > Check for 1 Line per Item ordered.  <b>Applicable for Text and Download Formats Only</b></td></tr>
+
+<tr><th align="left" bgcolor="#003366">Data Delimiter:</th><td><input type="radio" name="delimiter_type" value="comma" checked> Quote/Comma &nbsp;&nbsp;
+<input type="radio" name="delimiter_type" value="tab"> Tab &nbsp;&nbsp;<b>Applicable for Text and Download Formats Only</b></td></tr>
+
+<tr><th align="left" bgcolor="#003366"> Get Report:</th><td>
+<input type="submit" name="submit" value="Get Report"></td>
+</table>
+</form>
+
+<table width="760" border="0" cellpadding="0" cellspacing="0" id="footer">
+  <tr>
+    <td align="left"><p><a href="/admin/logout.cgi" title="Click to log out">Log Out</a> | <a id="close" href="javascript:closewin();" title="Click to close this window">Close Window</a></p></td>
+
+    <td align="right"><p>&copy; <script>document.write(new Date().getFullYear())</script>, Plug and Pay Technologies, Inc.</p></td>
+  </tr>
+</table>
+
+</body>
+</html>
+

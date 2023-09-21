@@ -1,0 +1,209 @@
+#!/usr/local/bin/perl
+
+use strict;
+use warnings;
+use JSON::XS;
+use Time::Local;
+use Getopt::Long;
+use Data::Dumper;
+
+#####################################################################################
+# This is a script to format JSON log entries back to previous processor log format # 
+#####################################################################################
+###########################################################
+# This script must be used in batchfiles container or EC2 # 
+###########################################################
+
+# This script reads a file with JSON log entries and reformats it to the previous processor log format. 
+# It can print all the logs to the terminal or write it to a file provided by user
+# It can also filter log entries by providing a start and end time range
+
+# This script takes 3 arguments in this order: processor name, log file name, and the log file
+# To filter logs by a time range please add the --start and --end long options after the aformentioned 3 arguments
+# Please pass the time arguments to the long options like so: 
+# --start YYYY-MM-DDTHH:MM:SSZ and --end YYYY-MM-DDTHH:MM:SSZ or 
+# --start YYYYMMDDHHMMSS and --end YYYYMMDDHHMMSS 
+
+# A write file can be provide using long option: --write, then provide a txt file
+# if a write file is provided, the formatted logs will be written to the new file, in the current directory
+# ex --write testfile.txt
+
+# If no write file is provided, the formatted logs will be printed to the terminal
+
+# print logs to terminal template:
+# perl new_processor_formatter.pl <processor name> <log file name> <log file> --start <start date> --end <end date>
+
+# Example: 
+# perl new_processor_formatter.pl paytechsalem serverlogmsg paytechsalem-serverlogmsg.2023-04-27.log --start 2023-04-13T19:22:25Z --end 2023-04-13T19:22:27Z
+# perl new_processor_formatter.pl paytechsalem serverlogmsg paytechsalem-serverlogmsg.2023-04-27.log --start 20230413192225 --end 20230413192227
+
+# write logs to file template:
+# perl new_processor_formatter.pl <processor name> <log file name> <log file> --start <start date> --end <end date> --write <write file>
+
+# Example:
+# perl new_processor_formatter.pl paytechsalem serverlogmsg paytechsalem-serverlogmsg.2023-04-27.log --start 2023-04-13T19:22:25Z --end 2023-04-13T19:22:27Z --write formattedserverlogmessage.txt
+# perl new_processor_formatter.pl paytechsalem serverlogmsg paytechsalem-serverlogmsg.2023-04-27.log --start 20230413192225 --end 20230413192227 --write formattedserverlogmessage.txt
+
+# Arguments passed to script
+my $processor = $ARGV[0];
+my $logFileName = $ARGV[1];
+my $log = $ARGV[2];
+
+# EX: /home/pay1/log/datalog/paytechsalem-serverlogmsg/paytechsalem-serverlogmsg.2023-04-27.log
+my $filePath = "/home/pay1/log/datalog/$processor-$logFileName/$log";
+
+# long options passed to script
+my $start = '';
+my $end = '';
+my $writeFile = '';
+GetOptions(
+    'start=s' => \$start,
+    'end=s'   => \$end,
+    'write=s' => \$writeFile
+);
+
+#### Main ####
+sub init {
+    my $numDateInput = numDateInput();
+    my $timeRangeIsValid = validateTime($start) && validateTime($end);
+
+    if ($numDateInput == 2 && $timeRangeIsValid) {
+        outputMessage(1);
+    } elsif ($numDateInput == 2 && !$timeRangeIsValid) { 
+        print invalidTimeError();
+    } elsif ($numDateInput == 1) { 
+        print missingTimeError();
+    } else {
+        outputMessage(0);
+    }
+}
+
+sub outputMessage {
+    my $filterLogs = shift;
+
+    # read file
+    open my $info, $filePath or die "Could not open $filePath: $!";
+    while (my $line = <$info>)  { 
+        my $timeStamp = substr($line, 0, 20);
+        if (!validateTime($timeStamp)) {
+            print invalidLogTimeError($timeStamp);
+        }
+
+        my $logData = substr($line, 22);
+        my $json = JSON::XS->new->utf8->decode($logData);
+        my $msg = $json->{'data'}->{'msg'};
+
+        if ($filterLogs) {
+            if (inDateRange($start, $end, $timeStamp)) {
+                writeOrPrint($msg);
+            }
+        } else {
+            writeOrPrint($msg);
+        }
+    }
+
+    close $info;
+    print "done\n";
+}
+
+#### validation functions ####
+sub isBlank {
+    my $string = shift;
+    return !$string || $string eq '';
+}
+
+sub validateTime {
+    my $timeStamp = shift;
+
+    # format date ex: 2023-04-13T19:22:29Z 
+    my $matchDateUTC = $timeStamp =~ /^[\d]{4}-[\d]{2}-[\d]{2}T[\d]{2}:[\d]{2}:[\d]{2}Z$/;
+    # format date ex: 20230413192229
+    my $matchDateAllInt = $timeStamp =~ /^[0-9]{14}$/;
+
+    if (isBlank($timeStamp)) {
+        return 0;
+    } elsif (!$matchDateUTC && !$matchDateAllInt) {
+        return 0;
+    } 
+    
+    return 1;
+}
+
+# check to see if a date is within a range provided
+sub inDateRange {
+    my $start = shift;
+    my $end = shift;
+    my $currentTime = shift;
+    my $inRange = 0;
+
+    if (!validateTime($currentTime)){
+        $inRange = 0;
+    } else {
+        $start = convertToEpochTime($start);
+        $end = convertToEpochTime($end);
+        $currentTime = convertToEpochTime($currentTime);
+
+        $inRange = $start <= $currentTime && $currentTime <= $end;
+    } 
+
+    return $inRange;
+}
+
+#### helper functions ####
+# count of start and end date provided
+sub numDateInput {
+    return !isBlank($start) + !isBlank($end);
+}
+
+sub convertToEpochTime {
+    my $timeStamp = shift;
+    my $time;
+    my ($year, $month, $day, $hr, $min, $sec) = (0) x 6;
+
+    if ($timeStamp && $timeStamp ne '') {
+        if ($timeStamp =~ /T/) {
+            ($year, $month, $day, $hr, $min, $sec) = ($timeStamp =~ /(\d+)-(\d+)-(\d+)T(\d+):(\d+):(\d+)/);
+        } else {
+            ($year, $month, $day, $hr, $min, $sec) = ($timeStamp =~ /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/);
+        }
+
+        $time = timegm($sec, $min, $hr, $day, $month - 1, $year);
+    }
+
+    return $time;
+} 
+
+sub writeOrPrint {
+    my $data = shift;
+
+    if (!isBlank($writeFile)) {
+        writeToFile($data, $writeFile);
+    } else {
+        print $data;
+    }
+}
+
+sub writeToFile {
+    my $line = shift;
+    my $fileName = shift;
+
+    open(my $info, '>>', $fileName) or die "Could not open file '$fileName' $!";
+    print $info "$line";
+    close $info;
+}
+
+#### Error functions ####
+sub invalidTimeError {
+    return "Invalid time range provided \nValid format: YYYYMMDDHHMMSS or YYYY-MM-DDTHH:MM:SSZ\nEx: 20230413192225 or 2023-04-13T19:22:25Z\n";
+}
+
+sub missingTimeError {
+    return "Must provide a start and an end date\n";
+}
+
+sub invalidLogTimeError {
+    my $timeStamp = shift;
+    return "*** Something is wrong with the date of this log entry --> timestamp: $timeStamp ***\n";
+}
+
+init();

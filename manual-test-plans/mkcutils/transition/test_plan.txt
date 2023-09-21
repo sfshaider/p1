@@ -1,0 +1,4 @@
+1) Open form.html in this directory
+2) Click submit.
+3) Fill out card data on /pay page and submit
+4) Do you see a transition page?  If yes, success! Otherwise have a sad (then fix the problem)

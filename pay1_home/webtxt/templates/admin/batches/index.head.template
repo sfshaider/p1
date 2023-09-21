@@ -1,0 +1,15 @@
+<title>Batching Administration</title>
+<link rel="stylesheet" href="/admin/batches/_css/common.css" type="text/css">
+<link rel="stylesheet" href="/admin/batches/_css/popover.css" type="text/css">
+<link rel="stylesheet" href="/_css/z_checkbox.css" type="text/css">
+<link rel="stylesheet" href="/_css/z_radio.css" type="text/css">
+<script type='text/javascript' language='javascript' src='/_js/Charts.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/Tools.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/order/Transaction.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/order/transaction/Batch.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/batches/_js/Batcher.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/batches/_js/Settler.js'></script>
+<script type="text/javascript" langugae="javascript" src='/_js/z_checkbox.js'></script>
+<script type="text/javascript" langugae="javascript" src='/_js/z_radio.js'></script>
+<script type="text/javascript" langugae="javascript" src='/admin/batches/_js/Uploader.js'></script>
+<script type="text/javascript" langugae="javascript" src='/admin/batches/_js/Init.js'></script>

@@ -1,0 +1,138 @@
+<div id="addCustomerLightBox" class="light-box pnp-hidden overlay">
+    <h1>Add Customer</h1>
+    <hr>
+    <div id="addCustomerContent">
+        <div id="addCustomerTabs" class="pnp-box">
+            <ul>
+                <li><a href="#addCustomerContactInformation">Contact Information</a></li>
+                <li><a href="#addCustomerPrimaryAddress">Address</a></li>
+                <li><a href="#addCustomerPhone">Phone</a></li>
+            </ul>
+
+            <div id="addCustomerContactInformation">
+                <div>
+                    <h1>Contact Information</h1>
+                    <div class="pnp-box half display-format">
+                        <h4 class="display-format">Username</h4>
+                        <span class="user-hint">(Will be randomly generated if left blank)</span>
+                        <br>
+                        <input id="addCustomerUsername" class="pnp-input-control pnp-box" type="text">
+                    </div>
+                    <br>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Name</h4>
+                        <input id="addCustomerName" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4 class="display-format">Email</h4>
+                        <span class="user-hint">(Will be randomly generated if left blank)</span>
+                        <br>
+                        <input id="addCustomerEmail" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Password</h4>
+                        <input id="addCustomerPassword" class="pnp-input-control pnp-box" type="password">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Confirm Password</h4>
+                        <input id="addCustomerPasswordVerify" class="pnp-input-control pnp-box" type="password">
+                    </div>
+                </div>
+            </div>
+
+            <div id="addCustomerPrimaryAddress">
+                <div>
+                    <h1>Default Address</h1>
+                    <div class="pnp-box half display-format">
+                        <h4>Name</h4>
+                        <input id="addCustomerPrimaryAddressName" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Company</h4>
+                        <input id="addCustomerPrimaryAddressCompany" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Line 1</h4>
+                        <input id="addCustomerPrimaryAddressLine1" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Line 2</h4>
+                        <input id="addCustomerPrimaryAddressLine2" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>City</h4>
+                        <input id="addCustomerPrimaryAddressCity" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>State</h4>
+                        <select id="addCustomerPrimaryAddressStateSelect" class="pnp-input-control pnp-box"></select>
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Postal Code</h4>
+                        <input id="addCustomerPrimaryAddressPostalCode" class="pnp-input-control pnp-box quarter" type="text">
+                    </div>
+                    <div class="pnp-box half display-format">
+                        <h4>Country</h4>
+                        <select id="addCustomerPrimaryAddressCountrySelect" class="pnp-input-control pnp-box">
+                            <metavar='countrySelect'>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="addCustomerPhone">
+                <div>
+                    <h1>Default Phone</h1>
+                    <div class="pnp-box half display-format">
+                        <h4>Phone Number</h4>
+                        <input id="addCustomerPhoneNumber" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Phone Type</h4>
+                        <select id="addCustomerPhoneGeneralTypeSelect" class="pnp-input-control pnp-box">
+                            <metavar='general_phone_type_options'>
+                        </select>
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Description</h4>
+                        <input id="addCustomerPhoneDescription" class="pnp-input-control pnp-box" type="text">
+                    </div>
+                </div>
+
+                <div>
+
+                    <h1>Default Fax</h1>
+                    <div class="pnp-box half display-format">
+                        <h4>Fax Number</h4>
+                        <input id="addCustomerFaxNumber" class="pnp-input-control pnp-box" type="text">
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Fax Type</h4>
+                        <select id="addCustomerFaxGeneralTypeSelect" class="pnp-input-control pnp-box">
+                            <metavar='general_fax_type_options'>
+                        </select>
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h4>Description</h4>
+                        <input id="addCustomerFaxDescription" class="pnp-input-control pnp-box" type="text">
+                    </div></div>
+            </div>
+        </div>
+    </div>
+    <input id="closeAddCustomerLightBox" type="button" class="pnp-input-control left-action-button" value="Close">
+    <input id="saveCustomer" type="button" class="pnp-input-control right-action-button" value="Submit">
+</div>

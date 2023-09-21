@@ -1,0 +1,29 @@
+<div id="tabs" data-role="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#batch_tab">Settle Transactions</a></li>
+      <li><a href="#upload_tab">Upload Batch</a></li>
+      <li><a href="#report_tab">Batch Reporting</a></li>
+    </ul>
+  </div>
+
+  <div id="batch_tab">
+    <div id="batching">
+      <metainc='/admin/batches/index/,batches'>
+    </div>
+  </div>
+
+  <div id="upload_tab">
+    <div id="uploads">
+      <metainc='/admin/batches/index,upload_form'>
+    </div>
+  </div>
+
+  <div id="report_tab">
+    <div id="reports">
+      <form action='report.cgi' method='POST' target='_blank'>
+        <metainc='/admin/batches/index/,report_criteria'>
+      </form>
+    </div>
+  </div>
+</div>

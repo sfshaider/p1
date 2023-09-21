@@ -1,0 +1,43 @@
+<h1>Commissions History</h1>
+<hr>
+<br>
+
+<div class='tableDiv'>
+  <input type='hidden' name='pt_gateway_account' value='<metavar="pt_gateway_account">'>
+
+  <div class='infoBox'>	
+	<h1>Start Date</h1>
+	<hr>
+
+	<label><span>Month:</span>
+	   <metavar='StartMonth'>
+        </label>
+
+	<label>
+	   <span>Year:</span>
+	   <metavar='StartYear'>
+	</label>
+  </div>
+
+  <div class="infoBox">
+	<h1>End Date</h1>
+        <hr>
+	<label><span>Month:</span>
+	  <metavar='EndMonth'>
+	</label>
+
+        <label>
+          <span>Year:</span>
+          <metavar='EndYear'>
+        </label>
+  </div>
+
+  <input type="button" value = 'Get Commissions Report' class='reseller-input-control' name='getReports'> 
+  <br><br>
+  <div class='totals'></div>
+</div>
+
+<div id='tableContainer'>
+  <div id='mainTable'>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+Expedited checkout:
+
+    Load /pay/ for 'scotttest'
+    Use 'scott@plugnpay.com' in the email address field
+    To test different scenarios, in /private/processors.cgi change settings and test:
+
+a) Auto - entering email address should open gocart window if gocart template is used (no other template used)
+
+    if another template is used, gocart window should not open after email is entered
+
+b) Off - entering email address should never open gocart window
+c) On - entering email address should always open gocart window, no matter what template is used
+
+    Also test the above by passing the same email address to /pay/
+
+Amount:
+
+    Load /pay/ without passing an amount, enter an amount on the page and use the gocart button, amount should be same as entered
+
+Enrollment checkbox:
+
+    Use enrollment setting in processor.cgi to render the enrollment checkbox and view it on /pay/
+

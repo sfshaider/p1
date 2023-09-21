@@ -1,0 +1,62 @@
+<div class='pnp-hidden overlay light-box' id="billMemberLightBox">
+<h1>Bill Member</h1>
+    <hr>
+
+    <div>
+        <div class="pnp-box">
+            <input type="hidden" id="billMemberSignupFeePayment" />
+
+            <div class="pnp-box third display-format">
+                <h4>Customer</h4>
+                <input id="billMemberCustomer" class="pnp-box pnp-input-control" type="text" readonly>
+            </div>
+
+            <br>
+
+            <input id="billMemberProfileID" type="hidden"/>
+
+            <div class="pnp-box half display-format">
+                <h4 class="display-format">Operation</h4>
+                <span class="info-span display-format" style="margin-left: 3px;">*Balance will be added if operation differs from payment plan type.</span>
+                <br>
+                <select id="billMemberOperation" class="pnp-box half pnp-input-control">
+                    <option value="auth">Authorization</option>
+                    <option value="credit">Credit</option>
+                </select>
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4>Description</h4>
+                <input id="billMemberDescription" class="pnp-box pnp-input-control" type="text" maxlength="60">
+            </div>
+
+            <br>
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Amount</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input id="billMemberAmount" class="pnp-box pnp-input-control half" type="text" />
+                <div id="billMemberSpinner" class="spinner"></div>
+            </div>
+
+            <div class="pnp-box third display-format"></div>
+
+            <div class="pnp-box third display-format">
+                <div class="pnp-box third display-format">
+                    <h4 class="display-format">Fee</h4>
+                    <br>
+                    <input id="billMemberFeeAmount" class="pnp-box pnp-input-control" readonly="" />
+                </div>
+
+                <div class="pnp-box half display-format">
+                    <h4 class="display-format">Total</h4>
+                    <br>
+                    <input id="billMemberTotalAmount" class="pnp-input-control" readonly="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input id="billMember" class="right-action-button pnp-input-control" type="button" value="Submit">
+    <input id="closeBillMemberLightBox" class="left-action-button pnp-input-control" type="button" value="Cancel">
+</div>

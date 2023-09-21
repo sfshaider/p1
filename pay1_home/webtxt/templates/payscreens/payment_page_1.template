@@ -1,0 +1,239 @@
+				<div id="customizableTopSection" class="section"><img class="logo" alt="<metavar="logoAltText">" src="<metavar="logoURL">"></div>	
+				<div id="formContainer" style="visibility: hidden">
+					<form method='POST' action='<meta type="template" content="type='variable', name='formAction'" novalidate />'id='payForm' >
+						<div id="errorSection"><h1><meta type="template" content="type='variable', name='errorMessage'" /></h1></div>
+						<div id="topOfForm" class="section"></div>
+						<meta type="template" content="type='variable', name='itemizationHTML'" />
+						<div id="billingAndPaymentSections">
+							<div id="billingInformationSection" class="section">
+								<h1></h1><hr class="sectionHeaderHR" />
+								<span id="billingMessage"></span>
+								<ul>
+									<li id="pt_billing_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_name"></span><span class="description"></span></label></li>
+									<li id="pt_billing_first_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_first_name"></span><span class="description"></span></label></li>
+									<li id="pt_billing_last_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_last_name"></span><span class="description"></span></label></li>
+									<li id="pt_billing_address_1"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_address_1"></span><span class="description"></span></label></li>
+									<li id="pt_billing_address_2"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_address_2"></span><span class="description"></span></label></li>
+									<li id="pt_billing_city"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_city"></span><span class="description"></span></label></li>
+									<li id="pt_billing_state"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_state"></span><span class="description"></span></label></li>
+									<li id="pt_billing_province"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_province"></span><span class="description"></span></label></li>
+									<li id="pt_billing_country"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_country"></span><span class="description"></span></label></li>
+									<li id="pt_billing_postal_code"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_postal_code"></span><span class="description"></span></label></li>
+									<li id="pt_billing_email_address"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_email_address"></span><span class="description"></span></label></li>
+									<li id="pt_billing_phone_number"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_phone_number"></span><span class="description"></span></label></li>
+									<li id="pt_billing_company"><label><span class="label"></span><span class="input"><input type="text" name="pt_billing_company"></span><span class="description"></span></label></li>
+									<li id="pt_customer_comments"><label><span class="label"></span><span class="input"><input type="text" name="pt_customer_comments"></span><span class="description"></span></label></li>
+								</ul>
+								<div class='clear'></div>
+							</div>
+							<div id="shippingInformationSection" class="section">
+								<h1></h1><hr class="sectionHeaderHR" />
+								<ul>
+									<li id="pt_shipping_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_name"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_first_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_first_name"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_last_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_last_name"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_address_1"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_address_1"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_address_2"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_address_2"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_city"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_city"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_state"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_state"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_province"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_province"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_country"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_country"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_postal_code"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_postal_code"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_email"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_email"></span><span class="description"></span></label></li>
+									<li id="pt_shipping_phone"><label><span class="label"></span><span class="input"><input type="text" name="pt_shipping_phone"></span><span class="description"></span></label></li>
+								</ul>
+								<div class='clear'></div>
+							</div>
+							<div id="paymentInformationSection" class="section">
+								<h1></h1><hr class="sectionHeaderHR" />
+								<span id="paymentMessage"></span>
+								<ul>
+									<li id="pt_payment_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_payment_name"></span><span class="description"></span></label></li>
+									<li id="pt_payment_first_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_payment_first_name"></span><span class="description"></span></label></li>
+									<li id="pt_payment_last_name"><label><span class="label"></span><span class="input"><input type="text" name="pt_payment_last_name"></span><span class="description"></span></label></li>
+									<li id="pt_card_number"><label><span class="label"></span><span class="input"><input type="text" name="pt_card_number" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_card_security_code"><label><span class="label"></span><span class="input"><input type="text" name="pt_card_security_code" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_card_expiration_month"><label><span class="label"></span><span class="input"><input type="text" name="pt_card_expiration_month" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_card_expiration_year"><label><span class="label"></span><span class="input"><input type="text" name="pt_card_expiration_year" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_card_expiration"><label><span class="label"></span><span class="input"><input type="text" name="pt_card_expiration" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_gift_card_number"><label><span class="label"></span><span class="input"><input type="text" name="pt_gift_card_number" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_gift_card_security_code"><label><span class="label"></span><span class="input"><input type="text" name="pt_gift_card_security_code" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_ach_routing_number"><label><span class="label"></span><span class="input"><input type="text" name="pt_ach_routing_number" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_ach_account_number"><label><span class="label"></span><span class="input"><input type="text" name="pt_ach_account_number" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_ach_account_type"><label><span class="label"></span><span class="input select"><select name="pt_ach_account_type"><option class="checking" label="checking" value="checking"></option><option class="savings" label="savings" value="savings"></option></select></span><span class="description"></span></label></li>
+									<li id="pt_ach_account_class"><label><span class="label"></span><span class="input select"><select name="pt_ach_account_class"><option class="personal" label="personal" value="personal"></option><option class="business" label="business" value="business"></option></select></span><span class="description"></span></label></li>
+									<li id="pt_ach_sec_code"><label><span class="label"></span><span class="input"><input type="text" name="pt_ach_sec_code" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_transaction_amount"><label><span class="label"></span><span class="input"><input type="text" name="pt_transaction_amount"></span><span class="description"></span></label></li>
+									<li id="pt_authorization_code"><label><span class="label"></span><span class="input"><input type="text" name="pt_authorization_code" autocomplete="off"></span><span class="description"></span></label></li>
+									<li id="pt_purchase_order_number"><label><span class="label"></span><span class="input"><input type="text" name="pt_purchase_order_number" autocomplete="off"></span><span class="description"></span></label></li>
+
+									<li id="pt_account_code_1"><label><span class="label"></span><span class="input"><input type="text" name="pt_account_code_1"></span><span class="description"></span></label></li>
+									<li id="pt_account_code_2"><label><span class="label"></span><span class="input"><input type="text" name="pt_account_code_2"></span><span class="description"></span></label></li>
+									<li id="pt_account_code_3"><label><span class="label"></span><span class="input"><input type="text" name="pt_account_code_3"></span><span class="description"></span></label></li>
+								</ul>
+								<div class='clear'></div>
+							</div>
+						</div>
+						<div id="chargeModelSection"><meta type="template" content="type='dynamic-include', name='chargeModelSection'" /></div>
+						<div id="bottomOfForm" class="section"></div>
+						<div id="buttonSection" class="section">
+							<input id="pi_error_message" type="hidden" name="pi_error_message" value="<meta type="template" content="type='variable', name='pi_error_message'" />" disabled/>
+							<input id="pi_response_status" type="hidden" name="pi_response_status" value="<meta type="template" content="type='variable', name='pi_response_status'" />" />
+							<input id="pi_response_code" type="hidden" name="pi_response_code" value="<meta type="template" content="type='variable', name='pi_response_code'" />" />
+							<input id="pt_gateway_account" type="hidden" name="pt_gateway_account" value="" />
+							<input id="pt_card_token" type="hidden" name="pt_card_token" value="" />
+							<input id="pt_magstripe" type="hidden" name="pt_magstripe" value="" />
+							<input id="pt_magensa" type="hidden" name="pt_magensa" value="" />
+							<input id="pt_swipe_device" type="hidden" name="pt_swipe_device" value="" />
+							<input id="pt_device_serial_number" type="hidden" name="pt_device_serial_number" value="" />
+							<input id="pt_encryption_track_1" type="hidden" name="pt_encryption_track_1" value="" />
+							<input id="pt_encryption_track_2" type="hidden" name="pt_encryption_track_2" value="" />
+							<input id="pt_encryption_track_3" type="hidden" name="pt_encryption_track_3" value="" />
+							<input id="pt_ksn" type="hidden" name="pt_ksn" value="" />
+							<input id="pt_magne_print_status" type="hidden" name="pt_magne_print_status" value="" />
+							<input id="pt_encryption_magne_print" type="hidden" name="pt_encryption_magne_print" value="" />
+							<input id="pb_force_receipt" type="hidden" name="pb_force_receipt" value="" />
+							<input id="pt_order_classifier" type="hidden" name="pt_order_classifier" value="" />
+							<input id="pt_pre_transaction_balance" type="hidden" name="pt_pre_transaction_balance" value="" />
+							<input id="pd_transaction_payment_type" type="hidden" name="pd_transaction_payment_type" value="" />
+							<input id="pt_authorization_type" type="hidden" name="pt_authorization_type" value="" />
+							<input id="pt_is_business_account" type="hidden" name="pt_is_business_account" value="" />
+							<input id="pd_display_items" type="hidden" name="pd_display_items" value="" />
+							<input id="pt_payment_session" type="hidden" name="pt_payment_session" value="<meta type="template" content="type='variable', name='paymentSession'" />" />
+							<input id="pb_bad_card_url" type="hidden" name="pb_bad_card_url" value="" />
+							<input id="pb_problem_url" type="hidden" name="pb_problem_url" value="" />
+							<input id="pb_success_url" type="hidden" name="pb_success_url" value="" />
+							<input id="pb_transition_type"  type="hidden" name="pb_transition_type"  value="" />
+							<input id="pb_transition_template"  type="hidden" name="pb_transition_template"  value="" />
+							<input id="pt_transaction_flags" type="hidden" name="pt_transaction_flags" value="" />
+							<input id="pt_transaction_hash"  type="hidden" name="pt_transaction_hash"  value="" />
+							<input id="pt_transaction_time"  type="hidden" name="pt_transaction_time"  value="" />
+							<input id="pt_tax_amount"  type="hidden" name="pt_tax_amount"  value="" />
+							<input id="pt_tax_rate"  type="hidden" name="pt_tax_rate"  value="" />
+							<input id="pb_receipt_type" type="hidden" name="pb_receipt_type" value="" />
+							<input id="pr_balance" type="hidden" name="pr_balance" value="" />
+							<input id="pr_plan_id" type="hidden" name="pr_plan_id" value="" />
+							<input id="pr_can_renew" type="hidden" name="pr_can_renew" value="" />
+							<input id="pr_validate_card" type="hidden" name="pr_validate_card" value="" />
+							<input id="pr_billing_cycle" type="hidden" name="pr_billing_cycle" value="" />
+							<input id="pr_recurring_amount" type="hidden" name="pr_recurring_amount" value="" />
+							<input id="pr_is_recurring" type="hidden" name="pr_is_recurring" value="" />
+							<input id="pr_is_initial" type="hidden" name="pr_is_initial" value="" />
+							<input id="pb_avs_only" type="hidden" name="pb_avs_only" value="" />
+							<input id="pb_allow_partial" type="hidden" name="pb_allow_partial" value="" />
+							<input id="px_purchase_descriptor" type="hidden" name="px_purchase_descriptor" value="<metavar='purchaseDescriptor'>"/>
+							<input id="pb_post_auth" type="hidden" name="pb_post_auth" value="" />
+							<input id="pr_password_hashing_method" type="hidden" name="pr_password_hashing_method" value="" />
+							<input id="pr_minutes_before_first_billed" type="hidden" name="pr_minutes_before_first_billed" value="" />
+							<input id="pr_days_before_first_billed" type="hidden" name="pr_days_before_first_billed" value="" />
+							<input id="pr_months_before_first_billed" type="hidden" name="pr_months_before_first_billed" value="" />
+							<input id="pb_duplicate_check_window" type="hidden" name="pb_duplicate_check_window" value="" />
+							<input id="pb_ignore_fraud_response" type="hidden" name="pb_ignore_fraud_response" value="" />
+							<input id="pb_receipt_country" type="hidden" name="pb_receipt_country" value="" />
+							<input id="pd_shipping_policy_url" type="hidden" name="pd_shipping_policy_url" value="" />
+							<input id="pm_username" type="hidden" name="pm_username" value="" />
+							<input id="pt_billing_fax_number" type="hidden" name="pt_billing_fax_number" value="" />
+							<input id="pt_bin" type="hidden" name="pt_bin" value="" />
+							<input id="pt_card_type" type="hidden" name="pt_card_type" value="" />
+							<input id="pt_currency" type="hidden" name="pt_currency" value="" />
+							<input id="pt_customer_username" type="hidden" name="pt_customer_username" value="<meta type="template" content="type='variable', name='customerUsername'" />" />
+							<input id="pt_ip_address" type="hidden" name="pt_ip_address" value="" />
+							<input id="pt_convenience_fee_amount" type="hidden" name="pt_convenience_fee_amount" value="" />
+							<input id="pa_version" type="hidden" name="pa_version" value="" />
+							<input id="pb_automatically_print_receipt" type="hidden" name="pb_automatically_print_receipt" value="" />
+							<input id="pb_transaction_routing" type="hidden" name="pb_transaction_routing" value="" />
+							<input id="pb_transaction_routing_balance" type="hidden" name="pb_transaction_routing_balance" value="" />
+							<input id="pb_cards_allowed" type="hidden" name="pb_cards_allowed" value="" />
+							<input id="pb_merchant_email" type="hidden" name="pb_merchant_email" value="" />
+							<input id="pb_confirmation_sending_email_address" type="hidden" name="pb_confirmation_sending_email_address" value="" />
+							<input id="pb_dont_send_email" type="hidden" name="pb_dont_send_email" value="" />
+							<input id="pb_customer_password" type="hidden" name="pb_customer_password" value="" />
+							<input id="pb_customer_password_confirmation" type="hidden" name="pb_customer_password_confirmation" value="" />
+							<input id="pb_dcc_type" type="hidden" name="pb_dcc_type" value="" />
+							<input id="pb_override_adjustment" type="hidden" name="pb_override_adjustment" value="" />
+							<input id="pb_ignore_security_code_response" type="hidden" name="pb_ignore_security_code_response" value="" />
+							<input id="pb_receipt_address_1" type="hidden" name="pb_receipt_address_1" value="" />
+							<input id="pb_receipt_address_2" type="hidden" name="pb_receipt_address_2" value="" />
+							<input id="pb_receipt_city" type="hidden" name="pb_receipt_city" value="" />
+							<input id="pb_receipt_company" type="hidden" name="pb_receipt_company" value="" />
+							<input id="pb_receipt_company_url" type="hidden" name="pb_receipt_company_url" value="" />
+							<input id="pb_receipt_email_address" type="hidden" name="pb_receipt_email_address" value="" />
+							<input id="pb_receipt_fax" type="hidden" name="pb_receipt_fax" value="" />
+							<input id="pb_receipt_name" type="hidden" name="pb_receipt_name" value="" />
+							<input id="pb_receipt_phone" type="hidden" name="pb_receipt_phone" value="" />
+							<input id="pb_receipt_postal_code" type="hidden" name="pb_receipt_postal_code" value="" />
+							<input id="pb_receipt_province" type="hidden" name="pb_receipt_province" value="" />
+							<input id="pb_receipt_state" type="hidden" name="pb_receipt_state" value="" />
+							<input id="pb_receipt_transaction_url" type="hidden" name="pb_receipt_transaction_url" value="" />
+							<input id="pb_remote_session" type="hidden" name="pb_remote_session" value="" />
+							<input id="pb_response_message_type" type="hidden" name="pb_response_message_type" value="" />
+							<input id="pb_response_parse_type" type="hidden" name="pb_response_parse_type" value="" />
+							<input id="pb_response_url" type="hidden" name="pb_response_url" value="" />
+							<input id="pd_collect_company" type="hidden" name="pd_collect_company" value="" />
+							<input id="pd_collect_credentials" type="hidden" name="pd_collect_credentials" value="" />
+							<input id="pd_collect_shipping_information" type="hidden" name="pd_collect_shipping_information" value="" />
+							<input id="pd_collect_ssn" type="hidden" name="pd_collect_ssn" value="" />
+							<input id="pd_collect_ssn_verification" type="hidden" name="pd_collect_ssn_verification" value="" />
+							<input id="pd_collect_title" type="hidden" name="pd_collect_title" value="" />
+							<input id="pd_content_privacy_statement" type="hidden" name="pd_content_privacy_statement" value="" />
+							<input id="pd_content_privacy_url" type="hidden" name="pd_content_privacy_url" value="" />
+							<input id="pd_content_return_url" type="hidden" name="pd_content_return_url" value="" />
+							<input id="pd_currency_symbol" type="hidden" name="pd_currency_symbol" value="" />
+							<input id="pd_language" type="hidden" name="pd_language" value="" />
+							<input id="pt_ach_check_number" type="hidden" name="pt_ach_check_number" value="" />
+							<input id="pt_avs_level" type="hidden" name="pt_avs_level" value="" />
+							<input id="pt_card_is_present" type="hidden" name="pt_card_is_present" value="" />
+							<input id="pt_card_issue_number" type="hidden" name="pt_card_issue_number" value="" />
+							<input id="pt_card_magensa" type="hidden" name="pt_card_magensa" value="" />
+							<input id="pt_card_magstripe" type="hidden" name="pt_card_magstripe" value="" />
+							<input id="pt_card_start_date" type="hidden" name="pt_card_start_date" value="" />
+							<input id="pt_client_identifier" type="hidden" name="pt_client_identifier" value="" />
+							<input id="pt_handling_amount" type="hidden" name="pt_handling_amount" value="" />
+							<input id="pt_is_retail_transaction" type="hidden" name="pt_is_retail_transaction" value="" />
+							<input id="pt_order_id" type="hidden" name="pt_order_id" value="<meta type="template" content="type='variable', name='orderID'" />" />
+							<input id="pt_shipping_amount" type="hidden" name="pt_shipping_amount" value="" />
+							<input id="pt_shipping_company" type="hidden" name="pt_shipping_company" value="" />
+							<input id="pt_shipping_email_address" type="hidden" name="pt_shipping_email_address" value="" />
+							<input id="pt_shipping_phone_number" type="hidden" name="pt_shipping_phone_number" value="" />
+							<input id="pt_tax_rates" type="hidden" name="pt_tax_rates" value="" />
+							<input id="pt_tax_state" type="hidden" name="pt_tax_state" value="" />
+							<input id="pt_transaction_type" type="hidden" name="pt_transaction_type" value="" />
+							<input id="pt_surcharge_amount" type="hidden" name="pt_surcharge_amount" value="" />
+							<input id="pt_discount_amount" type="hidden" name="pt_discount_amount" value="" />
+							<input id="pd_javascript_template" type="hidden" name="pd_javascript_template" value="" />
+							<input id="pd_css_template" type="hidden" name="pd_css_template" value="" />
+							<input id="pb_tds" type="hidden" name="pb_tds" value="" />
+							<input id="pt_agree_to_terms" type="hidden" name="pt_agree_to_terms" value="" />
+							<input id="pt_transaction_payment_type_selectable" type="hidden" name="pt_transaction_payment_type_selectable" value="" />
+							<input id="pb_remote_session_timeout" type="hidden" name="pb_remote_session_timeout" value="" />
+							<input id="pb_store_data_only" type="hidden" name="pb_store_data_only" value="" />
+							<input id="pt_masterpass_trans_id" type="hidden" name="pt_masterpass_trans_id" value="" />
+							<input id="pt_masterpass_consumer_key" type="hidden" name="pt_masterpass_consumer_key" value="" />
+							<input id="pt_masterpass_preCheckoutTransactionId" type="hidden" name="pt_masterpass_preCheckoutTransactionId" value="" />
+							<input id="masterpass_request_token" type="hidden" name="masterpass_request_token" value="<metavar='masterpass_request_token'>" />
+							<input id="masterpass_merchant_checkoutId" type="hidden" name="masterpass_merchant_checkoutId" value="<metavar='masterpass_merchant_checkoutId'>" />
+							<input id="masterpass_callback_url" type="hidden" name="masterpass_callback_url" value="<metavar='masterpass_callback_url'>" />
+							<input id="amexexpress_client_id" type="hidden" name="amexexpress_client_id" value="<metavar='amexexpress_client_id'>" />
+							<input id="amexexpress_request_id" type="hidden" name="amexexpress_request_id" value="<metavar='amexexpress_request_id'>" />
+							<input id="amexexpress_callback_url" type="hidden" name="amexexpress_callback_url" value="<metavar='amexexpress_callback_url'>" />
+							<input id="amexexpress_cookiecallback_url" type="hidden" name="amexexpress_cookiecallback_url" value="<metavar='amexexpress_cookiecallback_url'>" />
+							<input id="masterpass_tokencgi_url" type="hidden" name="masterpass_tokencgi_url" value="<metavar='masterpass_tokencgi_url'>" />
+							<input id="masterpass_maskedcardnumber" type="hidden" name="masterpass_maskedcardnumber" value="<metavar='masterpass_maskedcardnumber'>" />
+							<input id="pb_statement_descriptor" type="hidden" name="pb_statement_descriptor" value="" />
+							<input id="pt_client_response" type="hidden" name="pt_client_response" value="" />
+							<input id="pt_enroll_in_gocart" type="hidden" name="pt_enroll_in_gocart" value="" />
+							<input id="pb_security_token" type="hidden" name="pb_security_token" value="<meta type="template" content="type='variable', name='securityToken'" />" />
+							<input id="pt_3d_cavv" type="hidden" name="pt_3d_cavv" value="" />
+							<input id="pt_3d_eci" type="hidden" name="pt_3d_eci" value="" />
+							<input id="pt_3d_ucaf" type="hidden" name="pt_3d_ucaf" value="" />
+							<input id="pt_3d_xid" type="hidden" name="pt_3d_xid" value="" />
+							<ul>
+								<li><meta type="template" content="type='variable', name='captchaForm'" ></li>
+								<li><span class="input"><button id="submitButton" type="submit" class="button">Submit</button></span></li>
+							</ul>
+							<div class='clear'></div>
+						</div>
+						<div style="clear: both"></div>
+					</form>
+				</div>
+

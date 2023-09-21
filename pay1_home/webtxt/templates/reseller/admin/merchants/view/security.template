@@ -1,0 +1,89 @@
+<h1>Security</h1>
+<script>
+    jQuery('document').ready(function() {
+        var merchant = jQuery('input[name=gatewayAccountName]').val();
+        jQuery('#dialogMerchantName').text(merchant);
+
+        // get email address
+        function emailCallback(emailAddress) {
+            jQuery('#emailAddress').text(emailAddress);
+            jQuery('#dialogEmailAddress').text(emailAddress);
+        }
+        jQuery('#merchantSecurityTab').click(function() {
+            jQuery('#message').text('');
+            Security.getAutoResetPasswordEmail(merchant, emailCallback, '#emailAddress');
+        });
+
+        // reset password
+        function autoResetPasswordCallback(message) {
+           jQuery('#message').text(message);
+        }
+        jQuery('#autoResetPassword').click(function() {
+            if (jQuery('#dialogEmailAddress').text() !== '') {
+                jQuery('#confirmDialog').dialog({
+                    modal: true,
+                    buttons: [
+                        {
+                            text: "Reset Password",
+                            click: function () {
+                                jQuery(this).dialog("close");
+                                Security.autoResetPassword(merchant, autoResetPasswordCallback, '#message');
+                            }
+                        },
+                        {
+                            text: "Cancel",
+                            click: function () {
+                                jQuery(this).dialog("close");
+                            }
+                        }
+                    ],
+                })
+            } else {
+                jQuery('#errorDialog').dialog({
+                    modal: true,
+                    buttons: [
+                        {
+                            text: "Ok",
+                            click: function () {
+                                jQuery(this).dialog("close");
+                            }
+                        },
+                    ],
+                })
+            }
+        });
+    });
+</script>
+<style>
+    #emailAddress {
+        font-weight: bold;
+    }
+    #message {
+        font-weight: bold
+    }
+    #confirmDialog, #errorDialog {
+        display: none;
+    }
+</style>
+<hr>
+<table class="lightgraybox rounded rt-box noFinger">
+    <tr>
+        <td>
+            <button class="reseller-input-control" id="autoResetPassword">Reset Merchant Password</button>
+        </td>
+        <td>
+            Password will be sent to: <span id="emailAddress"></span>
+        </td>
+    </tr>
+    <tr>
+        <td><span id="message"></span></td>
+    </tr>
+    <div id="confirmDialog" title="Reset Merchant Password">
+        <p>Are you sure you want to reset the password for <span id="dialogMerchantName"></span>?</p>
+        <p>Email will be sent to <span id="dialogEmailAddress"></span>.</p>
+        <p>This cannot be undone.</p>
+    </div>
+    <div id="errorDialog" title="Error">
+        <p>Email address could not be loaded</p>
+    </div>
+</table>

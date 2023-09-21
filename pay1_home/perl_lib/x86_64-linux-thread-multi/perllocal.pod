@@ -1,0 +1,22 @@
+=head2 Fri Feb 24 21:21:21 2017: C<Module> L<Env::C|Env::C>
+
+=over 4
+
+=item *
+
+C<installed into: /home/p/pay1/perl_lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.13>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

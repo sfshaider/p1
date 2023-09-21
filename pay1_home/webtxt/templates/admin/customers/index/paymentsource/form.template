@@ -1,0 +1,84 @@
+<div class="pnp-box">
+    <h4 class="display-format">Type</h4>
+    <span class="info-span">*</span>
+    <br>
+    <input class="pnp-box pnp-input-control third display-format" type="button" name="paymentSourceCreditCardButton" value="CARD">
+    <input class="pnp-box pnp-input-control third display-format" type="button" name="paymentSourceACHButton" value="ACH">
+</div>
+
+<div>
+    <div name="paymentSourceCreditCardType">
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Credit Card</h4>
+            <span class="info-span">*</span>
+            <br>
+            <input type="text" name="paymentSourceCreditCard" class="pnp-box pnp-input-control" maxlength="19">
+        </div>
+
+        <div class="pnp-box display-format">
+            <span name="editPaymentSourceCreditCardSpan" class="pnp-hidden info-span">**Leave credit card # blank to use current card # stored</span>
+        </div>
+
+        <br>
+
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Expiration Month</h4>
+            <span class="info-span">*</span>
+            <br>
+            <select class="pnp-box pnp-input-control half" name="paymentSourceExpMonth"></select>
+        </div>
+
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Expiration Year</h4>
+            <span class="info-span">*</span>
+            <br>
+            <select class="pnp-box pnp-input-control half" name="paymentSourceExpYear"></select>
+        </div>
+    </div>
+
+    <div name="paymentSourceACHType">
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Routing Number</h4>
+            <span class="info-span">*</span>
+            <br>
+            <input type="text" name="paymentSourceRoutingNumber" class="pnp-box pnp-input-control">
+        </div>
+
+        <div class="pnp-box display-format">
+            <span name="editPaymentSourceACHSpan" class="pnp-hidden info-span">**Leave routing # and account # blank to use current routing # and account # stored</span>
+        </div>
+
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Account Number</h4>
+            <span class="info-span">*</span>
+            <br>
+            <input type="text" name="paymentSourceAccountNumber" class="pnp-box pnp-input-control">
+        </div>
+
+        <div class="pnp-box third display-format">
+            <h4 class="display-format">Account Type</h4>
+            <span class="info-span">*</span>
+            <br>
+            <select class="pnp-box pnp-input-control" name="paymentSourceAccountTypeSelect" style="width: 70%">
+                <metavar="ach_account_options">
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="pnp-box">
+    <h4>Description</h4>
+    <input class="pnp-box pnp-input-control half" type="text" name="paymentSourceDescription" maxlength="60">
+</div>
+
+<div name="paymentSourceBillingAddress" class="pnp-box full display-format">
+    <h4 class="display-format">Billing Address</h4>
+    <span class="info-span">*</span>
+    <br>
+    <select class="pnp-box pnp-input-control" name="paymentSourceBillingAddressSelect"></select>
+</div>
+
+<div class="pnp-box">
+    <input name="paymentSourceUseDefaultAddressCheckbox" type="checkbox">
+    <h4 class="display-format">Use Default Address</h4>
+</div>

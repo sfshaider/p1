@@ -1,0 +1,43 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+#use miscutils;
+use procutils;
+#use File::Copy;
+
+
+if ($#ARGV < 0) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+
+if ($ARGV[0] eq "off") {
+  &procutils::flagwrite("secondary","global","/home/pay1/batchfiles/logs/global","secondary.txt","unlink","","");
+  print "primary global\n";
+}
+elsif ($ARGV[0] eq "on") {
+  &procutils::flagwrite("secondary","global","/home/pay1/batchfiles/logs/global","secondary.txt","write","","1\n");
+  print "secondary global 1\n";
+}
+elsif ($ARGV[0] eq "1") {
+  &procutils::flagwrite("secondary","global","/home/pay1/batchfiles/logs/global","secondary.txt","write","","1\n");
+  print "secondary global 1\n";
+}
+elsif ($ARGV[0] eq "2") {
+  &procutils::flagwrite("secondary","global","/home/pay1/batchfiles/logs/global","secondary.txt","write","","2\n");
+  print "secondary global 2\n";
+}
+elsif ($ARGV[0] eq "3") {
+  &procutils::flagwrite("secondary","global","/home/pay1/batchfiles/logs/global","secondary.txt","write","","3\n");
+  print "secondary global 3\n";
+}
+elsif ($ARGV[0] eq "4") {
+  &procutils::flagwrite("secondary","global","/home/pay1/batchfiles/logs/global","secondary.txt","write","","4\n");
+  print "secondary global 4\n";
+}
+
+

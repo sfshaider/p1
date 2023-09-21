@@ -1,0 +1,39 @@
+    <div class='contentArea'>
+      <div class='elements uielement infobox'>
+        <h1>What are elements?</h1>
+        <hr />
+        <p>Elements are the building blocks of our payment screens.  They can be enabled or disabled, made visible or invisible, depending on your requirements.</p>
+        <p>This page may be used to add or remove form elements or entire sections of the form.  You do this by adding element controls on the right to override the default settings.</p>
+      </div>
+      <div class='uielement data'>
+        <div class='hidden'>
+          <div class='template control'>
+            <form>
+              <div class='settings'>
+                <input type='hidden' name='original_selector' value='' />
+                <input type='hidden' name='original_content_encoded' value='' />
+                <span class='setting'>
+                  <label><span class='labelText'>Selector:</span>
+                    <input type='text' name='selector' value='body ' style="width: 400px" />
+                  </label>
+                </span> 
+                <span class='setting'>
+                  <label><span class='labelText'>Content:</span>
+                    <input class='contentEncoded' type='hidden' name='content_encoded'>
+                    <textarea class='contentInputBox' style="width: 600px"><div></div></textarea>
+		  </label>
+                </span> 
+              </div>
+              <div class='buttons'>
+                <input class='setButton' name='set' type='button' value='Set' />
+                <input class='removeButton' name='remove' type='button' value='Remove' />
+              </div>
+              <div class='controllerSpinner'></div>
+              <div class='clearFloat'></div>
+            </form>
+          </div>
+        </div>
+        <input type='button' id='addControl' value="Add HTML Substitution">
+        <div id='controls'></div>
+      </div>
+      <div class='clearFloat'> </div>

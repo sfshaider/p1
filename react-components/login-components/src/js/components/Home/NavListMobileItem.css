@@ -1,0 +1,48 @@
+.MobileNavItem {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #dadada;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 -30px;
+    text-align: left;
+    padding: 0 12px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MobileNavItem a {
+    width: 80%;
+}
+
+.MobileNavItem svg {
+    padding: 1px 35px 1px 6px;
+}
+
+.MobileNavItem > button {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f9f9f9;
+    border: 2px solid transparent;
+}
+
+.MobileNavItem > button:focus {
+    border: 2px solid #005FCC;
+    border-radius: 4px;
+}
+
+.MobileLayerTwo {
+    padding: 0 12px 0 39px;
+}
+
+.MobileLayerThree {
+    padding: 0 12px 0 48px;
+}
+
+.MobileLayerFour {
+    padding: 0 12px 0 57px;
+}

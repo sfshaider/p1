@@ -1,0 +1,16 @@
+<div id="editGroupLightBox" class="pnp-hidden overlay light-box">
+    <h1>Edit Group</h1>
+    <hr>
+    <br>
+
+    <input hidden id="groupID">
+    <div class="pnp-box">
+        <h4 class="display-format">Group Name</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input id="editGroupName" type="text" class="pnp-box pnp-input-control half">
+    </div>
+
+    <input type="button" id="closeEditGroupLightBox" class="pnp-input-control left-action-button" value="Close">
+    <input type="button" id="editGroup" class="pnp-input-control right-action-button" value="Submit">
+</div>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Plug and Pay Technologies, Inc. Merchant Directory</title>
+<style type="text/css">
+<!--
+tr { background-color: #ffffff }
+.tr1 { background-color: #d0c0c0 }
+.tr2 { background-color: #c0d0c0 }
+.tr3 { background-color: #c0c0d0 }
+.tr4 { background-color: #d0c0d0 }
+.tr5 { background-color: #d0d0c0 }
+.tr6 { background-color: #c0d0d0 }
+td { font-family: Arial; font-size: 75%; color: black }
+.tdr { font-family: Arial; font-size: 70%; color: black }
+th { font-family: Arial, Helvetica; font-weight: bold; font-size: 75%; text-align: left }
+-->
+</style>
+<script Language="Javascript">
+//<!-- Start Script
+function postResults() {
+  window.opener.document.addmerchant.currency.value = document.volpay.currency.value;
+  window.close();
+}
+//-->
+</script>
+</head>
+<body bgcolor="#ffffff">
+<form name="volpay">
+<table border="0" cellspacing="0">
+<tr class="tr1"><th>Currency:</th><td> <input type="radio" name="currency" value="usd"> (usd) <input type="radio" name="currency" value="eur"> (eur)</td>
+<tr><td colspan="2"><input type="button" value="Send Info" onClick="postResults();"> <input type="reset" value="Reset Form"></td>
+</table>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY BGCOLOR="#ffffff" LINK="#000000" TEXT="#000000" ALINK="#187f0a" VLINK="#0b1f48">
+<FORM METHOD=post ACTION="https://dmanitta.nyoffice.plugnpay.com:8443/payment/xml.cgi">
+<input TYPE="hidden" name='<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE PNPxml SYSTEM "http://dmanitta.nyoffice.plugnpay.com:8443/PnPxml2.dtd">
+<PNPxml version="2.0" timeStamp="2018-02-23T06:22:54">
+<Header>
+  <Merchant>
+    <AcctName>pnpdemo2</AcctName>
+    <Password>55pnpdemo55</Password>
+  </Merchant>
+  <Version>2.0</Version>
+  <TranCount>1</TranCount>
+</Header>
+<Request>
+<TransactionRequest>
+  <Mode>auth</Mode>
+  <TransactionID></TransactionID>
+  <AuthType>authpostauth</AuthType>
+  <Instructions>
+    <DontSndMail>YES</DontSndMail>
+    <AppLevel>0</AppLevel>
+  </Instructions>
+  <IPAddress>111.11.11.111</IPAddress>
+  <CustRef1></CustRef1>
+  <BillDetails>
+    <CardName>Test Test</CardName>
+    <CardCompany></CardCompany>
+    <CardAddress1>123 Test Avenue</CardAddress1>
+    <CardAddress2></CardAddress2>
+    <CardCity>Testville</CardCity>
+    <CardState>CA</CardState>
+    <CardProv></CardProv>
+    <CardZip>90210</CardZip>
+    <CardCountry>US</CardCountry>
+    <Email>trash@plugnpay.com</Email>
+  </BillDetails>
+  <ShipDetails>
+    <ShipName>Test Test</ShipName>
+    <Company></Company>
+    <Address1>123 Test Avenue</Address1>
+    <Address2></Address2>
+    <City>Testville</City>
+    <State>CA</State>
+    <Province></Province>
+    <Zip>90210</Zip>
+    <Country>US</Country>
+  </ShipDetails>
+  <PaymentDetails>
+    <PaymentMethod>credit</PaymentMethod>
+    <CardNumber>4111111111111111</CardNumber>
+    <CardExp>01/22</CardExp>
+    <CardType>Visa</CardType>
+    <CardCVV>123</CardCVV>
+    <MagStripe></MagStripe>
+  </PaymentDetails>
+  <Order>
+    <EasyCart>1</EasyCart>
+    <CardAmount>1.05</CardAmount>
+    <Currency>MYR</Currency>
+    <Tax>0.00</Tax>
+    <Shipping> 0.00</Shipping>
+    <ItemCount>1</ItemCount>
+      <OrderDetails>
+        <Sku>000SKUTEST</Sku>
+        <Qty>1</Qty>
+        <Desc>Test Product</Desc>
+        <Cost>1.00</Cost>
+      </OrderDetails>    
+  </Order>
+</TransactionRequest>
+</Request>
+</PNPxml>' VALUE="">
+<input TYPE="submit" VALUE="Submit Test Order"><p>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<div class="pnp-hidden overlay light-box" id="addHostLightBox">
+    <h1>Add Host</h1>
+    <hr>
+
+    <div class="pnp-box full display-format">
+        <div class="pnp-box half display-format">
+            <div class="pnp-box full" style="display: inline-table;">
+                <h4 class="display-format">FQDN (Fully Qualified Domain Name)</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-input-control pnp-box" id="addHostFQDN" maxlength="120">
+            </div>
+        </div>
+
+        <div class="pnp-box half display-format display-format">
+            <div class="pnp-box" style="display: inline-table;">
+                <h4 class="display-format">IP Address</h4>
+                <span class="info-span">*</span>
+                <br>
+                <input class="pnp-input-control" id="addHostIPAddress" maxlength="16">
+            </div>
+        </div>
+    </div>
+
+    <div class="pnp-box full">
+        <div class="pnp-box half">
+            <div class="pnp-box full" style="display: inline-table;">
+                <h4>Description</h4>
+                <input class="pnp-input-control" id="addHostDescription" maxlength="60">
+            </div>
+        </div>
+    </div>
+
+    <input type="button" class="pnp-input-control left-action-button" value="Close" id="closeAddHostLightBox">
+    <input type="button" class="pnp-input-control right-action-button" value="Submit" id="saveHost">
+</div>

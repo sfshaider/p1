@@ -1,0 +1,113 @@
+<!-- start lightbox for profile -->
+<div class='pnp-hidden overlay light-box' id="newProfileLightBox">
+    <h1>Add New Profile</h1>
+    <hr>
+
+    <div class="content">
+        <!-- start lightbox profile form -->
+        <form id="newProfileForm">
+            <input id="newProfilePlanTransactionType" type="hidden"/>
+            <div class="pnp-box half display-format">
+                <h4 class="display-format">Payment Plan:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <select class="pnp-input-control pnp-box" id="newProfilePlanSelect">
+                    <metavar='planSettingSelectOptions'>
+                </select>
+            </div>
+
+            <div class="pnp-box quarter display-format">
+                <h4 class="display-format">Status:</h4>
+                <span class="info-span">*</span>
+                <br>
+                <select class="pnp-box pnp-input-control" id="newProfileStatusSelect">
+                    <metavar='statusSelectOptions'>
+                </select>
+            </div>
+
+            <div class="pnp-box quarter display-format">
+                <h4 class="display-format">Allow Renewal</h4>
+                <span class="info-span">*</span>
+                <br>
+                <select class="pnp-box pnp-input-control half" id="newProfileAllowRenewal">
+                    <option value=1>Yes</option>
+                    <option value=0>No</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="pnp-box third display-format">
+                <h4>Payment Sources Available:</h4>
+                <select class="pnp-input-control pnp-box" id="newProfilePaymentSourceSelect">
+                </select>
+            </div>
+
+            <div class="pnp-box half display-format">
+                <h4>Description:</h4>
+                <input class="pnp-box pnp-input-control" id="newProfileDescription" maxlength="60">
+            </div>
+
+            <br>
+
+            <div class="pnp-box third display-format">
+                <h4>End Date (If bill cycle is none)</h4>
+                <input type="text" placeholder="YYYY/MM/DD" class="pnp-box pnp-input-control" id="newProfileBillCycleDatePicker">
+            </div>
+
+            <br>
+
+            <div class="pnp-box display-format full" id="newProfileGroupSelect">
+                <metainc="/admin/membership/index/group/,group_select">
+            </div>
+
+            <br>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Sign Up Fee Options</h4>
+                <span class="info-span">*</span>
+                <br>
+                <select class="pnp-input-control pnp-box display-format" id="newProfileChargeSignUpFeeSelect">
+                    <option value="omit">Omit fee</option>
+                    <option value="immediately">Charge immediately</option>
+                    <option value="firstPayment">With first payment</option>
+                </select>
+            </div>
+
+            <div class="pnp-box third display-format">
+                <span id="newProfileSignUpFeeText" class=" display-format info-span"></span>
+            </div>
+
+            <br>
+
+            <div class="pnp-box third display-format">
+                <h4 class="display-format">Amount</h4>
+                <br>
+                <input id="newProfileAmount" class="pnp-box pnp-input-control half" type="text" readonly />
+                <div id="newProfileSpinner" class="spinner"></div>
+            </div>
+
+            <div class="pnp-box third display-format"></div>
+
+            <div class="pnp-box third display-format">
+                <div class="pnp-box third display-format">
+                    <h4 class="display-format">Fee</h4>
+                    <br>
+                    <input id="newProfileFeeAmount" class="pnp-box pnp-input-control" readonly="" />
+                </div>
+
+                <div class="pnp-box half display-format">
+                    <h4 class="display-format">Total</h4>
+                    <br>
+                    <input id="newProfileTotalAmount" class="pnp-input-control" readonly="" />
+                </div>
+            </div>
+
+            <input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeNewProfileLightBox">
+            <input class='pnp-input-control right-action-button' type=button value="Submit Profile Info" id="saveProfile">
+        </form>
+        <!-- end of lightbox profile form -->
+    </div>
+</div>
+<!-- end lightbox for profile -->
+

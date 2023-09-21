@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!--[if lt IE 9]>
+  <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+<script language="javascript" src="/_js/jquery-1.10.2.min.js"></script>
+<!-- jquery ui -->
+<script language="javascript" src="/_js/jquery-ui-1.10.3.custom.min.js"></script>
+<link rel="stylesheet" href="/_css/plugnpay-theme/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+<!-- end jquery ui -->
+<!-- spin.js -->
+<script language="javascript" src="/_js/spin.min.js"></script>
+<link rel="stylesheet" href="/private/_css/admin.css" type="text/css" />
+<!-- shim for anything less than IE9 below -->
+<!--[if lt IE 9]>
+<script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+<meta type="template" content="type='dynamic-include', name='head-tags'" />
+</head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <meta type="template" content="type='include', name='header', category='admin'" >
+      </div>
+      <div id="pathBar" class="contentArea"><metavar='pathBar'></div>
+      <div id="mainContent">
+        <meta type="template" content="type='dynamic-include', name='content'" />
+        <meta type="template" content="type='dynamic-include', name='footer'" />
+      </div>
+    </div>
+  </body>
+</html>

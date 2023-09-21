@@ -1,0 +1,95 @@
+<link rel="stylesheet" type="text/css" href="/admin/v2/merchants/_css/merchants.css"/>
+<link rel="stylesheet" type="text/css" href="/admin/v2/merchants/_css/contact_info.css"/>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="/_js/spin.min.js"></script>
+<script src="/_js/Charts.js"></script>
+<script src="/admin/v2/merchants/_js/merchants.js"></script>
+<script src="/admin/v2/merchants/_js/add_merchant.js"></script>
+<script src="/admin/v2/merchants/_js/merchant_list.js"></script>
+<style>
+/* Add Merchant */
+  .error {
+    color:red;
+  }
+
+  .success {
+    color:#006600;
+  }
+
+  .blur{
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+  }
+
+  .overlay {
+    background-color:white;
+    border: 1px solid black;
+    z-index:9999;
+    position:fixed;
+    left: 25%;
+  }
+
+</style>
+<script>
+
+Merchants.init();
+MerchantList.init();
+AddMerchant.init();
+
+// Create tabs
+jQuery('document').ready(function() {
+  jQuery('#merchantTabs').tabs();
+})
+
+
+//Edit Merchant Button
+function editNewMerchant() {
+  var merchant = jQuery('input[name=newAccountName]').val();
+  jQuery('div.overlay').remove();
+  jQuery('#merchantList form #merchant').val(merchant);
+  jQuery('#merchantList form').submit();
+}
+
+//Clear Add Merchant Field
+function clearNewMerchant() {
+  jQuery('#merchantGatewayAccount input[name=merchantAccountName]').val('');
+  jQuery('#merchantMainContact input').each(function() {
+    jQuery(this).val('');
+  });
+
+  jQuery('#merchantTechContact input').each(function() {
+    jQuery(this).val('');
+  });
+
+  jQuery('#merchantBillingContact input').each(function() {
+    jQuery(this).val('');
+  });
+
+  jQuery('#merchantProcessors select').each(function() {
+    jQuery(this).val('');
+    jQuery(this).change();
+  });
+
+  jQuery('#merchantNameError').removeClass().addClass('rt-hidden');
+
+  jQuery('#blurWrapper').removeClass('blur');
+  jQuery('#blockInteraction').css('display','none');
+
+  jQuery('input[name=addMerchantButton]').prop('disabled',false);
+  jQuery('div.overlay').remove();
+
+}
+
+//Refresh Page and go to merchant list
+function reloadPage() {
+  jQuery('#blurWrapper').removeClass('blur');
+  jQuery('#blockInteraction').css('display','none');
+
+  jQuery('div.overlay').remove();
+  location.href = '/admin/v2/merchants/';
+}
+
+</script>

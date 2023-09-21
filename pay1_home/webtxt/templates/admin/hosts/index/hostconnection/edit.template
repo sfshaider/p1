@@ -1,0 +1,51 @@
+<div class="pnp-hidden overlay light-box" id="editHostConnectionLightBox">
+    <h1>Edit Host Connection</h1>
+    <hr>
+
+    <input hidden id="hostConnectionID">
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Protocol</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select id="editHostConnectionProtocolSelect" class="pnp-input-control">
+            <metavar='protocolOptions'>
+        </select>
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Port</h4>
+        <span class="info-span">*</span>
+        <br>
+        <input class="pnp-input-control" id="editHostConnectionPort" type="text">
+    </div>
+
+
+    <div class="pnp-box half">
+        <h4>Description</h4>
+        <input class="pnp-input-control" id="editHostConnectionDescription" type="text" maxlength="60">
+    </div>
+
+    <div class="pnp-box">
+        <h4 class="display-format">Path</h4>
+        <br>
+        <input class="pnp-input-control" id="editHostConnectionPath" type="text">
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Host</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select class="pnp-input-control" id="editHostConnectionHostSelect"></select>
+    </div>
+
+    <div class="pnp-box half display-format">
+        <h4 class="display-format">Credential</h4>
+        <span class="info-span">*</span>
+        <br>
+        <select class="pnp-input-control" id="editHostConnectionCredentialSelect"></select>
+    </div>
+
+    <input type="button" class="pnp-input-control left-action-button" value="Close" id="closeEditHostConnectionLightBox">
+    <input type="button" class="pnp-input-control right-action-button" value="Submit" id="updateHostConnection">
+</div>

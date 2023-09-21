@@ -1,0 +1,18 @@
+<span id='overrideAdjustment' style='display:none;'>
+        <span class='label'><metalang='optional,overrideCheckbox'></span>
+        <span class='input'>
+                <input type='checkbox' name='overrideCheckbox' value='yes'>
+                <input type='hidden' name='pb_override_adjustment' value=''>
+        </span>
+</span>
+<table class='calculatorTable'>
+  <tr>
+    <td class='calculatorLabel'>Surcharge:</td><td class='calculatorValue'><span class="currencySymbol"></span><span class="adjustment">0.00</span></td>
+  </tr>
+  <tr>
+    <td class='calculatorLabel'>Surcharge Tax:</td><td class='calculatorValue'><span class="currencySymbol"></span><span class="adjustmentTax">0.00</span></td>
+  </tr>
+  <tr>
+    <td class='calculatorLabel'>Total:</td><td class='calculatorValue'><span class="currencySymbol"></span><span class="adjustedTotalWithTax">0.00</span></td>
+  </tr>
+</table>

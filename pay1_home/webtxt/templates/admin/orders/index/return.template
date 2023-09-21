@@ -1,0 +1,54 @@
+<div id='returnPrompt' class='pnp-hidden'>
+    <h1>Return Transaction</h1>
+    <hr>
+    <br>
+    <!-- Window Head End -->
+
+    <!-- Hidden Inputs -->
+    <input type="hidden" name="pnp_token" readonly>
+    <input type="hidden" name="merchant_order_id" readonly>
+    <input type="hidden" name="transaction_vehicle" readonly>
+    <input type="hidden" name="max_return_amount" readonly>
+    <input type="hidden" name="pnp_transaction_ref_id" readonly>
+    <input type="hidden" name="billing_address" readonly>
+    <input type="hidden" name="billing_state" readonly>
+    <input type="hidden" name="postal_code" readonly>
+    <input type="hidden" name="billing_name" readonly>
+    <!-- Hidden Input End -->
+
+    <label class="lightgraybox rounded pnp-box third">
+         <span>Amount: </span>
+         <input type="text" name="transaction_amount" class="pnp-input-control">  
+    </label>
+
+    <label class="rounded pnp-box lightgraybox pnp-hidden SECCode third">
+        <span>SEC Code: </span>
+        <select name="sec_code">
+            <option value="WEB">WEB</option>
+            <option value="PPD">PPD</option>
+            <option value="CCD">CCD</option>
+        </select>
+    </label>
+
+    <label class="rounded lightgraybox pnp-box full">
+        <span>Currency: </span>
+        <input type="text" name="transaction_currency" readonly class="pnp-input-control">
+    </label>
+
+    <label class="rounded pnp-box lightgraybox">
+        <span>Payment Information: </span>
+        <input type="text" class="half pnp-input-control" readonly name="masked_number">
+        <input type="text" class="half pnp-input-control" readonly name="payinfo">
+    </label>
+
+    <!-- Buttons -->
+    <input type="button" name="submit_credit" value="Return" class='half pnp-input-control'>
+    <input type="button" name="close_return" class="pnp-input-control half closeButton" value="Close">
+    <!-- Prompt End -->
+</div>
+
+
+<div id='returnResult' class='pnp-hidden'>
+
+</div>
+

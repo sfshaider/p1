@@ -1,0 +1,264 @@
+    <script><!-- set up buckets and caps on load -->
+      jQuery('document').ready(function() {
+        try {
+          Adjustment.setBuckets(<metavar="buckets">);
+          Adjustment.setCaps(<metavar="caps">);
+        } catch (e) { }
+      });
+    </script>
+    <!-- create coa account creation dialog -->
+    <div id="createCOAAccountDialog" title="Create new COA account for <metavar="merchant">.">
+      <form name='coaAccountCreationForm'>
+        <input type="hidden" name="gatewayAccount" value='<metavar="merchant">'>
+        <label class="lightgraybox rt-box inline-block rounded full" for="MCC">
+          <span>MCC</span>
+          <i class="fa fa-info-circle" title="The Merchant Category Code for the card processor account"></i>
+          <input class="reseller-input-control" id="mcc" name="mcc" value="" maxlength="4">
+        </label>
+        <label class="lightgraybox rt-box inline-block rounded full" for="MCC">
+          <span>Merchant's ACH Transaction Cost (optional)</span>
+          <i class="fa fa-info-circle" title="The merchant's cost to run an ACH transaction is used by the COA Calculator"></i>
+          <input class="reseller-input-control" id="ach_cost" name="achFee" value="" maxlength="6">
+        </label>
+      </form>
+    </div>
+    <!-- end coa account creation dialog -->
+
+
+
+    <!-- COA Settings -->
+    <div id="coaSettings" class='rt-box rounded lightgraybox full section'>
+      <h1>COA Calculator Settings</h1><div class='rt-clear-float'></div>
+      <hr/>
+      <div class="rt-box full" id='coaSettingsSpinner'></div>
+      <div class="coaAccountCreated rt-hidden"><!-- Div to display if COA Account exists -->
+        <form name='updateCOAAccountForm'>
+          <input type="hidden" name="gatewayAccount" value='<metavar="merchant">'>
+          <label class="lightgraybox rt-box inline-block rounded half" for="MCC">
+            <span>MCC</span>
+            <i class="fa fa-info-circle" title="The Merchant Category Code for the card processor account"></i>
+            <input class="reseller-input-control" id="mcc" name="mcc" value="" maxlength="4">
+          </label>
+          <label class="lightgraybox rt-box inline-block rounded half" for="MCC">
+            <span>Merchant's ACH Transaction Cost (optional)</span>
+            <i class="fa fa-info-circle" title="The merchant's cost to run an ACH transaction is used by the COA Calculator"></i>
+            <input class="reseller-input-control" id="achFee" name="achFee" value="" maxlength="6">
+          </label>
+          <input type="button" class="reseller-input-control" id="updateCOAAccountButton" value="Update COA Account">
+        </form>
+      </div>
+      <div class="coaAccountNotCreated rt-hidden"><!-- Div to display if COA Account does not exist -->
+        <input type="button" class="reseller-input-control" id="createCOAAccountButton" value="Create COA Account">
+      </div>
+      <div class="badMID rt-hidden"><!-- Div to display if the MID is not defined and unique -->
+         <input type="text" class="reseller-input-control" id="badMIDBox" value="Merchant's MID is not unique or does not exist" readonly>
+      </div>
+      <div class="badAccount rt-hidden"><!-- Div to display if COA Account does not exists or is setup inccorectly -->
+         <input type="text" class="reseller-input-control" id="badAccountBox" value="This COA account is not setup correctly, please contact support for assistance." readonly>
+      </div>
+    </div>
+
+    <!-- Adjustment Settings -->
+    <div id="adjustmentSettings" class='rt-box rounded lightgraybox full section'>
+      <h1>Settings</h1><div class='rt-clear-float'></div>
+      <hr/>
+      <div class="coaAccountNotCreated rt-hidden"><!-- Div to display if COA Account does not exist -->
+        <div class="rt-box full">Settings can not be configured until a COA account is created</div>
+      </div>
+      <div class="coaAccountCreated rt-hidden"><!-- Div to display if COA Account exists -->
+        <label class="rt-box inline-block half" for="enabled">
+          <span>Enabled</span>
+          <select class="reseller-input-control" name="enabled"><metavar="enabledSelectOptions"></select>
+        </label>
+        <label class="rt-box inline-block half" for="model">
+          <span>Model</span>
+          <i class="fa fa-info-circle" title="The adjustment model"></i>
+          <select class="reseller-input-control" name="model"><metavar="modelOptions"></select>
+        </label>
+        <div id="adjustmentSettingsFields" class="rt-hidden">
+          <div id="adjustmentModelSettings" class="section">
+            <h2>Model Specific Settings</h2>
+            <label class="rt-box inline-block half feeTypeOnly" for="feeAccountUsername">
+              <span>Fee Account Username</span>
+              <i class="fa fa-info-circle" title="The account for Intelligent Rate fees to be processed under"></i>
+              <input class="reseller-input-control" id="feeAccountUsername" name="feeAccountUsername" value="<metavar='feeAccount'>">
+            </label>
+            <label class="rt-box inline-block half feeTypeOnly" for="authMode">
+              <span>Authorization Type</span>
+              <i class="fa fa-info-circle" title="This sets the type of authorization to use in a transaction."></i>
+              <select class="reseller-input-control" id="authMode" name="authMode"><metavar="authorizationTypeOptions"></select>
+            </label>
+            <label class="rt-box inline-block half feeTypeOnly" for="failureMode">
+              <span>Authorization Failure Mode</span>
+              <i class="fa fa-info-circle" title="This defines what to do if an Intelligent Rate fee transaction fails"></i>
+              <select class="reseller-input-control" id="failureMode" name="failureMode"><metavar="failureModeOptions"></select>
+            </label>
+            <label class="rt-box inline-block half override" for="customerOverride">
+              <span>Customer Override</span>
+              <i class="fa fa-info-circle" title="This sets the customer ability to override a transaction."></i>
+              <select class="reseller-input-control" id="customerOverride" name="customerOverride"><metavar="overrideModes"></select>
+            </label>
+            <label class="rt-box inline-block half overrideCheckbox" for="overrideCheckboxIsChecked">
+              <span>Override Checkbox is Checked by Default</span>
+              <i class="fa fa-info-circle" title="This makes the override checkbox checked by default."></i>
+              <select class="reseller-input-control" id="overrideCheckboxIsChecked" name="overrideCheckboxIsChecked"><metavar="overrideCheckboxSelect"></select>
+            </label>
+            <label class="rt-box inline-block half checkCustomerState surchargeOnly" for="checkCustomerState">
+              <span>Check if customer's state allows surcharge</span>
+              <i class="fa fa-info-circle" title="This determines whether or not to check if a customer's state allows surcharge. With this option set to CHECK STATE, if the customer's state does not allow surcharge, it will not be charged."></i>
+              <select class="reseller-input-control" id="checkCustomerState" name="checkCustomerState"><metavar="checkCustomerStateSelect"></select>
+            </label>
+            <label class="rt-box inline-block half adjustmentIsTaxable surchargeOnly" for="adjustmentIsTaxable">
+              <span>Adjustment is Taxable</span>
+              <i class="fa fa-info-circle" title="This determines whether or not tax will be added to the adjustment"></i>
+              <select class="reseller-input-control" id="adjustmentIsTaxable" name="adjustmentIsTaxable"><metavar="adjustmentIsTaxableSelect"></select>
+            </label>
+            <label class="rt-box inline-block half processorDiscountRate surchargeDROnly" for="processorDiscountRate">
+              <span>Processor Discount Rate</span>
+              <i class="fa fa-info-circle" title="This determines the discount rate applied"></i>
+              <input class="reseller-input-control" id="processorDiscountRate" name="processorDiscountRate" value="<metavar='processorDiscountRate'>">
+            </label>
+          </div>
+          <div id="adjustmentThresholdSettings" class="section">
+            <h2>Threshold Settings</h2>
+            <label class="rt-box inline-block half" for="fixedThreshold">
+              <span>Fixed Threshold Amount</span>
+              <i class="fa fa-info-circle" title="The fixed portion of the threshold"></i>
+              <input class="reseller-input-control" id="fixedThreshold" name="fixedThreshold" value="<metavar='fixedThreshold'>">
+            </label>
+            <label class="rt-box inline-block half" for="percentThreshold">
+              <span>Percent Threshold Amount</span>
+              <i class="fa fa-info-circle" title="The percent portion of the threshold"></i>
+              <input class="reseller-input-control" id="percentThreshold" name="percentThreshold" value="<metavar='percentThreshold'>">
+            </label>
+            <label class="rt-box inline-block half" for="thresholdMode">
+              <span>Threshold Mode</span>
+              <i class="fa fa-info-circle" title="The threshold mode"></i>
+              <select class="reseller-input-control" id="thresholdMode" name="thresholdMode"><metavar="thresholdModeOptions"></select>
+            </label>
+          </div>
+          <div id="adjustmentBucketSettings" class="section">
+            <!-- new bucket dialog -->
+            <div id="createBucketDialog" class="rt-box" title="Create Bucket">
+              <form name='bucketCreationForm'>
+                <label class="rt-box inline-block full" for="paymentVehicle">
+                  <span>Payment Vehicle</span>
+                  <i class="fa fa-info-circle" title="The payment vehicle for which the bucket is for."></i>
+                  <select class="reseller-input-control" name="paymentVehicleID" value="" ><metavar="vehicleOptions"></select>
+                </label>
+                <label class="rt-box inline-block full" for="base">
+                  <span>Bucket Amount</span>
+                  <i class="fa fa-info-circle" title="The amount at which the bucket becomes enabled."></i>
+                  <input class="reseller-input-control" name="base" value="0">
+                </label>
+                <label class="rt-box inline-block full" for="totalRate">
+                  <span>Total Percentage</span>
+                  <i class="fa fa-info-circle" title="The percent of the transaction amount to be applied as an adjustment."></i>
+                  <input class="reseller-input-control" name="totalRate" value="0">
+                </label>
+                <label class="rt-box inline-block full" for="fixedAdjustment">
+                  <span>Fixed Adjustment</span>
+                  <i class="fa fa-info-circle" title="A fixed amount to be applied as an adjustment."></i>
+                  <input class="reseller-input-control" name="fixedAdjustment" value="0">
+                </label>
+                <label class="rt-box inline-block full" for="coaRate">
+                  <span>COA Percentage</span>
+                  <i class="fa fa-info-circle" title="The percentage of the cost of processing the transaction to be applied as an adjustment."></i>
+                  <input class="reseller-input-control" name="coaRate" value="0">
+                </label>
+              </form>
+            </div>
+            <!-- end of new bucket dialog -->
+
+            <h2>Buckets</h2>
+            <label class="rt-box inline-block half" for="bucketMode">
+              <span>Bucket Mode</span>
+              <i class="fa fa-info-circle" title="This defines how to apply the calculation buckets"></i>
+              <select class="reseller-input-control" id="bucketMode" name="bucketMode"><metavar="bucketModeOptions"></select>
+            </label>
+            <label class="rt-box inline-block half" for="vehicleBucket">
+              <span>Default Payment Vehicle Bucket</span>
+              <i class="fa fa-info-circle" title="This defines the type of bucket to use if the payment vehicle for the transaction being processed does not have a bucket defined"></i>
+              <select class="reseller-input-control" id="vehicleBucket" name="defaultPaymentVehicleBucket"><metavar="defaultBucketVehicleOptions"></select>
+            </label>
+            <div id="adjustmentBuckets" class='rt-box full'>
+              <input type="button" id="createBucketButton" value="Create new bucket">
+              <div class="bucket header">
+                <div class="rt-box paymentVehicle">Payment Vehicle</div>
+                <div class="rt-box base">Bucket Base</div>
+                <div class="rt-box totalRate">Total Percentage</div>
+                <div class="rt-box fixedAdjustment">Fixed Adjustment</div>
+                <div class="rt-box coaRate">COA Percentage</div>
+                <div class="rt-box delete">Delete</div>
+                <hr>
+              </div>
+              <div class="template bucket">
+                <input type="hidden" name="paymentVehicleID">
+                <input type="hidden" name="base">
+                <div class="rt-box paymentVehicle">Card - Debit</div>
+                <div class="rt-box base">0.00</div>
+                <div class="rt-box totalRate">0.85%</div>
+                <div class="rt-box fixedAdjustment">0.00</div>
+                <div class="rt-box coaRate">100%</div>
+                <div class="rt-box delete"><input type="button" value="Delete" name="delete"></div>
+              </div>
+            </div>
+          </div>
+          <div id="adjustmentCapSettings" class="section">
+            <!-- new cap dialog -->
+            <div id="createCapDialog" class="rt-box" title="Create Cap">
+              <form name='capCreationForm'>
+                <label class="rt-box inline-block full" for="paymentVehicle">
+                  <span>Payment Vehicle</span>
+                  <i class="fa fa-info-circle" title="The payment vehicle for which the cap is for."></i>
+                  <select class="reseller-input-control" name="paymentVehicleID" value="" ><metavar="vehicleOptions"></select>
+                </label>
+                <label class="rt-box inline-block full" for="percentCap">
+                  <span>Percentage Cap</span>
+                  <i class="fa fa-info-circle" title="The percent of the transaction amount to be applied as a cap."></i>
+                  <input class="reseller-input-control" name="percentCap" value="0">
+                </label>
+                <label class="rt-box inline-block full" for="fixedCap">
+                  <span>Fixed Cap</span>
+                  <i class="fa fa-info-circle" title="A fixed amount to be applied as an adjustment."></i>
+                  <input class="reseller-input-control" name="fixedCap" value="0">
+                </label>
+              </form>
+            </div>
+            <!-- end new cap dialog -->
+
+            <h2>Caps</h2>
+            <label class="rt-box inline-block half" for="capMode">
+              <span>Cap Mode</span>
+              <i class="fa fa-info-circle" title="The cap mode"></i>
+              <select class="reseller-input-control" id="capMode" name="capMode"><metavar="capModeOptions"></select>
+            </label>
+            <label class="rt-box inline-block half" for="vehicle">
+              <span>Default Payment Vehicle Cap</span>
+              <i class="fa fa-info-circle" title="This defines the cap to use if the payment vehicle for the transaction being processed does ont have a cap defined"></i>
+              <select class="reseller-input-control" id="vehicleCap" name="defaultPaymentVehicleCap"><metavar="defaultCapVehicleOptions"></select>
+            </label>
+            <div id="adjustmentCaps" class='rt-box full'>
+              <input type="button" id="createCapButton" value="Create new cap">
+              <div class="cap header">
+                <div class="rt-box paymentVehicle">Payment Vehicle</div>
+                <div class="rt-box fixedCap">Fixed Cap</div>
+                <div class="rt-box percentCap">Percent Cap</div>
+                <div class="rt-box delete">Delete</div>
+                <hr>
+              </div>
+              <div class="template cap">
+                <input type="hidden" name="paymentVehicleID">
+                <input type="hidden" name="fixedCap">
+                <input type="hidden" name="percentCap">
+                <div class="rt-box paymentVehicle">Payment Vehicle</div>
+                <div class="rt-box fixedCap">Fixed Cap</div>
+                <div class="rt-box percentCap">Percent Cap</div>
+                <div class="rt-box delete"><input type="button" value="Delete" name="delete"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input id='adjustmentSubmit' type='button' value='Save' class='ui-button ui-widget ui-state-default ui-corner-all' role='button'>

@@ -1,0 +1,23 @@
+        <invoiceRows>
+          <invoiceRow>
+            <itemDescription><metavar="itemDescription"></itemDescription>
+            <itemDiscount>
+              <currency><metavar="discountCurrency"></currency>
+              <value><metavar="discountValue"></value>
+            </itemDiscount>
+            <itemEAN><metavar="itemEAN"></itemEAN>
+            <itemQuantity><metavar="itemQuantity"></itemQuantity>
+            <itemSKU><metavar="itemSKU"></itemSKU>
+            <itemTaxRate><metavar="itemTaxRate"></itemTaxRate>
+            <itemTotalAmount>
+              <currency><metavar="itemTotalCurrency"></currency>
+              <value><metavar="itemTotalValue"></value>
+            </itemTotalAmount>
+            <itemUnit><metavar="itemUnit"></itemUnit>
+            <itemUnitPrice>
+              <currency><metavar="unitPriceCurrency"></currency>
+              <value><metavar="unitPriceValue"></value>
+            </itemUnitPrice>
+          </invoiceRow>
+        </invoiceRows>
+

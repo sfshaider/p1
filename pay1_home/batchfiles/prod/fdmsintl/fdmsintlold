@@ -1,0 +1,3 @@
+#!/bin/csh
+
+nohup /home/p/pay1/batchfiles/fdmsintl/fdmsintl.pl >& /dev/null &

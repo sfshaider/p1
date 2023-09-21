@@ -1,0 +1,34 @@
+<h1><metavar="editMode"> Merchant: <metavar="merchant"></h1>
+<hr><br>
+<div id="editMerchantTabs">
+  <ul>
+    <li><a href="#merchantContactInfo">Contact Information</a></li>
+    <li><a href="#merchantProcessorInfo">Processor Information</a></li>
+    <li><a href="#merchantAdjustmentInfo">Adjustment Information</a></li>
+    <li><a href="#merchantServicesInfo">Services</a></li>
+    <li><a href="#merchantSecurityInfo" id="merchantSecurityTab">Security</a></li>
+    <!--<li><a href="#merchantRiskTrakInfo">RiskTrak</a></li>-->
+  </ul>
+  <div id="merchantContactInfo" class='contactInfo'>
+    <metainc='/reseller/admin/merchants/shared/,contact_info'>
+    <input id="saveButton" type="button" value="Save">
+    <input id="resetButton" type="button" value="Reset">
+  </div>
+  <div id="merchantProcessorInfo">
+    <metainc='/reseller/admin/merchants/view/,processor_info'>
+  </div>
+  <div id="merchantAdjustmentInfo">
+    <metavar="merchantAdjustment">
+  </div>
+  <div id="merchantServicesInfo">
+    <metavar="merchantServices">
+  </div>
+  <div id="merchantSecurityInfo">
+    <metavar="merchantSecurity">
+  </div>
+
+  <!-- <div id='merchantRiskTrakInfo'>
+     <metainc='/reseller/admin/merchants/view/,risktrak-disabled'>
+  </div> -->
+</div>
+<br>

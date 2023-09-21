@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <!--jQuery UI-->
+  <link rel="stylesheet" type="text/css" href="/_js/jquery_ui/jquery-ui.css" />
+  <script src="/_js/jquery.min.js"></script>
+  <script src="/_js/jquery-1.10.2.min.js"></script>
+  <script src="/_js/jquery_ui/jquery-ui.js"></script>
+  <!--End jQuery-->
+  <style>
+    div.tabs,.ut-tab-nav,.ui-helper-reset, .ui-helper-clearfix, .ui-widget-header, .ui-corner-all {
+      background-color:white;
+      font-family: courier, monospace;     
+    }
+    .ui-tabs-nav {
+      border:none;
+      border-bottom:1px black solid;
+    }
+    #arrow {
+      border: 2px gray solid;
+      font-size:12pt;
+      text-decoration:underline;
+      width: 42px;
+      height: 22px;
+      padding: 10px;
+      background-color:#E6E6E6;
+      transition:width 1s,height 1s,background-color 1s linear, color 0.5s linear;
+      -moz-transition:width 1s,height 1s,background-color 1s linear,color 0.5s linear;
+      -o-transition:width 1s,height 1s,background-color 1s linear,color 0.5s linear;
+      -webkit-transition:width 1s,height 1s,background-color 1s linear,color 0.5s linear;
+      
+      box-shadow:3px 3px 5px #888888;
+      -webkit-box-shadow: 3px 3px 5px #888888;
+      -moz-box-shadow: 3px 3px 5px #888888;
+    }
+    #arrow span {
+      box-shadow:none;
+      -webkit-box-shadow:none;
+      -moz-box-shadow:none;
+    }
+    #arrow:hover {
+       width:340px;
+       height:163px;
+       min-height:fit-content;
+       background-color:white;
+    }
+ 
+    span.ui-accordion-header-icon {
+      box-shadow:none;
+      -webkit-box-shadow:none;
+      -moz-box-shadow:none;
+    }
+
+    body {
+      font-family: courier,monospace;
+    }
+
+    div {
+      display:block;
+    }
+    
+    span {
+       box-shadow:2px 2px 3px #888888;
+      -webkit-box-shadow: 2px 2px 3px #888888;
+      -moz-box-shadow: 2px 2px 3px #888888;
+    }
+
+    .hidden {
+      display:none;
+    }
+
+    .sticky{
+      position:fixed;
+      display:block;
+    }
+    
+    div.menu {
+      font-size: 16px;
+      width:350px;
+      font-weight: bold;
+      border: solid gray 2pt;
+      padding-bottom:20px;
+      text-align:center;
+      list-style-type:none;
+      z-index:9999;
+      background-color:white;
+    }
+
+    div.menuAppear {
+      font-size: 16px;
+      font-weight: bold;
+      text-align:center;
+      list-style-type:none;
+    }
+    
+    div.menu a {
+      font-size: 18px;
+      text-decoration: none;
+    }
+    
+    div.menu h2 {
+      text-decoration: underline;
+    }
+
+    div.menuAppear a {
+      font-size: 18px;
+      text-decoration: none;
+    }
+   
+    div.menuAppear h2 {
+      text-decoration: underline;
+    }
+
+    .menu a:hover {
+      color: #F90;
+    }
+    
+    .type {
+      color:#006EDB;
+      white-space:pre-wrap;
+    }
+    
+    .min {
+      color:#C28400;
+      white-space:pre-wrap;
+    }
+    
+    .max {
+      color:#009494;
+      white-space:pre-wrap;
+    }
+    
+    .optional {
+      color:#B04DD1;
+      white-space:pre-wrap;
+    }
+
+    .sensitive {
+      color:#C40000;
+      white-space:pre-wrap;
+    }
+
+    deprecated {
+      text-decoration: line-through;
+    }
+
+    .other {
+      color:#1E7329;
+      white-space:pre-wrap;
+    }
+    
+    .arrayElements {
+      color: #A19502;
+    }
+    
+    .elementName {
+      white-space:pre-wrap;
+    }
+    
+    .arrayBound {
+      white-space:pre-wrap;
+    }
+    
+    .paddingWrap {
+      padding-left:50px;
+      padding-right:10px;
+    }
+    
+    .pass {
+      color:green;
+      font-size:14pt;	
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    
+    .fail {
+      color:#D40202;
+      font-size:14pt;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    
+    .info {
+      color:#000278;
+      font-size:14pt;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+
+    example {
+      color: #881b9b;
+      font-size: 14pt;
+    }
+
+    .tooltip-custom {
+      width:320px;
+      font-family: courier,monospace;
+      padding: 5px;
+    }
+  </style>
+  <meta type="template" content="type='dynamic-include', name='head-tags'" />
+  <script>
+    jQuery(document).ready(function() {
+      jQuery('deprecated').tooltip({tooltipClass: "tooltip-custom" });
+
+      jQuery('div.tabs').tabs();
+      jQuery('div.accord').accordion({collapsible: true, active:false, heightStyle: "content"});
+      jQuery('div.menuSpace a').removeAttr('href');
+
+      jQuery('#topOfPage').click(function() { jQuery('#header').mouseleave(); });
+      jQuery('#arrow').mouseenter(function() {
+        jQuery('#header').addClass('hidden').removeAttr('style');
+        jQuery('#arrow').bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function() {
+          jQuery('#header').removeClass('hidden');
+          if (!jQuery('#header').hasClass('hidden') && jQuery('#header').attr('style') != 'display:none') {
+            jQuery('#menuLabel').addClass('hidden');
+          }
+        });
+      });
+      jQuery('#arrow').mouseleave(function() {
+        jQuery('#header').addClass('hidden').attr('style','display:none');
+        jQuery('#menuLabel').removeClass('hidden');
+      });
+
+    });
+       
+    jQuery(window).scroll(function() {
+      if(jQuery(window).scrollTop() > jQuery('#topOfContent').outerHeight()) {
+        jQuery('#arrow').removeClass('hidden').addClass('sticky');
+        
+      } else {
+        jQuery('#arrow').addClass('hidden').removeClass('sticky');
+      }
+
+    });
+
+  </script>
+</head>
+  <body>
+    <div id="content">
+      
+      <div id="arrow" class="hidden" style="z-index:998;">
+       <span id="menuLabel">Menu</span>
+      <div id="header" class='hidden menuAppear' >
+        <h2>Table of Contents</h2>
+        <metavar="header">
+          <!-- <li><a href="#topOfContent">Return to Top</a></li> -->
+          <li id="topOfPage"><a href="#">Return to Top</a></li>
+      </div>
+      </div>
+      <div id="pathBar" class="contentArea"><metavar='pathBar'></div>
+      <div class="menu" id="topOfContent">
+        <h2>Table of Contents</h2>
+        <metavar="header">
+        <br>
+      </div>
+      <br>
+      <div id="mainContent">
+        <metavar="content">
+        <meta type="template" content="type='dynamic-include', name='footer'" />
+      </div>
+    </div>
+  </body>
+</html>

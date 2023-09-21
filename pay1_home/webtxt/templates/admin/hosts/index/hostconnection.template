@@ -1,0 +1,41 @@
+<div id="tabHostConnections">
+    <div id="host_add">
+        <div style="text-align: left;">
+            <span style="display: inline-block;">
+                <input class="pnp-input-control pnp-box" value="Add Host Connection" type="button" id="showAddHostConnectionLightBox">
+            </span>
+        </div>
+    </div>
+
+    <div id="hostConnectionAccordion">
+        <h3 class="pnp-input-control" style="text-align: left;">Current Host Connections</h3>
+        <div>
+            <div id="filterHostConnection">
+                <div id="hostConnectionListNavigation" class='listNavigation'>
+                    <div class='buttonWrapper'>
+                        <input type='button' id='hostConnectionListPageBack' class='pnp-box pnp-input-control' value='<'>
+                    </div>
+
+                    <div id='hostConnectionListPageSelectContainer'>
+                        <select id='hostConnectionListPageSelect' class='pnp-box pnp-input-control'></select>
+                    </div>
+
+                    <div class='buttonWrapper'>
+                        <input type='button' id='hostConnectionListPageNext' class='pnp-box pnp-input-control' value='>'>
+                    </div>
+                </div>
+                <select class="pnp-input-control filter-select" id="filterHostConnectionSelect">
+                    <option value="protocol">Protocol</option>
+                    <option value="port">Port #</option>
+                    <option value="path">Path</option>
+                </select>
+                <input class="pnp-input-control display-format" style="width: 200px" id="filterHostConnectionTableInput" placeholder="Filter" type="text">
+            </div>
+            <div id="currentHostConnections"></div>
+            <span id="hostConnectionCount"></span>
+            <!-- end payment plans list section -->
+
+            <div id='hostConnectionSpinner'></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div id='customerContent' class='pnp-box rounded'>
+    <h1 class="display-format" id='customerListHeader'>Customer List</h1>
+    <hr>
+    <div class="listNavigation" id='customerListNavigation'>
+        <div class='buttonWrapper'>
+            <input type='button' id='customerListPageBack' class='pnp-box pnp-input-control' value='<'>
+        </div>
+
+
+        <div id='customerListPageSelectContainer'>
+            <select id='customerListPageSelect' class='pnp-box pnp-input-control'></select>
+        </div>
+
+        <div class='buttonWrapper'>
+            <input type='button' id='customerListPageNext' class='pnp-box pnp-input-control' value='>'>
+        </div>
+    </div>
+    <input type='button' id='addCustomerButton' class='pnp-box pnp-input-control quarter display-format' value='Add Customer'>
+
+    <br>
+
+    <div id='customerTable'>
+
+    </div>
+
+    <div id='customerDetailSpinner'></div>
+
+    <div id='customerListStatus'>
+        <span id="customerPageInfo"></span>
+        <div id='customerSpinner'></div>
+    </div>
+
+    <br>
+</div>

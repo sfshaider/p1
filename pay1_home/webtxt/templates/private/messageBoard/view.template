@@ -1,0 +1,46 @@
+<script type='text/javascript'>
+    function delete_confirm() {
+        return confirm('Are you sure?');
+    }
+</script>
+
+<table border=0 width='100%'>
+    <tr>
+        <td align=center>
+            <font size='+1'>
+            <b>Service News &amp; Updates</b>
+            </font>
+            <br>
+            <font color='#FF0000'>* Please Note: This page will refresh itself every <metavar='refresh_minutes'> minutes.</font>
+            <br>
+            All messages older then 1 month will be automatically archived.
+        </td>
+        <td align=right width='3%'>
+            <form method=post>
+                <input type=hidden name='mode' value='new_message'>
+                <input type=submit class='button' value='Add New Message'>
+            </form>
+        </td>
+
+        <td align=left width='3%'>
+            <form method=post>
+                <input type=hidden name='show_archive' value='<metavar='message_status'>'>
+                <input type=submit class='button' value='Show <metavar='message_status_action'>'>
+            </form>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<p><table border=0 cellpadding=3 width='100%'>
+        <tr>
+            <td valign=top>
+                <table border=0 cellspacing=0 cellpadding=0 width=100%>
+                    <metavar='messageboard'>
+                </table>
+            </td>
+            <td valign=top width=325>
+                <br>
+            </td>
+        </tr>
+</table>

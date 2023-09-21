@@ -1,0 +1,100 @@
+.resellerSelector {
+	width: 100%;
+	background: #15476e;
+	color: #F5F5F5;
+	margin: 2px 0;
+	vertical-align: center;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+
+.resellerSelector select,#merchantListFilter select {
+	margin: 5px;
+}
+
+#merchantFilter {
+	width: 100%;
+	background: #6d8394;
+	color: #F5F5F5;
+	margin: 2px 0;
+	vertical-align: center;
+	border-radius: 5px;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#merchantFilter label {
+	line-height: 40px;
+}
+
+#listStatus {
+	margin: 10px;
+	float: left;
+}
+
+#listNavigation {
+	float: right;
+}
+#listNavigation > div {
+	display: inline-block;
+}
+
+#listNavigation div.buttonWrapper {
+	width: 30px;
+}
+
+
+#merchantTable td {
+	height: 35px;
+}
+
+#merchantTable div {
+	height: 1000px;
+}
+
+#merchantAdd div.processor.section.ach,
+#merchantAdd div.processor.section.tds,
+#merchantAdd div.processor.section.wallet,
+#merchantAdd div.processor.section.emv,
+#merchantAdd div.processor.section hr {
+  display: none;
+}
+
+/* Spinner Style */
+
+#listStatus {
+	display: table;
+}
+
+#page-info, #spinner {
+	display: table-cell;
+}
+
+#spinner, .spinner {
+	position: relative !important;
+}
+
+.spinner {
+	left: 50% !important;
+	width: 50px !important;
+	display: inline-block;
+}
+
+/* extra stlyle */
+
+#resellerSelectors label {
+	padding: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+div.pnp-overlay {
+	padding: 15px;
+}
+
+h1.centeredHeader {
+	text-align: center;
+}

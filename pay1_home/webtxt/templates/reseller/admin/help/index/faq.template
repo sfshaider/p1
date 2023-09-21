@@ -1,0 +1,69 @@
+<div name="FAQSection" >
+  <h1>FAQ Area</h1>
+  <hr>
+
+  <table class='statusSelector'>
+    <tr>
+      <td>
+        <label>Search for Issues:</label>
+      </td>
+
+      <td>
+        <input type="text" class='reseller-input-control' name="keywords" size="40" >
+      </td>
+
+      <td>
+        <select name="sections" class='reseller-input-control'><metavar="sectionOptions"></select>
+     </td>
+
+      <td onClick="issueByID()">
+       <label class="superLink"><span class="fa fa-search"></span> Search by Issue ID</label>
+      </td>
+    </tr>
+
+    <tr>
+      <td> 
+        <label class='small'>
+           <span>keywords separated with comma: ","</span>
+        </label>
+      </td>
+    </tr>
+  </table>
+
+  <hr class='special'>
+  <div id="results" class="hidden" width = '100%'>
+  </div>
+
+  <div name="loader" class="hidden">
+    <br>
+    <h1 class='loading'>Loading Search Results...</h1>
+    <br>
+  </div>
+
+</div>
+
+<!-- Optional Search -->
+
+<div name="IssueIDSection" class="hidden">
+  <h1>FAQ Area</h1> 
+  <hr>
+
+  <table class='statusSelector'>
+     <tr>
+       <td>
+         <label><span>Search for Issues:</span></label>
+       </td>
+       <td>
+         <label><input type="text" name="ps_issue_id" id='searchByID' size="40" class='reseller-input-control'></label>
+       </td>
+       <td>
+          <input type="button" value="Search for Issue" class="reseller-input-control" name='idSearchButton'>
+       </td>
+       <td onClick="back()">
+          <label class="superLink"><span class="fa fa-search"></span> <span>Search by Keyword(s)</span></label>
+       </td>
+     </tr>
+  </table>
+</div>
+
+<hr class="special">

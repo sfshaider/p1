@@ -1,0 +1,27 @@
+<form method=post>
+<input type=hidden name='mode' value='update_message'>
+<input type=hidden name='message_id' value='<metavar='message_id'>'>
+<table border=0>
+  <tr>
+    <td colspan=2 bgcolor='#99BBD7'><b>Edit Message:</b></td>
+  </tr>
+  <tr>
+    <td bgcolor='#6688A4'><font color='#ffffff'>&nbsp; Outage: &nbsp;</font></td>
+    <td><input type=checkbox name='outage' value='yes' <metavar='outage_check'>> Check This When Reporting Outages Or Downtime</td>
+  </tr>
+  <tr>
+    <td bgcolor='#6688A4'><font color='#ffffff'>&nbsp; Subject: &nbsp;</font></td>
+    <td><input type=text name='subject' value='<metavar='subject'>' size=50></td>
+  </tr>
+  <tr>
+    <td valign=top bgcolor='#6688A4'><font color='#ffffff'>&nbsp;<br>&nbsp; Message &nbsp;";
+<br>&nbsp; (Optional) &nbsp;</font></td>
+    <td><textarea name='message' cols=95 rows=15><metavar='message_content'></textarea></td>
+  </tr>
+  <tr>
+    <td bgcolor='#6688A4'><font color='#ffffff'>&nbsp; &nbsp;</font></td>
+    <td><input type=submit class='button' value='Update Message'> &nbsp; <input type=button class='button' value='Cancel Operation' onClick='javascript:history.go(-1);'></td>
+  </tr>
+</table>
+</form>
+

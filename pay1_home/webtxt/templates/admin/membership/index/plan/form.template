@@ -1,0 +1,115 @@
+<div>
+    <h1 id="planHeader"></h1>
+    <hr>
+    <div class="content">
+        <!-- start lightbox plan form -->
+        <form id="planForm">
+            <div class="pnp-box">
+                <input hidden id="planID">
+                <div class="pnp-box quarter display-format">
+                    <h4 title="The merchant you are creating a payment plan for">Merchant</h4>
+                    <input class="pnp-box pnp-input-control" id="planGatewayAccount" readonly>
+                </div>
+
+                <div class="pnp-box half display-format">
+                    <h4 title="A unique identifier">Plan ID</h4>
+                    <input class="pnp-input-control pnp-box" id="planMerchantPlanID">
+                    <p id="planIDMessage">* If undefined, a unique Plan ID will be assigned for you.</p>
+                    <input class="pnp-hidden" id="originalPlanID">
+                </div>
+            </div>
+
+            <div class="pnp-box">
+                <div class="pnp-box quarter required display-format">
+                    <h4 class="display-format">Sign-Up Fee</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <input class="pnp-input-control pnp-box" id="planSignUpFee">
+                </div>
+
+
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Recurring Fee</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <input class="pnp-input-control pnp-box non-zero-bill-cycle" required id="planRecurringFee">
+                </div>
+
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Currency</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <select class="pnp-input-control pnp-box" required id="planCurrencySelect">
+                        <metavar='currencySelect'>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pnp-box">
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Loyalty Fee</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <input class="pnp-input-control pnp-box non-zero-bill-cycle" required id="planLoyaltyFee">
+                </div>
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Loyalty Count</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <input class="pnp-input-control pnp-box quarter non-zero-bill-cycle" required id="planLoyaltyCount">
+                </div>
+
+            </div>
+
+            <div id="planGroupSelect">
+                <metainc="/admin/membership/index/group,group_select">
+            </div>
+
+            <div class="pnp-box">
+                <div class="pnp-box quarter display-format">
+                    <h4>Balance</h4>
+                    <input class="pnp-input-control pnp-box half" id="planBalance"><br>
+                    <input id="planInstallBillingCheck" type="checkbox">
+                    <h4 class="pnp-box" style="display: inline-table;">Check For Installment Billing</h4>
+                </div>
+
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Billing Cycle</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <select class="pnp-input-control pnp-box" required id="planBillingCycleSelect">
+                        <metavar="billCycleSelect">
+                    </select>
+                </div>
+            </div>
+
+            <div class="pnp-box">
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Initial Month Delay</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <input class="pnp-input-control pnp-box quarter non-zero-bill-cycle" required id="planInitialMonthDelay">
+                </div>
+
+                <div class="pnp-box quarter display-format">
+                    <h4 class="display-format">Initial Day Delay</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <input class="pnp-input-control pnp-box quarter non-zero-bill-cycle" required id="planInitialDayDelay">
+                </div>
+            </div>
+
+            <div class="pnp-box">
+                <div class="pnp-box half display-format">
+                    <h4 class="display-format">Recurring Type</h4>
+                    <span class="info-span">*</span>
+                    <br>
+                    <select class="pnp-input-control pnp-box half" required id="planTransactionTypeSelect">
+                        <metavar='planTransactionTypeSelect'>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <!-- end of plan form -->
+    </div>
+</div>

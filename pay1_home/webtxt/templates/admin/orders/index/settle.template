@@ -1,0 +1,49 @@
+<div id='settlePrompt' class='pnp-hidden'>
+    <h1>Settle Transaction</h1>
+    <hr>
+    <br>
+    <!-- Window Head End -->
+
+    <!-- Hidden Inputs -->
+    <input type="hidden" name="pnp_token">
+    <input type="hidden" name="transaction_vehicle">
+    <input type="hidden" name="pnp_transaction_ref_id" readonly>
+    <input type="hidden" name="billing_address" readonly>
+    <input type="hidden" name="billing_state" readonly>
+    <input type="hidden" name="postal_code" readonly>
+    <input type="hidden" name="billing_name" readonly>
+    <!-- Hidden Input End -->
+
+    <label class="lightgraybox rounded pnp-box third">
+         <span>Amount: </span>
+         <input type="text" name="transaction_amount" class="pnp-input-control">
+    </label>
+
+    <label class="lightgraybox rounded pnp-box third">
+         <span>Fee Amount: </span>
+         <input type="text" name="fee_amount" class="pnp-input-control" readonly>
+    </label>
+
+    <label class="rounded lightgraybox pnp-box full">
+        <span>Currency: </span>
+        <input type="text" name="transaction_currency" readonly class="pnp-input-control">
+    </label>
+
+    <label class="rounded pnp-box lightgraybox">
+        <span>Payment Information: </span>
+        <input type="text" class="half pnp-input-control" readonly name="masked_number">
+        <input type="text" class="half pnp-input-control" readonly name="payinfo">
+    </label>
+
+    <!-- Buttons -->
+	<input type="button" value="Mark for Settlement" class="settlerButton pnp-input-control">
+	<span class="settleResponse"></span>
+	<input type="button" name="close_settle" class="pnp-input-control half closeButton" value="Close">
+    <!-- Prompt End -->
+</div>
+
+
+<div id='settleResult' class='pnp-hidden'>
+
+</div>
+

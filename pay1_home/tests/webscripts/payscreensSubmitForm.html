@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test Payscreens</title>
+	</head>
+	<body>
+        	<form action="https://localhost:8443/pay/" method="POST">
+		<h2>Itemization</h2>
+        	 Display Items: <input type="text" name="pd_display_items" value="no"> (Set to yes to enable itemization)<br>
+		 pt_item_identifier_1: <input type="text" name="pt_item_identifier_1" value=""><br>
+		 pt_item_cost_1: <input type="text" name="pt_item_cost_1" value=""><br>
+		 pt_item_quantity_1: <input type="text" name="pt_item_quantity_1" value=""><br>
+		 pt_item_description_1: <input type="text" name="pt_item_description_1" value=""><br>
+		 pr_is_initial: <input type="text" name="pr_is_initial" value="yes"><br>
+		<br>
+		 pt_item_identifier_2: <input type="text" name="pt_item_identifier_2" value=""><br>
+		 pt_item_cost_2: <input type="text" name="pt_item_cost_2" value=""><br>
+		 pt_item_quantity_2: <input type="text" name="pt_item_quantity_2" value=""><br>
+		 pt_item_description_2: <input type="text" name="pt_item_description_2" value=""><br>
+		<br><br>
+
+		<h2>Main Data</h2>
+	           Gateway Account: <input name="pt_gateway_account" value="dylaninc"><br>
+	           Payment Type: <input name="pd_transaction_payment_type" value="credit"><br>
+	           Amount: <input name="pt_transaction_amount" value="1.00"><br>
+	            <input type="submit">
+	        </form>
+	</body>
+</html>

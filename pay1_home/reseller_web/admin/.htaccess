@@ -1,0 +1,15 @@
+AuthType PlugNPay::AuthCookieDBI
+AuthName PNPSESSID
+PerlAuthenHandler PlugNPay::AuthCookieDBI->authenticate
+
+<RequireAll>
+require valid-user
+require group /reseller
+</RequireAll>
+
+# redirect if temp flag is set and not a tech
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/admin/logout.cgi$
+RewriteCond %{ENV:TECH} ^$
+RewriteCond %{ENV:TEMPFLAG} 1
+RewriteRule !/admin/logout\.cgi$ /admin/security.cgi [L]

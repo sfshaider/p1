@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/admin/v2/help/_css/help.css">
+<link rel="stylesheet" type="text/css" href="/admin/v2/_css/common.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="/_js/Charts.js"></script>
+<script src="/_js/spin.min.js"></script>
+<script src="/admin/v2/help/_js/FAQ.js"></script>
+<script src="/admin/v2/help/_js/Helpdesk.js"></script>
+<script src="/admin/v2/help/_js/main.js"></script>
+<script>
+  jQuery(document).ready( function() {
+    if (jQuery('input[name=new_ticket_request]').val() == "true") {
+      jQuery('#tabs').tabs({ active: 2} );
+    } else { 
+      jQuery('#tabs').tabs();
+    }
+  });
+</script>

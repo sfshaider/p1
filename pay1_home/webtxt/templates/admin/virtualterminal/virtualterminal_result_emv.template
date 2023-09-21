@@ -1,0 +1,34 @@
+<div id='resultContainer'>
+	<div id="resultInfo" style="width:350px;">
+		<div id="resultHeader" class='line'>
+			<h1 id="resultMessage"><metavar='message'></h1>
+			<hr><br>
+		</div>
+        <div id="paymentName" class='line'>
+        	<div class="name"><metalang="general,name">:</div>
+        	<div class="value"><metavar="paymentName"></div>
+  		</div>
+
+		<div id="authCode" class='line'>
+			<div class="name"><metalang="general,auth_code">:</div>
+			<div class="value"><metavar="authCode"></div>
+		</div>
+		<div id="amount" class='line'>
+		    <div class="name"><metalang="general,amount">:</div>
+            <div class="value"><metavar="amount"></div>
+		</div>
+		<div id="processorMessage" class='line'>
+		    <div class="name"><metalang="general,processorMessage">:</div>
+            <div class="value"><metavar="processorMessage"></div>
+		</div>
+		<div id="transactionType" class='line'>
+		    <div class="name"><metalang="general,transaction_type">:</div>
+			<div class="value"><metavar="transactionType"></div>
+		</div>
+        <div id="resultFooter" class='line'></div>
+	</div>
+	<div id="resultLinks" style="width:350px;">
+        <p><a id="virtualterminal_link" href='/admin/virtualterminal/?pb_merchant=<metavar="gatewayAccount">'><metalang="virtualterminal,enter_another_transaction"></a>&nbsp<a id="helpdesk_link" href='/admin/helpdesk.cgi'><metalang="general,helpdesk"></a><p>
+   </div>
+</div>
+

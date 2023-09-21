@@ -1,0 +1,7 @@
+basePath: "/home/pay1/log/loggy"
+inputs:
+  - name: "test1"
+    fifoFile: "./test1-pipe"
+    logPrefix: "[test1]"
+
+outputFifoFile: "/home/pay1/log/loggy-out"

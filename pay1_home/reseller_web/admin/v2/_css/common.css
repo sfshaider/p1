@@ -1,0 +1,36 @@
+.section {
+        background: #EEE;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+}
+
+select.reseller-input-control {
+        background: none;
+        background-color: white;
+        border-radius: 0px;
+}
+
+.hidden{
+  display:none;
+}
+
+.show{
+  display:block;
+}
+
+table.noFinger td,tr{
+  cursor:auto;
+}
+
+a {
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.lightgraybox {
+  display:inline-block;
+}
+

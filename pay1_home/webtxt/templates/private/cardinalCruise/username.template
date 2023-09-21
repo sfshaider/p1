@@ -1,0 +1,12 @@
+<div class='contentArea'>
+    <div class="settings">
+        <form method="post" action="cardinal_cruise_settings.cgi">
+          <span class="field">
+            <label>Username:</label>
+            <input type='text' name='username' value='' />
+          </span>
+          <br>
+          <input type="submit" name="Submit" />
+        </form>
+    </div>
+</div>

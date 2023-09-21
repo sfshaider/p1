@@ -1,0 +1,40 @@
+#!/usr/local/bin/perl
+
+use lib $ENV{'PNP_PERL_LIB'};
+use lib $ENV{'PNP_PERL_PROCESSOR_LIB'};
+
+use procutils;
+
+if ( $#ARGV < 0 ) {
+  print "       Usage:\n";
+  print "         secondary on\n";
+  print "         secondary off\n";
+  exit;
+}
+
+if ( $ARGV[0] eq "off" ) {
+
+  &procutils::flagwrite( "$username", "fdmsdebit", "/home/pay1/batchfiles/logs/fdmsdebit", "secondary.txt", "unlink", "", "" );
+  print "primary fdmsrc\n";
+} elsif ( $ARGV[0] eq "on" ) {
+  &procutils::flagwrite( "$username", "fdmsdebit", "/home/pay1/batchfiles/logs/fdmsdebit", "secondary.txt", "write", "", "1" );
+
+  print "secondary fdmsrc 1\n";
+} elsif ( $ARGV[0] eq "1" ) {
+  &procutils::flagwrite( "$username", "fdmsdebit", "/home/pay1/batchfiles/logs/fdmsdebit", "secondary.txt", "write", "", "1" );
+
+  print "secondary fdmsrc 1\n";
+} elsif ( $ARGV[0] eq "2" ) {
+  &procutils::flagwrite( "$username", "fdmsdebit", "/home/pay1/batchfiles/logs/fdmsdebit", "secondary.txt", "write", "", "2" );
+
+  print "secondary fdmsrc 2\n";
+} elsif ( $ARGV[0] eq "3" ) {
+  &procutils::flagwrite( "$username", "fdmsdebit", "/home/pay1/batchfiles/logs/fdmsdebit", "secondary.txt", "write", "", "3" );
+
+  print "secondary fdmsrc 3\n";
+} elsif ( $ARGV[0] eq "4" ) {
+  &procutils::flagwrite( "$username", "fdmsdebit", "/home/pay1/batchfiles/logs/fdmsdebit", "secondary.txt", "write", "", "4" );
+
+  print "secondary fdmsrc 4\n";
+}
+

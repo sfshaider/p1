@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='shortcut icon' href='favicon.ico'>
+        <link href='/css/style.css' type='text/css' rel='stylesheet'>
+        <meta http-equiv='Pragma' content='no-cache'>
+        <meta http-equiv='Cache-control' content='no-cache'>
+
+        <title>Message Board</title>
+        <metavar='auto_refresh'>
+    </head>
+    <body bgcolor='#ffffff' text='#000000'>

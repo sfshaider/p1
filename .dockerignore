@@ -1,0 +1,6 @@
+./react-components
+**/node_modules
+./datalog
+./bundles
+.idea
+.git

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!--[if lt IE 9]>
+  <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">IE7_PNG_SUFFIX=".png";</script>
+<![endif]-->
+<script language="javascript" src="/admin/_js/jquery-1.10.2.min.js"></script>
+<script language="javascript" src="/admin/_js/jquery-ui-1.10.3.custom.min.js"></script>
+<script language="javascript" src="/admin/_js/jquery-misc-plugins.js"></script>
+<link rel="stylesheet" href="/_css/merchants/<meta type="template" content="type='variable', name='login'" />/admin.css" type="text/css" />
+<link rel="stylesheet" href="/admin/_css/plugnpay-theme/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+</head>
+  <body>
+    <div id="content">
+      <div id="header">
+        <meta type="template" content="type='include', name='header', category='admin'" >
+      </div>
+      <div id="pathBar" class="contentArea"><metavar='pathBar'></div>
+      <div id="mainContent">
+        <div id="accessDenied" class="contentArea"><metalang="general,access_denied"></div>
+      </div>
+    </div>
+  </body>
+</html>

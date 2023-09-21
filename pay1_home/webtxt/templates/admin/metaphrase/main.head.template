@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="/_css/merchants/<metavar="login">/admin_control_list.css" type="text/css" />
+<metavar='metaphraseOptions'>
+<script type="text/javascript" langugae="javascript" src='/admin/_js/Form.js'></script>
+<script type="text/javascript" langugae="javascript" src='/admin/metaphrase/_js/Init.js'></script>

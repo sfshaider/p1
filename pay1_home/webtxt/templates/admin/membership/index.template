@@ -1,0 +1,325 @@
+<div id="index" class='rounded pnp-box section'>
+    <div id='filterFrame'>
+        <div class="merchantSelect">
+            <label>
+                <span>Select Merchant:</span>
+                <select id="merchant_names" class='pnp-box pnp-input-control quarter'>
+                    <option value='' disabled selected>Select A Merchant</option>
+                    <metavar='linked_accounts'>
+                </select>
+            </label>
+            <input type="button" id="reload_accounts" class="pnp-input-control pnp-box quarter" value="Reload Accounts">
+        </div>
+    </div>
+    <div id="dialogBox">
+        <span id="dialogContent"></span>
+    </div>
+
+    <div id="tabs">
+        <!-- start of tab list -->
+        <ul>
+            <!-- FUTURE USE -->
+            <!-- <li><a href="#tabDashboard">Dashboard</a></li> -->
+            <li><a href="#tabBillingProfiles">Profiles</a></li>
+            <li><a href="#tabPaymentPlans">Payment Plans</a></li>
+            <li><a href="#tabGroupManagement">Group Management</a></li>
+            <li><a href="#tabHostManagement">Host Management</a></li>
+        </ul>
+        <!-- end of tab list-->
+
+        <!-- start of dashboard section
+
+        -- FUTURE USE --
+
+        <div id="tabDashboard">
+            <div id="tab_dashboard">
+                <div class="section_table">
+                    <div id="dashboardProfileCount" class="pnp-box half display-format" style="width: 400px; height: 250px;">
+                        <h1>Profile Information</h1>
+                        <hr>
+
+                        <h4>Active Profiles</h4>
+                        <label id="activeProfiles"></label>
+
+                        <br>
+                        <h4>Expired Profiles</h4>
+                        <label id="expiredProfiles"></label>
+                        <br>
+
+                        <h4>Successful profiles billed</h4>
+                        <label id="successes"></label>
+                        <br>
+
+                        <h4>Failed profiles billed</h4>
+                        <label id="failures"></label>
+                    </div>
+
+                    <div id="dashboardRecurSendbill" class="pnp-box half display-format" style="width: 400px; height: 500px;">
+                        <h1>Billing Information</h1>
+                        <hr>
+
+                        <h4>Date</h4>
+                        <label id="date"></label>
+                        <br>
+
+                        <h4>Total $</h4>
+                        <label id="total"></label>
+                        <br>
+                        <div id="sendBillPieChart">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- end of dashboard section -->
+
+        <!-- start of plan section -->
+        <div id="tabPaymentPlans">
+            <div style="text-align: left;">
+                <!-- start payment plans add section -->
+                <div class="display-format">
+                    <input class="pnp-input-control pnp-box" value="Add Payment Plan" type="button" id="showNewPlanLightBox">
+                </div>
+            </div>
+
+            <div id="payment_plans_list">
+                <!-- start of plan accordion -->
+                <div id="planAccordion">
+                    <h3 class="pnp-input-control" style="text-align: left">Current Payment Plans</h3>
+                    <div id="dropdownPlanList">
+                        <div id="planTabContent">
+                            <div id="filterPaymentPlan">
+                                <div id="planListNavigation" class='listNavigation'>
+                                    <div class='buttonWrapper'>
+                                        <input type='button' id='planListPageBack' class='pnp-box pnp-input-control' value='<'>
+                                    </div>
+
+
+                                    <div id='planListPageSelectContainer'>
+                                        <select id='planListPageSelect' class='pnp-box pnp-input-control'>
+                                        </select>
+                                    </div>
+
+                                    <div class='buttonWrapper'>
+                                        <input type='button' id='planListPageNext' class='pnp-box pnp-input-control' value='>'>
+                                    </div>
+                                </div>
+                                <select class="pnp-input-control filter-select" id="filterPaymentPlanSelect">
+                                    <option value="merchantPlanID">PlanID</option>
+                                    <option value="balance">Balance</option>
+                                    <option value="recurringFee">Recurring Fee</option>
+                                </select>
+                                <input class="pnp-input-control display-format" style="width: 200px" id="filterPaymentPlanTable" placeholder="Filter" type="text">
+                            </div>
+                            <!-- start payment plans list section -->
+
+                            <div id="currentPaymentPlans">
+
+                            </div>
+                            <span id="planCount"></span>
+                            <!-- end payment plans list section -->
+                            <div id='planSpinner'></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of accordion -->
+            </div>
+
+        </div>
+        <!-- end of plan section -->
+
+        <!-- start of profile section -->
+        <div id="tabBillingProfiles">
+            <div id="profileSearchSection">
+                <h1>View Customer Billing Profiles</h1>
+                <hr>
+                <br>
+                <input id="profileUsernameSearchText" type="text" placeholder="Enter customer username..." class="pnp-box quarter pnp-input-control display-format"/>
+                <input id="profileUsernameSearchButton" value="Search" class="pnp-box quarter pnp-input-control display-format" type="button"/>
+            </div>
+
+            <!-- detail template -->
+            <div id="profileDetailSection">
+                <metainc="/admin/membership/index/profile/,detail">
+            </div>
+            <!-- end of detail template -->
+
+            <div id="customerProfileSpinner"></div>
+            <br>
+
+            <!-- Customer Profile Section -->
+            <div id="profileCustomerInformation" class="pnp-box pnp-hidden">
+                <h1 id="profileCustomerInformationHeader"></h1>
+                <hr>
+
+                <div id="customerInformation">
+                    <input id="customerUsername" type="hidden">
+                    <div class="pnp-box third display-format">
+                        <h3>Name:</h3>
+                        <input type="text" id="customerName" class="pnp-box pnp-input-control" readonly/>
+                    </div>
+
+                    <div class="pnp-box half display-format">
+                        <h3>Email Address:</h3>
+                        <input type="text" id="customerEmail" class="pnp-box pnp-input-control" readonly/>
+                    </div>
+
+                    <input class="pnp-input-control pnp-box quarter" value="Add Billing Profile" type="button" id="showNewProfileLightBox">
+                </div>
+
+                <br>
+
+                <h1>Current Profiles</h1>
+                <hr>
+                <!-- current profiles section -->
+                <div id="customerProfiles">
+
+                </div>
+                <div id="currentProfilesSpinner"></div>
+                <!-- end of current profiles section -->
+            </div>
+            <!-- end of Profile Section -->
+
+        </div>
+        <!-- end of profile section -->
+
+        <!-- start of group section -->
+        <div id="tabGroupManagement">
+            <div style="text-align: left;">
+                <!-- start group add section -->
+                <div class="display-format">
+                    <input class="pnp-input-control pnp-box" value="Add Merchant Group" type="button" id="showNewGroupLightBox">
+                </div>
+            </div>
+
+            <div id="groupAccordion">
+                <h3 class="pnp-input-control" style="text-align: left">Groups</h3>
+                <div id="dropdownGroupList">
+                    <div id="groupTabContent">
+                        <div id="filterGroup">
+                            <div id="groupListNavigation" class='listNavigation'>
+                                <div class='buttonWrapper'>
+                                    <input type='button' id='groupListPageBack' class='pnp-box pnp-input-control' value='<'>
+                                </div>
+
+                                <div id='groupListPageSelectContainer'>
+                                    <select id='groupListPageSelect' class='pnp-box pnp-input-control'>
+                                    </select>
+                                </div>
+
+                                <div class='buttonWrapper'>
+                                    <input type='button' id='groupListPageNext' class='pnp-box pnp-input-control' value='>'>
+                                </div>
+                            </div>
+                            <select class="pnp-input-control filter-select" id="filterGroupSelect">
+                                <option value="groupName">Group Name</option>
+                            </select>
+                            <input class="pnp-input-control display-format" style="width: 200px" id="filterGroupTable" placeholder="Filter" type="text">
+                        </div>
+                        <div id="groupList">
+
+                        </div>
+                    </div>
+                    <span id="groupCount"></span>
+
+                    <div id="groupSpinner"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end of group section -->
+
+        <!-- start of host section -->
+        <div id="tabHostManagement">
+            <div class="display-format">
+                <input class="pnp-input-control pnp-box" value="Add File Transfer Settings" type="button" id="showNewFileTransferLightBox">
+            </div>
+            <div class="display-format">
+                <input class="pnp-input-control pnp-box" value="Link File Transfer Settings" type="button" id="showLinkFileTransferLightBox">
+            </div>
+            <br>
+
+            <div id="fileTransferAccordion">
+                <h3 class="pnp-input-control" style="text-align: left">Host Connections</h3>
+                <div id="dropdownHostList">
+                    <div id="fileTransferTabContent">
+                        <div id="filterFileTransferSettings">
+                            <div id="fileTransferListNavigation" class='listNavigation'>
+                                <div class='buttonWrapper'>
+                                    <input type='button' id='fileTransferListPageBack' class='pnp-box pnp-input-control' value='<'>
+                                </div>
+
+
+                                <div id='fileTransferListPageSelectContainer'>
+                                    <select id='fileTransferListPageSelect' class='pnp-box pnp-input-control'>
+                                    </select>
+                                </div>
+
+                                <div class='buttonWrapper'>
+                                    <input type='button' id='fileTransferListPageNext' class='pnp-box pnp-input-control' value='>'>
+                                </div>
+                            </div>
+                            <select class="pnp-input-control filter-select" id="filterFileTransferSettingsSelect">
+                                <option value="activationURL">Activation URL</option>
+                                <option value="protocol">Protocol</option>
+                                <option value="path">Path</option>
+                            </select>
+                            <input class="pnp-input-control" style="width: 200px" id="filterFileTransferSettingsInput" placeholder="Filter" type="text">
+                        </div>
+                        <div id="hostTable">
+
+                        </div>
+                    </div>
+                    <span id="fileTransferCount"></span>
+
+                    <div id="fileTransferSpinner"></div>
+                </div>
+            </div>
+        </div>
+        <!-- start of host section -->
+    </div>
+</div>
+<!-- close round table div -->
+
+<!-- start of lightboxes -->
+<metainc='/admin/membership/index,message'>
+<metainc="/admin/membership/index/profile/,add">
+<metainc="/admin/membership/index/profile/,edit">
+<metainc="/admin/membership/index/profile/,billmember">
+
+<div id="planLightBox" class="pnp-hidden overlay light-box">
+    <metainc="/admin/membership/index/plan,form">
+
+    <div id="addPlanButtons" class="pnp-hidden">
+        <input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeAddPaymentPlanLightBox">
+        <input class='pnp-input-control right-action-button' type=button value="Add Plan" id="savePlan">
+    </div>
+
+    <div id="editPlanButtons" class="pnp-hidden">
+        <input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeEditPaymentPlanLightBox">
+        <input class='pnp-input-control right-action-button' type=button value="Edit Plan" id="editPlan">
+    </div>
+</div>
+
+<metainc="/admin/membership/index/group/,add">
+<metainc="/admin/membership/index/group/,edit">
+
+<div class='pnp-hidden overlay light-box' id="fileTransferLightBox">
+    <metainc="/admin/membership/index/host/,form">
+
+    <div class="pnp-hidden" id="newFileTransferActionButtons">
+        <input class='pnp-input-control right-action-button' type=button value="Save Settings" id="saveFileTransfer">
+        <input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeNewFileTransferLightBox">
+    </div>
+
+    <div class="pnp-hidden" id="editFileTransferActionButtons">
+        <input class='pnp-input-control right-action-button' type=button value="Edit Settings" id="updateFileTransfer">
+        <input class="pnp-input-control left-action-button" value="Close Window" type="button" id="closeEditFileTransferLightBox">
+    </div>
+</div>
+
+<div class='pnp-hidden overlay light-box' id="linkFileTransferLightBox">
+    <metainc="/admin/membership/index/host/,link">
+</div>
+<!-- end of light boxes -->

@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteBase /iapi/
+RewriteRule ^index\.cgi$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /iapi/index.cgi [L]
+
+
+<Files index.cgi>
+    SetHandler  perl-script
+    PerlResponseHandler ModPerl::PerlRun
+    PerlResponseHandler ModPerl::Registry
+    PerlSendHeader On
+    PerlHandler Apache::Registry
+    Options +ExecCGI
+</Files>

@@ -1,0 +1,8 @@
+AuthType PlugNPay::AuthCookieDBI
+AuthName PNPSESSID
+PerlAuthenHandler PlugNPay::AuthCookieDBI->authenticate
+
+<RequireAll>
+Require valid-user
+Require group /reseller/overview
+</RequireAll>

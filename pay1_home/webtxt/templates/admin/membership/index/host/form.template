@@ -1,0 +1,36 @@
+<h1 id="fileTransferLightBoxHeader"></h1>
+<hr>
+
+<div class="pnp-box third display-format">
+    <h4>Merchant</h4>
+    <input id="fileTransferMerchant" required readonly class="pnp-box pnp-input-control half" type="text">
+</div>
+
+<input type="hidden" id="fileTransferID">
+
+<div class="pnp-box half display-format">
+    <h4>Description</h4>
+    <input id="fileTransferDescription" required class="pnp-input-control pnp-box" type="text" maxlength="60">
+</div>
+
+<div class="pnp-box third display-format">
+    <h4 class="display-format">Rename Previous File Suffix</h4>
+    <span class="info-span">*</span>
+    <br>
+    <input id="fileTransferRenamePreviousSuffix" required class="pnp-box pnp-input-control half" type="text">
+</div>
+
+<div class="pnp-box half display-format">
+    <h4 class="display-format">Activation URL</h4>
+    <span class="info-span">*</span>
+    <br>
+    <input id="fileTransferActivationURL" required class="pnp-box pnp-input-control" type="text">
+</div>
+
+<div class="pnp-box">
+    <h4 class="display-format">Host Connection</h4>
+    <span class="info-span">*</span>
+    <br>
+    <select id="fileTransferConnectionsSelect" required class="pnp-box pnp-input-control full">
+    </select>
+</div>

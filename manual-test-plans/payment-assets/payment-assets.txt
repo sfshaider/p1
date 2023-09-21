@@ -1,0 +1,67 @@
+Payment Assets Manual Test Plan:
+
+Preparation:
+- Extract test_assets.tgz (in the same directory as this file) into *root* of repository (i.e. the directory that contains pay1_home)
+- Remove pnpdemo assets from static.dev.gateway-assets.com/merchant/pnpdemo/
+- Remove pnpdemo templates from plugnpay-dev-webdata/merchantAdminTemplates/payscreen, .../transition, and .../thankyou
+- Ensure /home/pay1/web/logos is recursively writable by 'all' ( "chmod -R a+w logos/" )
+- Ensure feature "staticContentServer=sameHost" is *not* set for pnpdemo
+
+1) load payment page for pnpdemo using the form in file "payment assets paycgi form.html"
+
+2) view the source (in chrome this might require a reload of the page) and verify that the logo, background, css, and alternate image (typing cat) are hosted by static.dev.gateway-assets.com
+
+3) reload a few times to see the hosts change for each asset (i.e. www0 -> www4 -> www1, etc)
+
+4) Set feature staticContentServer=sameHost for pnpdemo
+
+5) Reload page again, this time urls should show /assets/...
+
+These assets are also used on confirmation page, thank you page, billpaylite, and billpay templates.
+
+6) Submit form and see confirmation page with assets loaded accordingly.
+
+7) Submit successful transaction (hint, zip code 50001 and state, Iowa, amount less than $1000) and see thank you page with assets migrated.
+
+8) Load the pnpdemo bpl page with the T698 template (/bpl/pnpdemo,pt=T698) to see typing cat! (view source to confirm it's loading typingcat.gif from /assets/ or static.dev.gateway-assets.com depending on wether or not the staticContentServer feature is in place.)  If you do not see typing cat, check that the template in s3 is correct (in the webdata bucket, billpayLite/pnpdemo_T698.txt object)  if it is not correct, remove it from s3 and the extracted template will be automatically moved into place on the next load.
+
+9) billpay from here on out
+
+To prepare Billing Presentment for testing, do this:
+
+Step #1: Before starting docker, ensure BillPay's data folder exists & is writable
+
+- Check that folder pay1/pay1_home/webtxt/admin/billpay/data exists
+(if needed, use "mkdir -p /home/pay1/pay1_home/webtxt/admin/billpay/data" to create it)
+
+- Ensure that folder pay1/pay1_home/webtxt/admin/billpay/data is recursively writable by 'all'
+(if needed, use "chmod -R a+w /home/pay1/pay1_home/webtxt/admin/billpay/data/" to make it writable)
+
+Step #2: Startup docker and import the premade invoice to Billing Presentment
+
+- Login to the merchant administration on dev, with username 'pnpdemo'
+- Click on the Billing Presentment link
+- In the Upload Invoices section, use the following:
+    File To Upload: [select the 'billpay_import.txt' file from the test assets]
+    Invoice File Type: Billing Presentment File
+    Overwrite: Match - ...
+    * Leave all remaining options alone...
+- Click on the Upload Invoices button
+- After a few moments, the test invoice should be imported succesfully.
+
+Step #3: View invoice in BillPay Express interface  w/applied images
+
+- In Billing Presentment section, scroll down to the Search Invoices section
+- Enter the following:
+    Email: trash@plugnpay
+    Invoice #: 1234567890
+    * Leave all remaining fields alone...
+- Click on the Search Invoice button
+- You should see the invoice you uploaded in the earlier step listed.
+- Click on the Express Pay button for that invoice entry
+- You can now see the invoice rendered, with the custom template
+  -> You should see the title says 'Billing Presentment / Custom Bill Details'
+  -> You should typing cat image at the bottom of the invoice, just after the puiblic notes area
+  -> the footer should have a background image applied
+(view source to confirm it's loading from /assets/ or static.dev.gateway-assets.com depending on wether or not the staticContentServer feature is in place.)
+

@@ -1,0 +1,166 @@
+        <div id="formContainer">
+          <form action='/admin/virtualterminal/process.cgi' method='post' novalidate>
+            <div id="modeSelectionSection" class="section">
+            <h1><metalang='virtualterminal,select_payment_type'></h1>
+              <div id="modeSelector">
+                <input type="radio" id="selectCreditCardMode" class="credit" name="pd_transaction_payment_type" value="credit" checked="checked" /><label class="credit" for="selectCreditCardMode"><metalang="virtualterminal,credit_debit_gift_card"></label><!--
+                --><input type="radio" id="selectCheckMode" class="ach" name="pd_transaction_payment_type" value="ach" /><label class="ach" for="selectCheckMode"><metalang="virtualterminal,check_ach"></label>
+                <input type="radio" id="selectEMVMode" class="emv" name="pd_transaction_payment_type" value="emv" /> <label class="emv" for="selectEMVMode"><metalang="virtualterminal,emv"></label>
+              </div>
+            </div>
+            <hr />
+            <div id="dataSections">
+              <h1><metalang='general,payment_information'></h1>
+              <div id="paymentInformationSection" class="section">
+                <ul class='inputs visibilityHidden'>
+
+                  <li class="left  row1  billMember displayNone static" id="pm_username"><label><span class="label"><metalang='billmember,member_username'></span><span class="input"><input type="text" name="pm_username" /></span><span class="description"></span></label></li>
+                  <li class="left  row1" id="pt_payment_name"><label><span class="label"><metalang='general,name'></span><span class="input"><input type="text" name="pt_payment_name" /></span><span class="description"></span></label></li>
+		  <li class="right row1  billMember static" id="pb_bill_member_mode"><label><span class="label"><metalang='billmember,bill_member_mode'></span><span class="input"><select name="pb_bill_member_mode"><option label=" " value=""></option></select></span><span class="description"></span><a href="#" class="help1 tooltip"><metalang='billmember,bill_member_mode_help'><span><metalang='billmember,bill_member_mode_help_text1'></span></a><a href="#" class="help2 tooltip"><metalang='billmember,bill_member_mode_help'><span><metalang='billmember,bill_member_mode_help_text2'></span></a></label></li>
+		  <li class="right row2  billMember displayNone static" id="pr_billing_cycle"><label><span class="label"><metalang='billmember,bill_cycle'></span><span class="input"><input type="text" name="pr_billing_cycle" /></span><span class="description"></span></label></li>
+
+                  <li class="left  row2" id="pt_card_number"><label><span class="label"><metalang='general,card_number'></span><span class="input"><input class="numeric" type="text" name="pt_card_number" autocomplete="off" /></span><span class="description"></span></label></li>
+                    <span class="description"> </span></label></li>
+		  <li class="right row2" id="card_type_display">
+                    <div id="card_type_logos">
+                      <img id="card_logo_VISA" class="card_logo displayNone" src="/images/common/card_logos/small/visa.gif" alt="Visa" />
+                      <img id="card_logo_MSTR" class="card_logo displayNone" src="/images/common/card_logos/small/mastercard.gif" alt="MasterCard" />
+                      <img id="card_logo_DSCR" class="card_logo displayNone" src="/images/common/card_logos/small/discover.gif" alt="Discover" />
+                      <img id="card_logo_AMEX" class="card_logo displayNone" src="/images/common/card_logos/small/amex.gif" alt="Amex" />
+                      <img id="card_logo_DNRS" class="card_logo displayNone" src="/images/common/card_logos/small/diners.gif" alt="Diners" />
+                      <img id="card_logo_JCBC" class="card_logo displayNone" src="/images/common/card_logos/small/jcb.gif" alt="JCB" />
+                    </div>
+                  </li>
+                  <li class="left  row3" id="pt_card_expiration">
+                    <label>
+                      <span class="label"><metalang='general,'expiration'></span>
+                      <span class="input">
+                        <input class="" name="pt_card_expiration_month" autocomplete="off" />
+                      </span>
+                    </label>
+                    <label>
+                      <span class="input">
+                        <input class="" name="pt_card_expiration_year" autocomplete="off" />
+                      </span>
+                    </label>
+                  </li>
+                  <li class="left row2" id="pt_terminal_serial_number">
+                    <label>
+                      <span class="label"><metalang='virtualterminal,pt_terminal_serial_number'></span>
+                      <span class="input">
+                        <select name="pt_terminal_serial_number">
+                        <metavar="merchant_terminal_serial_number_options">
+                        </select>
+                      </span>
+                  <li class="right row3" id="pt_card_security_code"><label><span class="label"><metalang='general,cvv_cvc'></span><span class="input"><input class="numeric" type="text" name="pt_card_security_code" autocomplete="off" /></span><span class="description"></span></label></li>
+                  <li class="left  row2" id="pt_ach_routing_number"><label><span class="label"><metalang='general,routing_number'></span><span class="input"><input class="numeric" type="text" name="pt_ach_routing_number" autocomplete="off" /></span><span class="description"></span></label></li>
+                  <li class="right row2" id="pt_ach_account_number"><label><span class="label"><metalang='general,account_number'></span><span class="input"><input class="numeric" type="text" name="pt_ach_account_number" autocomplete="off" /></span><span class="description"></span></label></li>
+                  <li class="left  row3" id="pt_ach_account_type">
+                    <label>
+                      <span class="label"><metalang='general,account_type'></span>
+                      <span class="input">
+                        <select class="standard_select" data-placeholder="<metalang="virtualterminal,select_account_type">" name="pt_ach_account_type">
+                          <option class="checking" label=" " value="checking"></option>
+                          <option class="savings" label=" " value="savings"></option>
+                        </select>
+                      </span>
+                    <span class="description"> </span></label></li>
+                  <li class="right row3" id="pt_ach_sec_code"><label><span class="label"><metalang='general,sec_code'></span><span class="input"><select name="pt_ach_sec_code"></select></span><span class="description"></span></label></li>
+                  <li class="left  row4" id="pt_transaction_amount"><label><span class="label"><metalang='general,amount'></span><span class="input"><input class="decimal" type="text" name="pt_transaction_amount" /></span><span class="description"></span></label><label id="pt_currency" style="display:none;"><span class="label"><metalang='general,currency'></span><span class="input"><select name="pt_currency"></select></span><span class="description"></span></label></li>
+                  <li class="right row4" id="pt_transaction_type"><label><span class="label"><metalang='general,mode'></span><span class="input"><input name="pt_transaction_type" /></span><span class="description"></span></label></li>
+                  <li class="farright row4" id="pb_post_auth"><label><span class="label"><metalang='general,post_auth'></span><span id="pb_post_auth_checkbox" class="input"><input type="checkbox" name="pb_post_auth" value="yes" /></span><span class="description"></span></label></li>
+                  <li class="left  row5" id="pt_tax_amount"><label><span class="label"><metalang='general,tax'></span><span class="input"><input class="decimal" type="text" name="pt_tax_amount" /></span><span class="description"></span></label></li>
+                  <li class="right row5" id="pt_authorization_code"><label><span class="label"><metalang='general,auth_code'></span><span class="input"><input type="text" name="pt_authorization_code" /></span><span class="description"></span></label></li>
+                  <li class="left  row6" id="pt_order_id"><label><span class="label"><metalang='general,order_id'></span><span class="input"><input class="numeric" type="text" name="pt_order_id" /></span><span class="description"></span></label></li>
+                  <li class="right row6" id="pt_purchase_order_number"><label><span class="label"><metalang='general,purchase_order'></span><span class="input"><input type="text" name="pt_purchase_order_number" /></span><span class="description"></span></label></li>
+                  <li class="left  row7"  id="pt_account_code_1"><label><span class="label"><metalang='general,account_code_1'></span><span class="input"><input type="text" name="pt_account_code_1" /></span><span class="description"></span></label></li>
+                  <li class="right row7" id="pt_account_code_2"><label><span class="label"><metalang='general,account_code_2'></span><span class="input"><input type="text" name="pt_account_code_2" /></span><span class="description"></span></label></li>
+                </ul>
+                <div class='clear'>&nbsp</div>
+              </div>
+              <h1><metalang='general,billing_information'></h1>
+              <div id="billingInformationSection" class="section">
+                <ul class='inputs visibilityHidden'>
+                  <li class="left  row1" id="pt_billing_name"><label><span class="label"><metalang='general,name'></span><span class="input"><input autocomplete="off" type="text" name="pt_billing_name" /></span><span class="description"></span></label></li>
+                  <li class="left  row2" id="pt_billing_address_1"><label><span class="label"><metalang='general,address'></span><span class="input"><input type="text" name="pt_billing_address_1" /></span><span class="description"></span></label></li>
+                  <li class="right row2" id="pt_billing_address_2"><label><span class="label"><metalang='general,address_line_2'></span><span class="input"><input type="text" name="pt_billing_address_2" /></span><span class="description"></span></label></li>
+                  <li class="left  row3" id="pt_billing_city"><label><span class="label"><metalang='general,city'></span><span class="input"><input type="text" name="pt_billing_city" /></span><span class="description"></span></label></li>
+                  <li class="right row3" id="pt_billing_state"><label><span class="label"><metalang='general,state'></span><span class="input"><input type="text" name="pt_billing_state" /></span><span class="description"></span></label></li>
+                  <li class="left  row4" id="pt_billing_province"><label><span class="label"><metalang='general,intl_province'></span><span class="input"><input type="text" name="pt_billing_province" /></span><span class="description"></span></label></li>
+                  <li class="right row4" id="pt_billing_country"><label><span class="label"><metalang='general,country'></span><span class="input"><input type="text" name="pt_billing_country" /></span><span class="description"></span></label></li>
+                  <li class="left  row5" id="pt_billing_postal_code"><label><span class="label"><metalang='general,zip'></span><span class="input"><input type="text" name="pt_billing_postal_code" /></span><span class="description"></span></label></li>
+                  <li class="right row5" id="pt_billing_phone_number"><label><span class="label"><metalang='general,phone'></span><span class="input"><input type="text" name="pt_billing_phone_number" /></span><span class="description"></span></label></li>
+                  <li class="left  row6" id="pt_billing_email_address"><label><span class="label"><metalang='general,email_address'></span><span class="input"><input type="text" name="pt_billing_email_address" /></span><span class="description"></span></label></li>
+                </ul>
+                <div class='clear'></div>
+              </div>
+              <h1><metalang='general,shipping_information'></h1>
+              <div id="shippingInformationSection" class="section">
+                <ul class='inputs visibilityHidden'>
+                  <li class="left  row1" id="pt_shipping_name"><label><span class="label"><metalang='general,name'></span><span class="input"><input type="text" name="pt_shipping_name" /></span><span class="description"></span></label></li>
+                  <li class="left  row2" id="pt_shipping_address_1"><label><span class="label"><metalang='general,address'></span><span class="input"><input type="text" name="pt_shipping_address_1" /></span><span class="description"></span></label></li>
+                  <li class="right row2" id="pt_shipping_address_2"><label><span class="label"><metalang='general,address_line_2'></span><span class="input"><input type="text" name="pt_shipping_address_2" /></span><span class="description"></span></label></li>
+                  <li class="left  row3" id="pt_shipping_city"><label><span class="label"><metalang='general,city'></span><span class="input"><input type="text" name="pt_shipping_city" /></span><span class="description"></span></label></li>
+                  <li class="right row3" id="pt_shipping_state"><label><span class="label"><metalang='general,state'></span><span class="input"><input type="text" name="pt_shipping_state" /></span><span class="description"></span></label></li>
+                  <li class="left  row4" id="pt_shipping_province"><label><span class="label"><metalang='general,intl_province'></span><span class="input"><input type="text" name="pt_shipping_province" /></span><span class="description"></span></label></li>
+
+                  <li class="right row4" id="pt_shipping_country"><label><span class="label"><metalang='general,country'></span><span class="input"><input type="text" name="pt_shipping_country" /></span><span class="description"></span></label></li>
+                  <li class="left  row5" id="pt_shipping_postal_code"><label><span class="label"><metalang='general,zip'></span><span class="input"><input type="text" name="pt_shipping_postal_code" /></span><span class="description"></span></label></li>
+                  <li class="right row5" id="pt_shipping_email_address"><label><span class="label"><metalang='general,email_address'></span><span class="input"><input type="text" name="pt_shipping_email_address" /></span><span class="description"></span></label></li>
+                  <li class="left  row6" id="pt_shipping_phone_number"><label><span class="label"><metalang='general,phone'></span><span class="input"><input type="text" name="pt_shipping_phone_number" /></span><span class="description"></span></label></li>
+                </ul>
+                <div class='clear'></div>
+              </div>
+            </div>
+            <metavar="features_sections">
+            <hr />
+            <div id="settingsSection">
+              <h1><metalang='virtualterminal,virtual_terminal_settings'></h1>
+              <div class="section">
+              <ul>
+                <li class="row1 left"  id="pb_ignore_security_code_response"><label><span class="label"><metalang='general,ignore_cvv_response'></span><span id="pb_ignore_security_code_response_checkbox" class="input"><input type="checkbox" name="pb_ignore_security_code_response" value="yes" /></span><span class="description"></span></label></li>
+                <li class="row1 right" id="pb_ignore_fraud_response"><label><span class="label"><metalang='general,'ignore_fraud_response'></span><span id="pb_ignore_fraud_response_checkbox" class="input"><input type="checkbox" name="pb_ignore_fraud_response" value="yes" /></span><span class="description"></span></label></li>
+                <li class="row2 left"  id="pb_receipt_type">
+                  <label>
+                    <span class="label"><metalang='general,receipt_type'></span>
+                    <span class="input">
+                      <select name="pb_receipt_type">
+                        <option class="no_printer" value="none"><metalang='general,none'></option>
+                        <option class="standard_printer" value="simple"><metalang='general,standard_printer'></option>
+                        <option class="receipt_printer" value="pos_simple"><metalang='general,receipt_printer'></option>
+                      </select>
+                    </span>
+                    <span class="description"></span>
+                  </label>
+                </li>
+                <li class="row2 right" id="pb_automatically_print_receipt"><label><span class="label"><metalang='virtualterminal,automatically_print_receipt'></span><span id="pb_automatically_print_receipt_checkbox" class="input"><input type="checkbox" name="pb_automatically_print_receipt" value="yes" /></span><span class="description"></span></label></li>
+
+		<li class="row3 left" id="pi_email_receipt"><label><span class="label"><metalang="virtualterminal,email_receipt'></span><span id="pi_email_receipt_checkbox" class="input"><input type="checkbox" name="pi_email_receipt" value="yes" /></span><span class="description"></span></label></li>
+		<li class="row3 middle displayNone" id="pi_email_copy"><label><span class="label"><metalang="virtualterminal,email_copy'></span><span id="pi_email_copy_checkbox" class="input"><input type="checkbox" name="pi_email_copy" value="yes" /></span><span class="description"></span></label></li>
+		<li class="row3 right" id="pi_save_settings"><label><span class="label"><metalang="general,save_settings'></span><span id="pi_save_settings_checkbox" class="input"><input type="checkbox" name="pi_save_settings" value="yes" /></span><span class="description"></span></label></li>
+                <li class="row4 left" id="pb_dcc_type"><label><span class="label"><metalang='general,use_dcc'></span><span id="pb_dcc_type_checkbox" class="input"><input type="checkbox" name="pb_dcc_type" value="planetpayment" /></span><span class="description"></span></label></li>
+                <li class="row4 middle" id="pt_card_is_present"><label><span class="label"><metalang='general,card_present'></span><span id="pt_card_is_present_checkbox" class="input"><input type="checkbox" name="pt_card_is_present" value="yes" /></span><span class="description"></span></label></li>
+              </ul>
+              </div>
+            </div>
+            <div id="buttonSection" class="section">
+              <ul>
+                <li><span class="input"><button id="submitButton" class="button"><metalang='form,submit'></button><button id="clearButton" class="button"><metalang='form,clear'></button></span></li>
+              </ul>
+              <div class='clear'></div>
+            <div style="clear: both"></div>
+		<input type="hidden" id="pt_magstripe" name="pt_magstripe" value="" />
+		<input type="hidden" id="pt_magensa" name="pt_magensa" value="" />
+		<input type="hidden" id="pt_swipe_device" name="pt_swipe_device" value="" />
+		<input type="hidden" id="pb_merchant" name="pb_merchant" value="" />
+		<input type="hidden" id="pb_credit_fund_transfer" name="pb_credit_fund_transfer" value="" />
+        </div>
+	</form>
+
+	<div id="billMemberSearch" title="<metalang='billmember,bill_member_information'>">
+		<ul>
+			<li class="billMember" id="autoCompleteButtons"><span><button id='autoCompleteListOpen'><metalang='billmember,autocomplete_list_open'></button><button id='autoCompleteListClose'><metalang='billmember,autocomplete_list_close'></button></span></li>
+			<li class="billMember" id="pt_autoComplete_search"><label><span class="label"><metalang='billmember,autoComplete_search'></span></label><span class="input"><input autocomplete="off" type="text" name="pt_autoComplete_search" /></span></li>
+			<li class="billMember" id="autoComplete_status_message"><span class="message"></span></li>
+		</ul>
+	</div>

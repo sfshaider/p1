@@ -1,0 +1,34 @@
+<div id="areaToBlur" class="pnp-box rounded">
+	<input type="hidden" class="pnp-hidden" name="merchant" value="<metavar='username'>" readonly>
+ 	<h1>Batch and Settlement Report for <metavar="username"></h1>
+	<hr><br>
+	<div class="section">
+		<h3>Settlements from <metavar="startDate"> to <metavar="endDate"></h3>
+		<hr>
+		<div class="pnp-box rounded subsection" >
+			<div id = "reportContainer" >
+				<metavar="report">
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<h3>Batches from <metavar="startDate"> to <metavar="endDate"></h3>
+		<hr>
+		<div class="pnp-box rounded subsection" >
+			<div id = "batchStatus" >
+				<metavar="batch_status">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="batchPopover" class="pnp-hidden popover">
+	<table id="batchResultTable">
+		<!--built at load time-->
+	</table>
+</div>
+
+
+<div id="transactionPopover" class="pnp-hidden popover">
+
+</div>

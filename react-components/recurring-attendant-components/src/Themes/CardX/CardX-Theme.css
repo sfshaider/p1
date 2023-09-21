@@ -1,0 +1,925 @@
+@font-face {
+    font-family: 'Trade Gothic Com';
+    src: url("../../Fonts/2F71C3_1_0.eot");
+    src: url("../../Fonts/2F71C3_1_0.eot?#iefix") format("embedded-opentype"),
+    url("../../Fonts/2F71C3_1_0.woff2") format("woff2"),
+    url("../../Fonts/2F71C3_1_0.woff") format("woff"),
+    url("../../Fonts/2F71C3_1_0.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Trade Gothic Com Bold';
+    src: url("../../Fonts/2F71C3_0_0.eot");
+    src: url("../../Fonts/2F71C3_0_0.eot?#iefix") format("embedded-opentype"),
+    url("../../Fonts/2F71C3_0_0.woff2") format("woff2"),
+    url("../../Fonts/2F71C3_0_0.woff") format("woff"),
+    url("../../Fonts/2F71C3_0_0.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Trade Gothic Com C18';
+    src: url("../../Fonts/2F71C3_2_0.eot");
+    src: url("../../Fonts/2F71C3_2_0.eot?#iefix") format("embedded-opentype"),
+    url("../../Fonts/2F71C3_2_0.woff2") format("woff2"),
+    url("../../Fonts/2F71C3_2_0.woff") format("woff"),
+    url("../../Fonts/2F71C3_2_0.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Trade Gothic Com Bold C20';
+    src: url("../../Fonts/2F71C3_3_0.eot");
+    src: url("../../Fonts/2F71C3_3_0.eot?#iefix") format("embedded-opentype"),
+    url("../../Fonts/2F71C3_3_0.woff2") format("woff2"),
+    url("../../Fonts/2F71C3_3_0.woff") format("woff"),
+    url("../../Fonts/2F71C3_3_0.ttf") format("truetype")
+}
+
+#modal-cover {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Hide Placeholders */
+#attendant.CardX-Theme ::-webkit-input-placeholder { /* WebKit browsers */
+    color: transparent;
+}
+#attendant.CardX-Theme :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+}
+#attendant.CardX-Theme ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: transparent;
+}
+#attendant.CardX-Theme :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: transparent;
+}
+
+#attendant.CardX-Theme textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color: transparent;
+}
+#attendant.CardX-Theme textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+}
+#attendant.CardX-Theme textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: transparent;
+}
+#attendant.CardX-Theme textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: transparent;
+}
+
+/* High Level Layout */
+#attendant.CardX-Theme > div.content > div.section {
+    padding: 65px 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+#attendant.CardX-Theme > div.content > div.header-bar {
+    height: 65px;
+    background: #372772;
+    color: white;
+}
+
+#attendant.CardX-Theme > div.content > div.nav-bar {
+    height: 100vh;
+    width: 200px;
+    background: rgb(238, 238, 238);
+    display: inline-block;
+    float: left;
+}
+
+/* Navigation Related */
+#attendant.CardX-Theme.open{
+    /*position: fixed;*/
+    max-width: 100vw;
+}
+#attendant.CardX-Theme div.nav-bar ul {
+    padding: 35px 20px 0 20px !important;
+}
+#attendant.CardX-Theme li.nav-item {
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid rgba(120, 117, 131, 0.5);
+}
+#attendant.CardX-Theme li.nav-item a {
+    color: #372772;
+    font-family: 'Trade Gothic Com Bold';
+}
+.noScroll {
+    overflow: hidden;
+    position: fixed;
+}
+
+/* Section Related */
+#attendant.CardX-Theme div.section li ul {
+    padding: 0;
+}
+
+#attendant.CardX-Theme div.section li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 21px solid #E2E2E7;
+}
+
+#attendant.CardX-Theme div.section li.narrow {
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+}
+
+/* Body Styles */
+#attendant.CardX-Theme {
+    font-family: "Trade Gothic Com", Arial, sans-serif;
+    position: static;
+}
+
+
+#attendant.CardX-Theme > div.content > div.nav-bar > div.logo-box img {
+    height:45px;
+    margin-left: 20px;
+    color: #372772;
+    margin-top: 10px;
+}
+#attendant.CardX-Theme .header-text {
+    font-size: 30px;
+    padding-left: 71px;
+    padding-top: 12px;
+    font-family: 'Trade Gothic Com Bold C20', serif;
+    letter-spacing: .05em;
+    font-weight: normal;
+    display: inline-block;
+}
+#attendant.CardX-Theme .header-logout {
+    float: right;
+    padding-right: 75px;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+#attendant.CardX-Theme .header-logout a {
+    color: white;
+}
+
+#attendant.CardX-Theme .optional {
+    font-size: 11px;
+    position: absolute;
+}
+
+#attendant.CardX-Theme .exp-label {
+    display: inline;
+    margin-right: 15px;
+}
+#attendant.CardX-Theme div.exp-values {
+    display: inline-block;
+    width: 565px !important;
+}
+
+/* div.section specific stuff */
+#attendant.CardX-Theme div.section {
+    /*margin-left: 270px;*/
+    /*width: 800px;*/
+    /*margin-top: -250px;*/
+    color: #787583;
+}
+#attendant.CardX-Theme div.section div.disclaimer span {
+    font-size: 11px;
+    display: block;
+}
+#attendant.CardX-Theme div.section div.readonly span.label-span {
+    display: inline-block;
+    width: 130px !important;
+}
+#attendant.CardX-Theme div.section div.readonly span.readonly-input {
+    display: inline-block;
+}
+#attendant.CardX-Theme div.section div.readonly span.readonly-input.value {
+    width: 130px !important;
+}
+#attendant.CardX-Theme div.section div.readonly span.readonly-input.value.empty {
+    letter-spacing: 0.1em;
+    padding-left: 2px;
+}
+#attendant.CardX-Theme div.section div.readonly span.readonly-input.prefix {
+    width: auto !important;
+}
+
+#attendant.CardX-Theme div.section div.readonly span.readonly-input.bold,
+#attendant.CardX-Theme div.section span.bold {
+    font-weight:bold;
+    color:#372772;
+}
+#attendant.CardX-Theme #dashes {
+    letter-spacing: 0.1em;
+    padding-left: 2px;
+}
+
+#attendant.CardX-Theme > div.content div.sectionContent {
+    max-width: 768px;
+    padding: 24px 35px 20px 35px;
+    background-color: #E2E2E7;
+    margin-bottom: 64px;
+}
+/* Form Styles */
+#attendant.CardX-Theme div.formField label, #attendant.CardX-Theme #makePaymentSection div.formField-state-container label, #attendant.CardX-Theme #makePaymentSection div.formField-country-container label {
+    font-size: 14px;
+    letter-spacing: 0.75px;
+    color: #787583;
+    white-space: nowrap;
+    top: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    width: 130px;
+    max-width: 18.66666667% !important;
+    display: inline-block;
+}
+#attendant.CardX-Theme input {
+    max-width: 565px !important;
+}
+
+#attendant.CardX-Theme input, #attendant.CardX-Theme select {
+    color: #372772;
+}
+
+#attendant.CardX-Theme input, #attendant.CardX-Theme select {
+    border: 1px solid transparent;
+    border-radius: 0px;
+    padding: 6px;
+    padding-top: 8px;
+    padding-left: 12px !important;
+    height: 42px;
+    line-height: 21px;
+    letter-spacing: 0.75px;
+    background-image: none;
+    overflow-x: hidden;
+}
+
+/* form elements */
+#attendant.CardX-Theme div.formField {
+    display: table;
+    width: 100%;
+}
+
+#attendant.CardX-Theme div.formField label.two-line-label {
+    vertical-align: top;
+    padding-top: 4px;
+}
+
+/* Payment Info */
+#attendant.CardX-Theme div.cardInfo ul {
+    margin-bottom: 0;
+}
+
+#attendant.CardX-Theme div.cardInfo div.formField-cardNumber-container {
+    width: 100%;
+    display: table;
+}
+
+#attendant.CardX-Theme div.formField div.cardInfo div.formField-cardNumber-container label {
+    display: table-cell;
+}
+
+#attendant.CardX-Theme div.cardInfo input[name=cardNumber] {
+    max-width: 370px;
+}
+
+#attendant.CardX-Theme div.cardInfo div.expiration-and-cvv {
+    position: relative;
+    width: 100%;
+}
+
+#attendant.CardX-Theme div.formField div.cardInfo span.expiration label {
+    display: inline;
+    margin-right: 20px;
+}
+
+#attendant.CardX-Theme #makePaymentSection div.formField-expirationMonth-container, #attendant.CardX-Theme #makePaymentSection div.formField-expirationYear-container {
+    padding-right: 5px;
+}
+
+#attendant.CardX-Theme div.cardInfo input[name=cvv] {
+        width: 82px;
+        float: right;
+        text-align: center;
+}
+
+#attendant.CardX-Theme div.cardInfo span.cvv {
+    position: absolute;
+    right: 0;
+}
+
+#attendant.CardX-Theme div.cardInfo span.cvv div.formField {
+    display: block;
+}
+
+#attendant.CardX-Theme div.cardInfo span.cvv div.formField > label {
+    display: inline-block;
+}
+
+#attendant.CardX-Theme div.cardInfo span.cvv div.formField > input {
+    width: 82px;
+}
+
+#attendant.CardX-Theme div.cardInfo span.cvv label {
+    width: 100px !important;
+    top: 4px;
+    padding-top: 0;
+}
+#attendant.CardX-Theme div.cardInfo span.cvv input {
+    position: relative;
+}
+
+#attendant.CardX-Theme #makePaymentSection div.formField-state-container, #attendant.CardX-Theme #makePaymentSection div.formField-country-container {
+    display: table;
+    width: 100%;
+}
+
+#attendant.CardX-Theme #makePaymentSection select[name=state], #attendant.CardX-Theme #makePaymentSection select[name=country] {
+    width: inherit;
+    max-width: 563px !important;
+}
+
+#attendant.CardX-Theme div.select-carat {
+    display: inline-block;
+}
+
+#attendant.CardX-Theme div.select-carat select {
+    background-image: url(https://d33afyne1i6b5q.cloudfront.net/assets/images/CDX_DeveloperIcons_DOWNARROW_Gray.png);
+    background-size: 10px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    -webkit-appearance: none;
+    padding-right: 20px;
+}
+
+#attendant.CardX-Theme span[id="custom-checkbox"] {
+    cursor: pointer;
+}
+
+/* Hidden checkbox */
+#hidden-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Checkbox before */
+#attendant.CardX-Theme span[id="custom-checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 1px solid rgba(120,117,131,.5);
+}
+
+#attendant.CardX-Theme .pushLeft {
+    margin-left: 130px !important;
+}
+
+#attendant.CardX-Theme .adjustLeft {
+    margin-left: 40px;
+}
+/* Hidden checkbox and span Checkbox */
+#attendant.CardX-Theme input[id="hidden-checkbox"] ~ input[id="custom-checkbox"]::after {
+    display: block;
+}
+
+/* Checkbox after */
+#attendant.CardX-Theme .selectedCheckbox:after  {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: -1px;
+    width: 10px;
+    height: 20px;
+    border: solid #372772;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+#attendant.CardX-Theme input:focus,
+#attendant.CardX-Theme textarea:focus,
+#attendant.CardX-Theme select:focus,
+#attendant.CardX-Theme button:focus,
+#attendant.CardX-Theme button:active {
+    border: 1px solid #372772;
+    outline: none !important;
+    box-shadow: none !important;
+}
+#attendant.CardX-Theme input.error,
+#attendant.CardX-Theme select.error {
+    border: 1px solid red;
+    color: red;
+}
+#attendant.CardX-Theme button {
+    font-size: 14px !important;
+    line-height: 14px !important;
+    border-radius: 0px !important;
+    width: 300px;
+    height: 57px;
+    background-color: #372772 !important;
+    border-color: #372772 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin-bottom: 64px;
+    display: block;
+    width: 300px;
+}
+
+#attendant.CardX-Theme .deleteProfileLinkBtn {
+    color: #372772;
+    display: inline-block;
+    width: 55%;
+    margin-left: 70px;
+}
+
+#attendant.CardX-Theme button:hover {
+    background-color: #2e215f !important;
+    transition: 150ms;
+}
+#attendant.CardX-Theme hr {
+    border-color: rgba(120, 117, 131, 0.5);
+    margin: -25px 0 -4px;
+}
+.mobiletoggle {
+    display: none;
+}
+
+#attendant.CardX-Theme #entityName {
+    color: #372772;
+    margin-bottom: 25px;
+    margin-top: -5px;
+}
+
+/* media tags */
+@media screen and (max-width: 1114px) { /* when the inputs drop below the labels */
+    /* High Level Layout */
+    #attendant.CardX-Theme > div.section {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #attendant.CardX-Theme input {
+        max-width: 100% !important;
+    }
+
+    #attendant.CardX-Theme div.formField-cardNumber-container input {
+        max-width: 140px !important;
+        width: 140px;
+    }
+
+    #attendant.CardX-Theme div.cardInfo {
+        width: 350px;
+    }
+
+    #attendant.CardX-Theme div.formField div.cardInfo div.formField-cardNumber-container label {
+        display: block;
+    }
+
+    #attendant.CardX-Theme div.formField div.cardInfo span.expiration label {
+        display: block;
+    }
+
+    #attendant.CardX-Theme div.formField div.cardInfo span.cvv label {
+        width: 100% !important;
+        display: block;
+    }
+
+    #attendant.CardX-Theme div.cardInfo span.cvv {
+        bottom: 0;
+    }
+
+    #attendant.CardX-Theme #makePaymentSection select[name=state], #attendant.CardX-Theme #makePaymentSection select[name=country] {
+        max-width: 100% !important;
+    }
+
+    #attendant.CardX-Theme .optional {
+        position: relative;
+    }
+
+    .pushLeft {
+        margin-left: 0 !important;
+    }
+
+    #attendant.CardX-Theme .deleteProfileLinkBtn {
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 767.98px) { /* below tablet size, assuming mobile device */
+    /* High Level Layout */
+    #attendant.CardX-Theme {
+        overflow: hidden;
+        max-width: 100vw;
+    }
+
+    #attendant.CardX-Theme #entityName {
+        margin-top: 25px;
+    }
+
+    #attendant.CardX-Theme div.content > div.section {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*#attendant.CardX-Theme #paymentDetailsSection {*/
+        /*padding: 0 0;*/
+        /*width: 100%;*/
+    /*}*/
+    #attendant.CardX-Theme #makePaymentButton {
+        margin: auto;
+        margin-bottom: 64px;
+        display: block;
+        width: 300px;
+    }
+    #attendant.CardX-Theme .header-bar {
+        max-width: 100vw;
+    }
+    #attendant.CardX-Theme .header-text {
+        font-size: 28px;
+        padding-left: 15px;
+    }
+    #attendant.CardX-Theme .header-logout {
+        display: none;
+    }
+    #attendant.CardX-Theme > div.content > div.nav-bar {
+        display: block;
+        position: fixed;
+        top: 65px;
+        z-index: 1;
+        left: 100%;
+        width: 100%;
+        height: calc(100% - 65px);
+        transition: 200ms;
+    }
+    #attendant.CardX-Theme > div.content > div.nav-bar > div.logo-box img {
+        margin-left: 33px;
+        margin-top: 33px;
+    }
+    #attendant.CardX-Theme > div.content > div.nav-bar ul {
+        padding: 0 33px 0 33px!important;
+    }
+    #attendant.CardX-Theme > div.content > div.nav-bar ul ul {
+        padding: 0px !important;
+    }
+    #attendant.CardX-Theme > div.content > div.nav-bar.open {
+        display: block;
+        left: 0;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 26px;
+        height: 30px;
+        top: 22px;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle span {
+        position: absolute;
+        display: block;
+        width: 26px;
+        height: 4px;
+        background: white;
+        overflow: hidden;
+        text-indent: -999px;
+        transition: 250ms;
+        border-radius: 1px;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle span.n {
+        top: 0;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle.open span.n {
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+        top: 10px;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle span.a {
+        top: 8px;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle.open span.a {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle span.v {
+        top: 16px;
+    }
+    #attendant.CardX-Theme > div.content > div.header-bar a.mobiletoggle.open span.v {
+        -webkit-transform: rotateZ(-45deg);
+        transform: rotateZ(-45deg);
+        top: 10px;
+    }
+    #attendant.CardX-Theme div.cardInfo {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    #attendant.CardX-Theme .deleteProfileLinkBtn {
+        margin-left: 250px;
+        margin-top: -40px;
+    }
+}
+@media screen and (max-width: 374.98px) {
+    #attendant.CardX-Theme .header-text {
+        font-size: 23px;
+        padding-top: 16px;
+    }
+}
+
+/* SVG Styling */
+#attendant.CardX-Theme .svg-container {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+#attendant.CardX-Theme .color-box {
+    fill: rgba(255, 255, 255, 0.6);
+}
+#attendant.CardX-Theme .color-box {
+    animation: pop 0.9s ease infinite;
+    -webkit-animation-name: pop;
+    -webkit-animation-duration: 0.9s;
+    -webkit-animation-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+}
+#attendant.CardX-Theme .color-box:nth-child(2) { animation-delay: 0.1s; }
+#attendant.CardX-Theme .color-box:nth-child(3) { animation-delay: 0.2s; }
+#attendant.CardX-Theme .color-box:nth-child(4) { animation-delay: 0.3s; }
+#attendant.CardX-Theme .color-box:nth-child(5) { animation-delay: 0.4s; }
+#attendant.CardX-Theme .color-box:nth-child(6) { animation-delay: 0.5s; }
+#attendant.CardX-Theme .color-box:nth-child(7) { animation-delay: 0.6s; }
+#attendant.CardX-Theme .color-box:nth-child(8) { animation-delay: 0.7s; }
+@keyframes pop {
+    0%   { fill: rgba(255, 255, 255, 0.6); }
+    25%  { fill: rgba(255, 255, 255, 1.0); }
+    50%  { fill: rgba(255, 255, 255, 0.6); }
+    100% { fill: rgba(255, 255, 255, 0.6); }
+}
+
+#attendant.CardX-Theme .modal {
+    width: 500px;
+    background-color: #e2e2e7;
+    margin: auto;
+    min-height: 180px;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 50%;
+    margin: auto;
+    height: auto !important;
+    padding: 20px !important;
+    margin-right: -250px;
+    display: block;
+    text-align: center;
+    z-index: 999999;
+}
+
+#attendant.CardX-Theme .modal p.modalTitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #372772;
+    margin: auto;
+    padding: 30px 20px 0 20px;
+    text-align: center;
+}
+
+#attendant.CardX-Theme div.modal div.message {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#attendant.CardX-Theme .modalButton {
+    display: block;
+    float: left;
+    background-color: #787583!important;
+    color: white !important;
+    font-size: 14px;
+    border: none !important;
+    margin: 20px 20px 30px 20px;
+    width: 200px;
+    white-space: normal;
+    height: 60px !important;
+    padding: 6px 12px 0 12px !important;
+}
+
+#attendant.CardX-Theme .modalButtonContainer {
+    margin: auto;
+    display: inline-block;
+}
+
+#attendant.Plugnpay-Theme .modal div.jsx-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: 22px;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .modal-label {
+    color: rgb(120,117,131);
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25.6px;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown td {
+    padding: 6px 0;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown td {
+    vertical-align: top;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25.6px;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .td-left {
+    width: 33.5%;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .td-right {
+    width: 62.5%;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .align-right {
+    text-align: right;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .plus-minus {
+    display: inline-block;
+    float: right;
+    color: rgb(120,117,131);
+    padding-right: 2px;
+}
+#attendant.CardX-Theme .modal .payment-breakdown .td-left     p,
+#attendant.CardX-Theme .modal .payment-breakdown .td-right p {
+    margin: 0;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .value-bottom.purple {
+    color: #372772;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .td-right.gray {
+    color: rgb(120,117,131);
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .large-break {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: 1px #cecdd2 solid;
+    border-bottom: 1px #cecdd2 solid;
+    width: 80%;
+    position: relative;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .large-break.bottom {
+    margin-bottom: 20px;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown .small-break {
+    margin-right: auto;
+    border-top: 1px #cecdd2 solid;
+    border-bottom: 1px #cecdd2 solid;
+    width: 37%;
+    position: relative;
+    margin-left: 35.5%;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown table {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    text-align: left;
+    margin-top: 18px;
+}
+
+#attendant.CardX-Theme .modal .payment-breakdown table.transaction-info {
+    box-sizing: border-box;
+    margin-bottom: 17px;
+    margin-top: 15px;
+}
+
+
+#attendant.CardX-Theme .modal .payment-breakdown table.total-info {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#endSessionBtn {
+    margin-top: 10px !important;
+}
+
+.modalButton:hover {
+    background-color: #372772!important;
+}
+.modalButton:active {
+    background-color: #372772!important;
+}
+
+
+#attendant.CardX-Theme .hidden {
+    display: none;
+}
+
+@media screen and (max-width: 401px) {
+    #attendant.CardX-Theme .modal {
+        width: 401px;
+        margin-left: 0px;
+        top: 40%;
+    }
+    #attendant.CardX-Theme .modalButton {
+        display: block;
+        margin: 30px auto;
+        width: 250px;
+    }
+    #attendant.CardX-Theme .modalButton:hover {
+        background-color: #372772!important;
+    }
+    #attendant.CardX-Theme .modalButton:active {
+        background-color: #372772!important;
+    }
+
+    #attendant.CardX-Theme .deleteProfileLinkBtn {
+        margin-left: 110px;
+        margin-top: -40px;
+    }
+    #attendant.CardX-Theme input[name=amount] {
+        max-width: 250px !important;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    #attendant.CardX-Theme .modal {
+        width: 100vw;
+        right: 0;
+        margin-right: 0;
+        float: none;
+        top: 0;
+        text-align: center;
+    }
+
+    #attendant.CardX-Theme .modalButton {
+        margin: 20px auto;
+        float: none;
+    }
+
+    #attendant.CardX-Theme  .modalButton:hover {
+        background-color: #372772!important;
+    }
+    #attendant.CardX-Theme .modalButton:active {
+        background-color: #372772!important;
+    }
+}
+
+#attendant.CardX-Theme span.radioOption {
+    display: inline-block;
+}
+
+#attendant.CardX-Theme .PNPSidebar {
+    list-style: none;
+    display: block;
+    background-color: #0d2c48;
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 0px;
+    height: 100%;
+    width: 200px;
+    float: left;
+}
+
+#attendant.CardX-Theme .PNPSidebar li {
+    height: 49px;
+    border-bottom: 1px solid #264766;
+    border-top: 1px solid #264766;
+}
+
+#attendant.CardX-Theme .PNPSidebar li a {
+    color: #cee0f1;
+    display: block;
+    font-size: 14px;
+    padding: 15px 0px 15px 15px;
+    height: 49px;
+    text-decoration: none;
+}
+
+#attendant.CardX-Theme .PNPSidebar li:hover {
+    background-color: #072036;
+}
+
+#attendant.CardX-Theme #PNPButtonWrapper {
+    display: inline-block !important;
+}
+

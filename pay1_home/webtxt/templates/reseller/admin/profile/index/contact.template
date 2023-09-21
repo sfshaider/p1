@@ -1,0 +1,91 @@
+  <h1>Primary Contact</h1>
+  <hr>
+  <div class='rt-box rounded section'>
+    <label  class="third rt-box rounded lightgraybox" for='ps_contact_name'><span>Full Name:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_name" value="<metavar='full_name'>" ></label>
+
+    <label  class=" half  rt-box rounded lightgraybox" for='ps_contact_company'><span>Company:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_company" value="<metavar='company'>" ></label>
+
+    <label for='ps_contact_address_1'  class="third rt-box rounded lightgraybox"><span>Address:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_address_1" value="<metavar='address1'>" ></label>
+
+    <label for='ps_contact_address_2' class="third rt-box rounded lightgraybox"><span>Address 2:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_address_2" value="<metavar='address2'>" ></label>
+
+    <label for='ps_contact_city' class="third rt-box rounded lightgraybox"><span>City:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_city" value="<metavar='city'>" ></label>
+
+    <label for='ps_contact_contry'  class="third rt-box rounded lightgraybox">
+      <span>Country:</span>
+      <select class='reseller-input-control' name="ps_contact_country"><metavar='contactCountryOptions'></select>
+    </label>
+
+    <label for='ps_contact_state'  class="third rt-box rounded lightgraybox">
+      <span>State/Province:</span>
+      <select class='reseller-input-control' name="ps_contact_state"><metavar='contactStateOptions'></select>
+    </label>
+
+    <label for='ps_contact_postal_code'  class="quarter rt-box rounded lightgraybox"><span>Postal Code</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_postal_code" value='<metavar="postal_code">'></label>
+
+    <label class="third rt-box rounded lightgraybox" for='ps_contact_phone'><span>Phone Number:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_phone" value="<metavar='telephone'>" ></label>
+
+    <label  class="third rt-box rounded lightgraybox" for='ps_contact_fax'><span>Fax Number:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_fax" value="<metavar='fax'>" ></label>
+
+    <label for='ps_contact_email'  class="half rt-box rounded lightgraybox"><span>Email Address:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_email" value="<metavar='email'>" ></label>
+
+    <label for='ps_contact_url' class="half rt-box rounded lightgraybox"><span>Website URL:</span>
+    <input class='reseller-input-control' type="text" name="ps_contact_url" value="<metavar='url'>" ></label>
+  </div>
+
+  <br>
+  <h1>Technical Contact</h1>
+  <hr>
+  <div class='rt-box section rounded'>
+     
+    <label for='ps_tech_name' class="third rt-box rounded lightgraybox"><span>Tech Full Name:</span>
+    <input class='reseller-input-control' type="text" name="ps_tech_name" value="<metavar='tech_name'>" ></label>
+
+    <label for='ps_tech_phone' class="third rt-box rounded lightgraybox"><span>Tech Phone:</span>
+    <input class='reseller-input-control' type="text" name="ps_tech_phone" value="<metavar='tech_phone'>" ></label>
+
+    <label for='ps_tech_email' class="half rt-box rounded lightgraybox"><span>Tech Email:</span>
+    <input class='reseller-input-control' type="text" name="ps_tech_email" value="<metavar='tech_email'>" ></label>
+  </div>
+
+  <br>
+  <h1>Billing Contact</h1>
+  <hr>
+  <div class='rt-box section rounded'>
+    <label for='ps_billing_name' class="half rt-box rounded lightgraybox"><span>Billing Email:</span>
+    <input class='reseller-input-control' type="text" name="ps_billing_email" value="<metavar='billing_email'>" ></label>
+  </div>
+
+  <br>
+  <h1>Password Change</h1>
+  <hr>
+  <div class='rt-box section rounded'>
+    <label id='badPassChange' class="rt-hidden error"><span name='password_failure_message'>Password was not changed! Either your current password was incorrect or you tried to use an old password again.</span></label>
+
+    <br>
+    <label for='pt_old_password' class="third rt-box rounded lightgraybox"><span>Current Password:</span>
+    <input class='reseller-input-control' name="pt_old_password" type="password" autocomplete='off' size='25' maxlength='20'></label>
+    <br>
+
+    <label for='pt_gateway_password' class="third rt-box rounded lightgraybox"><span>New Password:</span>
+    <input class='reseller-input-control' name="pt_gateway_password" type="password" autocomplete='off' size='25' maxlength='20'></label>
+
+    <label for='pt_gateway_password_check'  class="third rt-box rounded lightgraybox"><span>Confirm New Password:</span>
+    <input class='reseller-input-control' name="pt_gateway_password_check" size='25' maxlength='20' type="password" autocomplete='off'></label>
+    <label name='errorMessage' class="hidden"><span>Passwords must match!</span></label>
+    <br>
+
+    <label><span class='paymentAgree'>NOTE:</span><span> Changing password is optional</span></label>
+  </div>
+
+  <br>
+  <input class='reseller-input-control' type="button" value="Update Information" name="contactsubmit">

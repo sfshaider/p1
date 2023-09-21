@@ -1,0 +1,6 @@
+<div id="headerContent" class="header">
+    <h3><metavar="username"></h3>
+    <h3>Cardinal Cruise 3DS</h3>
+    <h4 class="message"><metavar="message"></h4>
+    <h4 class="error"><metavar="error"></h4>
+</div>

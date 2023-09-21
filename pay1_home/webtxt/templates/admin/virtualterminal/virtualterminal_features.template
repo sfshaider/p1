@@ -1,0 +1,5 @@
+            <hr>
+            <div id="featureSections">
+              <h1><metavar='calculatorName'><span id='calculatorSpinner'></span></h1>
+              <div class="section"><metadyn="chargetype"></div>
+            </div>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://external.interfaces.ers.seamless.com/">
+  <SOAP-ENV:Body>
+    <ns1:sendInvoice>
+      <metavar="contextXML">
+      <invoice>
+        <paymentMode>Array</paymentMode>
+        <acknowledgmentMode>Array</acknowledgmentMode>
+        <issueDate><metavar="issueDate"></issueDate>
+        <title><metavar="title"></title>
+        <clientInvoiceId><metavar="clientInvoiceId"></clientInvoiceId>
+
+        <metavar="invoiceItemsXML">
+
+        <totalAmount>
+          <currency><metavar="currency"></currency>
+          <value><metavar="totalAmount"></value>
+        </totalAmount>
+        <cashierId><metavar="cashierID"></cashierId>
+        <footer><metavar="footer"></footer>
+        <backURL><metavar="callBackURL"></backURL>
+        <notificationUrl><metavar="notificationURL"></notificationUrl>
+        <commitReservationTimeout>0</commitReservationTimeout>
+      </invoice>
+
+      <metavar="tokenXML">
+
+    </ns1:sendInvoice>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+

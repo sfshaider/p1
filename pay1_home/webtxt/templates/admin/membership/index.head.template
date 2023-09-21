@@ -1,0 +1,22 @@
+<link type='text/css' rel='stylesheet' href='/admin/membership/_css/membership.css'>
+<link type='text/css' rel='stylesheet' href='/admin/membership/_css/popover.css'>
+<link rel="stylesheet" type="text/css" href="/_jqueryui/themes/plugnpay/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/_css/vendor/chosen/chosen.css"/>
+
+<script src="/_jqueryui/themes/plugnpay/jquery-ui.js"></script>
+<script src="/_js/vendor/chosen/chosen.jquery.js"></script>
+<script src="/_js/Charts.js"></script>
+<script src="/_js/Input.js"></script>
+<script src="/admin/membership/_js/Membership.js"></script>
+<script src="/admin/_js/responders/merchant/Customer.js"></script>
+<script src="/admin/_js/responders/merchant/customer/PaymentSource.js"></script>
+<script src="/admin/_js/responders/merchant/membership/Dashboard.js"></script>
+<script src="/admin/_js/responders/merchant/membership/Profile.js"></script>
+<script src="/admin/_js/responders/merchant/membership/Plan.js"></script>
+<script src="/admin/_js/responders/merchant/membership/Group.js"></script>
+<script src="/admin/_js/responders/merchant/membership/Report.js"></script>
+<script src="/admin/_js/responders/merchant/membership/plan/FileTransfer.js"></script>
+<script src="/admin/_js/responders/merchant/membership/plan/filetransfer/Link.js"></script>
+<script src="/admin/_js/responders/merchant/membership/profile/BillMember.js"></script>
+<script src="/admin/_js/responders/merchant/HostConnection.js"></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/Adjustment.js'></script>

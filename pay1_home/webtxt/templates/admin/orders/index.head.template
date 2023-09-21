@@ -1,0 +1,19 @@
+<link type='text/css' rel='stylesheet' href='/admin/orders/_css/common.css'>
+<link type='text/css' rel='stylesheet' href='/admin/orders/_css/popover.css'>
+
+<script type='text/javascript' language='javascript' src='/admin/orders/_js/Init.js'></script>
+<script type='text/javascript' language='javascript' src='/_js/Charts.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/Token.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/Adjustment.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/Order.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/_js/responders/merchant/order/Transaction.js'></script>
+<script type='text/javascript' language='javascript' src='/admin/orders/_js/DataSet.js'></script>
+<script type='text/javascript' language='javascript'>
+jQuery(document).ready(function() {
+	jQuery('button.collapsible').click(function() {
+    		jQuery(this).toggleClass('active');
+		jQuery('div.collapsibleContent').toggleClass('pnp-hidden');
+	});
+
+});
+</script>
